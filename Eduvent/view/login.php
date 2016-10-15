@@ -2,12 +2,17 @@
 include 'header.php';
 
 
+//---------------- this file also contains html form with two input box which will take user email and user password entered by user-----//
+//  and then after submitting the form, the php code will match that user email and password combination in database 
+//  and when it finds both results in table then it will start a session and
+//   allow user to access home page else it will show appropriate message.
+
 ?>
 
 <?php
  ob_start();
  session_start();
- require_once 'dbconnect.php';
+require_once 'dbconnect.php';
  
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {

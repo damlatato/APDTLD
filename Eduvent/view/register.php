@@ -1,13 +1,17 @@
 <?php
 include 'header.php';
 
+// ---------------------------contains simple html form and few lines of php code. ----------------------------//
 
+// this file contains simple html form with all the required registration fields 
+// except user id because it’s auto incremented and some php code for registering a new user. 
+// all the user registration process can be done in this single php file.
 ?>
 <?php
  ob_start();
  session_start();
  if( isset($_SESSION['user'])!="" ){
-  header("Location: home.php");
+  header("Location: index.php");
  }
 include_once 'dbconnect.php';
 

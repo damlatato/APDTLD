@@ -1,9 +1,13 @@
 <?php
+
+//-------------- this page contains only few lines of php code to unset 
+// and destroy the current logged in users session, 
+// and after destroying the session the page automatically redirect to the ‘index’ page.
  session_start();
  if (!isset($_SESSION['user'])) {
-  header("Location: index.php");
+  header("Location: login.php");
  } else if(isset($_SESSION['user'])!="") {
-  header("Location: home.php");
+  header("Location: index.php");
  }
  
  if (isset($_GET['logout'])) {

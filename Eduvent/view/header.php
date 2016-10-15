@@ -8,7 +8,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<title>Material Design Bootstrap</title>
+<title>Material Design Bootstrap <?php echo $userRow['userName']; ?></title>
 
 <!-- Font Awesome -->
 <link rel="stylesheet"
@@ -64,11 +64,31 @@
 							class="nav-link waves-effect waves-light" href="#"><i
 								class="fa fa-envelope"></i> Contact</a>
 						</li>
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle waves-effect waves light"
+<!-- 						this part  shows welcome message of logged in user with username and -->
+<!-- 						 a hyper link to logout the user and redirects the ‘logout.php’ page.  -->
+						<?php
+ ob_start();
+ session_start();
+//  require_once 'dbconnect.php';?>
+ <?php 
+ // if session is not set this will redirect to login page
+ if( !isset($_SESSION['user']) ) {?>
+<!-- header("Location: login.php"); -->
+<!--   // select loggedin users detail -->
+<!--   $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
+<!--   $userRow=mysql_fetch_array($res); -->
+<!--   exit; -->
+<li class="nav-item"><a class="nav-link" href="login.php">Log in</a>
+ 
+ <?php } else { 
+ 	$res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
+ 	$userRow=mysql_fetch_array($res);
+?>
+
+ <li class="nav-item dropdown"><a class="nav-link dropdown-toggle waves-effect waves light"
 							type="button" id="dropdownMenu1" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="true"> <i class="fa fa-user"></i>
-								Profile
+								 <span class="glyphicon glyphicon-user"></span>&nbsp;Hi' <?php echo $userRow['userName']; ?>&nbsp;<span class="caret"></span></a>
 						</a>
 							<div class="dropdown-menu dropdown-default"
 								aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn"
@@ -76,9 +96,12 @@
 								<a class="dropdown-item waves-effect waves-light" href="#">Action</a>
 								<a class="dropdown-item waves-effect waves-light" href="#">Another
 									action</a> <a class="dropdown-item waves-effect waves-light"
-									href="#">Something else here</a>
+									href="logout.php?logout">Sign Out</a>
+									
 							</div>
-						</li>
+						</li>  
+<?php } ?>
+
 						<li class="nav-item"><a class="nav-link waves-effect waves-light"
 							href="#"><i class="fa fa-gear"></i> Settings</a>
 						</li>
