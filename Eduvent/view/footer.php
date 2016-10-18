@@ -65,7 +65,7 @@
         <ul>
             <li>
                 <h5>Register for free</h5></li>
-            <li><a href="register.php" class="btn btn-danger">Sign up!</a></li>
+            <li><a href="Login/signup.php" class="btn btn-danger">Sign up!</a></li>
         </ul>
     </div>
     <!--/.Call to action-->

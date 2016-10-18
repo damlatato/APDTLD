@@ -8,7 +8,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<title>Material Design Bootstrap <?php echo $userRow['userName']; ?></title>
+<title>Material Design Bootstrap </title>
 
 <!-- Font Awesome -->
 <link rel="stylesheet"
@@ -67,39 +67,60 @@
 <!-- 						this part  shows welcome message of logged in user with username and -->
 <!-- 						 a hyper link to logout the user and redirects the ‘logout.php’ page.  -->
 						<?php
- ob_start();
- session_start();
-//  require_once 'dbconnect.php';?>
+//  ob_start();
+//  session_start();
+//   require_once 'Login/dbconfig.php';?>
  <?php 
+ session_start();
+require_once 'Login/class.user.php';
+$user_home = new USER();
+
+ 
  // if session is not set this will redirect to login page
- if( !isset($_SESSION['user']) ) {?>
+ if($user_home->is_logged_in()!="")
+{
+$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=:uid");
+$stmt->execute(array(":uid"=>$_SESSION['userSession']));
+$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
+<!-- $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
+<!--  	$userRow=mysql_fetch_array($res); -->
+<!-- 	include 'Livechat/livechat.php' -->
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle waves-effect waves light"
+							type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="true"> <i class="fa fa-user"></i>
+								 <span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span></a>
+						</a>
+							<div class="dropdown-menu dropdown-default"
+								aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn"
+								data-dropdown-out="fadeOut">
+								<a class="dropdown-item waves-effect waves-light" href="Login/member.php">My Profile</a>
+								<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
+									<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
+								<a class="dropdown-item waves-effect waves-light" href="#">Another
+									action</a> <a class="dropdown-item waves-effect waves-light"
+									href="Login/logout.php?logout">Sign Out</a>
+									
+							</div>
+						</li>  
+
+
+
+
+
+
+
+
+ 
+ <?php } else { 
+ 	
+
+?>
 <!-- header("Location: login.php"); -->
 <!--   // select loggedin users detail -->
 <!--   $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
-<li class="nav-item"><a class="nav-link" href="login.php">Log in</a>
- 
- <?php } else { 
- 	$res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
- 	$userRow=mysql_fetch_array($res);
-?>
-
- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle waves-effect waves light"
-							type="button" id="dropdownMenu1" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="true"> <i class="fa fa-user"></i>
-								 <span class="glyphicon glyphicon-user"></span>&nbsp;Hi' <?php echo $userRow['userName']; ?>&nbsp;<span class="caret"></span></a>
-						</a>
-							<div class="dropdown-menu dropdown-default"
-								aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn"
-								data-dropdown-out="fadeOut">
-								<a class="dropdown-item waves-effect waves-light" href="#">Action</a>
-								<a class="dropdown-item waves-effect waves-light" href="#">Another
-									action</a> <a class="dropdown-item waves-effect waves-light"
-									href="logout.php?logout">Sign Out</a>
-									
-							</div>
-						</li>  
+<li class="nav-item"><a class="nav-link" href="Login/login.php">Log in</a>
 <?php } ?>
 
 						<li class="nav-item"><a class="nav-link waves-effect waves-light"

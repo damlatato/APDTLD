@@ -1,8 +1,14 @@
 <?php
 include 'header.php';
+// include 'livechat.php';
 ?>
+
+
 <main> <!--Main layout-->
+
 <div class="container">
+
+
 	<!--First row-->
 	<div class="row">
 		<div class="col-md-7"></div>
