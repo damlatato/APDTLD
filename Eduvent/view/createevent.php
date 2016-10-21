@@ -44,6 +44,7 @@ ul {
     
 }
 
+
 #pages {
     margin-left: 270px; /* 250px + 20px of actual margin */
 }
@@ -57,6 +58,7 @@ ul {
 
 width: 250px; 
 height: 50px;}
+
 
 .order {
 
@@ -73,7 +75,13 @@ position: relative;
 
 </style>
 
-
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".page-link").on("click", function(e) {
+        $(".page").fadeOut(250);
+        setTimeout(function() { $($(e.currentTarget).attr("href")).fadeIn(250); }, 250);
+    });
+});</script>
 </head>
 
 <body>
@@ -182,13 +190,12 @@ position: relative;
 </td> <td> 
 
  <div id="content">
-            <div id="navigation">
            
-                <ul>
-                    <li><a href="#page1" class="page-link">Free</a></li>
-                    <li><a href="#page2" class="page-link">Paid</a></li>
+                <ul style="ist-style: none outside none;display: inline">
+                    <li style="display: inline;"><a href="#page1" class="page-link">Free</a></li>
+                    <li style="display: inline;"><a href="#page2" class="page-link">Paid</a></li>
                 </ul>
-            </div>
+          
             
             <div id="pages">
                 <div id="page1" class="page">
