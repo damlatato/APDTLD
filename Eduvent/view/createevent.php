@@ -326,8 +326,6 @@ var readyInterval = setInterval(function() {
 				
 					<div class="break"></div>
 				
-		
-				<div class="break"></div>
 				 </td>
 				   <tr>
 				    </table>
@@ -514,14 +512,14 @@ var readyInterval = setInterval(function() {
 </div>
 
 
+ <button class="btn btn-large btn-primary" type="submit" name="btn-signup"  style="margin-left: 700px;    margin-bottom: -70px;">Create</button></form>
 
 
+</td>
 
-</td></tr>
+ 
 
-
-
-
+</tr>
 </table>
  
        
