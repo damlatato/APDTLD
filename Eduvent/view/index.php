@@ -166,6 +166,7 @@ include 'header.php';
 
 	<!--Row 5 (Topics)-->
 	<div class="row topics-area" style="background-color:MediumSpringGreen;">
+		<div class="col-md-12"><span>Topics</span></div>
 		
 		<div class="col-md-2">
 			<a href="#" class="card topic-tile">
@@ -223,22 +224,9 @@ include 'header.php';
 
 	</div>
 	<!--/.Row 5-->
-	
-	<!--Row 6-->
-	<div class="row" style="background-color:MediumSeaGreen;">
-		<div class="col-md-9 colindtext">
-			<span id="topics-text">Events from various industry sectors</span>
-		</div>
-		<div class="col-md-3">
-			<button type="button" id="goto-topicslist" class="btn btn-default">
-				<span class="glyphicon glyphicon-chevron-right"></span>&nbsp;Industry sector list
-			</button>
-		</div>
-	</div>
-	<!--/.Row 6-->
 
 	<!--Row -->
-	<div class="row" style="background-color:MediumSpringGreen;">
+	<div class="row" style="background-color:MediumSpringGreen;margin-top:10px;">
 		<div class="col-md-4">
 			<div class="eventlist panel panel-default">
 				<div class="panel-heading">Frequent searches</div>
