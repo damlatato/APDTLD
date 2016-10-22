@@ -7,22 +7,49 @@ include 'header.php';
 <!--Main layout-->
 <main>
 
+<!--Carousel Wrapper-->
+<div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel" style="height:310px;">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-1" data-slide-to="1"></li>
+        <li data-target="#carousel-example-1" data-slide-to="2"></li>
+        <li data-target="#carousel-example-1" data-slide-to="3"></li>
+    </ol>
+    <!--/.Indicators-->
 
-<!--Carousel wrapper-->
-<div id="carousel" style="background-color:LightSkyBlue;">
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox" style="height:310px;">
 
-	<!--Indicators-->
+        <div class="carousel-item active">
+            <img src="includes/images/c1.jpg" alt="First slide">
+        </div>
 
-	<!--/.Indicators-->
+        <div class="carousel-item">
+            <img src="includes/images/c2.jpg" alt="Second slide">
+        </div>
 
-	<!--Slides-->
+        <div class="carousel-item">
+            <img src="includes/images/c3.jpg" alt="Third slide">
+        </div>
 
-	<!--/.Slides-->
+        <div class="carousel-item">
+            <img src="includes/images/c4.jpg" alt="Third slide">
+        </div>
 
-	<!--Controls-->
+    </div>
+    <!--/.Slides-->
 
-	<!--/.Controls-->
-
+    <!--Controls-->
+    <a class="left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
 
@@ -36,7 +63,7 @@ include 'header.php';
 
 		<div class="col-md-6">
 			<div class="eventlist panel panel-default">
-				<div class="panel-heading">Highlights</div>
+				<div class="panel-heading"><h4>Highlights</h4></div>
 				<div class="list-group event-items">
 
 					<a href="#" class="list-group-item event-item">
@@ -70,7 +97,7 @@ include 'header.php';
 		
 		<div class="col-md-6">
 			<div class="eventlist panel panel-default">
-				<div class="panel-heading">Newest nearby</div>
+				<div class="panel-heading"><h4>Newest nearby</h4></div>
 				<div class="list-group">
 
 					<a href="#" class="list-group-item event-item">
@@ -107,7 +134,7 @@ include 'header.php';
 	<!--Row 2 (Frequent searches) -->
 	<div class="row search-terms-area">
 	
-		<div class="search-terms-heading">Frequent searches</div>
+		<div class="search-terms-heading"><h4>Frequent searches</h4></div>
 		<div class="search-terms-items">
 			<a href="#" class="search-terms-item"><div>Topic 1</div></a>
 			<a href="#" class="search-terms-item"><div>Topic 2</div></a>
@@ -166,7 +193,7 @@ include 'header.php';
 
 	<!--Row 5 (Topics)-->
 	<div class="row topics-area" style="background-color:MediumSpringGreen;">
-		<div class="col-md-12"><span>Topics</span></div>
+		<div class="col-md-12"><span><h4>Topics</h4></span></div>
 		
 		<div class="col-md-2">
 			<a href="#" class="card topic-tile">
