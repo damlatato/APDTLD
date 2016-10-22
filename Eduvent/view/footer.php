@@ -7,21 +7,21 @@
 
             <!--First column-->
             <div class="col-md-3 col-md-offset-1">
-                <h5 class="title">Footer Content</h5>
-                <p>Here you can use rows and columns here to organize your footer content.</p>
+                <h5 class="title">About Eduvent</h5>
+                <p>Eduvent is a online platform where you can register for educational events or create your own educational events.</p>
             </div>
             <!--/.First column-->
 
             <hr class="hidden-md-up">
 
             <!--Second column-->
-            <div class="col-md-2 col-md-offset-1">
-                <h5 class="title">Links</h5>
+            <div class="col-md-3 col-md-offset-1">
+                <h5 class="title">Information</h5>
                 <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
+                    <li><a href="#!">About us</a></li>
+                    <li><a href="#!">Contact us</a></li>
+                    <li><a href="#!">Imprint</a></li>
+                    <li><a href="#!">Data privacy</a></li>
                 </ul>
             </div>
             <!--/.Second column-->
@@ -29,30 +29,19 @@
             <hr class="hidden-md-up">
 
             <!--Third column-->
-            <div class="col-md-2">
-                <h5 class="title">Links</h5>
+            <div class="col-md-3">
+                <h5 class="title">News</h5>
                 <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
+                    <li><a href="#!">Andrena Objectives posting interesting events now!</a></li>
+                    <li><a href="#!">Eduvent is getting one of the most famous event platform.</a></li>
+                    <li><a href="#!">How to get personalized event suggestions.</a></li>
+                    <li><a href="#!">Join our platform to get some gifts</a></li>
                 </ul>
             </div>
             <!--/.Third column-->
 
-            <hr class="hidden-md-up">
+           <hr class="hidden-md-up">
 
-            <!--Fourth column-->
-            <div class="col-md-2">
-                <h5 class="title">Links</h5>
-                <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            <!--/.Fourth column-->
 
         </div>
     </div>
@@ -66,6 +55,10 @@
             <li>
                 <h5>Register for free</h5></li>
             <li><a href="Login/signup.php" class="btn btn-danger">Sign up!</a></li>
+            <li>
+                <h5>Need help?</h5></li>
+            <li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default waves-effect waves-light">Support</a></li>
+            
         </ul>
     </div>
     <!--/.Call to action-->
@@ -89,7 +82,7 @@
     <!--Copyright-->
     <div class="footer-copyright">
         <div class="container-fluid">
-            © 2015 Copyright: <a href="http://www.Eduvent.com"> Eduvent.com </a>
+            © 2016 Copyright: <a href="http://www.Eduvent.com"> Eduvent.com </a>
 
         </div>
     </div>
@@ -99,8 +92,7 @@
 <!--/.Footer-->
 
 
-	<!-- /Start your project here-->
-
+	
 
 	<!-- SCRIPTS -->
 
