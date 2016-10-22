@@ -4,125 +4,328 @@ include 'header.php';
 ?>
 
 
-<main> <!--Main layout-->
+<!--Main layout-->
+<main>
+
+
+<!--Carousel wrapper-->
+<div id="carousel" style="background-color:LightSkyBlue;">
+
+	<!--Indicators-->
+
+	<!--/.Indicators-->
+
+	<!--Slides-->
+
+	<!--/.Slides-->
+
+	<!--Controls-->
+
+	<!--/.Controls-->
+
+</div>
+<!--/.Carousel Wrapper-->
+
+
+
 
 <div class="container">
 
+	<!--Row 1 (Event lists)-->
+	<div class="row evet-list-area" style="background-color:lightgreen;">
 
-	<!--First row-->
-	<div class="row">
-		<div class="col-md-7"></div>
+		<div class="col-md-6">
+			<div class="eventlist panel panel-default">
+				<div class="panel-heading">Highlights</div>
+				<div class="list-group event-items">
+
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 1</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 2</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 3</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 4</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</div>
 		
-		<br>
-		<!--Main information-->
-		<div class="col-md-5">
-			<h2 class="h2-responsive">We are professionals</h2>
-			<hr>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				Blanditiis pariatur quod ipsum atque quam dolorem voluptate officia
-				sunt placeat consectetur alias fugit cum praesentium ratione sint
-				mollitia, perferendis natus quaerat!</p>
-			<a href="" class="btn btn-primary">Get it now!</a>
+		<div class="col-md-6">
+			<div class="eventlist panel panel-default">
+				<div class="panel-heading">Newest nearby</div>
+				<div class="list-group">
 
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 1</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 2</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 3</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+					<a href="#" class="list-group-item event-item">
+						<div>
+							<h4 class="list-group-item-heading">Event 4</h4>
+							<p class="list-group-item-text">Details<br>Description</p>
+						</div>
+					</a>
+
+				</div>
+			</div>
 		</div>
 	</div>
-	<!--/.First row-->
+	<!--/.Row 1-->
 
-	<!--Second row-->
-	<div class="row">
-		<!--First columnn-->
-		<div class="col-md-4">
-			<!--Card-->
-			<div class="card">
-
-				<!--Card image-->
-				<div class="view overlay hm-white-slight">
-					<img src="http://mdbootstrap.com/images/regular/city/img%20(2).jpg"
-						class="img-fluid" alt=""> <a href="#">
-						<div class="mask"></div>
-					</a>
-				</div>
-				<!--/.Card image-->
-
-				<!--Card content-->
-				<div class="card-block">
-					<!--Title-->
-					<h4 class="card-title">Example Event</h4>
-					<!--Text-->
-					<p class="card-text">Some quick example text to build on the card
-						title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Register</a>
-				</div>
-				<!--/.Card content-->
-
-			</div>
-			<!--/.Card-->
+	<!--Row 2 (Frequent searches) -->
+	<div class="row search-terms-area">
+	
+		<div class="search-terms-heading">Frequent searches</div>
+		<div class="search-terms-items">
+			<a href="#" class="search-terms-item"><div>Topic 1</div></a>
+			<a href="#" class="search-terms-item"><div>Topic 2</div></a>
+			<a href="#" class="search-terms-item"><div>Topic 3</div></a>
+			<a href="#" class="search-terms-item"><div>Topic 4</div></a>
+			<a href="#" class="search-terms-item"><div>Topic 5</div></a>
 		</div>
-		<!--First columnn-->
-
-		<!--Second columnn-->
-		<div class="col-md-4">
-			<!--Card-->
-			<div class="card">
-
-				<!--Card image-->
-				<div class="view overlay hm-white-slight">
-					<img src="http://mdbootstrap.com/images/regular/city/img%20(4).jpg"
-						class="img-fluid" alt=""> <a href="#">
-						<div class="mask"></div>
-					</a>
-				</div>
-				<!--/.Card image-->
-
-				<!--Card content-->
-				<div class="card-block">
-					<!--Title-->
-					<h4 class="card-title">Example Event</h4>
-					<!--Text-->
-					<p class="card-text">Some quick example text to build on the card
-						title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Register</a>
-				</div>
-				<!--/.Card content-->
-
-			</div>
-			<!--/.Card-->
-		</div>
-		<!--Second columnn-->
-
-		<!--Third columnn-->
-		<div class="col-md-4">
-			<!--Card-->
-			<div class="card">
-
-				<!--Card image-->
-				<div class="view overlay hm-white-slight">
-					<img src="http://mdbootstrap.com/images/regular/city/img%20(8).jpg"
-						class="img-fluid" alt=""> <a href="#">
-						<div class="mask"></div>
-					</a>
-				</div>
-				<!--/.Card image-->
-
-				<!--Card content-->
-				<div class="card-block">
-					<!--Title-->
-					<h4 class="card-title">Example Event</h4>
-					<!--Text-->
-					<p class="card-text">Some quick example text to build on the card
-						title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Register</a>
-				</div>
-				<!--/.Card content-->
-
-			</div>
-			<!--/.Card-->
-		</div>
-		<!--Third columnn-->
 	</div>
-	<!--/.Second row-->
+	<!--/.Row 2-->
+	
+	<!--Row 3 (Event market filter bar) -->
+	<div class="row event-market-filter-area" style="background-color:MediumPurple;">
+
+		<div class="col-md-12">
+			<div class="row">
+			
+				<div class="col-md-4">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+					
+				<div class="col-md-4" style="margin-top:19px;">
+					<span>within 50 km from Mannheim, DE</span>
+				</div>
+
+				<div class="col-md-4" style="margin-top:11px">
+					<div class="btn-toolbar pull-right" role="toolbar" aria-label="view-options">
+						<div class="btn-group" role="group" aria-label="pricing-cat" style="margin-right:12px;">
+							<button type="button" class="btn btn-default">All</button>
+							<button type="button" class="btn btn-default">Free</button>
+							<button type="button" class="btn btn-default">Paid</button>
+						</div>
+						<div class="btn-group" role="group" aria-label="view-style">
+							<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th">Grid</span></button>
+							<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list">List</span></button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- /.row -->
+		</div>
+
+	</div>
+	<!--/.Row 3-->
+	
+	<!--Row 4 (Event market) -->
+	<div class="row event-market-area" style="background-color:lightgrey;height:300px;">
+	
+	</div>
+	<!--/.Row 4-->
+
+	<!--Row 5 (Topics)-->
+	<div class="row topics-area" style="background-color:MediumSpringGreen;">
+		
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-business.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Business</footer>
+				</div>
+			</a>
+		</div>
+
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-computing.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Computing</footer>
+				</div>
+			</a>
+		</div>
+
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-science.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Science</footer>
+				</div>
+			</a>
+		</div>
+		
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-economics.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Economics</footer>
+				</div>
+			</a>
+		</div>
+		
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-business.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Economics</footer>
+				</div>
+			</a>
+		</div>
+
+		<div class="col-md-2">
+			<a href="#" class="card topic-tile">
+				<img class="card-img-top topic-card-img" src="includes/images/ind-economics.jpg" alt="Card image cap">
+				<div class="card-block topic-card">
+					<footer class="topic-card-footer">Economics</footer>
+				</div>
+			</a>
+		</div>
+
+	</div>
+	<!--/.Row 5-->
+	
+	<!--Row 6-->
+	<div class="row" style="background-color:MediumSeaGreen;">
+		<div class="col-md-9 colindtext">
+			<span id="topics-text">Events from various industry sectors</span>
+		</div>
+		<div class="col-md-3">
+			<button type="button" id="goto-topicslist" class="btn btn-default">
+				<span class="glyphicon glyphicon-chevron-right"></span>&nbsp;Industry sector list
+			</button>
+		</div>
+	</div>
+	<!--/.Row 6-->
+
+	<!--Row -->
+	<div class="row" style="background-color:MediumSpringGreen;">
+		<div class="col-md-4">
+			<div class="eventlist panel panel-default">
+				<div class="panel-heading">Frequent searches</div>
+				<div class="list-group">
+
+					<a href="#" class="list-group-item list-group-item">
+						<h4 class="list-group-item-heading">Event</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="eventlist panel panel-default">
+				<div class="panel-heading">Event topics</div>
+				<div class="list-group">
+
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 1</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 2</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 3</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 4</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="eventlist panel panel-default">
+				<div class="panel-heading">Events by city</div>
+				<div class="list-group">
+
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 1</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 2</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 3</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+					<a href="#" class="list-group-item">
+						<h4 class="list-group-item-heading">Event 4</h4>
+						<p class="list-group-item-text">Description</p>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/.Row -->
 </div>
-<!--/.Main layout--> </main>
+
+</main>
+<!--/.Main layout-->
+
 
 <?php
 include 'footer.php';

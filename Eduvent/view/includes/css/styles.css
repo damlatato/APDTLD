@@ -1,0 +1,187 @@
+/*body {
+    font:12px arial;
+    color: #222;
+    padding:35px; 
+    margin: 0;
+    padding: 0;
+}
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    color:#0000FF;
+    text-decoration:none;
+}
+  
+a:hover { text-decoration:underline; }*/
+
+#livechat {
+	position:fixed;
+} 
+
+#wrapper, #loginform {
+	z-index: 100;
+	width: 100%;
+	right: 0px;
+	width: 300px;
+	bottom: 0px;
+	position:fixed;
+	margin:0 auto;
+	margin-right:0px;
+	padding-bottom:25px;
+	background:#EBF4FB;
+	float: bottom;
+	border:1px solid #ACD8F0;
+}
+  
+#loginform { padding-top:18px; }
+  
+#loginform p { margin: 5px; }
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+  
+#usermsg {
+    width:395px;
+    border:1px solid #ACD8F0; }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left; }
+  
+.logout { float:right; }
+  
+.msgln { margin:0 0 2px 0; }
+
+/*******************************************************/
+
+html, body {
+	height: 100%;
+}
+
+/* Carousel */
+
+#carousel {
+	height: 200px;
+}
+
+/* Event lists */
+
+.evet-list-area {
+	margin-top: 10px;
+}
+
+.eventlist {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.list-group-item {
+	padding: 3px;
+}
+
+.event-items {
+	list-style: none;
+}
+
+.event-item:hover {
+	background-color: lightgrey;
+}
+
+/*
+.caret {
+	border-width: 7px;
+}*/
+
+/* Frequent search terms */
+.search-terms-area {
+	color: #48453d;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.search-terms-heading {
+	background-color: lightgrey;
+	color: #48453d;
+	font-size: 16px;
+	padding: 4px;
+	margin-bottom: 1px;
+}
+
+.search-terms-items {
+	background-color: lightgrey;
+	text-align: center;
+}
+
+.search-terms-item {
+	background-color: #756f5d;
+	padding: 12px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 5px;
+	border-radius: 9px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.search-terms-item:hover {
+	background-color: #a38018;
+	color: White;
+}
+
+/* Industries */
+
+.topics-area {
+	margin-top: 10px;
+}
+
+.topic-card footer {
+	font-size: 20px;
+	font-weight: bold;
+}
+.topic-tile {
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	width: 150px;
+}
+	
+.topic-card-img {
+	height: 100px;
+	width: 150px;
+}
+
+.topic-card-footer {
+	background-color: Lavender;
+	text-align: center;
+}
+
+#topics-text {
+	font-size: 20px;
+}
+
+#goto-topicslist {
+	font-weight: bold;
+}
+
+/* */

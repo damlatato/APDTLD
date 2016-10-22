@@ -4,9 +4,9 @@ class Database
 {
 	 
 	private $host = "localhost";
-	private $db_name = "dbtest";
-	private $username = "tato";
-	private $password = "123456";
+	private $db_name = "eduventdb";
+	private $username = "root";
+	private $password = "";
 	public $conn;
 	 
 	public function dbConnection()

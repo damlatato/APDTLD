@@ -97,20 +97,16 @@
 	<!-- SCRIPTS -->
 
 	<!-- JQuery -->
-	<script type="text/javascript"
-		src="includes/mdbootstrap/js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery-2.2.3.min.js"></script>
 
 	<!-- Bootstrap tooltips -->
-	<script type="text/javascript"
-		src="includes/mdbootstrap/js/tether.min.js"></script>
+	<script type="text/javascript" src="includes/js/tether.min.js"></script>
 
 	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript"
-		src="includes/mdbootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="includes/js/bootstrap.min.js"></script>
 
 	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="includes/mdbootstrap/js/mdb.min.js"></script>
-
+	<script type="text/javascript" src="includes/js/mdb.min.js"></script>
 
 </body>
 
