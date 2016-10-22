@@ -15,6 +15,7 @@ include 'header.php';
         <li data-target="#carousel-example-1" data-slide-to="1"></li>
         <li data-target="#carousel-example-1" data-slide-to="2"></li>
         <li data-target="#carousel-example-1" data-slide-to="3"></li>
+        <li data-target="#carousel-example-1" data-slide-to="4"></li>
     </ol>
     <!--/.Indicators-->
 
@@ -35,6 +36,10 @@ include 'header.php';
 
         <div class="carousel-item">
             <img src="includes/images/c4.jpg" alt="Third slide">
+        </div>
+
+        <div class="carousel-item">
+            <img src="includes/images/c5.jpg" alt="Third slide">
         </div>
 
     </div>
