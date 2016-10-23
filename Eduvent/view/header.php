@@ -7,6 +7,18 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Eduvent</title>
 
+<!-- JQuery -->
+<script type="text/javascript" src="includes/js-lib/jquery-2.2.3.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="includes/js-lib/tether.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="includes/js-lib/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="includes/js-lib/mdb.min.js"></script>
+	
 <!-- Font Awesome
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
 
@@ -22,9 +34,6 @@
 </head>
 
 <body>
-
-
-	<!-- Start your project here-->
 	<header>
 
 		<!--Navbar-->
@@ -125,7 +134,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 					</ul>
 					<!--Search form-->
 					<form class="form-inline">
-						<input class="form-control" type="text" placeholder="Search">
+						<input id="search-general" class="form-control" type="text" placeholder="Search">
 					</form>
 				</div>
 				<!--/.Collapse content-->

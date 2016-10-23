@@ -6,7 +6,7 @@
         <div class="row">
 
             <!--First column-->
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-1">
                 <h5 class="title">About Eduvent</h5>
                 <p>Eduvent is a online platform where you can register for educational events or create your own educational events.</p>
             </div>
@@ -15,7 +15,7 @@
             <hr class="hidden-md-up">
 
             <!--Second column-->
-            <div class="col-md-3 col-md-offset-1">
+            <div class="col-md-2 col-md-offset-1">
                 <h5 class="title">Information</h5>
                 <ul>
                     <li><a href="#!">About us</a></li>
@@ -29,13 +29,13 @@
             <hr class="hidden-md-up">
 
             <!--Third column-->
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <h5 class="title">News</h5>
                 <ul>
                     <li><a href="#!">Andrena Objectives posting interesting events now!</a></li>
                     <li><a href="#!">Eduvent is getting one of the most famous event platform.</a></li>
                     <li><a href="#!">How to get personalized event suggestions.</a></li>
-                    <li><a href="#!">Join our platform to get some gifts</a></li>
+                    <li><a href="#!">Join our platform to get some gifts.</a></li>
                 </ul>
             </div>
             <!--/.Third column-->
@@ -91,23 +91,5 @@
 </footer>
 <!--/.Footer-->
 
-
-	
-
-	<!-- SCRIPTS -->
-
-	<!-- JQuery -->
-	<script type="text/javascript" src="includes/js/jquery-2.2.3.min.js"></script>
-
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="includes/js/tether.min.js"></script>
-
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="includes/js/bootstrap.min.js"></script>
-
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="includes/js/mdb.min.js"></script>
-
 </body>
-
 </html>
