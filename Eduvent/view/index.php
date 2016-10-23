@@ -150,27 +150,19 @@ include 'header.php';
 	</div>
 	<!--/.Row 2-->
 	
-	<!--Row 3 (Event market filter bar) -->
-	<div class="row event-market-filter-area" style="background-color:MediumPurple;">
-
-		<div class="col-md-12">
-			<div class="row">
-			
-				<div class="col-md-4">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						</span>
-					</div>
-				</div>
-					
-				<div class="col-md-4" style="margin-top:19px;">
-					<span>within 50 km from Mannheim, DE</span>
+	<!--Row 3: Navbar (Event market filter bar) -->
+	<div class="row">
+		<nav class="navbar navbar-light teal lighten-4" id="filter-navbar">
+			<div class="collapse navbar-toggleable-xs">
+				<div class="col-md-5">
+					<form class="form-inline" id="search-form" onsubmit="runSearch()">
+						<input class="form-control" id="search-input" type="text" placeholder="Search">
+						<span>within 50 km from Mannheim, DE</span>
+					</form>
 				</div>
 
-				<div class="col-md-4" style="margin-top:11px">
-					<div class="btn-toolbar pull-right" role="toolbar" aria-label="view-options">
+				<div class="col-md-7">
+					<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 						<div class="btn-group" role="group" aria-label="pricing-cat" style="margin-right:12px;">
 							<button type="button" class="btn btn-default">All</button>
 							<button type="button" class="btn btn-default">Free</button>
@@ -182,17 +174,18 @@ include 'header.php';
 						</div>
 					</div>
 				</div>
-				
 			</div>
-			<!-- /.row -->
-		</div>
-
+		</nav>
 	</div>
+	<!--/.Row 3: Navbar-->
+
+	
+
 	<!--/.Row 3-->
 	
 	<!--Row 4 (Event market) -->
 	<div class="row event-market-area" style="background-color:lightgrey;height:300px;">
-	
+		<div id="search-result"></div>
 	</div>
 	<!--/.Row 4-->
 
@@ -261,27 +254,23 @@ include 'header.php';
 	<div class="row" style="background-color:MediumSpringGreen;margin-top:10px;">
 		<div class="col-md-4">
 			<div class="eventlist panel panel-default">
-				<div class="panel-heading">Frequent searches</div>
+				<div class="panel-heading">Search term</div>
 				<div class="list-group">
 
 					<a href="#" class="list-group-item list-group-item">
-						<h4 class="list-group-item-heading">Event</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Search term</h4>
 					</a>
 
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Search term</h4>
 					</a>
 					
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Search term</h4>
 					</a>
 					
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Search term</h4>
 					</a>
 
 				</div>
@@ -294,20 +283,16 @@ include 'header.php';
 				<div class="list-group">
 
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event 1</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Topic</h4>
 					</a>
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event 2</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Topic</h4>
 					</a>
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event 3</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Topic</h4>
 					</a>
 					<a href="#" class="list-group-item">
-						<h4 class="list-group-item-heading">Event 4</h4>
-						<p class="list-group-item-text">Description</p>
+						<h4 class="list-group-item-heading">Topic</h4>
 					</a>
 
 				</div>
@@ -346,6 +331,7 @@ include 'header.php';
 </main>
 <!--/.Main layout-->
 
+<script type="text/javascript" src="js-scripts/search.js"></script>
 
 <?php
 include 'footer.php';
