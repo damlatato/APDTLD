@@ -84,7 +84,7 @@ $user_home = new USER();
  // if session is not set this will redirect to login page
  if($user_home->is_logged_in()!="")
 {
-$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=:uid");
+$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
 $stmt->execute(array(":uid"=>$_SESSION['userSession']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <!-- $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
