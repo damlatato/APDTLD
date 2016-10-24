@@ -31,7 +31,7 @@ class USER
 		try
 		{							
 			$password = md5($upass);
-			$stmt = $this->conn->prepare("INSERT INTO tbl_users(userName,userBirth,userEmail,userPass,tokenCode) 
+			$stmt = $this->conn->prepare("INSERT INTO users(userName,userBirth,EmailAddress,userPass,tokenCode) 
 			                                             VALUES(:user_name, :user_birth, :user_mail, :user_pass, :active_code)");
 			$stmt->bindparam(":user_name",$uname);
 			$stmt->bindparam(":user_birth",$bday);
@@ -51,7 +51,7 @@ class USER
 	{
 		try
 		{
-			$stmt = $this->conn->prepare("SELECT * FROM tbl_users WHERE userEmail=:email_id");
+			$stmt = $this->conn->prepare("SELECT * FROM users WHERE EmailAddress=:email_id");
 			$stmt->execute(array(":email_id"=>$email));
 			$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 			
@@ -61,7 +61,7 @@ class USER
 				{
 					if($userRow['userPass']==md5($upass))
 					{
-						$_SESSION['userSession'] = $userRow['userID'];
+						$_SESSION['userSession'] = $userRow['ID'];
 						return true;
 					}
 					else

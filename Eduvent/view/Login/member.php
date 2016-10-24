@@ -9,7 +9,7 @@ if(!$user_home->is_logged_in())
  $user_home->redirect('login.php');
 }
 
-$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=:uid");
+$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
 $stmt->execute(array(":uid"=>$_SESSION['userSession']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -19,7 +19,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 <html class="no-js">
     
     <head>
-        <title><?php echo $row['userEmail']; ?></title>
+        <title><?php echo $row['EmailAddress']; ?></title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -44,7 +44,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         <ul class="nav pull-right">
                             <li class="dropdown">
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> 
-        <?php echo $row['userEmail']; ?> <i class="caret"></i>
+        <?php echo $row['EmailAddress']; ?> <i class="caret"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                 <li>
