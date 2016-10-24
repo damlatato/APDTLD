@@ -24,6 +24,7 @@ SET time_zone = "+00:00";
 
 SET storage_engine=innodb;
 
+
 --
 -- Tabellenstruktur für Tabelle `addresses`
 --
@@ -248,6 +249,10 @@ CREATE TABLE `users` (
   `AddressID` int(11) NOT NULL,
   `EmailAddress` int(11),
   `GenderID` int(11) NOT NULL,
+   `userPass` varchar(100) NOT NULL,
+  `userStatus` enum('Y','N') NOT NULL DEFAULT 'N',
+  `tokenCode` varchar(100) NOT NULL,
+   `userBirth` char(50) DEFAULT NULL,
   `DOB` date,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
