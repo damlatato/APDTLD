@@ -19,8 +19,8 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="includes/js-lib/mdb.min.js"></script>
 	
-<!-- Font Awesome
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
+<!-- Font Awesome-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> 
 
 <!-- Bootstrap core CSS -->
 <link href="includes/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 								class="fa fa-envelope"></i> Contact</a>
 						</li>
 <!-- 						this part  shows welcome message of logged in user with username and -->
-<!-- 						 a hyper link to logout the user and redirects the ‘logout.php’ page.  -->
+<!-- 						 a hyper link to logout the user and redirects the ï¿½logout.phpï¿½ page.  -->
 						<?php
 //  ob_start();
 //  session_start();
@@ -129,7 +129,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <?php } ?>
 
 						<li class="nav-item"><a class="nav-link waves-effect waves-light"
-							href="#"><i class="fa fa-gear"></i> Settings</a>
+							href="settings.php"><i class="fa fa-gear"></i> Settings</a>
 						</li>
 					</ul>
 					<!--Search form-->
