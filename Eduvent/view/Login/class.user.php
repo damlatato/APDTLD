@@ -66,19 +66,19 @@ class USER
 					}
 					else
 					{
-						header("Location: login.php?error");
+						header("Location: ../login.php?error");
 						exit;
 					}
 				}
 				else
 				{
-					header("Location: login.php?inactive");
+					header("Location: ../login.php?inactive");
 					exit;
 				}	
 			}
 			else
 			{
-				header("Location: login.php?error");
+				header("Location: ../login.php?error");
 				exit;
 			}		
 		}

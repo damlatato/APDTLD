@@ -53,7 +53,7 @@
 					<a class="navbar-brand" href="#">Eduvent</a>
 					<!--Links-->
 					<ul class="nav navbar-nav">
-						<li class="nav-item active"><a class="nav-link" href="#">Home <span
+						<li class="nav-item active"><a class="nav-link" href="index.php">Home <span
 								class="sr-only">(current)</span>
 						</a>
 						</li>
@@ -125,7 +125,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <!--   $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
-<li class="nav-item"><a class="nav-link" href="Login/login.php">Log in</a>
+<li class="nav-item"><a class="nav-link" href="login.php">Log in</a>
 <?php } ?>
 
 						<li class="nav-item"><a class="nav-link waves-effect waves-light"
