@@ -84,11 +84,11 @@ if(isset($_POST['btn-login']))
         <input type="email" class="input-block-level" style="font-size: 16px;
     height: auto;
     margin-bottom: 15px;
-    padding: 7px 9px;" placeholder="Email address" name="txtemail" required />
+    padding: 7px 9px;  border: 1px solid #ccc;  border-radius: 4px;width: 226px;" placeholder="Email address" name="txtemail" required />
         <input type="password" class="input-block-level" style="font-size: 16px;
     height: auto;
     margin-bottom: 15px;
-    padding: 7px 9px;" placeholder="Password" name="txtupass" required />
+    padding: 7px 9px; border: 1px solid #ccc;   border-radius: 4px;width: 226px;" placeholder="Password" name="txtupass" required />
       <hr />
         <button class="btn btn-large btn-primary" type="submit" name="btn-login">Sign in</button>
         <a href="signup.php" style="float:right;background: #c12e2a;" class="btn btn-large">Sign Up</a><hr />
