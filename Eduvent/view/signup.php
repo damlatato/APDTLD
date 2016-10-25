@@ -338,6 +338,3 @@ if(isset($_POST['btn-signup']))
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
-<?php
-include 'footer.php';
-?>
