@@ -1,11 +1,17 @@
 <?php
-session_start();
-require_once 'class.user.php';
+include 'header.php';
+
+
+?>
+
+<?php
+
+require_once 'Login/class.user.php';
 $user = new USER();
 
 if($user->is_logged_in()!="")
 {
- $user->redirect('member.php');
+ $user->redirect('Login/member.php');
 }
 
 if(isset($_POST['btn-submit']))
@@ -59,9 +65,9 @@ if(isset($_POST['btn-submit']))
   <head>
     <title>Forgot Password</title>
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="assets/styles.css" rel="stylesheet" media="screen">
+    <link href="includes/mdbootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="includes/mdbootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="includes/mdbootstrap/css/styles.css" rel="stylesheet" media="screen">
      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -70,7 +76,18 @@ if(isset($_POST['btn-submit']))
   <body id="login">
     <div class="container">
 
-      <form class="form-signin" method="post">
+      <form class="form-signin" method="post" style="    margin-top: 50px;
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 34px auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);">
         <h2 class="form-signin-heading">Forgot Password</h2><hr />
         
          <?php
@@ -88,7 +105,13 @@ if(isset($_POST['btn-submit']))
    }
    ?>
         
-        <input type="email" class="input-block-level" placeholder="Email address" name="txtemail" required />
+        <input type="email" class="input-block-level" style="font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 226px;" placeholder="Email address" name="txtemail" required />
       <hr />
         <button class="btn btn-danger btn-primary" type="submit" name="btn-submit">Generate new Password</button>
       </form>
@@ -98,3 +121,6 @@ if(isset($_POST['btn-submit']))
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+<?php 
+include 'footer.php';?>
