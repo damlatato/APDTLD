@@ -27,7 +27,6 @@
 
            <hr class="hidden-md-up">
 
-
         </div>
     </div>
     <!--/.Footer Links-->
