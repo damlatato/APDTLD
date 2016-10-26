@@ -12,11 +12,11 @@
   
         <!-- CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
-        <link rel="stylesheet" href="includes/mdbootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="includes/mdbootstrap/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="includes/mdbootstrap/css/form-elements.css">
-        <link rel="stylesheet" href="includes/mdbootstrap/css/style_createvent.css">
-        <link rel="stylesheet" href="includes/mdbootstrap/css/media-queries.css">
+        <link rel="stylesheet" href="../Eduvent/mdbootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../Eduvent/mdbootstrap/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../Eduvent/mdbootstrap/css/form-elements.css">
+        <link rel="stylesheet" href="../Eduvent/mdbootstrap/css/style_createvent.css">
+        <link rel="stylesheet" href="../Eduvent/mdbootstrap/css/media-queries.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -269,10 +269,10 @@
 		
 
         <!-- Javascript -->
-        <script src="includes/mdbootstrap/js/jquery-1.11.1.min.js"></script>
-        <script src="includes/mdbootstrap/js/bootstrap.min.js"></script>
-        <script src="includes/mdbootstrap/js/jquery.backstretch.min.js"></script>
-        <script src="includes/mdbootstrap/js/scripts.js"></script>
+        <script src="../Eduvent/mdbootstrap/js/jquery-1.11.1.min.js"></script>
+        <script src="../Eduvent/mdbootstrap/js/bootstrap.min.js"></script>
+        <script src="../Eduvent/mdbootstrap/js/jquery.backstretch.min.js"></script>
+        <script src="../Eduvent/mdbootstrap/js/scripts.js"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
