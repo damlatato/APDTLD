@@ -79,8 +79,9 @@ if(isset($_POST['btn-login'])) {
 					padding: 7px 9px; border: 1px solid #ccc;   border-radius: 4px;width: 226px;" placeholder="Password" name="txtupass" required />
 			<hr />
 			<button class="btn btn-large btn-primary" type="submit" name="btn-login">Sign in</button>
-			<a href="signup.php" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />
-			<a href="Login/fpass.php">Lost your Password?</a>
+			<!--<a href="php/signup.php" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />-->
+			<a href="../Eduvent/index.php?page=signup" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />
+			<a href="login/fpass.php">Lost your Password?</a>
 		</form>
 
 	</div> <!-- /container -->

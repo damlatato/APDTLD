@@ -1,7 +1,4 @@
 <?php
-include 'header.php';
-
-
 //---------------- this file also contains html form with two input box which will take user email and user password entered by user-----//
 //  and then after submitting the form, the php code will match that user email and password combination in database 
 //  and when it finds both results in table then it will start a session and
@@ -12,7 +9,7 @@ include 'header.php';
 <?php
 
 
-require_once 'Login/class.user.php';
+require_once 'login/class.user.php';
 
 $reg_user = new USER();
 
@@ -334,10 +331,5 @@ if(isset($_POST['btn-signup']))
       </form>
 
     </div> <!-- /container -->
-    <script src="vendors/jquery-1.9.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
-<?php
-include 'footer.php';
-?>
