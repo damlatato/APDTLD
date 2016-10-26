@@ -2,11 +2,28 @@
 <html lang="en">
 
 <head>
-<style rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Eduvent/ Event Market</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Material Design Bootstrap -->
+<link href="../css/mdb.min.css" rel="stylesheet">
+
+<!-- Custom styles -->
+<link href="../css/styles.css" rel="stylesheet">
+
+<!-- Styles for carousel -->
+<link href="../css/carousel.css" rel="stylesheet">
+
+  <style rel="stylesheet">
         /* TEMPLATE STYLES */
         /* Necessary for full page carousel*/
         
-	
+
         html,
         body {
             height: 100%;
@@ -136,7 +153,7 @@
 <!--Header of the page-->
 <div class="row" style="background-color: lightgreen;">
     <div class="col-md-3" >
-            <img src="../Eduvent/images/Eduvent3.png" alt="test" class="img-responsive">
+            <img src="../images/Eduvent3.png" alt="test" class="img-responsive">
 			</div>
 			
     <div class="col-md-7" style={ align="center"; valign="bottom";} > 
@@ -176,13 +193,13 @@
 
     <div class="col-md-1"  style="valign: top">
 	<div style="width: 60px; height: 60px;">
-	            <img src="../Eduvent/images/push-notification.png" alt="test" class="img-responsive img-circle">
+	            <img src="../images/push-notification.png" alt="test" class="img-responsive img-circle">
 
 </div>
 </div>
  <div class="col-md-1" style="valign: top" >
 	<div style="width: 60px; height: 60px;">
-			    <img src="../Eduvent/images/funny-profile-pictures.jpg" alt="test" class="img-responsive img-circle">
+			    <img src="../images/funny-profile-pictures.jpg" alt="test" class="img-responsive img-circle">
 
 </div>
 </div>
@@ -253,7 +270,7 @@
     <div class="row">
        
    	   <div class="col-md-4 indtile">
-            <img src="../Eduvent/images/bigdata.jpg" alt="test" class="img-responsive">
+            <img src="../images/bigdata.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -273,7 +290,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -293,7 +310,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e3.jpg" alt="test" class="img-responsive">
+            <img src="../images/e3.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -313,7 +330,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e4.jpg" alt="test" class="img-responsive">
+            <img src="../images/e4.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -333,7 +350,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e5.jpg" alt="test" class="img-responsive">
+            <img src="../images/e5.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -353,7 +370,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e6.jpg" alt="test" class="img-responsive">
+            <img src="../images/e6.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -373,7 +390,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e7.jpg" alt="test" class="img-responsive">
+            <img src="../images/e7.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -393,7 +410,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e8.jpg" alt="test" class="img-responsive">
+            <img src="../images/e8.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -412,7 +429,7 @@
 				</div> 
 				</div>'
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e4.jpg" alt="test" class="img-responsive">
+            <img src="../images/e4.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -432,7 +449,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e10.jpg" alt="test" class="img-responsive">
+            <img src="../images/e10.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -452,7 +469,7 @@
 				</div>
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e11.jpg" alt="test" class="img-responsive">
+            <img src="../images/e11.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -471,7 +488,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e3.jpg" alt="test" class="img-responsive">
+            <img src="../images/e3.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -493,7 +510,7 @@
 				
 				
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -512,7 +529,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -531,7 +548,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -550,7 +567,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -569,7 +586,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -588,7 +605,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -607,7 +624,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -626,7 +643,7 @@
 				</div> 
 				</div>
 				<div class="col-md-4 indtile">
-            <img src="../Eduvent/images/e1.jpg" alt="test" class="img-responsive">
+            <img src="../images/e1.jpg" alt="test" class="img-responsive">
             <div class="carousel-caption">
               <h4><strong>Title</strong></h4>
             </div>
@@ -652,10 +669,43 @@
   
   
   
-		</div>
+		</div>		
+
+	<!--/.Row -->
+
+
+	<!--Row 4 (Industries)-->
+
+	<!--/.Row 4-->
 </div>
 </main>
 <!--/.Main layout-->
+
+
+
+
+<!--Footer-->
+<footer class="page-footer" style="background-color:black;height:100px;">
+
+</footer>
+<!--/.Footer-->
+
+
+
+
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../lib/tether.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../lib/mdb.min.js"></script>
 
 </body>
 </html>
