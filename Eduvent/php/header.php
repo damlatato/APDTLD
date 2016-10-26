@@ -12,7 +12,7 @@
 			<!--Collapse content-->
 			<div class="collapse navbar-toggleable-xs" id="collapseEx2">
 				<a class="navbar-brand" href="../Eduvent/index.php">
-					<span><img src="../Eduvent/images/logo.png" height="50" width="54"></span>Eduvent
+					<span><img src="../Eduvent/images/logo-banner-small.png" height="50" width=""></span>
 				</a>
 				<!--Links-->
 				<ul class="nav navbar-nav">

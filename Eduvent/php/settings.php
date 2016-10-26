@@ -232,151 +232,153 @@ div.user-menu div.user-menu-content:not(.active){
 </center>
                 
 <div class="row user-menu-container square">
-        <div class="col-md-1 user-menu-btns">
-            <div class="btn-group-vertical square" id="responsive">
-                <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-bell-o fa-2x"></i>General
-                </a>
-                <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-envelope-o fa-2x"></i>Notifications
-                </a>
-                <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-laptop fa-2x"></i>Privacy
-                </a>
-                <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-money fa-2x"></i>Payments
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4 user-menu user-pad" style="width: 80%">
-            <div class="user-menu-content active">
-            	<div class="row">
-                        <ul class="user-menu-list">
-                        	<li class="fa coral"> <h4>Stefan Gunter</h4> 
-                        		<img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-circle" style="width: 45%; heigth:45%;">
-                        		<div class="row">
-									<h5 class= "fa fa-phone">+4915700-00-00</h5>
-								</div> 
-								<div class="row">
-                        			<h5 class= "fa fa-envelope">sg@gmail.com</h5> 
-            					</div>
-							</li>
-						</ul>		
-            	</div>
-            </div>
-            <div class="user-menu-content">
-                <ul class="user-menu-list">
-                <ul id="sortable" class="list-unstyled">
-                <h3>Notify me about:</h3>
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />New events posted</label>
-                        </div>
-                    </li>
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />Events fee discounts</label>
-                        </div>
-                    </li>
-                    <li class="ui-state-default">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="" />Events updates</label>
-                        </div>
-                    </li>
-                </ul>
-                </ul>
-            </div>
-            <div class="user-menu-content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">Show my profile to:</p>
-                        </div>
-                        <div class="stats turqbg">
-                            <select class="selectpicker">
-                            	<option>Everybody</option>
-                            	<option>Nobody</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">Show events booked by me to:</p>
-                        </div>
-                        <div class="stats turqbg">
-                            <select class="selectpicker">
-                            	<option>Everybody</option>
-                            	<option>Nobody</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="user-menu-content">
-                <!--Second columnn-->
-		<div class="col-md-4">
-			<!--Card-->
-			<div class="card card-inverse card-success">
 
-				<!--Card image-->
-				<div class="view overlay hm-white-slight">
-					<img src="http://mdbootstrap.com/images/regular/city/img%20(4).jpg"
-						class="img-fluid" alt=""> <a href="#">
-						<div class="mask"></div>
-					</a>
-				</div>
-				<!--/.Card image-->
-
-				<!--Card content-->
-				<div class="card-block">
-					<!--Title-->
-					<h4 class="card-title">Example Event</h4>
-					<!--Text-->
-					<p class="card-text">Some quick example text to build on the card
-						title and make up the bulk of the card's content.</p>
-				</div>
-				<div class="card-footer text-xs-center" style="background-color: #000">
-					Paid
-				</div>
-				<!--/.Card content-->
-			</div>
-			<!--/.Card-->
+	<div class="col-md-1 user-menu-btns">
+		<div class="btn-group-vertical square" id="responsive">
+			<a href="#" class="btn btn-block btn-default">
+			  <i class="fa fa-bell-o fa-2x"></i>General
+			</a>
+			<a href="#" class="btn btn-block btn-default">
+			  <i class="fa fa-envelope-o fa-2x"></i>Notifications
+			</a>
+			<a href="#" class="btn btn-block btn-default">
+			  <i class="fa fa-laptop fa-2x"></i>Privacy
+			</a>
+			<a href="#" class="btn btn-block btn-default">
+			  <i class="fa fa-money fa-2x"></i>Payments
+			</a>
 		</div>
-		<!--Second columnn-->
-		<!--Second columnn-->
-		<div class="col-md-4">
-			<!--Card-->
-			<div class="card">
+	</div>
 
-				<!--Card image-->
-				<div class="view overlay hm-white-slight">
-					<img src="http://mdbootstrap.com/images/regular/city/img%20(4).jpg"
-						class="img-fluid" alt=""> <a href="#">
-						<div class="mask"></div>
-					</a>
-				</div>
-				<!--/.Card image-->
-
-				<!--Card content-->
-				<div class="card-block">
-					<!--Title-->
-					<h4 class="card-title">Example Event</h4>
-					<!--Text-->
-					<p class="card-text">Some quick example text to build on the card
-						title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Pay 37$</a>
-				</div>
-				<!--/.Card content-->
-
+	<div class="col-md-4 user-menu user-pad" style="width: 80%">
+		<div class="user-menu-content active">
+			<div class="row">
+				<ul class="user-menu-list">
+					<li class="fa coral"> <h4>Stefan Gunter</h4> 
+						<img src="http://24.media.tumblr.com/273167b30c7af4437dcf14ed894b0768/tumblr_n5waxesawa1st5lhmo1_1280.jpg" class="img-circle" style="width: 45%; heigth:45%;">
+						<div class="row">
+							<h5 class= "fa fa-phone">+4915700-00-00</h5>
+						</div> 
+						<div class="row">
+							<h5 class= "fa fa-envelope">sg@gmail.com</h5> 
+						</div>
+					</li>
+				</ul>		
 			</div>
-			<!--/.Card-->
 		</div>
-		<!--Second columnn-->
-            </div>
-        </div>
+		<div class="user-menu-content">
+			<ul class="user-menu-list">
+			<ul id="sortable" class="list-unstyled">
+			<h3>Notify me about:</h3>
+				<li class="ui-state-default">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="" />New events posted</label>
+					</div>
+				</li>
+				<li class="ui-state-default">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="" />Events fee discounts</label>
+					</div>
+				</li>
+				<li class="ui-state-default">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="" />Events updates</label>
+					</div>
+				</li>
+			</ul>
+			</ul>
+		</div>
+		<div class="user-menu-content">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="info">
+						<p class="small" style="text-overflow: ellipsis">Show my profile to:</p>
+					</div>
+					<div class="stats turqbg">
+						<select class="selectpicker">
+							<option>Everybody</option>
+							<option>Nobody</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="info">
+						<p class="small" style="text-overflow: ellipsis">Show events booked by me to:</p>
+					</div>
+					<div class="stats turqbg">
+						<select class="selectpicker">
+							<option>Everybody</option>
+							<option>Nobody</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="user-menu-content">
+			<!--Second columnn-->
+			<div class="col-md-4">
+				<!--Card-->
+				<div class="card card-inverse card-success">
+
+					<!--Card image-->
+					<div class="view overlay hm-white-slight">
+						<img src="http://mdbootstrap.com/images/regular/city/img%20(4).jpg"
+							class="img-fluid" alt=""> <a href="#">
+							<div class="mask"></div>
+						</a>
+					</div>
+					<!--/.Card image-->
+
+					<!--Card content-->
+					<div class="card-block">
+						<!--Title-->
+						<h4 class="card-title">Example Event</h4>
+						<!--Text-->
+						<p class="card-text">Some quick example text to build on the card
+							title and make up the bulk of the card's content.</p>
+					</div>
+					<div class="card-footer text-xs-center" style="background-color: #000">
+						Paid
+					</div>
+					<!--/.Card content-->
+				</div>
+				<!--/.Card-->
+			</div>
+			<!--Second columnn-->
+			<!--Second columnn-->
+			<div class="col-md-4">
+				<!--Card-->
+				<div class="card">
+
+					<!--Card image-->
+					<div class="view overlay hm-white-slight">
+						<img src="http://mdbootstrap.com/images/regular/city/img%20(4).jpg"
+							class="img-fluid" alt=""> <a href="#">
+							<div class="mask"></div>
+						</a>
+					</div>
+					<!--/.Card image-->
+
+					<!--Card content-->
+					<div class="card-block">
+						<!--Title-->
+						<h4 class="card-title">Example Event</h4>
+						<!--Text-->
+						<p class="card-text">Some quick example text to build on the card
+							title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Pay 37$</a>
+					</div>
+					<!--/.Card content-->
+
+				</div>
+				<!--/.Card-->
+			</div>
+			<!--Second columnn-->
+		</div>
+	</div>
     </div>
     
 <script type="text/javascript" src="../Eduvent/lib/settings.js"></script>
