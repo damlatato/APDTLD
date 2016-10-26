@@ -1,0 +1,225 @@
+/******************************************/
+/*        General homepage styles         */
+/******************************************/
+
+html, body {
+	height: 100%;
+}
+
+.row {
+	margin-top: 10px;
+}
+
+/*.list-group-item {
+	padding: 3px;
+}*/
+
+/******************************************/
+/*          Nav bar                       */
+/******************************************/
+
+.navbar-brand {
+	padding: 0;
+}
+
+.navtop .navbar-nav li a {
+	line-height: 36px;
+}
+
+.navbar-nav li a:hover {
+	/*background-color: #eceff1;*/
+	background-color: #e5f4f3;
+}
+
+/******************************************/
+/*          Side bar                      */
+/******************************************/
+
+.collapse {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.sidebar-nav {
+	margin-top: 10px;
+}
+
+.sidebar-group-head {
+	font-size: 1.1rem;
+    /*text-indent: 6px;
+	padding-right: 6px;*/
+    line-height: 36px;
+}
+
+.sidebar-nav li {
+    text-indent: 8px;
+    line-height: 28px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+	
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+/******************************************/
+/*          Login form                    */
+/******************************************/
+
+/*#wrapper,*/
+#loginform {
+	z-index: 100;
+	width: 100%;
+	right: 0px;
+	width: 300px;
+	bottom: 0px;
+	position:fixed;
+	margin:0 auto;
+	margin-right:0px;
+	padding-bottom:25px;
+	background:#EBF4FB;
+	float: bottom;
+	border:1px solid #ACD8F0;
+}
+  
+#loginform { padding-top:18px; }
+  
+#loginform p { margin: 5px; }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left; }
+  
+.logout { float:right; }
+
+/******************************************/
+/*           Carousel                     */
+/******************************************/
+
+#carousel-example-1, .carousel-inner {
+	height: 400px;
+}
+
+/******************************************/
+/*          Event lists                   */
+/******************************************/
+
+.event-list {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.event-items {
+	list-style: none;
+}
+
+.event-list-item {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.event-list-item:hover {
+	background-color: lightgrey;
+}
+
+.event-list-item-category {
+	font-size: 16px;
+}
+
+.event-list-item-date {
+	font-size: 18px;
+}
+
+.highlights > .event-list-item:nth-child(1) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/40185/mac-freelancer-macintosh-macbook-40185-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.highlights > .event-list-item:nth-child(2) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/51079/pexels-photo-51079-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.highlights > .event-list-item:nth-child(3) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/73760/swimming-swimmer-female-race-73760-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.highlights > .event-list-item:nth-child(4) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.newest > .event-list-item:nth-child(1) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/5256/city-cars-road-houses-large.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.newest > .event-list-item:nth-child(2) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/116139/pexels-photo-116139-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.newest > .event-list-item:nth-child(3) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/29390/pexels-photo-29390-large.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.newest > .event-list-item:nth-child(4) {
+	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
+				url('https://static.pexels.com/photos/175032/pexels-photo-175032-large.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/******************************************/
+/*         Popular search terms           */
+/******************************************/
+
+.popular-search-tags .panel-body {
+	padding: 10px;
+}
+
+.popular-search-tags .tag {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.popular-search-tags .tag:hover {
+	background-color: #009688;
+	color: White;
+}
