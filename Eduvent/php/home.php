@@ -13,19 +13,19 @@
 	<!--Slides-->
 	<div class="carousel-inner" role="listbox">
 		<div class="carousel-item active">
-			<img src="images/c1.jpg" alt="First slide">
+			<img src="images/c1.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c2.jpg" alt="Second slide">
+			<img src="images/c2.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c3.jpg" alt="Third slide">
+			<img src="images/c3.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c4.jpg" alt="Third slide">
+			<img src="images/c4.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c5.jpg" alt="Third slide">
+			<img src="images/c5.jpg">
 		</div>
 	</div>
 	<!--/.Slides-->
@@ -45,6 +45,7 @@
 
 <div class="container">
 	<div class="row">
+
 		<div class="col-md-2">
 			<div class="sidebar-nav list-group">
 
@@ -254,7 +255,9 @@
 			<!--Row 4 (Event market) -->
 			<div class="row" id="event-market-area">
 				<div class="col-md-12">
-					<div class="event-market-area card grey lighten-5" id="search-result"></div>
+
+					<div class="event-market-area card grey lighten-5" id="search-result" hidden></div>
+
 					<div class="grey lighten-5" style="padding:4px;min-height:20em;">
 						<div class="row">
 							<div class="col-md-4">
@@ -274,8 +277,8 @@
 									<!--Card content-->
 									<div class="card-block text-xs-center">
 										<!--Category & Title-->
-										<h5>Shoes</h5>
-										<h4 class="card-title"><strong><a href="">Product name</a></strong></h4>
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 										<!--Description-->
 										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
