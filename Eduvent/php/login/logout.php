@@ -5,12 +5,12 @@ $user = new USER();
 
 if(!$user->is_logged_in())
 {
- $user->redirect('../login.php');
+ $user->redirect('../Eduvent/index.php?page=login');
 }
 
 if($user->is_logged_in()!="")
 {
  $user->logout(); 
- $user->redirect('../login.php');
+ $user->redirect('../Eduvent/index.php?page=login');
 }
 ?>

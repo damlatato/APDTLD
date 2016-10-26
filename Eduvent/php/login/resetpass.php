@@ -4,7 +4,7 @@ $user = new USER();
 
 if(empty($_GET['id']) && empty($_GET['code']))
 {
-	$user->redirect('../login.php');
+	$user->redirect('../Eduvent/index.php?page=login');
 }
 
 if(isset($_GET['id']) && isset($_GET['code']))

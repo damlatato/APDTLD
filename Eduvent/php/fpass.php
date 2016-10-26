@@ -1,12 +1,6 @@
 <?php
-include 'header.php';
 
-
-?>
-
-<?php
-
-require_once 'Login/class.user.php';
+require_once 'login/class.user.php';
 $user = new USER();
 
 if($user->is_logged_in()!="")
@@ -121,6 +115,3 @@ if(isset($_POST['btn-submit']))
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-<?php 
-include 'footer.php';?>
