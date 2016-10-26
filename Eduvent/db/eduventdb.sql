@@ -245,8 +245,13 @@ CREATE TABLE `users` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `OrganizerAcc` tinyint(1),
   `AddressID` int(11) NOT NULL,
+  `userName` varchar(20),
   `EmailAddress` int(11),
   `GenderID` int(11) NOT NULL,
+  `userPass` varchar(100) NOT NULL,
+  `userStatus` enum('Y','N') NOT NULL DEFAULT 'N',
+  `tokenCode` varchar(100) NOT NULL,
+  `userBirth` char(50) DEFAULT NULL,
   `DOB` date,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -296,7 +301,7 @@ CREATE TABLE `wishlist` (
 --
 -- Indizes der exportierten Tabellen
 --
-
+/*
 --
 -- Indizes für die Tabelle `bookings`
 --
@@ -460,7 +465,7 @@ ALTER TABLE `validsettingvalues`
 ALTER TABLE `wishlist`
   ADD CONSTRAINT `fk_wishlist_events1` FOREIGN KEY (`EventID`) REFERENCES `events` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_wishlist_users1` FOREIGN KEY (`UserID`) REFERENCES `users` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
+*/
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

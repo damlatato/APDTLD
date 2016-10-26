@@ -52,9 +52,9 @@ if(isset($_POST['btn-signup']))
       Hello $uname,
       <br /><br />
       Welcome to Eduvent!<br/>
-      To complete your registration  please , just click following link<br/>
+      To complete your registration please, just click following link<br/>
       <br /><br />
-      <a href='http://localhost/APDTLD/Eduvent/view/Login/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
+      <a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
       <br /><br />
       Thanks,";
       
