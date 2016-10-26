@@ -16,7 +16,7 @@
 				</a>
 				<!--Links-->
 				<ul class="nav navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#">Event market</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventmarket">Event market</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Event proposal</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>

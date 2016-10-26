@@ -33,6 +33,7 @@
 
 <!-- Custom styles -->
 <link href="../Eduvent/css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>

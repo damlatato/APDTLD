@@ -301,29 +301,199 @@
 							</div>
 							<div class="col-md-4">
 
+								<!--Card-->
+								<div class="card">
 
+									<!--Card image-->
+									<div class="view overlay hm-white-slight">
+										<img src="https://static.pexels.com/photos/59100/pexels-photo-59100-large.jpeg" class="img-fluid" alt="">
+										<a href="#">
+											<div class="mask"></div>
+										</a>
+									</div>
+									<!--/.Card image-->
+
+									<!--Card content-->
+									<div class="card-block text-xs-center">
+										<!--Category & Title-->
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+										<!--Description-->
+										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+										<!--Card footer-->
+										<div class="card-footer">
+											<span class="left">49€</span>
+											<span class="right">
+												<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+												<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+											</span>
+										</div>
+
+									</div>
+									<!--/.Card content-->
+
+								</div>
+								<!--/.Card-->
 
 							</div>
 							<div class="col-md-4">
 
+								<!--Card-->
+								<div class="card">
 
+									<!--Card image-->
+									<div class="view overlay hm-white-slight">
+										<img src="https://static.pexels.com/photos/110470/pexels-photo-110470-large.jpeg" class="img-fluid" alt="">
+										<a href="#">
+											<div class="mask"></div>
+										</a>
+									</div>
+									<!--/.Card image-->
+
+									<!--Card content-->
+									<div class="card-block text-xs-center">
+										<!--Category & Title-->
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+										<!--Description-->
+										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+										<!--Card footer-->
+										<div class="card-footer">
+											<span class="left">49€</span>
+											<span class="right">
+												<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+												<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+											</span>
+										</div>
+
+									</div>
+									<!--/.Card content-->
+
+								</div>
+								<!--/.Card-->
 							
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-4">
 
+								<!--Card-->
+								<div class="card">
 
+									<!--Card image-->
+									<div class="view overlay hm-white-slight">
+										<img src="https://static.pexels.com/photos/132700/pexels-photo-132700-large.jpeg" class="img-fluid" alt="">
+										<a href="#">
+											<div class="mask"></div>
+										</a>
+									</div>
+									<!--/.Card image-->
+
+									<!--Card content-->
+									<div class="card-block text-xs-center">
+										<!--Category & Title-->
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+										<!--Description-->
+										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+										<!--Card footer-->
+										<div class="card-footer">
+											<span class="left">49€</span>
+											<span class="right">
+												<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+												<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+											</span>
+										</div>
+
+									</div>
+									<!--/.Card content-->
+
+								</div>
+								<!--/.Card-->
 
 							</div>
 							<div class="col-md-4">						
 
+								<!--Card-->
+								<div class="card">
 
+									<!--Card image-->
+									<div class="view overlay hm-white-slight">
+										<img src="https://static.pexels.com/photos/25970/pexels-photo-large.jpg" class="img-fluid" alt="">
+										<a href="#">
+											<div class="mask"></div>
+										</a>
+									</div>
+									<!--/.Card image-->
+
+									<!--Card content-->
+									<div class="card-block text-xs-center">
+										<!--Category & Title-->
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+										<!--Description-->
+										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+										<!--Card footer-->
+										<div class="card-footer">
+											<span class="left">49€</span>
+											<span class="right">
+												<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+												<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+											</span>
+										</div>
+
+									</div>
+									<!--/.Card content-->
+
+								</div>
+								<!--/.Card-->
 							
 							</div>
 							<div class="col-md-4">
 
+								<!--Card-->
+								<div class="card">
 
+									<!--Card image-->
+									<div class="view overlay hm-white-slight">
+										<img src="https://static.pexels.com/photos/7374/startup-photos-large.jpg" class="img-fluid" alt="">
+										<a href="#">
+											<div class="mask"></div>
+										</a>
+									</div>
+									<!--/.Card image-->
+
+									<!--Card content-->
+									<div class="card-block text-xs-center">
+										<!--Category & Title-->
+										<h5>Topic</h5>
+										<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+										<!--Description-->
+										<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+										<!--Card footer-->
+										<div class="card-footer">
+											<span class="left">49€</span>
+											<span class="right">
+												<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+												<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+											</span>
+										</div>
+
+									</div>
+									<!--/.Card content-->
+
+								</div>
+								<!--/.Card-->
 							
 							</div>
 						</div>
