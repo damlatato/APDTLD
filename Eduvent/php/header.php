@@ -25,23 +25,25 @@
 					<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>
 <!-- 						this part  shows welcome message of logged in user with username and -->
 <!-- 						 a hyper link to logout the user and redirects the �logout.php� page.  -->
-						<?php
+
+<?php
 //  ob_start();
 //  session_start();
-//   require_once 'login/dbconfig.php';?>
+//  require_once 'login/dbconfig.php';
+?>
+
  <?php 
-// session_start();
+session_start(); //Comment out
 require_once 'login/class.user.php';
 $user_home = new USER();
-
  
- // if session is not set this will redirect to login page
+// if session is not set this will redirect to login page
  if($user_home->is_logged_in()!="")
 {
-$stmt = $user_home->runQuery("SELECT * FROM tbl_users WHERE userID=:uid");
+$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
 $stmt->execute(array(":uid"=>$_SESSION['userSession']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
-<!-- $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
+<!-- $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
 <!--  	$userRow=mysql_fetch_array($res); -->
 <!-- 	include 'Livechat/livechat.php' -->
 <li class="nav-item dropdown">
@@ -51,11 +53,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 	</a>
 	</a>
 	<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-		<a class="dropdown-item waves-effect waves-light" href="login/member.php">My Profile</a>
+		<a class="dropdown-item waves-effect waves-light" href="php/login/member.php">My Profile</a>
 		<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
 		<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
 		<a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-		<a class="dropdown-item waves-effect waves-light" href="login/logout.php?logout">Sign Out</a>
+		<a class="dropdown-item waves-effect waves-light" href="php/login/logout.php?logout">Sign Out</a>
 	</div>
 </li>  
 
@@ -66,7 +68,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 ?>
 <!-- header("Location: login.php"); -->
 <!--   // select loggedin users detail -->
-<!--   $res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']); -->
+<!--   $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
 <li class="nav-item"><a href="../Eduvent/index.php?page=login" class="nav-link">Log in</a>

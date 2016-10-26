@@ -6,7 +6,7 @@ $user_home = new USER();
 
 if(!$user_home->is_logged_in())
 {
- $user_home->redirect('login.php');
+ $user_home->redirect('../Eduvent/index.php?page=login');
 }
 
 $stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
