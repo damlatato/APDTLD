@@ -30,7 +30,7 @@
 //  session_start();
 //   require_once 'login/dbconfig.php';?>
  <?php 
- session_start();
+// session_start();
 require_once 'login/class.user.php';
 $user_home = new USER();
 
