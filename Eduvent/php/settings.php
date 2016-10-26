@@ -1,8 +1,3 @@
-<?php
-include 'header.php';
-?>
-  
-
 <style>
 /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 .square, .btn {
@@ -232,29 +227,24 @@ div.user-menu div.user-menu-content:not(.active){
 </style>
 
     
-<script src="includes/js-lib/prefixfree.min.js"></script>
 <center>
-<h3>My Profile</h3>
+	<h3>My Profile</h3>
 </center>
                 
 <div class="row user-menu-container square">
         <div class="col-md-1 user-menu-btns">
             <div class="btn-group-vertical square" id="responsive">
                 <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-bell-o fa-2x"></i>
-                  General
+                  <i class="fa fa-bell-o fa-2x"></i>General
                 </a>
                 <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-envelope-o fa-2x"></i>
-                  Notifications
+                  <i class="fa fa-envelope-o fa-2x"></i>Notifications
                 </a>
                 <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-laptop fa-2x"></i>
-                  Privacy
+                  <i class="fa fa-laptop fa-2x"></i>Privacy
                 </a>
                 <a href="#" class="btn btn-block btn-default">
-                  <i class="fa fa-money fa-2x"></i>
-                  Payments
+                  <i class="fa fa-money fa-2x"></i>Payments
                 </a>
             </div>
         </div>
@@ -389,10 +379,4 @@ div.user-menu div.user-menu-content:not(.active){
         </div>
     </div>
     
-<script src='includes/js-lib/jquery-2.2.3.js'></script>
-<script src='includes/js-lib/bootstrap.min.js'></script>
-<script src="includes/js-lib/settings.js"></script>
-        
-<?php
-include 'footer.php';
-?>
+<script type="text/javascript" src="../Eduvent/lib/settings.js"></script>
