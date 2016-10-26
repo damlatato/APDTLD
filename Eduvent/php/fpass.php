@@ -30,7 +30,7 @@ if(isset($_POST['btn-submit']))
        <br /><br />
        Click Following Link To Reset Your Password 
        <br /><br />
-       <a href='http://localhost/APDTLD/Eduvent/view/Login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
+       <a href='http://localhost/APDTLD/Eduvent/php/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
        <br /><br />
        thank you :)
        ";

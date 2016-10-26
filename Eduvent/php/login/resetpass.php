@@ -39,7 +39,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
 						<button class='close' data-dismiss='alert'>&times;</button>
 						Password Changed.
 						</div>";
-				header("refresh:5;../login.php");
+				header("refresh:5;../../index.php?page=login");
 			}
 		}	
 	}

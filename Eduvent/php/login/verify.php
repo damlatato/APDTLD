@@ -30,7 +30,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
    $msg = "
              <div class='alert alert-success'>
        <button class='close' data-dismiss='alert'>&times;</button>
-       <strong>WoW !</strong>  Your Account is Now Activated: <a href='../../Eduvent/index.php?page=login'>Login here</a>
+       <strong>WoW !</strong>  Your Account is Now Activated: <a href='../../index.php?page=login'>Login here</a>
           </div>
           "; 
   }
@@ -39,7 +39,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
    $msg = "
              <div class='alert alert-error'>
        <button class='close' data-dismiss='alert'>&times;</button>
-       <strong>sorry !</strong>  Your Account is allready Activated : <a href='../Eduvent/index.php?page=login'>Login here</a>
+       <strong>sorry !</strong>  Your Account is allready Activated : <a href='../../index.php?page=login'>Login here</a>
           </div>
           ";
   }
