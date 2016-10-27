@@ -1,3 +1,9 @@
+<?php
+session_start(); //Comment out
+require_once 'php/login/class.user.php';
+$user_home = new USER();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

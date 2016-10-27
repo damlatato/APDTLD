@@ -1,9 +1,3 @@
-<?php
-/*session_start(); //Comment out
-require_once 'login/class.user.php';
-$user_home = new USER();*/
-?>
-
 <header>
 
 	<!--Navbar-->
@@ -36,9 +30,13 @@ $user_home = new USER();*/
 //  ob_start();
 //  session_start();
 //  require_once 'login/dbconfig.php';
+?>
 
-
-
+ <?php 
+session_start(); //Comment out
+require_once 'login/class.user.php';
+$user_home = new USER();
+ 
 // if session is not set this will redirect to login page
  if($user_home->is_logged_in()!="")
 {
