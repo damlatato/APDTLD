@@ -10,9 +10,8 @@ $( document ).ready(function() {
 		width: el.css("width")
 	}, 2200 );*/
 	
-	overlay.delay(800).show("slide", { direction: "left" }, 2000);
-
-	$("#carousel-overlay-text").delay(2300).show("slide", { direction: "left" }, 1400);
+	overlay.delay(800).show("slide", { direction: "left" }, 1500);
+	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
 });
 </script>
 
@@ -21,10 +20,10 @@ $( document ).ready(function() {
 	<!--Indicators-->
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
-		<!--<li data-target="#carousel-example-1" data-slide-to="1"></li>
+		<li data-target="#carousel-example-1" data-slide-to="1"></li>
 		<li data-target="#carousel-example-1" data-slide-to="2"></li>
 		<li data-target="#carousel-example-1" data-slide-to="3"></li>
-		<li data-target="#carousel-example-1" data-slide-to="4"></li>-->
+		<li data-target="#carousel-example-1" data-slide-to="4"></li>
 	</ol>
 	<!--/.Indicators-->
 
@@ -43,7 +42,7 @@ $( document ).ready(function() {
 			</div>
 			<img id="carousel-image-1" src="../Eduvent/view/images/c1.jpg">
 		</div>
-		<!--<div class="carousel-item">
+		<div class="carousel-item">
 			<img src="../Eduvent/view/images/c2.jpg">
 		</div>
 		<div class="carousel-item">
@@ -54,7 +53,7 @@ $( document ).ready(function() {
 		</div>
 		<div class="carousel-item">
 			<img src="../Eduvent/view/images/c5.jpg">
-		</div>-->
+		</div>
 	</div>
 	<!--/.Slides-->
 
