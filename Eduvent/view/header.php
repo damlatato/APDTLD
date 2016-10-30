@@ -50,7 +50,7 @@ if($user_home->is_logged_in()!="") {
 			<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span>
 		</a>
 		<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=member">My profile</a>
+			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=settings">My profile</a>
 			<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
 			<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
 			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
@@ -72,9 +72,6 @@ if($user_home->is_logged_in()!="") {
 
 <?php } ?>
 
-					<li class="nav-item">
-						<a class="nav-link waves-effect waves-light" href="../Eduvent/index.php?page=settings"><i class="fa fa-gear"></i> Settings</a>
-					</li>
 				</ul>
 
 				<!--Search form-->

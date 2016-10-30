@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../Eduvent/controller/login/class.user.php';
+require_once 'class.user.php';
 
 $user_home = new USER();
 
