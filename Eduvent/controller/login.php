@@ -5,7 +5,7 @@
 // and when it finds both results in table then it will start a session and
 // allow user to access home page else it will show appropriate message.
 
-require_once 'login/class.user.php';
+//require_once '../Eduvent/controller/login/class.user.php';
 $user_login = new USER();
 
 if($user_login->is_logged_in()!="")
@@ -32,7 +32,7 @@ if(isset($_POST['btn-login'])) {
 
 		<div class='alert alert-error'>
 			<button class='close' data-dismiss='alert'>&times;</button>
-			<strong>Sorry!</strong>This Account is not. Please click on the activation link in your email. 
+			<strong>Sorry!</strong>This Account is not activated. Please click on the activation link in your email. 
 		</div>
 
 <?php
@@ -58,7 +58,7 @@ if(isset($_POST['btn-login'])) {
 
 			<div class='alert alert-success'>
 				<button class='close' data-dismiss='alert'>&times;</button>
-				<strong>Wrong Details!</strong> 
+				<strong>Wrong details!</strong> 
 			</div>
 
 <?php
@@ -79,9 +79,9 @@ if(isset($_POST['btn-login'])) {
 					padding: 7px 9px; border: 1px solid #ccc;   border-radius: 4px;width: 226px;" placeholder="Password" name="txtupass" required />
 			<hr />
 			<button class="btn btn-large btn-primary" type="submit" name="btn-login">Sign in</button>
-			<!--<a href="php/signup.php" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />-->
+			<!--<a href="../Eduvent/controller/signup.php" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />-->
 			<a href="../Eduvent/index.php?page=signup" style="float:right;background: #c12e2a;" class="btn btn-large">Sign up</a><hr />
-			<a href="../Eduvent/index.php?page=fpass">Lost your Password?</a>
+			<a href="../Eduvent/index.php?page=fpass">Lost your password?</a>
 		</form>
 
 	</div> <!-- /container -->

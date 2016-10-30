@@ -225,6 +225,7 @@
 					<nav class="navbar navbar-light grey lighten-5">
 						<div class="collapse navbar-toggleable-xs">
 							<div class="pull-xs-left">
+
 								<form class="form-inline" id="search-form" onsubmit="runSearch()">
 									<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
 									<span>within<button class="btn btn-default-outline waves-effect dropdown-toggle" type="button">5 km</button>
@@ -237,6 +238,7 @@
 										</div>
 									</span>
 								</form>
+
 							</div>
 							<div class="pull-xs-right">
 								<div class="btn-toolbar" role="toolbar" aria-label="view-options">

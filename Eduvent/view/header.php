@@ -44,23 +44,22 @@ if($user_home->is_logged_in()!="") {
 <!--  	$userRow=mysql_fetch_array($res); -->
 <!-- 	include 'Livechat/livechat.php' -->
 
-<li class="nav-item dropdown">
-	<a class="nav-link dropdown-toggle waves-effect waves light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-		<i class="fa fa-user"></i>
-		<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span>
-	</a>
-	</a>
-	<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-		<a class="dropdown-item waves-effect waves-light" href="php/login/member.php">My profile</a>
-		<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
-		<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
-		<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
-	</div>
-</li>  
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle waves-effect waves light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			<i class="fa fa-user"></i>
+			<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span>
+		</a>
+		<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=member">My profile</a>
+			<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
+			<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
+			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
+		</div>
+	</li>
 
 
 <?php
-	} else { 
+} else { 
 ?>
 
 <!-- header("Location: login.php"); -->
@@ -85,7 +84,7 @@ if($user_home->is_logged_in()!="") {
 
 			</div>
 			<!--/.Collapse content-->
-		</div>			
+		</div>
 	</div>
 	</nav>
 	<!--/.Navbar-->

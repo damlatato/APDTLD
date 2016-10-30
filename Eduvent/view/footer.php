@@ -35,10 +35,10 @@
 	<ul>
 		<li>
 			<h5>Register for free</h5></li>
-		<li><a href="login/signup.php" class="btn btn-danger">Sign up!</a></li>
+		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-danger">Sign up</a></li>
 		<li>
 			<h5>Need help?</h5></li>
-		<li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default waves-effect waves-light">Support</a></li>
+		<li><a target="_blank" href="#" class="btn btn-default waves-effect waves-light">Support</a></li>
 		
 	</ul>
 </div>

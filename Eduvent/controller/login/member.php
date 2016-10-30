@@ -1,12 +1,11 @@
 <?php
 session_start();
-require_once 'class.user.php';
-// include "../livechat/livechat.php";
+require_once '../Eduvent/controller/login/class.user.php';
+
 $user_home = new USER();
 
-if(!$user_home->is_logged_in())
-{
- $user_home->redirect('../Eduvent/index.php?page=login');
+if(!$user_home->is_logged_in()) {
+	$user_home->redirect('../Eduvent/index.php?page=login');
 }
 
 $stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
@@ -17,18 +16,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html class="no-js">
-    
+
     <head>
-        <title><?php echo $row['EmailAddress']; ?></title>
-        <!-- Bootstrap -->
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="assets/styles.css" rel="stylesheet" media="screen">
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        
     </head>
     
     <body>
