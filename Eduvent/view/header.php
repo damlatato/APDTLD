@@ -18,19 +18,19 @@
 				<ul class="nav navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventmarket">Event market</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Event proposal</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventsproposal">Event proposal</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=about">About</a></li>
 				</ul>
 				<ul class="nav navbar-nav pull-right">
-					<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>
+					<!--<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>-->
 
 <!-- this part  shows welcome message of logged in user with username and  -->
-<!-- a hyper link to logout the user and redirects the �logout.php� page. -->
+<!-- a hyper link to logout the user and redirects the logout.php page. -->
 
 <?php
 //  ob_start();
 //  session_start();
-//  require_once 'login/dbconfig.php';
+//  require_once '../Eduvent/controller/login/dbconfig.php';
 
 
 // if session is not set this will redirect to login page
