@@ -26,7 +26,7 @@ html, body {
 	line-height: 36px;
 }
 
-.navbar-nav li a:hover {
+.navbar-nav .nav-item > a:hover {
 	/*background-color: #eceff1;*/
 	background-color: #e5f4f3;
 }

@@ -9,7 +9,7 @@ require_once '../Eduvent/controller/login/class.user.php';
 $reg_user = new USER();
 
 if($reg_user->is_logged_in()!="") {
-	$reg_user->redirect('../Eduvent/controller/login/member.php');
+	$reg_user->redirect('../Eduvent/index.php?page=settings');
 }
 
 

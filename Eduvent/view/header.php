@@ -68,7 +68,11 @@ if($user_home->is_logged_in()!="") {
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
 
-					<li class="nav-item"><a href="../Eduvent/index.php?page=login" class="nav-link">Log in</a>
+					<li>
+						<a href="../Eduvent/index.php?page=login">
+							<button type="button" class="btn btn-primary">Log in</button>
+						</a>
+					</li>
 
 <?php } ?>
 

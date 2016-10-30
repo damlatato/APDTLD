@@ -4,7 +4,7 @@ require_once '../Eduvent/controller/login/class.user.php';
 $user = new USER();
 
 if($user->is_logged_in()!="") {
-	$user->redirect('../Eduvent/controller/login/member.php');
+	$user->redirect('../Eduvent/index.php?page=settings');
 }
 
 if(isset($_POST['btn-submit'])) {
@@ -23,7 +23,7 @@ if(isset($_POST['btn-submit'])) {
 			Hello , $email
 			<br /><br />
 			We got requested to reset your password, if you do this then just click the following link to reset your password, if not just ignore                   this email,
-			<br /><br />Click Following Link To Reset Your Password<br /><br />
+			<br /><br />Please click on the following link to reset your password<br /><br />
 			<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
 			<br /><br />
 			thank you :)";
