@@ -16,6 +16,9 @@ $user_home = new USER();
 <!-- JQuery -->
 <script type="text/javascript" src="../Eduvent/lib/jquery-2.2.3.min.js"></script>
 
+<!-- JQuery UI -->
+<script type="text/javascript" src="../Eduvent/lib/jquery-ui.min.js"></script>
+
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="../Eduvent/lib/tether.min.js"></script>
 

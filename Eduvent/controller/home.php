@@ -1,21 +1,49 @@
+<script>
+$( document ).ready(function() {
+	$("#carousel-overlay-text").hide();
+	overlay=$("#carousel-item-overlay");
+	overlay.hide();
+	el=$("#carousel-example-1");
+	//overlay.height("400px");
+
+	/*overlay.delay(800).animate({
+		width: el.css("width")
+	}, 2200 );*/
+	
+	overlay.delay(800).show("slide", { direction: "left" }, 2000);
+
+	$("#carousel-overlay-text").delay(2300).show("slide", { direction: "left" }, 1400);
+});
+</script>
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
 	<!--Indicators-->
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-1" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-example-1" data-slide-to="1"></li>
+		<!--<li data-target="#carousel-example-1" data-slide-to="1"></li>
 		<li data-target="#carousel-example-1" data-slide-to="2"></li>
 		<li data-target="#carousel-example-1" data-slide-to="3"></li>
-		<li data-target="#carousel-example-1" data-slide-to="4"></li>
+		<li data-target="#carousel-example-1" data-slide-to="4"></li>-->
 	</ol>
 	<!--/.Indicators-->
 
 	<!--Slides-->
 	<div class="carousel-inner" role="listbox">
 		<div class="carousel-item active">
-			<img src="../Eduvent/view/images/c1.jpg">
+			<div id="carousel-item-overlay" class="carousel-item-overlay">
+				<div id="carousel-overlay-text">
+					<br/><br/>
+					<span id="text-carousel-1">Finding education events.</span>
+					<span id="text-carousel-2">Easily.</span><br><br/><br/><br/><br/><br/><br/>
+					<a href="../Eduvent/index.php?page=signup">
+						<button class="btn" id="btn-signup-carousel" type="button">Sign up</button>
+					</a>
+				</div>
+			</div>
+			<img id="carousel-image-1" src="../Eduvent/view/images/c1.jpg">
 		</div>
-		<div class="carousel-item">
+		<!--<div class="carousel-item">
 			<img src="../Eduvent/view/images/c2.jpg">
 		</div>
 		<div class="carousel-item">
@@ -26,7 +54,7 @@
 		</div>
 		<div class="carousel-item">
 			<img src="../Eduvent/view/images/c5.jpg">
-		</div>
+		</div>-->
 	</div>
 	<!--/.Slides-->
 
