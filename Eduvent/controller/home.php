@@ -228,10 +228,10 @@
 
 								<form class="form-inline" id="search-form" onsubmit="runSearch()">
 									<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
-									<span>within<button class="btn btn-default-outline waves-effect dropdown-toggle" type="button">5 km</button>
+									<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
 										from
 										<div style="display:inline-block;">
-											<button class="btn btn-default-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
+											<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
 											<!--<div class="dropdown-menu">
 
 											</div>-->
