@@ -48,7 +48,7 @@ $user_home = new USER();
 include 'view/header.php';
 ?>
 </header>
-	
+
 <!--Main-->
 <main>
 

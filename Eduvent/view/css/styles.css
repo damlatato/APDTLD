@@ -43,23 +43,29 @@ html, body {
 	margin-top: 10px;
 }
 
+.sidebar-head {
+	background-color: #1694b2;
+	border: 1px solid #1694b2;
+}
+
 .sidebar-group-head {
+	background-color: #fafafa;
+	border: 1px solid #1694b2;
+	color: #1694b2;
 	font-size: 1.1rem;
-    /*text-indent: 6px;
-	padding-right: 6px;*/
     line-height: 36px;
 }
 
 .sidebar-nav li {
+	background-color: ;
     text-indent: 4px;
     line-height: 28px;
 }
 
 .sidebar-nav li a {
+	color: #106f85;
     display: block;
     text-decoration: none;
-    color: #999999;
-	
 }
 
 .sidebar-nav li a:hover {
@@ -221,4 +227,18 @@ html, body {
 .popular-search-tags .tag:hover {
 	background-color: #1694b2;
 	color: White;
+}
+
+/******************************************/
+/*         Event market                   */
+/******************************************/
+
+.event-image-home {
+	height:190px;
+	width:284px;
+}
+
+.event-image {
+	height:169px;
+	width:253px;
 }
