@@ -13,19 +13,19 @@
 	<!--Slides-->
 	<div class="carousel-inner" role="listbox">
 		<div class="carousel-item active">
-			<img src="images/c1.jpg">
+			<img src="../Eduvent/view/images/c1.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c2.jpg">
+			<img src="../Eduvent/view/images/c2.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c3.jpg">
+			<img src="../Eduvent/view/images/c3.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c4.jpg">
+			<img src="../Eduvent/view/images/c4.jpg">
 		</div>
 		<div class="carousel-item">
-			<img src="images/c5.jpg">
+			<img src="../Eduvent/view/images/c5.jpg">
 		</div>
 	</div>
 	<!--/.Slides-->
