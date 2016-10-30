@@ -70,7 +70,7 @@ html, body {
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #FED835;
     background: rgba(255,255,255,0.2);
 }
 
@@ -234,11 +234,15 @@ html, body {
 /******************************************/
 
 .event-image-home {
-	height:190px;
-	width:284px;
+	height: 190px;
+	width: 284px;
 }
 
 .event-image {
-	height:169px;
-	width:253px;
+	height: 166px;
+	width: 199.25px;
+}
+
+.event-text {
+	font-size: 0.9rem;
 }

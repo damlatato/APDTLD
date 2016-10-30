@@ -98,7 +98,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -137,7 +137,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -175,7 +175,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -213,7 +213,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -254,7 +254,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -293,7 +293,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -332,7 +332,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
@@ -371,7 +371,7 @@
 									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 									<!--Description-->
-									<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
 
 									<!--Card footer-->
 									<div class="card-footer">
