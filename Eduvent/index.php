@@ -1,6 +1,6 @@
 <?php
 session_start(); //Comment out
-require_once 'php/login/class.user.php';
+require_once 'controller/login/class.user.php';
 $user_home = new USER();
 ?>
 
@@ -29,23 +29,23 @@ $user_home = new USER();
 <script type="text/javascript" src="../Eduvent/lib/prefixfree.min.js"></script>
 	
 <!-- Font Awesome-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="../Eduvent/view/font-awesome/css/font-awesome.min.css">
 
 <!-- Bootstrap core CSS -->
-<link href="../Eduvent/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../Eduvent/view/css/bootstrap.min.css">
 
 <!-- Material Design Bootstrap -->
-<link href="../Eduvent/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../Eduvent/view/css/mdb.min.css">
 
 <!-- Custom styles -->
-<link href="../Eduvent/css/styles.css" rel="stylesheet">
+<link rel="stylesheet" href="../Eduvent/view/css/styles.css">
 
 </head>
 
 <body>
 <header>
 <?php
-include 'php/header.php';
+include 'view/header.php';
 ?>
 </header>
 	
@@ -56,10 +56,10 @@ include 'php/header.php';
 
 	if (isset($_GET['page'])) {
 		$page = $_GET['page'] . '.php';
-		include('php/'.$page);
+		include('controller/'.$page);
 	}	/* if $page has a value, include it */
 	else {
-		include('php/home.php');
+		include('controller/home.php');
 	}	/* otherwise, include the default page */
 
 ?>
@@ -73,7 +73,7 @@ include 'php/header.php';
 <footer class="page-footer center-on-small-only">
 
 <?php
-include 'php/footer.php';
+include 'view/footer.php';
 ?>
 
 </footer>
