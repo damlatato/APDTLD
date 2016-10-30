@@ -70,7 +70,7 @@ if($user_home->is_logged_in()!="") {
 
 					<li>
 						<a href="../Eduvent/index.php?page=login">
-							<button type="button" class="btn btn-primary">Log in</button>
+							<button type="button" class="btn btn-primary" style="background-color:#1694b2;">Log in</button>
 						</a>
 					</li>
 
