@@ -1,9 +1,3 @@
-<?php
-/*session_start(); //Comment out
-require_once 'login/class.user.php';
-$user_home = new USER();*/
-?>
-
 <header>
 
 	<!--Navbar-->
@@ -22,15 +16,16 @@ $user_home = new USER();*/
 				</a>
 				<!--Links-->
 				<ul class="nav navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="../Event-market/index.php">Event market</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventmarket">Event market</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Event proposal</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 				</ul>
 				<ul class="nav navbar-nav pull-right">
 					<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>
-<!-- 						this part  shows welcome message of logged in user with username and -->
-<!-- 						 a hyper link to logout the user and redirects the �logout.php� page.  -->
+
+<!-- this part  shows welcome message of logged in user with username and  -->
+<!-- a hyper link to logout the user and redirects the �logout.php� page. -->
 
 <?php
 //  ob_start();
@@ -38,16 +33,17 @@ $user_home = new USER();*/
 //  require_once 'login/dbconfig.php';
 
 
-
 // if session is not set this will redirect to login page
- if($user_home->is_logged_in()!="")
-{
-$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
-$stmt->execute(array(":uid"=>$_SESSION['userSession']));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);?>
+if($user_home->is_logged_in()!="") {
+	$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
+	$stmt->execute(array(":uid"=>$_SESSION['userSession']));
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!-- $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
 <!--  	$userRow=mysql_fetch_array($res); -->
 <!-- 	include 'Livechat/livechat.php' -->
+
 <li class="nav-item dropdown">
 	<a class="nav-link dropdown-toggle waves-effect waves light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		<i class="fa fa-user"></i>
@@ -55,37 +51,41 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 	</a>
 	</a>
 	<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-		<a class="dropdown-item waves-effect waves-light" href="php/login/member.php">My Profile</a>
+		<a class="dropdown-item waves-effect waves-light" href="php/login/member.php">My profile</a>
 		<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
 		<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
-		<a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-		<a class="dropdown-item waves-effect waves-light" href="php/login/logout.php?logout">Sign Out</a>
+		<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
 	</div>
 </li>  
 
 
- <?php } else { 
- 	
-
+<?php
+	} else { 
 ?>
+
 <!-- header("Location: login.php"); -->
 <!--   // select loggedin users detail -->
 <!--   $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
-<li class="nav-item"><a href="../Eduvent/index.php?page=login" class="nav-link">Log in</a>
+
+					<li class="nav-item"><a href="../Eduvent/index.php?page=login" class="nav-link">Log in</a>
+
 <?php } ?>
 
-					<li class="nav-item"><a class="nav-link waves-effect waves-light" href="../Eduvent/index.php?page=settings"><i class="fa fa-gear"></i> Settings</a></li>
+					<li class="nav-item">
+						<a class="nav-link waves-effect waves-light" href="../Eduvent/index.php?page=settings"><i class="fa fa-gear"></i> Settings</a>
+					</li>
 				</ul>
+
 				<!--Search form-->
-				<!--<form class="form-inline">
+				<form class="form-inline">
 					<input id="search-general" class="form-control" type="text" placeholder="Search">
-				</form>-->
+				</form>
+
 			</div>
 			<!--/.Collapse content-->
-		</div>
-			
+		</div>			
 	</div>
 	</nav>
 	<!--/.Navbar-->
