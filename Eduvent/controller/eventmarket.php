@@ -1,711 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Eduvent/ Event Market</title>
-
-<!-- Bootstrap core CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Material Design Bootstrap -->
-<link href="../css/mdb.min.css" rel="stylesheet">
-
-<!-- Custom styles -->
-<link href="../css/styles.css" rel="stylesheet">
-
-<!-- Styles for carousel -->
-<link href="../css/carousel.css" rel="stylesheet">
-
-  <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        /* Necessary for full page carousel*/
-        
-
-        html,
-        body {
-            height: 100%;
-        }
-        /* Navigation*/
-        
-        .navbar {
-            background-color: transparent;
-
-        }
-        
-		
-        footer.page-footer {
-            background-color: #4285F4;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                background-color: #4285F4;
-            }
-        }
-        /* Carousel*/
-        
-        .carousel {
-            height: 250px;
-			margin-bottom: 10px;
-        }
-        
-        @media (max-width: 776px) {
-            .carousel {
-                height: 300px;
-            }
-        }
-        
-        .carousel-item,
-        .active {
-            height: 100%;
-        }
-        
-        .carousel-inner {
-            height: 100%;
-        }
-        
-        .carousel-item:nth-child(1) {
-            background-image: url("http://coverjunction.s3.amazonaws.com/manual/low/colorful4.jpg");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            opacity: 0.4;
-        }
-        
-        .carousel-item:nth-child(2) {
-            background-image: url("http://www.mercadodeterras.com.br/public/main/assets/images/carousel/carousel-img-2.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .carousel-item:nth-child(3) {
-            background-image: url("http://www.mercadodeterras.com.br/public/main/assets/images/carousel/carousel-img-5.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        /*Caption*/
-        
-        .flex-center {
-            color: #fff;
-        }
-	
-	.topics-area {
-	color: #48453d;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	overflow: hidden;
-}
-
-.topics-heading {
-	background-color: lavender;
-	color: #48453d;
-	font-size: 16px;
-	padding: 4px;
-	margin-bottom: 2px;
-}
-
-.topic-items {
-	background-color: lavender;
-	text-align: center;
-}
-
-.topic-item {
-	background-color: #756f5d;
-	padding: 12px;
-	color: #fff;
-	display: inline-block;
-	font-size: 14px;
-	line-height: 5px;
-	border-radius: 9px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.topic-item:hover {
-	background-color: #a38018;
-	color: White;
-}
-
-.scroll-event-market{
-    max-height: 690px;
-    overflow-y:scroll; 
-}
-
-.scr{
-	max-height:400px;
-	overflow-y: scroll;
-}
-</style>
-	
-</head>
-
-<body>
-<!--Main layout-->
-<main>
-
-<div class="container">
-
-
-<!--Header of the page-->
-<div class="row" style="background-color: lightgreen;">
-    <div class="col-md-3" >
-            <img src="../images/Eduvent3.png" alt="test" class="img-responsive">
+<!--Row 2 (Popular searches) -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default popular-search-tags">
+			<div class="panel-heading"><h5 class="font-weight-bold"><b>Popular search tags</b></h5></div>
+			<div class="panel-body list-group flex-center grey lighten-5">
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
+				<span class="tag tag-default"><a>Search tag</a></span>
 			</div>
-			
-    <div class="col-md-7" style={ align="center"; valign="bottom";} > 
-		
-		    <!-- the uper text-->
-		    <div class="row"> 
-				<h1><strong>Save time, save effort, be eficient... </strong></h1>
-		     </div>
-		
-		    <!-- the navigation bar-->
-		    <div class="row" >
-		    <nav class="navbar navbar-dark " >
-       
-                <!--Links-->
-                <ul class="nav navbar-nav">
-                    <li class="nav-item" >
-                        <a class="nav-link" href="#">Event Market</a>
-                    </li>
-					<li class="nav-item">
-                        <a class="nav-link" href="#">My Events</a>
-                    </li>
-					<li class="nav-item">
-                        <a class="nav-link" href="#">Create Event</a>
-                    </li>
-					<li class="nav-item">
-                        <a class="nav-link" href="#">My Payments</a>
-                    </li>
-                    
-                </ul>
-                <!--Search form-->
-                <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
-                </form>        
-            </nav>
 		</div>
-</div>
-
-    <div class="col-md-1"  style="valign: top">
-	<div style="width: 60px; height: 60px;">
-	            <img src="../images/push-notification.png" alt="test" class="img-responsive img-circle">
-
-</div>
-</div>
- <div class="col-md-1" style="valign: top" >
-	<div style="width: 60px; height: 60px;">
-			    <img src="../images/funny-profile-pictures.jpg" alt="test" class="img-responsive img-circle">
-
-</div>
-</div>
-</div>
-
-
-	<!--Row 2 (Popular topics) -->
-	<div class="row topics-area">
-	
-			<div class="topics">
-				<div class="topics-heading">Popular topics</div>
-				<div class="topic-items">
-					<a href="#" class="topic-item"><div>Topic 1</div></a>
-					<a href="#" class="topic-item"><div>Topic 2</div></a>
-					<a href="#" class="topic-item"><div>Topic 3</div></a>
-					<a href="#" class="topic-item"><div>Topic 4</div></a>
-					<a href="#" class="topic-item"><div>Topic 5</div></a>
-				</div>
-			</div>
-
 	</div>
-	<!--/.Row 2-->
-	
-	<!--Row 3 (Event market buttons) -->
-	<div class="row" style="background-color:lavender;">
+</div>
+<!--/.Row 2-->
 
-		<div class="col-md-12">
-			
-			<div class="row">
-				<div class="col-md-4">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
+<!--Row 3: Navbar (Event market filter bar) -->
+<div class="row">
+	<div class="col-md-12">
+		<nav class="navbar navbar-light grey lighten-5">
+			<div class="collapse navbar-toggleable-xs">
+				<div class="pull-xs-left">
+
+					<form class="form-inline" id="search-form" onsubmit="runSearch()">
+						<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
+						<span>within<button class="btn btn-default-outline waves-effect dropdown-toggle" type="button">5 km</button>
+							from
+							<div style="display:inline-block;">
+								<button class="btn btn-default-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
+								<!--<div class="dropdown-menu">
+
+								</div>-->
+							</div>
 						</span>
-					</div>
-					</div><!-- /.col-md-4 -->
-					
-					<div class="col-md-4" style="margin-top:19px;">
-						<span>within 50 km from Mannheim, DE</span>
-					</div>
+					</form>
 
-					<div class="col-md-4" style="margin-top:11px">
-						<div class="btn-toolbar pull-right" role="toolbar" aria-label="view-options">
-							<div class="btn-group" role="group" aria-label="pricing-cat" style="margin-right:12px;">
-								<button type="button" class="btn btn-default">All</button>
-								<button type="button" class="btn btn-default">Free</button>
-								<button type="button" class="btn btn-default">Paid</button>
-							</div>
-							<div class="btn-group" role="group" aria-label="view-style">
-								<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th"></span></button>
-								<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
-							</div>
+				</div>
+				<div class="pull-xs-right">
+					<div class="btn-toolbar" role="toolbar" aria-label="view-options">
+						<div class="btn-group" role="group" aria-label="view-style">
+							<button type="button" class="btn btn-default" style="background-color:#1694b2;">
+								<i class="fa fa-th-large" aria-hidden="true"></i></button>
+							<button type="button" class="btn btn-default" style="background-color:#1694b2;">
+								<i class="fa fa-th-list" aria-hidden="true"></i></button>
 						</div>
-					</div><!-- /.col-md-4 -->
-			</div><!-- /.row -->
-			
-		</div>
-
+					</div>
+				</div>
+			</div>
+		</nav>
 	</div>
-	<!--/.Row 3-->
-
-
-	<!--Event market-->
-	<div class="row" style="background-color: transparent;">
-
-	<div class="container" >
-    <div class="row">
-       
-   	   <div class="col-md-4 indtile">
-            <img src="../images/bigdata.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block"> 
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e3.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e4.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e5.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e6.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e7.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e8.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>'
-				<div class="col-md-4 indtile">
-            <img src="../images/e4.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e10.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e11.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e3.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				
-				</div>
-				
-				
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-				<div class="col-md-4 indtile">
-            <img src="../images/e1.jpg" alt="test" class="img-responsive">
-            <div class="carousel-caption">
-              <h4><strong>Title</strong></h4>
-            </div>
-			<div class="card-block">
-					<footer class="indfooter">
-					        <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-							</footer>
-				</div> 
-				</div>
-			
-				
 </div>
-      
- </div>
-  
-  
-  
-		</div>		
+<!--/.Row 3: Navbar-->
 
-	<!--/.Row -->
+<!--Row 4 (Event market) -->
+<div class="row" id="event-market-area">
+	<div class="col-md-12">
 
+		<div class="event-market-area card grey lighten-5" id="search-result" hidden></div>
 
-	<!--Row 4 (Industries)-->
+		<div class="grey lighten-5" style="padding:4px;min-height:20em;">
+			<div class="row">
+				<div class="col-md-3">
 
-	<!--/.Row 4-->
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/106344/pexels-photo-106344-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+
+				</div>
+				<div class="col-md-3">
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/59100/pexels-photo-59100-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+
+				</div>
+				<div class="col-md-3">
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/110470/pexels-photo-110470-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+				</div>
+				<div class="col-md-3">
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/110470/pexels-photo-110470-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/132700/pexels-photo-132700-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+
+				</div>
+				<div class="col-md-3">						
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/25970/pexels-photo-large.jpg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+				
+				</div>
+				<div class="col-md-3">
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/7374/startup-photos-large.jpg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+				
+				</div>
+				<div class="col-md-3">
+
+					<!--Card-->
+					<div class="card">
+
+						<!--Card image-->
+						<div class="view overlay hm-white-slight">
+							<img src="https://static.pexels.com/photos/132700/pexels-photo-132700-large.jpeg" class="img-fluid" alt="">
+							<a href="#">
+								<div class="mask"></div>
+							</a>
+						</div>
+						<!--/.Card image-->
+
+						<!--Card content-->
+						<div class="card-block text-xs-center">
+							<!--Category & Title-->
+							<h5>Topic</h5>
+							<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+
+							<!--Description-->
+							<p class="card-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+
+							<!--Card footer-->
+							<div class="card-footer">
+								<span class="left">49€</span>
+								<span class="right">
+									<a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
+									<a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>
+								</span>
+							</div>
+
+						</div>
+						<!--/.Card content-->
+
+					</div>
+					<!--/.Card-->
+
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-</main>
-<!--/.Main layout-->
-
-
-
-
-<!--Footer-->
-<footer class="page-footer" style="background-color:black;height:100px;">
-
-</footer>
-<!--/.Footer-->
-
-
-
-
-<!-- SCRIPTS -->
-
-<!-- JQuery -->
-<script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
-
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../lib/tether.min.js"></script>
-
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
-
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="../lib/mdb.min.js"></script>
-
-</body>
-</html>
+<!--/.Row 4-->

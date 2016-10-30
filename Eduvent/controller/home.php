@@ -50,7 +50,7 @@
 			<div class="sidebar-nav list-group">
 
 				<!--Group 'Filters'-->
-				<div class="list-group-item sidebar-group-head teal white-text">
+				<div class="list-group-item sidebar-group-head white-text" style="background-color:#1694b2;">
 					<span class="font-weight-bold">Filters</span>
 				</div>
 				<!--Group 'Event types'-->
@@ -123,7 +123,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category"style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -131,7 +131,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -139,7 +139,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -147,7 +147,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -164,7 +164,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -172,7 +172,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -180,7 +180,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -188,7 +188,7 @@
 
 							<a href="#" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
-									<span class="event-list-item-category teal-text">Category</span>
+									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
 									<span class="event-list-item-date">20.10., Mannheim</span>
 								</div>
@@ -243,8 +243,10 @@
 							<div class="pull-xs-right">
 								<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 									<div class="btn-group" role="group" aria-label="view-style">
-										<button type="button" class="btn btn-default teal"><i class="fa fa-th-large" aria-hidden="true"></i></button>
-										<button type="button" class="btn btn-default teal"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+										<button type="button" class="btn btn-default" style="background-color:#1694b2;">
+											<i class="fa fa-th-large" aria-hidden="true"></i></button>
+										<button type="button" class="btn btn-default" style="background-color:#1694b2;">
+											<i class="fa fa-th-list" aria-hidden="true"></i></button>
 									</div>
 								</div>
 							</div>
