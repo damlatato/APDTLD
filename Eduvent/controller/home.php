@@ -10,7 +10,7 @@ $( document ).ready(function() {
 		width: el.css("width")
 	}, 2200 );*/
 	
-	overlay.delay(800).show("slide", { direction: "left" }, 1500);
+	overlay.delay(700).show("slide", { direction: "left" }, 1500);
 	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
 });
 </script>
@@ -33,7 +33,7 @@ $( document ).ready(function() {
 			<div id="carousel-item-overlay" class="carousel-item-overlay">
 				<div id="carousel-overlay-text">
 					<br/><br/>
-					<span id="text-carousel-1">Finding education events.</span>
+					<span id="text-carousel-1">Finding educational events.</span>
 					<span id="text-carousel-2">Easily.</span><br><br/><br/><br/><br/><br/><br/>
 					<a href="../Eduvent/index.php?page=signup">
 						<button class="btn" id="btn-signup-carousel" type="button">Sign up</button>
