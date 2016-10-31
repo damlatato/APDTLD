@@ -85,7 +85,64 @@ $( document ).ready(function() {
 		
 		<!--Content-->
 		<div class="col-md-10">
-			<!--Row 1 (Event lists)-->
+			<!--Row 1 (Popular searches) -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default popular-search-tags">
+						<div class="panel-heading"><h5 class="font-weight-bold">Popular search tags</h5></div>
+						<div class="panel-body list-group flex-center grey lighten-5">
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+							<span class="tag tag-default"><a>Search tag</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.Row 1-->
+
+			<!--Row 2: Navbar (Event market filter bar) -->
+			<div class="row">
+				<div class="col-md-12">
+					<h5 class="font-weight-bold">Event search</h5>
+					<nav class="navbar navbar-light grey lighten-5">
+						<div class="collapse navbar-toggleable-xs">
+							<div class="pull-xs-left">
+
+								<form class="form-inline" id="search-form" onsubmit="runSearch()">
+									<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
+									<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
+										from
+										<div style="display:inline-block;">
+											<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
+											<!--<div class="dropdown-menu">
+
+											</div>-->
+										</div>
+									</span>
+								</form>
+
+							</div>
+							<div class="pull-xs-right">
+								<div class="btn-toolbar" role="toolbar" aria-label="view-options">
+									<div class="btn-group" role="group" aria-label="view-style">
+										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
+											<i class="fa fa-th-large" aria-hidden="true"></i></button>
+										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
+											<i class="fa fa-th-list" aria-hidden="true"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<!--/.Row 2: Navbar-->
+
+			<!--Row 3 (Event lists)-->
 			<div class="row evet-list-area">
 
 				<div class="col-md-6">
@@ -170,66 +227,11 @@ $( document ).ready(function() {
 					</div>
 				</div>
 			</div>
-			<!--/.Row 1-->
-
-			<!--Row 2 (Popular searches) -->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="panel panel-default popular-search-tags">
-						<div class="panel-heading"><h5 class="font-weight-bold"><b>Popular search tags</b></h5></div>
-						<div class="panel-body list-group flex-center grey lighten-5">
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/.Row 2-->
-
-			<!--Row 3: Navbar (Event market filter bar) -->
-			<div class="row">
-				<div class="col-md-12">
-					<nav class="navbar navbar-light grey lighten-5">
-						<div class="collapse navbar-toggleable-xs">
-							<div class="pull-xs-left">
-
-								<form class="form-inline" id="search-form" onsubmit="runSearch()">
-									<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
-									<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
-										from
-										<div style="display:inline-block;">
-											<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
-											<!--<div class="dropdown-menu">
-
-											</div>-->
-										</div>
-									</span>
-								</form>
-
-							</div>
-							<div class="pull-xs-right">
-								<div class="btn-toolbar" role="toolbar" aria-label="view-options">
-									<div class="btn-group" role="group" aria-label="view-style">
-										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
-											<i class="fa fa-th-large" aria-hidden="true"></i></button>
-										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
-											<i class="fa fa-th-list" aria-hidden="true"></i></button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<!--/.Row 3: Navbar-->
+			<!--/.Row 3-->
 		
-			<!--Row 4 (Event market) -->
+			<!--Row 4 (Popular events) -->
 			<div class="row" id="event-market-area-home">
+				<h5 class="font-weight-bold">Popular events</h5>
 				<div class="col-md-12 event-market-area grey lighten-5">
 					<div class="row">
 						<div class="col-md-3 event-market-col">
