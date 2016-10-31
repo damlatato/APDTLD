@@ -88,18 +88,9 @@ $( document ).ready(function() {
 			<!--Row 1 (Popular searches) -->
 			<div class="row">
 				<div class="col-md-12">
-					<div class="panel panel-default popular-search-tags">
-						<div class="panel-heading"><h5 class="font-weight-bold">Popular search tags</h5></div>
-						<div class="panel-body list-group flex-center grey lighten-5">
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-							<span class="tag tag-default"><a>Search tag</a></span>
-						</div>
-					</div>
+<?php
+	include("search-tags.php");
+?>
 				</div>
 			</div>
 			<!--/.Row 1-->
@@ -125,16 +116,6 @@ $( document ).ready(function() {
 									</span>
 								</form>
 
-							</div>
-							<div class="pull-xs-right">
-								<div class="btn-toolbar" role="toolbar" aria-label="view-options">
-									<div class="btn-group" role="group" aria-label="view-style">
-										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
-											<i class="fa fa-th-large" aria-hidden="true"></i></button>
-										<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
-											<i class="fa fa-th-list" aria-hidden="true"></i></button>
-									</div>
-								</div>
 							</div>
 						</div>
 					</nav>

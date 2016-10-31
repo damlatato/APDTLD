@@ -13,21 +13,12 @@
 	<!--Content-->
 	<div class="col-md-10">
 
-		<!--Row 2 (Popular searches) -->
+		<!--Row 2 (Popular search tags) -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="panel panel-default popular-search-tags">
-					<div class="panel-heading"><h5 class="font-weight-bold"><b>Event search</b></h5></div>
-					<div class="panel-body list-group flex-center grey lighten-5">
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-						<span class="tag tag-default"><a>Search tag</a></span>
-					</div>
-				</div>
+<?php
+	include("search-tags.php");
+?>
 			</div>
 		</div>
 		<!--/.Row 2-->
@@ -35,6 +26,7 @@
 		<!--Row 3: Navbar (Event market filter bar) -->
 		<div class="row">
 			<div class="col-md-12">
+				<h5 class="font-weight-bold">Event search</h5>
 				<nav class="navbar navbar-light grey lighten-5">
 					<div class="collapse navbar-toggleable-xs">
 						<div class="pull-xs-left">
