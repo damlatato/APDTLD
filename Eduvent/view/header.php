@@ -79,9 +79,9 @@ if($user_home->is_logged_in()!="") {
 				</ul>
 
 				<!--Search form-->
-				<form class="form-inline">
+				<!--<form class="form-inline">
 					<input id="search-general" class="form-control" type="text" placeholder="Search">
-				</form>
+				</form>-->
 
 			</div>
 			<!--/.Collapse content-->
