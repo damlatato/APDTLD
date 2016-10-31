@@ -243,7 +243,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -297,7 +297,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -351,7 +351,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -405,7 +405,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -461,7 +461,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -515,7 +515,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -569,7 +569,7 @@ $( document ).ready(function() {
 
 										<div class="flex-center">
 											<a href="#">
-												<button class="btn btn-event-details" type="button">Event details</button>
+												<button class="btn btn-event-details" type="button">Show details</button>
 											</a>
 
 											<div class="event-menu">
@@ -623,7 +623,7 @@ $( document ).ready(function() {
 
 									<div class="flex-center">
 										<a href="#">
-											<button class="btn btn-event-details" type="button">Event details</button>
+											<button class="btn btn-event-details" type="button">Show details</button>
 										</a>
 
 										<div class="event-menu">
