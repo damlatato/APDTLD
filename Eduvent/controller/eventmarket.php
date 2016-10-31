@@ -99,14 +99,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -153,14 +153,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -207,14 +207,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -261,14 +261,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -317,14 +317,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -371,14 +371,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -425,14 +425,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 
@@ -479,14 +479,14 @@
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
-											<div class="event-dropdown-menu">
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-												<a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
-											</div>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+											</ul>
 										</div>
 									</div>
 

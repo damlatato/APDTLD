@@ -381,3 +381,12 @@ html, body {
 .event-menu:hover .event-dropdown-menu {
     display: block;
 }
+
+.event-dropdown-item {
+	color: #1694b2;
+	display: block;
+}
+
+.event-dropdown-item:hover {
+	color: #FED835;
+}
