@@ -175,15 +175,13 @@
 
 								<!--Card footer-->
 								<div class="card-footer">
-									<span>49€</span><br>
+									<div>49€</div>
 
-									<span class="pull-left">
+									<div class="flex-center">
 										<a href="#">
-											<button class="btn btn-book-event" type="button">Book this event</button>
+											<button class="btn btn-event-details" type="button">Event details</button>
 										</a>
-									</span>
-									
-									<span class="pull-right">
+
 										<div class="event-menu">
 											<button class="btn btn-event-menu" type="button">More</button>
 
@@ -196,7 +194,7 @@
 													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company's newsletter</a>
 											</div>
 										</div>
-									</span>
+									</div>
 
 								</div>
 								<!--/.Card footer-->
