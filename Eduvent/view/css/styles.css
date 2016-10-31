@@ -284,6 +284,10 @@ html, body {
 	margin-bottom: 0em;
 }
 
+#event-market-area-home {
+	padding-top:0.45em;
+}
+
 .event-market-area > .row {
 	margin-top: 0.1em;
 }
