@@ -88,14 +88,26 @@ html, body {
 }
 
 #collapsedate-form {
-	padding: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 2px;
+	padding-right: 2px;
 	margin-bottom: 0;
 }
 
 #datepicker-sidebar {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 6px;
+	padding-right: 6px;
 	margin-bottom: 0;
+}
+
+.date-group {
+	width: 90%;
+}
+
+.clear-date {
+	padding-top: 5px;
+	cursor: pointer;
 }
 
 #datepicker-addon1 {

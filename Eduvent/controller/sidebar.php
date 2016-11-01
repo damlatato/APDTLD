@@ -1,4 +1,12 @@
 <script>
+$( document ).ready(function() {
+	$('#clear-date-from').click(function(){
+		$('#datepicker-from-sidebar').val('');
+	});
+	$('#clear-date-to').click(function(){
+		$('#datepicker-to-sidebar').val('');
+	});
+});
 
 </script>
 
@@ -73,26 +81,30 @@
 		<div class="form-group" id="collapsedate-form">
 			<div class='md-form input-group date' id='datepicker-sidebar'>
 
-				<span>From</span>
-				<div class="input-group">
+				<div><span>From</span></div>
+				<div class="input-group pull-left date-group">
 					<span class="input-group-addon" id="datepicker-addon1">
 						<i class="fa fa-calendar" aria-hidden="true"></i></span>
 					<input type="text" class="form-control datepicker-sidebar" id="datepicker-from-sidebar" placeholder="dd.mm.yyyy" aria-describedby="datepicker-addon1">
 				</div>
+				<div class="pull-right clear-date" id="clear-date-from"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
-				<span>To</span>
-				<div class="input-group">
+				<div><span>To</span></div>
+				<div class="input-group pull-left date-group">
 					<span class="input-group-addon" id="datepicker-addon2">
 						<i class="fa fa-calendar" aria-hidden="true"></i></span>
 					<input type="text" class="form-control datepicker-sidebar" id="datepicker-to-sidebar" placeholder="dd.mm.yyyy" aria-describedby="datepicker-addon2">
 				</div>
+				<div class="pull-right clear-date" id="clear-date-to"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
 			</div>
 		</div>
 
 		<script type="text/javascript">
 			$(function () {
-				$('#datepicker-sidebar .datepicker-sidebar').datepicker({format: "dd.mm.yyyy"});
+				$('#datepicker-sidebar .datepicker-sidebar').datepicker({
+					format: "dd.mm.yyyy"
+				});
 			});
 		</script>
 
