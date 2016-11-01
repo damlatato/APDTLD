@@ -77,7 +77,7 @@ $( document ).ready(function() {
 		<div class="col-md-2">
 
 			<?php
-				include("sidebar-topics.php");
+				include("sidebar.php");
 			?>
 
 		</div>

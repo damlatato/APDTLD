@@ -4,7 +4,7 @@
 	<div class="col-md-2">
 
 <?php
-	include("sidebar-topics.php");
+	include("sidebar.php");
 ?>
 
 	</div>
@@ -13,7 +13,7 @@
 	<!--Content-->
 	<div class="col-md-10">
 
-		<!--Row 2 (Popular search tags) -->
+		<!--Row 1 (Popular search tags) -->
 		<div class="row">
 			<div class="col-md-12">
 <?php
@@ -21,9 +21,9 @@
 ?>
 			</div>
 		</div>
-		<!--/.Row 2-->
+		<!--/.Row 1-->
 
-		<!--Row 3: Navbar (Event market filter bar) -->
+		<!--Row 2: Navbar (Event market filter bar) -->
 		<div class="row">
 			<div class="col-md-12">
 				<h5 class="font-weight-bold">Event search</h5>
@@ -59,9 +59,9 @@
 				</nav>
 			</div>
 		</div>
-		<!--/.Row 3: Navbar-->
+		<!--/.Row 2: Navbar-->
 
-		<!--Row 4 (Event market) -->
+		<!--Row 3 (Event market) -->
 		<div class="row" id="event-market-area">
 			<div class="col-md-12 event-market-area grey lighten-5" id="search-results">
 				<div class="row">
@@ -502,7 +502,7 @@
 				</div>
 			</div>
 		</div>
-		<!--/.Row 4-->
+		<!--/.Row 3-->
 
 	</div>
 	<!--/.Content-->
