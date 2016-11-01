@@ -163,6 +163,18 @@ class Event  implements JsonSerializable{
 		return Event::fromJSONa($jeventlist);
 	}
 	
+	public function getByDate($StartDate, $EndDate){
+		$jeventlist = get("event");
+		$eventA = Event::fromJSONa($jeventlist);
+		$eventlist = array();
+		foreach($eventA as $event){
+			if(strtotime($event->getDatetime())>strtotime($StartDate) && strtotime($event->getDatetime())<strtotime($EndDate)){
+				array_push($eventlist, $event);
+			}
+		}
+		return $eventlist;
+	}
+	
 	public function getByEventType($eventtype){
 		$jeventlist = get("event?q=eventType:".chr(34).$eventtype.chr(34));
 		return Event::fromJSONa($jeventlist);

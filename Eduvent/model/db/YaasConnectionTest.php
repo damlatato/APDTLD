@@ -83,7 +83,7 @@ $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim"
 //test
 
 $event1 = new Event(1, $eventtypes["Show"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Studing'], 11);
-$event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.10.2016 14:56", $address2, $interest['Sport'], 0);
+$event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0);
 $eventA = array($event1, $event2);
 //test
 	$jevent1 = $event1->jsonSerialize();
@@ -395,6 +395,22 @@ if ($u1==true && $u2==false){
 if (User::getPasswordByEmail("leonidgunko1@yandex.ru")=="213322" && User::getPasswordByEmail("leonidgunko2@yandex.ru")=="213"){
 	echo "<br>";
 	echo "Yaas getPasswordByEmail for Login TestSuccesfull";
+}
+
+$eventlist = Event::getByDate("12.10.2016","28.10.2016");
+$u1=false;
+$u2=false;
+foreach($eventlist as $event) {
+	if ($event->getId() == $event1->getId()) {
+		$u1 = true;
+	}
+	if ($event->getId() == $event2->getId()) {
+		$u2 = true;
+	}
+}
+if ($u1==true && $u2==false){
+	echo "<br>";
+	echo "Yaas GetByDate Event TestSuccesfull";
 }
   
 $event1->deleteEvent();	//delete test user from BD
