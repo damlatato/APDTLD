@@ -1,13 +1,13 @@
 <?php
 class Booking implements JsonSerializable{
 	private $id;
-	private $eventId;	//key
+	private $event;	//key
 	private $bookingTime;
 	private $payment;	//class
 	
-	public function __construct($id, $eventId, $bookingTime, $payment){
+	public function __construct($id, $event, $bookingTime, $payment){
 		$this->id = $id;
-		$this->eventId = $eventId;
+		$this->event = $event;
 		$this->bookingTime = $bookingTime;
 		$this->payment = $payment;
 	}
@@ -15,8 +15,8 @@ class Booking implements JsonSerializable{
 	public function setId($id){
 		$this->id = $id;
 	}
-	public function seteventId($eventId){
-		$this->eventId = $eventId;
+	public function setevent($eventId){
+		$this->event = $event;
 	}
 	public function setbookingTime($bookingTime){
 		$this->bookingTime = $bookingTime;
@@ -32,8 +32,8 @@ class Booking implements JsonSerializable{
 	public function getId(){
 		return $this->id;
 	}
-	public function geteventId(){
-		return $this->eventId;
+	public function getevent(){
+		return $this->event;
 	}
 	public function getbookingTime(){
 		return $this->bookingTime;
@@ -46,7 +46,7 @@ class Booking implements JsonSerializable{
 		$payment = $this->getpayment();
 		return json_encode([
 		'id'=>$this->id,
-		'eventId'=>$this->eventId,	//key
+		'event'=>$this->event,	//key
 		'bookingTime'=>$this->bookingTime,
 		'payment'=>$payment->jsonSerialize()
 		]);
@@ -63,6 +63,11 @@ class Booking implements JsonSerializable{
 					$payment->set($key, $value);
 				}
 				$booking->set('payment', $payment);
+				continue;
+			}
+			if($key=='event'){
+				$event = Event::fromJSON($value);
+				$booking->set('event', $event);
 				continue;
 			}
 			$booking->set($key, $value);

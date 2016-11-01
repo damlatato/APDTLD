@@ -121,11 +121,43 @@ class User implements JsonSerializable{
 	
 	public function getUserByEmail($email){
 		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
-		return User::fromJSONa($juserlist);
+		return User::fromJSONa($juserlist)[0];
+	}
+	
+	public function getPasswordByEmail($email){
+		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
+		return User::fromJSONa($juserlist)[0]->getPassword();
+	}
+	
+	public function getUserListByEvent($event){
+		$userslist=User::getUserList();
+		$resultUserArray = array();
+		foreach ($userslist as $user){
+			$bookingslist=$user->getBookings();
+			foreach ($bookingslist as $booking){
+				if($booking->getEvent()->getId() == $event->getId()){
+					array_push($resultUserArray,$user);
+				}
+			}
+		}
+		return $resultUserArray;
+	}
+	
+	public function getEventOrganizer($event){
+		$userslist=User::getUserList();
+		$resultUserArray = array();
+		foreach ($userslist as $user){
+			$organizedEventslist=$user->getOrganizedEvents();
+			foreach ($organizedEventslist as $organizedEvent){
+				if($organizedEvent->getId() == $event->getId()){
+					array_push($resultUserArray,$user);
+				}
+			}
+		}
+		return $resultUserArray[0];
 	}
 	
 	public function organizeEvent($event){
-		echo gettype($event);
 		if (gettype($event)=="Event"){
 			$event->postEvent();
 			$this->setOrganizedEvents(array_push($this->getOrganizedEvents(), $event));
