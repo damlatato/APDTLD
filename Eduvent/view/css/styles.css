@@ -324,25 +324,33 @@ html, body {
 /*         Event market                   */
 /******************************************/
 
-.location-search {
+.location-radius, .location-search {
     display: inline-block;
 }
 
-.location-search-menu {
+.location-radius-menu, .location-search-menu {
     display: none;
 	border: 1.5px solid black;
-	border-radius: 3px;
+	border-radius: 2px;
     position: absolute;
     background-color: white;
 	margin-top: -5px;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    padding: 6px 8px;
     z-index: 1;
 }
 
-.location-search:hover .location-search-menu {
+.location-radius:hover .location-radius-menu, .location-search:hover .location-search-menu {
     display: block;
+}
+
+.btn-grid-view {
+	background-color: #1694b2;
+}
+
+.btn-list-view {
+	background-color: #1694b2;
 }
 
 /******************************************/

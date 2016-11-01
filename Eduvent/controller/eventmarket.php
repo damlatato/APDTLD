@@ -33,7 +33,18 @@
 
 							<form class="form-inline" id="search-form" onsubmit="runSearch()">
 								<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
-								<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
+								<span>within
+
+									<div class="location-radius">
+										<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
+										<ul class="location-radius-menu">
+											<li class="dropdown-item">10 km</li>
+											<li class="dropdown-item">25 km</li>
+											<li class="dropdown-item">50 km</li>
+											<li class="dropdown-item">No limit</li>
+										</ul>
+									</div>
+
 									from
 									<div class="location-search">
 										<button class="btn-location-search btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
@@ -49,9 +60,9 @@
 						<div class="pull-xs-right">
 							<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 								<div class="btn-group" role="group" aria-label="view-style">
-									<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
+									<button type="button" class="btn btn-cyan btn-grid-view">
 										<i class="fa fa-th-large" aria-hidden="true"></i></button>
-									<button type="button" class="btn btn-cyan" style="background-color:#1694b2;">
+									<button type="button" class="btn btn-cyan btn-list-view">
 										<i class="fa fa-th-list" aria-hidden="true"></i></button>
 								</div>
 							</div>
