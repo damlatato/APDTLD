@@ -119,6 +119,43 @@ class User implements JsonSerializable{
 		return $this->votedEvents;
 	}
 	
+	public function getUserByEmail($email){
+		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
+		return User::fromJSONa($juserlist);
+	}
+	
+	public function organizeEvent($event){
+		echo gettype($event);
+		if (gettype($event)=="Event"){
+			$event->postEvent();
+			$this->setOrganizedEvents(array_push($this->getOrganizedEvents(), $event));
+		}
+		$this->putUser();
+	}
+	
+	public function voteEvent($event){
+		echo gettype($event);
+		if (gettype($event)=="Event"){
+			$this->setVotedEvents(array_push($this->getVotedEvents(), $event));
+		}
+		$this->putUser();
+	}
+	
+	public function proposeEvent($event){	//wishlist
+		echo gettype($event);
+		if (gettype($event)=="Event"){
+			$this->setWishlist(array_push($this->getWishlist(), $event));
+		}
+		$this->putUser();
+	}
+	
+	public function bookEvent($event){	//wishlist
+		echo gettype($event);
+		if (gettype($event)=="Event"){
+			$this->setBookings(array_push($this->getBookings(), $event));
+		}
+		$this->putUser();
+	}
 	
 	public function jsonSerialize(){	
 		$str = json_encode([

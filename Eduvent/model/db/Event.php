@@ -20,7 +20,7 @@ class Event  implements JsonSerializable{
     	$this->topic = $topic;
     	$this->price = $price;
     	if ($price>0){
-    		$this->priceCategory = "Not Free";
+    		$this->priceCategory = "Paid";
     	}
     	else{
     		$this->priceCategory = "Free";
@@ -157,5 +157,21 @@ class Event  implements JsonSerializable{
 		$jeventlist = get("event");
 		return Event::fromJSONa($jeventlist);
 	}
+	
+	public function getByTopic($topic){
+		$jeventlist = get("event?q=topic:".chr(34).$topic.chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
+	public function getByEventType($eventtype){
+		$jeventlist = get("event?q=eventType:".chr(34).$eventtype.chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
+	public function getByPriceCategory($priceCategory){
+		$jeventlist = get("event?q=priceCategory:".chr(34).$priceCategory.chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
 }  
 ?> 

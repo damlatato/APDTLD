@@ -163,8 +163,8 @@ if ($juserA == $juserA1) {
 //test
 
 
-$user1->deleteUser();	//delete test user from BD
-$user2->deleteUser();	//delete tes user from BD
+//$user1->deleteUser();	//delete test user from BD
+//$user2->deleteUser();	//delete tes user from BD
 $user1->postUser();	//post user to BD
 $user2->postUser();	//post user to BD
 
@@ -221,8 +221,8 @@ if ($u1==true && $u2==true){
 	echo "Yaas PutUser TestSuccesfull";
 }
 
-$user1->deleteUser();	//delete test user from BD
-$user2->deleteUser();	//delete tes user from BD
+//$user1->deleteUser();	//delete test user from BD
+//$user2->deleteUser();	//delete tes user from BD
 
 $userslist=User::getUserList();
 $u1=false;
@@ -248,8 +248,8 @@ if ($u1==false && $u2==false){
 	echo "Yaas DeleteUser TestSuccesfull";
 }
 
-$event1->deleteEvent();	//delete test user from BD
-$event2->deleteEvent();	//delete tes user from BD
+//$event1->deleteEvent();	//delete test user from BD
+//$event2->deleteEvent();	//delete tes user from BD
 $event1->postEvent();	//post user to BD
 $event2->postEvent();	//post user to BD
 $eventlist=Event::getEventList();
@@ -290,8 +290,62 @@ if ($e1==true && $e2==true){
 	echo "Yaas PutEvent TestSuccesfull";
 }
 
-$event1->deleteEvent();	//delete test user from BD
-$event2->deleteEvent();	//delete tes user from BD
+$eventlist=Event::getByTopic("Studing");
+$e1=false;
+$e2=false;
+foreach($eventlist as $event) {
+	if ($event->getID() == $event1->getID() && $event->getEventType() == $event1->getEventType() && $event->getTitle() == $event1->getTitle()
+	&& $event->getDescription() == $event1->getDescription() && $event->getLocation() == $event1->getLocation() ) {
+		$e1 = true;
+	}
+	if ($event->getID() == $event2->getID() && $event->getEventType() == $event2->getEventType() && $event->getTitle() == $event2->getTitle()
+	&& $event->getDescription() == $event2->getDescription() && $event->getLocation() == $event2->getLocation() ) {
+		$e2 = true;
+	}
+}
+if ($e1==true && $e2==false){
+	echo "<br>";
+	echo "Yaas Get Event by Topic Test Succesfull";
+}
+
+$eventlist=Event::getByEventType("Show");
+$e1=false;
+$e2=false;
+foreach($eventlist as $event) {
+	if ($event->getID() == $event1->getID() && $event->getEventType() == $event1->getEventType() && $event->getTitle() == $event1->getTitle()
+	&& $event->getDescription() == $event1->getDescription() && $event->getLocation() == $event1->getLocation() ) {
+		$e1 = true;
+	}
+	if ($event->getID() == $event2->getID() && $event->getEventType() == $event2->getEventType() && $event->getTitle() == $event2->getTitle()
+	&& $event->getDescription() == $event2->getDescription() && $event->getLocation() == $event2->getLocation() ) {
+		$e2 = true;
+	}
+}
+if ($e1==true && $e2==false){
+	echo "<br>";
+	echo "Yaas Get Event by EventType Test Succesfull";
+}
+
+$eventlist=Event::getByPriceCategory("Paid");
+$e1=false;
+$e2=false;
+foreach($eventlist as $event) {
+	if ($event->getID() == $event1->getID() && $event->getEventType() == $event1->getEventType() && $event->getTitle() == $event1->getTitle()
+	&& $event->getDescription() == $event1->getDescription() && $event->getLocation() == $event1->getLocation() ) {
+		$e1 = true;
+	}
+	if ($event->getID() == $event2->getID() && $event->getEventType() == $event2->getEventType() && $event->getTitle() == $event2->getTitle()
+	&& $event->getDescription() == $event2->getDescription() && $event->getLocation() == $event2->getLocation() ) {
+		$e2 = true;
+	}
+}
+if ($e1==true && $e2==false){
+	echo "<br>";
+	echo "Yaas Get Event by PriceCategory Test Succesfull";
+}
+
+//$event1->deleteEvent();	//delete test user from BD
+//$event2->deleteEvent();	//delete tes user from BD
 $eventlist=Event::getEventList();
 $e1=false;
 $e2=false;
@@ -308,6 +362,6 @@ foreach($eventlist as $event) {
 if ($e1==false && $e2==false){
 	echo "<br>";
 	echo "Yaas DeleteEvent TestSuccesfull";
-	
 }
+
 ?>
