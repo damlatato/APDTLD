@@ -35,12 +35,13 @@
 								<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
 								<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
 									from
-									<div style="display:inline-block;">
-										<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
-										<!--<div class="dropdown-menu">
-
-										</div>-->
+									<div class="location-search">
+										<button class="btn-location-search btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
+										<div class="location-search-menu">
+											<input type="text" class="form-control" placeholder="Location ..." aria-describedby="location-addon1">
+										</div>
 									</div>
+
 								</span>
 							</form>
 
