@@ -87,6 +87,41 @@ html, body {
     text-decoration: none;
 }
 
+#collapsedate-form {
+	padding: 4px;
+	margin-bottom: 0;
+}
+
+#datepicker-sidebar {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0;
+}
+
+#datepicker-addon1 {
+	padding: 2px 4px;
+}
+
+#datepicker-from-sidebar {
+	color: #1694b2;
+	height: 0.8em;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	text-indent: 8px;
+}
+
+#datepicker-addon2 {
+	padding: 2px 4px;
+}
+
+#datepicker-to-sidebar {
+	color: #1694b2;
+	height: 0.8em;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	text-indent: 8px;
+}
+
 /******************************************/
 /*          Login form                    */
 /******************************************/

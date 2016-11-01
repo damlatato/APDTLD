@@ -28,6 +28,9 @@ $user_home = new USER();
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../Eduvent/lib/mdb.min.js"></script>
 
+
+<script type="text/javascript" src="../Eduvent/view/datepicker/js/bootstrap-datepicker.js"></script>
+
 <!-- PrefixFree -->
 <script type="text/javascript" src="../Eduvent/lib/prefixfree.min.js"></script>
 	
@@ -42,6 +45,9 @@ $user_home = new USER();
 
 <!-- Custom styles -->
 <link rel="stylesheet" href="../Eduvent/view/css/styles.css">
+
+
+<link rel="stylesheet" href="../Eduvent/view/datepicker/css/datepicker.css">
 
 </head>
 
