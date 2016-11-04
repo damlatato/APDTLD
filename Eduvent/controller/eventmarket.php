@@ -60,6 +60,8 @@
 						<div class="pull-xs-right">
 							<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 								<div class="btn-group" role="group" aria-label="view-style">
+									<button type="button" class="btn btn-cyan btn-grid-view-small">
+										<i class="fa fa-th" aria-hidden="true"></i></button>
 									<button type="button" class="btn btn-cyan btn-grid-view">
 										<i class="fa fa-th-large" aria-hidden="true"></i></button>
 									<button type="button" class="btn btn-cyan btn-list-view">
