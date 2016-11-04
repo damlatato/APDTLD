@@ -27,6 +27,9 @@
 
 <!-- PrefixFree -->
 <script type="text/javascript" src="../Eduvent/lib/prefixfree.min.js"></script>
+
+<!-- Backstretch -->
+<script type="text/javascript" src="../Eduvent/lib/jquery.backstretch.min.js"></script>
 	
 <!-- Font Awesome-->
 <link rel="stylesheet" href="../Eduvent/view/font-awesome/css/font-awesome.min.css">
