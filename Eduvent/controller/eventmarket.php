@@ -1,17 +1,11 @@
 <script>
-/*function showGridSmall() {
-	
-}
-
-function showGrid() {
-	$('.event-market-col').addClass('col-md-4');
-	$('.event-market-col').removeClass('list-group-item col-md-3');
-}
-
-function showList() {
-	$('.event-market-col').addClass('list-group-item');
-	$('.event-market-col').removeClass('col-md-3 col-md-4');
-}*/
+$(document).ready(function() {
+	$('.location-radius-menu > li').click(function() {
+		$('#btn-set-radius').text($(this).text());
+		$(this).prop('hidden', true);
+		$(this).siblings().prop('hidden', false);
+	}); 
+});
 </script>
 
 
@@ -51,8 +45,9 @@ function showList() {
 								<span>within
 
 									<div class="location-radius">
-										<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
+										<button class="btn btn-info-outline waves-effect dropdown-toggle" id="btn-set-radius" type="button">5 km</button>
 										<ul class="location-radius-menu">
+											<li class="dropdown-item" hidden>5 km</li>
 											<li class="dropdown-item">10 km</li>
 											<li class="dropdown-item">25 km</li>
 											<li class="dropdown-item">50 km</li>
@@ -72,18 +67,6 @@ function showList() {
 							</form>
 
 						</div>
-						<!--<div class="pull-xs-right">
-							<div class="btn-toolbar" role="toolbar" aria-label="view-options">
-								<div class="btn-group" role="group" aria-label="view-style">
-									<button type="button" class="btn btn-cyan btn-grid-view-small" id="grid-view-small" onclick="showGridSmall()">
-										<i class="fa fa-th" aria-hidden="true"></i></button>
-									<button type="button" class="btn btn-cyan btn-grid-view"  id="grid-view" onclick="showGrid()">
-										<i class="fa fa-th-large" aria-hidden="true"></i></button>
-									<button type="button" class="btn btn-cyan btn-list-view"  id="list-view" onclick="showList()">
-										<i class="fa fa-th-list" aria-hidden="true"></i></button>
-								</div>
-							</div>
-						</div>-->
 					</div>
 				</nav>
 			</div>

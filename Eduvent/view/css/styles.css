@@ -353,6 +353,10 @@ html, body {
     display: block;
 }
 
+.location-radius-menu li:hover {
+	cursor: pointer;
+}
+
 .btn-grid-view-small, .btn-grid-view, .btn-list-view {
 	background-color: #1694b2;
 }
