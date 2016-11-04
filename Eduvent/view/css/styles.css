@@ -304,8 +304,8 @@ html, body {
 /*         Popular search terms           */
 /******************************************/
 
-.popular-search-tags .panel-body {
-	
+.tag-list {
+	margin-bottom: 0;
 }
 
 .popular-search-tags .tag {

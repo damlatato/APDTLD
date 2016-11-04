@@ -1,5 +1,5 @@
 <script>
-function showGridSmall() {
+/*function showGridSmall() {
 	
 }
 
@@ -11,7 +11,7 @@ function showGrid() {
 function showList() {
 	$('.event-market-col').addClass('list-group-item');
 	$('.event-market-col').removeClass('col-md-3 col-md-4');
-}
+}*/
 </script>
 
 
@@ -72,18 +72,18 @@ function showList() {
 							</form>
 
 						</div>
-						<div class="pull-xs-right">
+						<!--<div class="pull-xs-right">
 							<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 								<div class="btn-group" role="group" aria-label="view-style">
-									<!--<button type="button" class="btn btn-cyan btn-grid-view-small" id="grid-view-small" onclick="showGridSmall()">
-										<i class="fa fa-th" aria-hidden="true"></i></button>-->
+									<button type="button" class="btn btn-cyan btn-grid-view-small" id="grid-view-small" onclick="showGridSmall()">
+										<i class="fa fa-th" aria-hidden="true"></i></button>
 									<button type="button" class="btn btn-cyan btn-grid-view"  id="grid-view" onclick="showGrid()">
 										<i class="fa fa-th-large" aria-hidden="true"></i></button>
 									<button type="button" class="btn btn-cyan btn-list-view"  id="list-view" onclick="showList()">
 										<i class="fa fa-th-list" aria-hidden="true"></i></button>
 								</div>
 							</div>
-						</div>
+						</div>-->
 					</div>
 				</nav>
 			</div>
