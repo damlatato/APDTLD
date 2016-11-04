@@ -274,7 +274,6 @@ function showList() {
 					</div>
 				</div>
 				<div class="row list-group">
-
 				</div>
 			</div>
 		</div>
