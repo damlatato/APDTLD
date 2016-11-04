@@ -381,7 +381,8 @@ html, body {
 /******************************************/
 
 .event-card {
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
+	margin: 6px;
 }
 
 .event-image {
