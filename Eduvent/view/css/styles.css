@@ -305,7 +305,7 @@ html, body {
 /******************************************/
 
 .popular-search-tags .panel-body {
-	padding: 10px;
+	
 }
 
 .popular-search-tags .tag {
@@ -318,10 +318,13 @@ html, body {
 	font-weight: normal;
 	margin-left: 4px;
 	margin-right: 4px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .popular-search-tags .tag:hover {
 	background-color: #FED835; /*#1694b2;*/
+	border: 1px solid #E4C22F;
 	color: White;
 }
 

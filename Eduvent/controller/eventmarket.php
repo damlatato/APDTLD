@@ -1,19 +1,17 @@
 <script>
-//$( document ).ready(function() {
-	function showGridSmall() {
-		
-	}
+function showGridSmall() {
+	
+}
 
-	function showGrid() {
-		$('.event-market-col').addClass('col-md-4');
-		$('.event-market-col').removeClass('list-group-item col-md-3');
-	}
+function showGrid() {
+	$('.event-market-col').addClass('col-md-4');
+	$('.event-market-col').removeClass('list-group-item col-md-3');
+}
 
-	function showList() {
-		$('.event-market-col').addClass('list-group-item');
-		$('.event-market-col').removeClass('col-md-3 col-md-4');
-	}
-//});
+function showList() {
+	$('.event-market-col').addClass('list-group-item');
+	$('.event-market-col').removeClass('col-md-3 col-md-4');
+}
 </script>
 
 
