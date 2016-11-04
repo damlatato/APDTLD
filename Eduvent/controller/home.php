@@ -75,11 +75,9 @@ $( document ).ready(function() {
 
 		<!--Sidebar (Topics)-->
 		<div class="col-md-2">
-
 			<?php
 				include("sidebar.php");
 			?>
-
 		</div>
 		<!--/.Sidebar (Topics)-->
 		
@@ -88,9 +86,9 @@ $( document ).ready(function() {
 			<!--Row 1 (Popular searches) -->
 			<div class="row">
 				<div class="col-md-12">
-<?php
-	include("search-tags.php");
-?>
+					<?php
+						include("search-tags.php");
+					?>
 				</div>
 			</div>
 			<!--/.Row 1-->
@@ -215,7 +213,7 @@ $( document ).ready(function() {
 				<h5 class="font-weight-bold">Popular events</h5>
 				<div class="col-md-12 event-market-area grey lighten-5">
 					<div class="row">
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -269,7 +267,7 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -323,7 +321,7 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -377,63 +375,9 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
-							<!--Card-->
-							<div class="card">
-
-								<!--Card image-->
-								<div class="view overlay hm-white-slight event-image">
-									<img src="https://static.pexels.com/photos/25970/pexels-photo-large.jpg" class="img-fluid" alt="">
-									<a href="#">
-										<div class="mask"></div>
-									</a>
-								</div>
-								<!--/.Card image-->
-
-								<!--Card content-->
-								<div class="card-block text-xs-center">
-									<!--Category & Title-->
-									<h5>Topic</h5>
-									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-									<!--Description-->
-									<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-									<!--Card footer-->
-									<div class="card-footer">
-										<div class="ticket-price">Ticket price: 49€</div>
-
-										<div class="flex-center">
-											<a href="#">
-												<button class="btn btn-event-details" type="button">Show details</button>
-											</a>
-
-											<div class="event-menu">
-												<button class="btn btn-event-menu" type="button">More</button>
-
-												<ul class="event-dropdown-menu">
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-												</ul>
-											</div>
-										</div>
-
-									</div>
-									<!--/.Card footer-->
-
-								</div>
-								<!--/.Card content-->
-
-							</div>
-							<!--/.Card-->
-						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -487,7 +431,7 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -541,7 +485,7 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
+						<div class="col-md-4 event-market-col">
 							<!--Card-->
 							<div class="card">
 
@@ -595,60 +539,6 @@ $( document ).ready(function() {
 							</div>
 							<!--/.Card-->
 						</div>
-						<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
-
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/57825/pexels-photo-57825-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
 					</div>
 				</div>
 			</div>

@@ -22,7 +22,7 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../Eduvent/lib/mdb.min.js"></script>
 
-
+<!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/view/datepicker/js/bootstrap-datepicker.js"></script>
 
 <!-- PrefixFree -->
@@ -40,7 +40,7 @@
 <!-- Custom styles -->
 <link rel="stylesheet" href="../Eduvent/view/css/styles.css">
 
-
+<!-- Datepicker -->
 <link rel="stylesheet" href="../Eduvent/view/datepicker/css/datepicker.css">
 
 </head>
