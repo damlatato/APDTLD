@@ -1,12 +1,29 @@
+<script>
+//$( document ).ready(function() {
+	function showGridSmall() {
+		
+	}
+
+	function showGrid() {
+		$('.event-market-col').addClass('col-md-4');
+		$('.event-market-col').removeClass('list-group-item col-md-3');
+	}
+
+	function showList() {
+		$('.event-market-col').addClass('list-group-item');
+		$('.event-market-col').removeClass('col-md-3 col-md-4');
+	}
+//});
+</script>
+
+
 <div class="container">
 
 	<!--Sidebar (Topics)-->
 	<div class="col-md-2">
-
-<?php
-	include("sidebar.php");
-?>
-
+		<?php
+			include("sidebar.php");
+		?>
 	</div>
 	<!--/.Sidebar (Topics)-->
 
@@ -16,9 +33,9 @@
 		<!--Row 1 (Popular search tags) -->
 		<div class="row">
 			<div class="col-md-12">
-<?php
-	include("search-tags.php");
-?>
+				<?php
+					include("search-tags.php");
+				?>
 			</div>
 		</div>
 		<!--/.Row 1-->
@@ -60,11 +77,11 @@
 						<div class="pull-xs-right">
 							<div class="btn-toolbar" role="toolbar" aria-label="view-options">
 								<div class="btn-group" role="group" aria-label="view-style">
-									<button type="button" class="btn btn-cyan btn-grid-view-small">
-										<i class="fa fa-th" aria-hidden="true"></i></button>
-									<button type="button" class="btn btn-cyan btn-grid-view">
+									<!--<button type="button" class="btn btn-cyan btn-grid-view-small" id="grid-view-small" onclick="showGridSmall()">
+										<i class="fa fa-th" aria-hidden="true"></i></button>-->
+									<button type="button" class="btn btn-cyan btn-grid-view"  id="grid-view" onclick="showGrid()">
 										<i class="fa fa-th-large" aria-hidden="true"></i></button>
-									<button type="button" class="btn btn-cyan btn-list-view">
+									<button type="button" class="btn btn-cyan btn-list-view"  id="list-view" onclick="showList()">
 										<i class="fa fa-th-list" aria-hidden="true"></i></button>
 								</div>
 							</div>
@@ -78,14 +95,14 @@
 		<!--Row 3 (Event market) -->
 		<div class="row" id="event-market-area">
 			<div class="col-md-12 event-market-area grey lighten-5" id="search-results">
-				<div class="row">
-					<div class="col-md-3 event-market-col">
+				<div class="row list-group">
+					<div class="col-md-4 event-market-col">
 						<!--Card-->
-						<div class="card">
+						<div class="event-card card">
 
 							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg" class="img-fluid" alt="">
+							<div class="event-image view overlay hm-white-slight">
+								<img src="https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg" class="img-fluid" alt="" height="195px">
 								<a href="#">
 									<div class="mask"></div>
 								</a>
@@ -93,19 +110,24 @@
 							<!--/.Card image-->
 
 							<!--Card content-->
-							<div class="card-block text-xs-center">
+							<div class="event-body card-block text-xs-center">
 								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
+								<div class="event-title">
+									<h5>Topic</h5>
+									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+								</div>
+								
 								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+								<div class="event-text card-text text-xs-left">
+									<p>
+										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+									</p>
+								</div>
 
 								<!--Card footer-->
 								<div class="card-footer">
 									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
+									<div class="event-buttons flex-center">
 										<a href="#">
 											<button class="btn btn-event-details" type="button">Show details</button>
 										</a>
@@ -123,7 +145,6 @@
 											</ul>
 										</div>
 									</div>
-
 								</div>
 								<!--/.Card footer-->
 
@@ -133,12 +154,12 @@
 						</div>
 						<!--/.Card-->
 					</div>
-					<div class="col-md-3 event-market-col">
+					<div class="col-md-4 event-market-col">
 						<!--Card-->
-						<div class="card">
+						<div class="event-card card">
 
 							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
+							<div class="event-image view overlay hm-white-slight">
 								<img src="https://static.pexels.com/photos/177598/pexels-photo-177598-large.jpeg" class="img-fluid" alt="">
 								<a href="#">
 									<div class="mask"></div>
@@ -147,19 +168,25 @@
 							<!--/.Card image-->
 
 							<!--Card content-->
-							<div class="card-block text-xs-center">
+							<div class="event-body card-block text-xs-center">
 								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+								<div class="event-title">
+									<h5>Topic</h5>
+									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
+								</div>
 
 								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+								<div class="card-text event-text text-xs-left">
+									<p>
+										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+									</p>
+								</div>
 
 								<!--Card footer-->
 								<div class="card-footer">
 									<div class="ticket-price">Ticket price: 49€</div>
 
-									<div class="flex-center">
+									<div class="event-buttons flex-center">
 										<a href="#">
 											<button class="btn btn-event-details" type="button">Show details</button>
 										</a>
@@ -187,13 +214,13 @@
 						</div>
 						<!--/.Card-->
 					</div>
-					<div class="col-md-3 event-market-col">
+					<div class="col-md-4 event-market-col">
 						<!--Card-->
-						<div class="card">
+						<div class="event-card card">
 
 							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/159888/pexels-photo-159888-large.jpeg" class="img-fluid" alt="">
+							<div class="event-image view overlay hm-white-slight">
+								<img src="https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg" class="img-fluid" alt="">
 								<a href="#">
 									<div class="mask"></div>
 								</a>
@@ -201,73 +228,25 @@
 							<!--/.Card image-->
 
 							<!--Card content-->
-							<div class="card-block text-xs-center">
+							<div class="event-body card-block text-xs-center">
 								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
+								<div class="event-title">
+									<h5>Topic</h5>
+									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
-
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/25970/pexels-photo-large.jpg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
 
 								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+								<div class="card-text event-text text-xs-left">
+									<p>
+										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+									</p>
+								</div>
 
 								<!--Card footer-->
 								<div class="card-footer">
 									<div class="ticket-price">Ticket price: 49€</div>
 
-									<div class="flex-center">
+									<div class="event-buttons flex-center">
 										<a href="#">
 											<button class="btn btn-event-details" type="button">Show details</button>
 										</a>
@@ -296,223 +275,8 @@
 						<!--/.Card-->
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
+				<div class="row list-group">
 
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/110470/pexels-photo-110470-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
-
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/128402/pexels-photo-128402-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
-
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/7374/startup-photos-large.jpg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-3 event-market-col">
-						<!--Card-->
-						<div class="card">
-
-							<!--Card image-->
-							<div class="view overlay hm-white-slight event-image">
-								<img src="https://static.pexels.com/photos/57825/pexels-photo-57825-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="card-block text-xs-center">
-								<!--Category & Title-->
-								<h5>Topic</h5>
-								<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-
-								<!--Description-->
-								<p class="card-text event-text text-xs-left">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="flex-center">
-										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
 				</div>
 			</div>
 		</div>

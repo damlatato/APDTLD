@@ -358,13 +358,13 @@ html, body {
 
 #event-market-area-home, #event-market-area {
 	margin-top: 0.1em;
-	margin-left: 0em;
-	margin-right: 0em;
-	margin-bottom: 0em;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
 }
 
 #event-market-area-home {
-	padding-top:0.45em;
+	padding-top: 0.45em;
 }
 
 .event-market-area > .row {
@@ -375,18 +375,17 @@ html, body {
 	padding: 0.1em;
 }
 
-.event-market-col > .card {
-	height: 22em;
+/******************************************/
+
+.event-card {
 	margin-bottom: 0;
 }
 
 .event-image {
-	height: 40%;
 	width: 100%;
 }
 
-.card-block {
-	height: 60%;
+.event-body {
 	width: 100%;
 	padding-bottom: 0;
 	padding-top: 0.3rem;
@@ -394,15 +393,17 @@ html, body {
 	padding-right: 0.3rem;
 }
 
-.card-block > h5 {
+/******************************************/
+
+.event-title > h5 {
 	margin-bottom: 0.5rem;
 }
 
-.card-block > h4 {
+.event-title > h4 {
 	margin-bottom: 0.3rem;
 }
 
-.card-block p {
+.event-title p {
 	margin-bottom: 0.2rem;
 }
 
@@ -411,7 +412,11 @@ html, body {
 }
 
 .card-footer {
-	padding: 0em;
+	padding: 0;
+}
+
+.event-buttons {
+	padding-bottom: 2px;
 }
 
 .ticket-price {
@@ -453,7 +458,8 @@ html, body {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 180px;
+	width: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;

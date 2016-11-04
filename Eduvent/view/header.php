@@ -24,7 +24,9 @@
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventsproposal">Event proposal</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=shoppingCart"><i class="fa fa-shopping-cart left"></i> Shopping Cart<?php printQuantityOfSelectedEvents()?></a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=shoppingCart">
+						<i class="fa fa-shopping-cart left"></i>&nbsp Shopping cart<?php printQuantityOfSelectedEvents()?></a>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav pull-right">
 					<!--<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>-->
@@ -49,18 +51,18 @@ if(isLoggedUserExisting()== true) {
 <!--  	$userRow=mysql_fetch_array($res); -->
 <!-- 	include 'Livechat/livechat.php' -->
 
-	<li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle waves-effect waves light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			<i class="fa fa-user"></i>
-			<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span>
-		</a>
-		<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=settings">My profile</a>
-			<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
-			<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
-			<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
-		</div>
-	</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle waves-effect waves light" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<i class="fa fa-user"></i>
+					<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+					<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=settings">My profile</a>
+					<a class="dropdown-item waves-effect waves-light" href="#">Create Event</a>
+					<a class="dropdown-item waves-effect waves-light" href="#">Bookings</a>
+					<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
+				</div>
+			</li>
 
 
 <?php
@@ -73,15 +75,15 @@ if(isLoggedUserExisting()== true) {
 <!--   $userRow=mysql_fetch_array($res); -->
 <!--   exit; -->
 
-					<li>
-						<a href="../Eduvent/index.php?page=login">
-							<button id="btn-login-header" type="button" class="btn">Log in</button>
-						</a>
-					</li>
+			<li>
+				<a href="../Eduvent/index.php?page=login">
+					<button id="btn-login-header" type="button" class="btn">Log in</button>
+				</a>
+			</li>
 
 <?php } ?>
 
-				</ul>
+		</ul>
 
 				<!--Search form-->
 				<!--<form class="form-inline">
