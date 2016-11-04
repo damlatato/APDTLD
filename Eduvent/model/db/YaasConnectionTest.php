@@ -413,7 +413,7 @@ if ($u1==true && $u2==false){
 	echo "Yaas GetByDate Event TestSuccesfull";
 }
   
-$event1->deleteEvent();	//delete test user from BD
+/*$event1->deleteEvent();	//delete test user from BD
 $event2->deleteEvent();	//delete tes user from BD
 $eventlist=Event::getEventList();
 $e1=false;
@@ -459,6 +459,7 @@ if ($u1==false && $u2==false){
 	echo "<br>";
 	echo "Yaas DeleteUser TestSuccesfull";
 }
+*/
 
 
 ?>
