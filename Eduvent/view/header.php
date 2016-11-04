@@ -24,7 +24,7 @@
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventsproposal">Event proposal</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=shoppingCart"><i class="fa fa-shopping-cart left"></i>Shopping Cart<?php printQuantityOfSelectedEvents()?></a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=shoppingCart"><i class="fa fa-shopping-cart left"></i> Shopping Cart<?php printQuantityOfSelectedEvents()?></a></li>
 				</ul>
 				<ul class="nav navbar-nav pull-right">
 					<!--<li class="nav-item"><a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i>&nbspContact</a></li>-->

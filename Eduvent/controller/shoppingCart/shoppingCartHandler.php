@@ -16,7 +16,7 @@
 	if ($function == "addToShoppingCart"){
 		$eventID = $_POST['eventID'];
 		$quantity = $_POST['quantity'];
-		
+	
 		$shoppingCart = $_SESSION['shoppingCartSession'];
 		$success = $shoppingCart->{'addEvent'}($eventID,$quantity);
 		echo $success;

@@ -12,7 +12,6 @@ class ShoppingCart {
 		//TODO fetch event from db
 		
 		//TODO check if event already exists in shopping cart
-	
 		return "eventID: ".$eventID."quantity: ".$quantity;
 	}
 	

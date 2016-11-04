@@ -4,11 +4,12 @@
 		<thead>
 			<tr>
 				<th></th>
-				<th>Product</th>
-				<th>Color</th>
-				<th>Size</th>
+				<th>Event</th>
+				<th>Category</th>
+				<th>Date</th>
 				<th>Price</th>
-				<th>QTY</th>
+				<th>Quantity</th>
+				<th>Gift</th>
 				<th>Amount</th>
 				<th></th>
 			</tr>

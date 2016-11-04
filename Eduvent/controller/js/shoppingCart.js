@@ -1,5 +1,5 @@
 $('.insert-to-shopping-cart').click(function() {
-
+	
 	var $eventID = $(this).attr("eventid");
 	var $quantity = $('#eventquentity'+$eventID+ ' option:selected').attr("value");
 

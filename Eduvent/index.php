@@ -71,6 +71,7 @@ include 'view/header.php';
 <!--/.Main-->
 
 <script type="text/javascript" src="controller/js/search.js"></script>
+<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
 
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
