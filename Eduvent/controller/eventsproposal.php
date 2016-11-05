@@ -19,7 +19,7 @@ $(document).ready(function() {
 	<!--Sidebar (Topics)-->
 	<div class="col-md-2">
 		<?php
-			include("sidebar.php");
+			include("proposals-sidebar.php");
 		?>
 	</div>
 	<!--/.Sidebar (Topics)-->

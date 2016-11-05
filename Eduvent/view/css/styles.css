@@ -532,3 +532,20 @@ html, body {
 .page-link {
 	color: #1694b2;
 }
+
+/******************************************/
+/*          Proposals side bar            */
+/******************************************/
+
+.proposal-sidebar-head {
+	background-color: #424242;
+	border: 1px solid #424242;
+}
+
+.proposal-sidebar-group-head {
+	background-color: #fafafa;
+	border: 1px solid #424242;
+	color: #424242;
+	font-size: 1.1rem;
+    line-height: 36px;
+}
