@@ -4,6 +4,7 @@ include 'Payment.php';
 include 'User.php';
 include 'thesaurus.php';
 
+$tests=array();
 $payment1 = new Payment(1, "25.09.2016", 1000);
 $payment2 = new Payment(2, "26.09.2016", 2000);
 //test
@@ -28,15 +29,19 @@ $notificationA = array($notification1, $notification2);
 	$jnotificationA = json_encode($notificationA);
 	$notificationA1 = Notification::fromJSONa($jnotificationA);
 	if ($jnotification1 == $jnotification3) {
+		array_push($tests,1);
 		echo "<br> notification json is ok";
 	}
 	if ($notification1 == $notification3) {
+		array_push($tests,2);
 		echo "<br> notification from json is ok";
 	}
 	if ($notificationA == $notificationA1) {
+		array_push($tests,3);
 		echo "<br> notification array is ok";
 	}
 	if ($notificationA == $notificationA1) {
+		array_push($tests,4);
 		echo "<br> notification array from json is ok";
 	}
 //test
@@ -53,15 +58,19 @@ $interestA = array($interest1, $interest2);
 	$interestA1 = Interest::fromJSONa($jinterestA);
 	
 	if ($jinterest1 == $jinterest3) {
+		array_push($tests,5);
 		echo "<br> interest json is ok";
 	}
 	if ($interest1 == $interest3) {
+		array_push($tests,6);
 		echo "<br> interest from json is ok";
 	}
 	if ($interestA == $interestA1) {
+		array_push($tests,7);
 		echo "<br> interest array is ok";
 	}
 	if ($interestA == $interestA1) {
+		array_push($tests,8);
 		echo "<br> interest array from json is ok";
 	}
 //test
@@ -75,15 +84,18 @@ $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim"
 	$jaddress3 = $address3->jsonSerialize();
 	
 	if ($jaddress1 == $jaddress3) {
+		array_push($tests,9);
 		echo "<br> address json is ok";
 	}
 	if ($address1 == $address3) {
+		array_push($tests,10);
 		echo "<br> address from json is ok";
 	}
 //test
 
-$event1 = new Event(1, $eventtypes["Show"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Studing'], 11);
-$event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0);
+$event1 = new Event(1, $eventtypes["Show"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Studing'], 11, $statuses["Proposed"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event4 = new Event(4, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $eventA = array($event1, $event2);
 //test
 	$jevent1 = $event1->jsonSerialize();
@@ -93,21 +105,25 @@ $eventA = array($event1, $event2);
 	$eventA1 = Event::fromJSONa($jeventA);
 	$jeventA1 = json_encode($eventA1);
 	if ($jevent1 == $jevent3) {
+		array_push($tests,11);
 		echo "<br> event json is ok";
 	}
 	if ($event1 == $event3) {
+		array_push($tests,12);
 		echo "<br> event from json is ok";
 	}
 	if ($eventA == $eventA1) {
+		array_push($tests,13);
 		echo "<br> event array is ok";
 	}
 	if ($jeventA == $jeventA1) {
+		array_push($tests,14);
 		echo "<br> event array from json is ok";
 	}
 //test
 
-$booking1 = new Booking(1, $event1, "24.09.2016 13:56", $payment1);
-$booking2 = new Booking(2, $event2, "25.09.2016 13:56", $payment2);
+$booking1 = new Booking(1, $event1->getId(), "24.09.2016 13:56", $payment1);
+$booking2 = new Booking(2, $event2->getId(), "25.09.2016 13:56", $payment2);
 $bookingA = array($booking1, $booking2);
 
 //test
@@ -118,27 +134,32 @@ $bookingA = array($booking1, $booking2);
 	
 	$bookingA1 = Booking::fromJSONa($jbookingA);
 	if ($jbooking1 == $jbooking3) {
+		array_push($tests,15);
 		echo "<br> booking json is ok";
 	}
 	if ($booking1 == $booking3) {
+		array_push($tests,16);
 		echo "<br> booking from json is ok";
 	}
 	if ($bookingA == $bookingA1) {
+		array_push($tests,17);
 		echo "<br> booking array is ok";
 	}
 	if ($bookingA == $bookingA1) {
+		array_push($tests,18);
 		echo "<br> booking array from json is ok";
 	}
 //test
 
 
-$wishlist = array($event1, $event2);
-$organizedEvents = array($event1);
-$votedEvents = array($event2);
+$wishlist = array($event1->getId(), $event2->getId());
+$organizedEvents = array($event1->getId());
+$votedEvents = array($event2->getId());
+$proposedEvents = array($event2->getId());
 
 
-$user1 = new User(111,"leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, $notificationA, $bookingA, $wishlist, $organizedEvents, $votedEvents);
-$user2 = new User(222,"leonidgunko2@yandex.ru","213", $address2, $genders["Mrs."], "09.07.1994", $interestA, $notificationA, $bookingA, $wishlist, $organizedEvents, $votedEvents);
+$user1 = new User(111,"leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, $notificationA, $bookingA, $wishlist, $organizedEvents, $votedEvents, $proposedEvents, "/images/img1");
+$user2 = new User(222,"leonidgunko2@yandex.ru","213", $address2, $genders["Mrs."], "09.07.1994", $interestA, $notificationA, $bookingA, $wishlist, $organizedEvents, $votedEvents, $proposedEvents, "/images/img2");
 $userA = array($user1,$user2);
 //test
 	$juser1 = $user1->jsonSerialize();
@@ -147,16 +168,26 @@ $userA = array($user1,$user2);
 	$juserA = json_encode($userA);
 	$userA1 = User::fromJSONa($juserA);
 	$juserA1 = json_encode($userA1);
+	
 	if ($juser1 == $juser3) {
+		array_push($tests,19);
 		echo "<br> user json is ok";
 	}
-	if ($user1 == $user3) {
-		echo "<br> user from json is ok";
+	if ($user1->getId() == $user3->getId() && $user1->getEmail() == $user3->getEmail() && $user1->getPassword() == $user3->getPassword()
+	&&$user1->getAddress() == $user3->getAddress() && $user1->getGender() == $user3->getGender() && $user1->getBirthDate() == $user3->getBirthDate()
+	&&$user1->getInterest() == $user3->getInterest() && $user1->getNotifications() == $user3->getNotifications()
+	&&$user1->getBookings() == $user3->getBookings() && $user1->getWishlist() == $user3->getWishlist()
+	&&$user1->getOrganizedEvents() == $user3->getOrganizedEvents() && $user1->getVotedEvents() == $user3->getVotedEvents()
+	&& $user1->getProposedEvents() == $user3->getProposedEvents()) {
+		array_push($tests,20);
+		echo "<br> user from json is ok";;
 	}
 	if ($userA == $userA1) {
+		array_push($tests,21);
 		echo "<br> user array is ok";
 	}
 	if ($juserA == $juserA1) {
+		array_push($tests,22);
 		echo "<br> user array from json is ok";
 	}
 //test
@@ -166,6 +197,7 @@ $user1->deleteUser();	//delete test user from BD
 $user2->deleteUser();	//delete tes user from BD
 $event1->deleteEvent();	//delete test user from BD
 $event2->deleteEvent();	//delete tes user from BD
+$event4->deleteEvent();	//delete tes user from BD
 
 $user1->postUser();	//post user to BD
 $user2->postUser();	//post user to BD
@@ -191,6 +223,7 @@ foreach($userslist as $user) {
 }
 
 if ($u1==true && $u2==true){
+	array_push($tests,23);
 	echo "<br>";
 	echo "Yaas PostUser TestSuccesfull";
 }
@@ -219,6 +252,7 @@ foreach($userslist as $user) {
 	}
 }
 if ($u1==true && $u2==true){
+	array_push($tests,24);
 	echo "<br>";
 	echo "Yaas PutUser TestSuccesfull";
 }
@@ -229,6 +263,7 @@ if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail()
 	&&$user->getInterest() == $user1->getInterest() && $user->getNotifications() == $user1->getNotifications()
 	&&$user->getBookings() == $user1->getBookings() && $user->getWishlist() == $user1->getWishlist()
 	&&$user->getOrganizedEvents() == $user1->getOrganizedEvents() && $user->getVotedEvents() == $user1->getVotedEvents()) {
+		array_push($tests,25);
 		echo "<br>";
 		echo "Yaas GetUser by Email Test Successfull";
 }
@@ -236,9 +271,9 @@ if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail()
 
 $event1->postEvent();	//post user to BD
 $event2->postEvent();	//post user to BD
-$eventlist=Event::getEventList();
 $e1=false;
 $e2=false;
+$eventlist = Event::getEventList();
 foreach($eventlist as $event) {
 	if ($event->getID() == $event1->getID() && $event->getEventType() == $event1->getEventType() && $event->getTitle() == $event1->getTitle()
 		&& $event->getDescription() == $event1->getDescription() && $event->getLocation() == $event1->getLocation() ) {
@@ -251,6 +286,7 @@ foreach($eventlist as $event) {
 }
 
 if ($e1==true && $e2==true){
+	array_push($tests,26);
 	echo "<br>";
 	echo "Yaas PostEvent TestSuccesfull";
 }
@@ -270,6 +306,7 @@ foreach($eventlist as $event) {
 	}
 }
 if ($e1==true && $e2==true){
+	array_push($tests,27);
 	echo "<br>";
 	echo "Yaas PutEvent TestSuccesfull";
 }
@@ -288,6 +325,7 @@ foreach($eventlist as $event) {
 	}
 }
 if ($e1==true && $e2==false){
+	array_push($tests,28);
 	echo "<br>";
 	echo "Yaas Get Event by Topic Test Succesfull";
 }
@@ -306,6 +344,7 @@ foreach($eventlist as $event) {
 	}
 }
 if ($e1==true && $e2==false){
+	array_push($tests,29);
 	echo "<br>";
 	echo "Yaas Get Event by EventType Test Succesfull";
 }
@@ -324,6 +363,7 @@ foreach($eventlist as $event) {
 	}
 }
 if ($e1==true && $e2==false){
+	array_push($tests,30);
 	echo "<br>";
 	echo "Yaas Get Event by PriceCategory Test Succesfull";
 }
@@ -332,17 +372,13 @@ if ($e1==true && $e2==false){
 $userlist=User::getUserListByEvent($event2);
 $user = $userlist[0];
 if ($user->getId()==222 && count($userlist)==1){
+	array_push($tests,31);
 	echo "<br>";
 	echo "getUserListByEvent Test Successfull";
 }
 
-$user=User::getEventOrganizer($event1);
-if ($user->getId()==111){
-	echo "<br>";
-	echo "getEventOrganizer Test Successfull";
-}
 
-$user1->organizeEvent($event2);
+$user1->organizeEvent($event4);
 $userslist=User::getUserList();
 $u1=false;
 $u2=false;
@@ -362,9 +398,19 @@ foreach($userslist as $user) {
 		$u2 = true;
 	}
 }
-if ($u1==true && $u2==false){
+if ($u1==true && $u2==true){
+	array_push($tests,32);
 	echo "<br>";
 	echo "Yaas organizeEvent TestSuccesfull";
+}
+
+$event4 = Event::getById($event4->getId());
+
+$userId=$event4->geteventOrganizer();
+if ($userId==$user1->getId()){
+	array_push($tests,33);
+	echo "<br>";
+	echo "getEventOrganizer Test Successfull";
 }
 
 $user1->voteEvent($event1);
@@ -387,12 +433,14 @@ foreach($userslist as $user) {
 		$u2 = true;
 	}
 }
-if ($u1==true && $u2==false){
+if ($u1==true && $u2==true){
+	array_push($tests,34);
 	echo "<br>";
 	echo "Yaas voteEvent TestSuccesfull";
 }
 
 if (User::getPasswordByEmail("leonidgunko1@yandex.ru")=="213322" && User::getPasswordByEmail("leonidgunko2@yandex.ru")=="213"){
+	array_push($tests,35);
 	echo "<br>";
 	echo "Yaas getPasswordByEmail for Login TestSuccesfull";
 }
@@ -409,8 +457,21 @@ foreach($eventlist as $event) {
 	}
 }
 if ($u1==true && $u2==false){
+	array_push($tests,36);
 	echo "<br>";
 	echo "Yaas GetByDate Event TestSuccesfull";
+}
+
+if (count($tests)==36){
+	echo "<br>";
+	echo "All the tests are done";
+}
+else{
+	echo "<br>";
+	foreach($tests as $test){
+		echo $test;
+		echo " , ";
+	}
 }
   
 /*$event1->deleteEvent();	//delete test user from BD

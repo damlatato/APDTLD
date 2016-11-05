@@ -9,8 +9,11 @@ class Event  implements JsonSerializable{
     private $topic;	//same as interests in user thesaurus
     private $priceCategory; //thesaurus
     private $price;
+    private $status;//thesaurus
+    private $eventOrganizer;//userId
+    private $imgHref;
     
-    public function __construct($id, $eventType, $title, $description, $datetime, $location, $topic, $price){
+    public function __construct($id, $eventType, $title, $description, $datetime, $location, $topic, $price, $status, $imgHref){
     	$this->id = $id;
     	$this->eventType = $eventType;
     	$this->title = $title;
@@ -25,6 +28,8 @@ class Event  implements JsonSerializable{
     	else{
     		$this->priceCategory = "Free";
     	}
+    	$this->status = $status;
+    	$this->imgHref = $imgHref;
     }
     
     public function setId($id){
@@ -56,7 +61,16 @@ class Event  implements JsonSerializable{
     	else{
     		$this->priceCategory = "Free";
     	}
+    }
+    public function setStatus($status){
+    	$this->status = $status;
     } 
+    public function seteventOrganizer($eventOrganizer){
+    	$this->eventOrganizer = $eventOrganizer;
+    }
+    public function setimgHref($imgHref){
+    	$this->imgHref = $imgHref;
+    }
 
     public function set($key, $id){
     	$this->$key = $id;
@@ -80,7 +94,7 @@ class Event  implements JsonSerializable{
     public function getLocation(){
     	return $this->location;
     }
-    public function getTopics(){
+    public function getTopic(){
     	return $this->topic;
     }
     public function getPrice(){
@@ -88,6 +102,15 @@ class Event  implements JsonSerializable{
     }
     public function getPriceCategory(){
     	return $this->priceCategory;
+    }
+    public function getStatus(){
+    	return $this->status;
+    }
+    public function geteventOrganizer(){
+    	return $this->eventOrganizer;
+    }
+    public function getimgHref(){
+    	return $this->imgHref;
     }
     
     public function jsonSerialize(){
@@ -101,13 +124,16 @@ class Event  implements JsonSerializable{
 		'topic'=>$this->topic,
 		'price'=>$this->price,
 		'priceCategory'=>$this->priceCategory,
-		'location'=>$location->jsonSerialize()
+		'location'=>$location->jsonSerialize(),
+		'status'=>$this->status,
+		'eventOrganizer'=>$this->eventOrganizer,
+		'imgHref'=>$this->imgHref
 		]);
     }
     
     function fromJSON($jevent){
     	$eventv = json_decode($jevent,true);
-    	$event = new Event(1, 1, 1, 1, 1, 1, 1, 1);
+    	$event = new Event(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
     	foreach($eventv as $key=>$value){
     		if($key=='location'){
     			$addressv = json_decode($value);
@@ -153,17 +179,27 @@ class Event  implements JsonSerializable{
 		delete("event", $this->getId());
 	}
 	
-	public function getEventList(){
+	public static function getEventList(){
 		$jeventlist = get("event");
 		return Event::fromJSONa($jeventlist);
 	}
 	
-	public function getByTopic($topic){
+	public static function getByTopic($topic){
 		$jeventlist = get("event?q=topic:".chr(34).$topic.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
-	public function getByDate($StartDate, $EndDate){
+	public static function getByStatus($status){
+		$jeventlist = get("event?q=status:".chr(34).$status.chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
+	public static function getById($id){
+		$jeventlist = get("event?q=id:".chr(34).$id.chr(34));
+		return Event::fromJSONa($jeventlist)[0];
+	}
+	
+	public static function getByDate($StartDate, $EndDate){
 		$jeventlist = get("event");
 		$eventA = Event::fromJSONa($jeventlist);
 		$eventlist = array();
@@ -175,12 +211,12 @@ class Event  implements JsonSerializable{
 		return $eventlist;
 	}
 	
-	public function getByEventType($eventtype){
+	public static function getByEventType($eventtype){
 		$jeventlist = get("event?q=eventType:".chr(34).$eventtype.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
-	public function getByPriceCategory($priceCategory){
+	public static function getByPriceCategory($priceCategory){
 		$jeventlist = get("event?q=priceCategory:".chr(34).$priceCategory.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}

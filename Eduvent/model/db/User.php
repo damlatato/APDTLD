@@ -12,15 +12,16 @@ class User implements JsonSerializable{
 	private $address;			//class
 	private $gender;			//thesaurus
 	private $birthDate;
-	private $interest;			//class
-	private $notifications;		//class
-	private $bookings;			//array of class ->{event, payment} 
-	private $wishlist;			//array of events
-	//private $settings;		//class
+	private $interest; //class
+	private $notifications; //class
+	private $bookings;	//array of ->{event, payment} 
+	private $wishlist;	//array of events
+	//private $settings;	//class
 	private $organizedEvents;	//array
-	private $votedEvents;		//array
+	private $votedEvents;	//array
+	private $proposedEvents;	//array
 	
-	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $notifications, $bookings, $wishlist, $organizedEvents, $votedEvents){
+	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $notifications, $bookings, $wishlist, $organizedEvents, $votedEvents, $proposedEvents, $imgHref){
 		$this->id = $id;
 		$this->email = $email;
 		$this->password = $password;
@@ -34,6 +35,8 @@ class User implements JsonSerializable{
 		//$this->settings = $settings;
 		$this->organizedEvents = $organizedEvents;
 		$this->votedEvents = $votedEvents;
+		$this->proposedEvents= $proposedEvents;
+		$this->imgHref = $imgHref;
 	}
 	
 	public function setId($id){
@@ -74,6 +77,12 @@ class User implements JsonSerializable{
 	}
 	public function setVotedEvents($votedEvents){
 		$this->votedEvents = $votedEvents;
+	}
+	public function setProposedEvents($proposedEvents){
+		$this->proposedEvents = $proposedEvents;
+	}
+	public function setimgHref($imgHref){
+		$this->imgHref = $imgHref;
 	}
 	public function set($key, $value){
 		$this->$key = $value;
@@ -118,24 +127,30 @@ class User implements JsonSerializable{
 	public function getVotedEvents(){
 		return $this->votedEvents;
 	}
+	public function getProposedEvents(){
+		return $this->proposedEvents;
+	}
+	public function getimgHref(){
+		return $this->imgHref;
+	}
 	
-	public function getUserByEmail($email){
+	public static function getUserByEmail($email){
 		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0];
 	}
 	
-	public function getPasswordByEmail($email){
+	public static function getPasswordByEmail($email){
 		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0]->getPassword();
 	}
 	
-	public function getUserListByEvent($event){
+	public static function getUserListByEvent($event){
 		$userslist=User::getUserList();
 		$resultUserArray = array();
 		foreach ($userslist as $user){
 			$bookingslist=$user->getBookings();
 			foreach ($bookingslist as $booking){
-				if($booking->getEvent()->getId() == $event->getId()){
+				if($booking->getEventId() == $event->getId()){
 					array_push($resultUserArray,$user);
 				}
 			}
@@ -143,50 +158,62 @@ class User implements JsonSerializable{
 		return $resultUserArray;
 	}
 	
-	public function getEventOrganizer($event){
+/*	public static function getEventOrganizer($event){
 		$userslist=User::getUserList();
-		$resultUserArray = array();
 		foreach ($userslist as $user){
 			$organizedEventslist=$user->getOrganizedEvents();
 			foreach ($organizedEventslist as $organizedEvent){
-				if($organizedEvent->getId() == $event->getId()){
-					array_push($resultUserArray,$user);
+				if($organizedEvent == $event->getId()){
+					return $user;
 				}
 			}
 		}
-		return $resultUserArray[0];
-	}
+	}*/
 	
 	public function organizeEvent($event){
-		if (gettype($event)=="Event"){
-			$event->postEvent();
-			$this->setOrganizedEvents(array_push($this->getOrganizedEvents(), $event));
+		if ($event->geteventOrganizer() != $this->getId()){
+			$event->seteventOrganizer($this->getId());
 		}
+		$this->setOrganizedEvents(array_push($this->getOrganizedEvents(), $event->getId()));
+		$event->postEvent();
+	}
+	
+	public function proposeEvent($event){
+		if ($event->getStatus != $statuses["Proposed"]){
+			$event->setStatus($statuses["Proposed"]);
+		}
+		$this->setProposedEvents(array_push($this->getProposedEvents(), $event->getId()));
+		$event->postEvent();
 		$this->putUser();
 	}
 	
 	public function voteEvent($event){
-		echo gettype($event);
-		if (gettype($event)=="Event"){
-			$this->setVotedEvents(array_push($this->getVotedEvents(), $event));
-		}
+		$this->setVotedEvents(array_push($this->getVotedEvents(), $event->getId()));
 		$this->putUser();
 	}
 	
-	public function proposeEvent($event){	//wishlist
-		echo gettype($event);
-		if (gettype($event)=="Event"){
-			$this->setWishlist(array_push($this->getWishlist(), $event));
-		}
+	public function WishEvent($event){	//wishlist
+		$this->setWishlist(array_push($this->getWishlist(), $event->getId()));
 		$this->putUser();
 	}
 	
 	public function bookEvent($event){	//wishlist
-		echo gettype($event);
-		if (gettype($event)=="Event"){
-			$this->setBookings(array_push($this->getBookings(), $event));
-		}
+		$this->setBookings(array_push($this->getBookings(), $event->getId()));
 		$this->putUser();
+	}
+	
+	public function payBooking($booking){	//wishlist
+		if (in_array($booking, $this->getBookings())){
+			$date = date('Y/m/d H:i:s');
+			$payment = new Payment(1,$date,100);
+			$bookings = $this->getBookings();
+			foreach($bookings as $bookingv){
+				if ($bookingv->getId()==$booking->getId())
+					$bookingv->setPayment($payment);
+					break;
+			}
+			$this->putUser();
+		}
 	}
 	
 	public function jsonSerialize(){	
@@ -202,7 +229,9 @@ class User implements JsonSerializable{
 		'bookings' =>json_encode($this->bookings),	//class
 		'wishlist' =>json_encode($this->wishlist),	//class
 		'organizedEvents' =>json_encode($this->organizedEvents),	//class
-		'votedEvents' =>json_encode($this->votedEvents)	//class
+		'votedEvents' =>json_encode($this->votedEvents),	//class
+		'proposedEvents' =>json_encode($this->proposedEvents),	//class
+		'imgHref'=>$this->imgHref
 		]);
 		
 		/*$str = str_replace(chr(92), '', $str);
@@ -215,9 +244,9 @@ class User implements JsonSerializable{
 	}
 	
 	
-	function fromJSON($juser){
+	public static function fromJSON($juser){
 		$userv = json_decode($juser,true);
-		$user = new User(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+		$user = new User(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 		foreach($userv as $key=>$value){
 			if($key=='address'){
 				$addressv = json_decode($value);
@@ -244,6 +273,26 @@ class User implements JsonSerializable{
 				continue;
 			}
 			if($key=='wishlist'){
+				$wishlistvA = json_decode($value);
+				$user->set('wishlist', $wishlistvA);
+				continue;
+			}
+			if($key=='organizedEvents'){
+				$organizedEventsvA = json_decode($value);
+				$user->set('organizedEvents', $organizedEventsvA);
+				continue;
+			}
+			if($key=='votedEvents'){
+				$votedEventsvA = json_decode($value);
+				$user->set('votedEvents', $votedEventsvA);
+				continue;
+			}
+			if($key=='proposedEvents'){
+				$proposedEventsvA = json_decode($value);
+				$user->set('proposedEvents', $proposedEventsvA);
+				continue;
+			}
+			/*if($key=='wishlist'){
 				$wishlistvA = Event::fromJSONa($value);
 				$user->set('wishlist', $wishlistvA);
 				continue;
@@ -258,13 +307,18 @@ class User implements JsonSerializable{
 				$user->set('votedEvents', $votedEventsvA);
 				continue;
 			}
+			if($key=='proposedEvents'){
+				$votedEventsvA = Event::fromJSONa($value);
+				$user->set('proposedEvents', $proposedEventsvA);
+				continue;
+			}*/
 			
 			$user->set($key, $value);
 		}
 		return $user;
 	}
 	
-	function fromJSONa($userAj){
+	public static function fromJSONa($userAj){
 		$userAv = json_decode($userAj);
 		$userA = array();
 		foreach($userAv as $key=>$userj){
@@ -294,7 +348,7 @@ class User implements JsonSerializable{
 		delete("user", $this->getId());
 	}
 	
-	public function getUserList(){
+	public static function getUserList(){
 		$juserlist = get("user");
 		return User::fromJSONa($juserlist);
 	}

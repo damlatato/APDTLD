@@ -11,6 +11,7 @@ function getAccessToken(){
 	$result=curl_exec ($ch);
 	curl_close($ch);
 	$result1 = json_decode($result, true);
+	//echo $result1["access_token"];
 	return $result1["access_token"];
 }
 
@@ -33,7 +34,7 @@ function post($datatype, $bodyjson){
 		curl_close($ch);
 		return $code;
 	}
-	return $ErrorException;
+	echo curl_error($ch);
 }
 
 function delete($datatype, $id){
@@ -54,7 +55,7 @@ function delete($datatype, $id){
 		curl_close($ch);
 		return $code;
 	}
-	return $ErrorException;
+	echo curl_error($ch);
 }
 
 function get($datatype){
@@ -76,7 +77,7 @@ function get($datatype){
 		curl_close($ch);
 		return $result;
 	}
-	return $ErrorException;
+	echo curl_error($ch);
 }
 
 function put($datatype, $id, $bodyjson){
@@ -98,6 +99,6 @@ function put($datatype, $id, $bodyjson){
 		curl_close($ch);
 		return $code;
 	}
-	return $ErrorException;
+	echo curl_error($ch);
 }
 ?>
