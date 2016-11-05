@@ -409,6 +409,7 @@ html, body {
 /******************************************/
 
 .event-title > h5 {
+	color: #1694b2;
 	margin-bottom: 0.5rem;
 }
 
@@ -502,6 +503,10 @@ html, body {
 
 .btn-propose:hover {
 	background-color: #ffeb3b;
+}
+
+.proposal-topic {
+	color: #1694b2;
 }
 
 .proposal-title {

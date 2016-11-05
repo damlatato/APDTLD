@@ -1,31 +1,7 @@
-<script>
-$(document).ready(function() {
-	trend=$('.requested-trend');
-	trendValue=trend.text();
-	if (trendValue.charAt(1)==='+') {
-		trend.css('color', '#4CAF50');
-	}
-	else if (trendValue.charAt(1)==='-') {
-		trend.css('color', '#F44336');
-	}
-	else {
-		trend.css('color', '');
-	}
-});
-</script>
-
 <div class="container">
 
-	<!--Sidebar (Topics)-->
-	<div class="col-md-2">
-		<?php
-			include("proposals-sidebar.php");
-		?>
-	</div>
-	<!--/.Sidebar (Topics)-->
-
 	<!--Content-->
-	<div class="col-md-10 ">
+	<div class="col-md-12">
 
 		<!--Row 1: Page heading-->
 		<div class="row">
@@ -34,7 +10,7 @@ $(document).ready(function() {
 				<h3 class="h3-responsive"><small class="text-muted">Secondary text</small></h3>
 			</div>
 			<div class="col-md-3">
-				<br><a href="#!" class="btn btn-propose"><strong>Propose event!</strong></a>
+				<br><a href="../Eduvent/index.php?page=createproposal" class="btn btn-propose"><strong>Propose event!</strong></a>
 			</div>
 		</div>
 		<!--/.Page heading-->
