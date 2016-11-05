@@ -146,8 +146,14 @@ if ($userId==$user1->getId()){
 	echo "getEventOrganizer Test Successfull";
 }
 
+if ($event4->getUsersNumber()==1){
+	array_push($tests,8);
+	echo "<br>";
+	echo "getNumberOfParticipants Test Successfull";
+}
 
-if (count($tests)==7){
+
+if (count($tests)==8){
 	echo "<br>";
 	echo "All the tests are done";
 }
