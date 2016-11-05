@@ -10,87 +10,76 @@
 				<h3 class="h3-responsive"><small class="text-muted">Secondary text</small></h3>
 			</div>
 			<div class="col-md-3">
-				<br><a href="../Eduvent/index.php?page=createproposal" class="btn btn-propose"><strong>Propose event!</strong></a>
+				<br><a href="../Eduvent/index.php?page=eventproposals" class="btn btn-list-proposals"><strong>Show posted proposals</strong></a>
 			</div>
 		</div>
 		<!--/.Page heading-->
 		<hr>
 
-		<!--Row 2: Navbar (Filter bar) -->
-		<div class="row">
-			<div class="col-md-12">
-				<?php
-					include("proposal-filter-bar.php");
-				?>
-			</div>
-		</div>
-		<!--/.Row 2: Navbar-->
-
 		<!--Row 3 (Proposal list) -->
 		<div class="row">
 			<div class="col-md-12">
-				<!--Proposal-->
-				<div class="row">
-					<div class="col-md-12">
-						<a href="#!" class="proposal-title"><h4>Event proposal title</h4></a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias voluptates incidunt tempora ducimus! At cum iusto necessitatibus sed omnis nemo natus. iure magni quasi dolores similique aspernatur.</p>
-						<div class="read-more text-xs-right">
-							<span class="requested-by">Requested by <b>35</b> users</span>
-							<a href="#!" class="btn btn-vote">I want it also! Vote here!</a>
-							<a href="#!" class="btn btn-offer">Offer event</a>
-						</div>
+
+				<div class="form-group row">
+					<label for="topic-select" class="col-xs-3 col-form-label">Topic</label>
+					<div class="col-xs-3">
+						<select class="form-control" id="topic-select">
+							<option>Topic</option>
+							<option>Topic</option>
+							<option>Topic</option>
+							<option>Topic</option>
+							<option>Topic</option>
+						</select>
 					</div>
 				</div>
-				<!--/.Proposal-->
-				<hr class="extra-margin">
 
-				<!--Proposal-->
-				<div class="row">
-					<div class="col-md-12">
-						<a href="#!" class="proposal-title"><h4>Event proposal title</h4></a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestias voluptates incidunt tempora ducimus! At cum iusto necessitatibus sed omnis nemo natus. iure magni quasi dolores similique aspernatur.</p>
-						<div class="read-more text-xs-right">
-							<span class="requested-by">Requested by <b>35</b> users</span>
-							<a href="#!" class="btn btn-vote">I want it also! Vote here!</a>
-							<a href="#!" class="btn btn-offer">Offer event</a>
-						</div>
+				<div class="form-group row">
+					<label for="title-input" class="col-xs-3 col-form-label">Title</label>
+					<div class="col-xs-3">
+						<input class="form-control" type="search" value="Title" id="title-input">
 					</div>
 				</div>
-				<!--/.Proposal-->
 
-				<br>
-				<hr>
+				<div class="form-group row">
+					<label for="description-textarea" class="col-xs-3 col-form-label">Description</label>
+					<div class="col-xs-6">
+						<textarea class="form-control" id="description-textarea"></textarea>
+					</div>
+				</div>
 
-				<!--Pagination-->
-				<nav class="row text-xs-center page-items">
-					<ul class="pagination">
-						<li class="page-item disabled">
-							<a class="page-link" href="#!" aria-label="Previous">
-								<span aria-hidden="true">&laquo;</span>
-								<span class="sr-only">Previous</span>
-							</a>
-						</li>
-						<li class="page-item active">
-							<a class="page-link" href="#!">1 <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="page-item"><a class="page-link" href="#!">2</a></li>
-						<li class="page-item"><a class="page-link" href="#!">3</a></li>
-						<li class="page-item"><a class="page-link" href="#!">4</a></li>
-						<li class="page-item"><a class="page-link" href="#!">5</a></li>
-						<li class="page-item">
-							<a class="page-link" href="#!" aria-label="Next">
-								<span aria-hidden="true">&raquo;</span>
-								<span class="sr-only">Next</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<!--/.Pagination-->
-				<hr>
+				<div class="form-group row">
+					<p class="col-xs-3 col-form-label">Acceptable time period</p>
+				</div>
+
+				<div class="form-group row">
+					<label for="end-date" class="col-xs-3 col-form-label">From</label>
+					<div class="col-xs-3">
+						<input class="form-control" type="date" value="2016-10-20" id="start-date">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="end-date" class="col-xs-3 col-form-label">To</label>
+					<div class="col-xs-3">
+						<input class="form-control" type="date" value="2016-12-20" id="end-date">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="location-input" class="col-xs-3 col-form-label">Acceptable location</label>
+					<div class="col-xs-3">
+						<input class="form-control" type="search" value="Acceptable location" id="location-input">
+					</div>
+				</div>
+				
+				<a href="#" class="btn btn-post-proposal">Post proposal</a>
+
 			</div>
 		</div>
 		<!--/.Row 3-->
 
+		<br>
+		<hr>
 	</div>
 	<!--/.Content-->
 </div>

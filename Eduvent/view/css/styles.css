@@ -497,12 +497,12 @@ html, body {
 /******************************************/
 
 .btn-propose {
-	background-color: #fdd835;
+	background-color: #ff6d00;
 	font-size: 0.95em;
 }
 
 .btn-propose:hover {
-	background-color: #ffeb3b;
+	background-color: #ff9100;
 }
 
 .proposal-topic {
@@ -562,4 +562,30 @@ html, body {
 	color: #424242;
 	font-size: 1.1rem;
     line-height: 36px;
+}
+
+/******************************************/
+/*         Create proposal                */
+/******************************************/
+
+.btn-list-proposals {
+	background-color: #1694b2;
+	font-size: 0.95em;
+}
+
+.btn-list-proposals:hover {
+	background-color: #32d373;
+}
+
+.col-form-label {
+	font-size: 1rem;
+}
+
+.btn-post-proposal {
+	background-color: #1694b2;
+	font-size: 0.95em;
+}
+
+.btn-post-proposal:hover {
+	background-color: #32d373;
 }
