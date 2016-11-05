@@ -1,4 +1,6 @@
 <?php
+	include_once 'controller/shoppingCart/class.shoppingCart.php';
+	include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
 	require_once 'controller/initiatePage.php';
 ?>
 
@@ -22,7 +24,7 @@
 				<ul class="nav navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventmarket">Event market</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
-					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventproposals">Event proposal</a></li>
+					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=eventsproposal">Event proposal</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php">About</a></li>
 					<li class="nav-item"><a class="nav-link" href="../Eduvent/index.php?page=shoppingCart">
 						<i class="fa fa-shopping-cart left"></i>&nbsp Shopping cart<?php printQuantityOfSelectedEvents()?></a>

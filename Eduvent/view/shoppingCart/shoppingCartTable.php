@@ -1,3 +1,44 @@
+<div class="row">
+	<div class="col-md-12">
+		<h4>Event 1</h4>
+		<label>Select Quantity</label> <select id="eventquentity1"
+			class="browser-default">
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select> <input
+			class="btn btn-success btn-rounded insert-to-shopping-cart"
+			eventid="1" type="submit" value="buy" />
+	</div>
+	<div class="col-md-12">
+		<h4>Event 2</h4>
+		<label>Select Quantity</label> <select id="eventquentity2"
+			class="browser-default">
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select> <input
+			class="btn btn-success btn-rounded insert-to-shopping-cart"
+			eventid="2" type="submit" value="buy" />
+	</div>
+	<div class="col-md-12">
+		<h4>Event 3</h4>
+		<label>Select Quantity</label> <select id="eventquentity3"
+			class="browser-default">
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select> <input
+			class="btn btn-success btn-rounded insert-to-shopping-cart"
+			eventid="3" type="submit" value="buy" />
+	</div>
+</div>
 <div class="table-responsive">
 	<table class="table product-table">
 		<!--Table head-->
@@ -18,24 +59,26 @@
 
 		<!--Table body-->
 		<tbody>
-			<?php $array = $_SESSION['shoppingCartSession'] ?>
-			<?php foreach($array as $key=>$value): ?>
+			<?php 
+			$shoppingCart = $_SESSION['shoppingCartSession'];
+			foreach($shoppingCart->getEvents() as $shoppingCartEvent):
+			?>
 
-			<!--First row-->
+		<!--First row-->
 			<tr>
 				<th scope="row"><img
-					src="<?php echo'$key->imageLink'?>"
-					alt="" class="img-fluid">
+					src="<?php echo $shoppingCartEvent->getEvent()->getimgHref()?>"
+					alt="" class="img-fluid" width="80px" height="80px">
 				</th>
 				<td>
 					<h5>
-						<strong><?php echo'$key->getEventTitle()'?></strong>
+						<strong><?php echo $shoppingCartEvent->getEvent()->getTitle() ?></strong>
 					</h5>
-					<p class="text-muted"><?php echo'$key->getDescription()'?></p>
+					<p class="text-muted"><?php echo $shoppingCartEvent->getEvent()->getDescription()?></p>
 				</td>
-				<td><?php echo'$key->getTopic()'?></td>
-				<td><?php echo'$key->getDateTime()'?></td>
-				<td><td><?php echo'$key->getPrice()'?></td></td>
+				<td><?php echo $shoppingCartEvent->getEvent()->getTopic()?></td>
+				<td><?php echo $shoppingCartEvent->getEvent()->getDateTime()?></td>
+				<td><td><?php echo $shoppingCartEvent->getEvent()->getPrice() ?></td></td>
 				<td><span class="qty">1 </span>
 					<div class="btn-group" data-toggle="buttons">
 						<label class="btn btn-sm btn-primary btn-rounded"> <input
@@ -45,7 +88,7 @@
 						</label>
 					</div>
 				</td>
-				<td><?php echo'$key->getPrice()'?></td>
+				<td><?php echo $shoppingCartEvent->getAmount() ?></td>
 				<td>
 					<button type="button" class="btn btn-sm btn-primary"
 						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
@@ -68,7 +111,8 @@
 				</td>
 				<td colspan="3"><button type="button" class="btn btn-primary">
 						Complete purchase <i class="fa fa-angle-right right"></i>
-					</button></td>
+					</button>
+				</td>
 			</tr>
 
 		</tbody>

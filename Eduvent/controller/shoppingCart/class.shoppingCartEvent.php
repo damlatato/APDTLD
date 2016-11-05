@@ -1,10 +1,10 @@
 <?php
-
+include 'model/db/Event.php';
 class ShoppingCartEvent {	
 
-	private $event;
+	public $event;
 	private $isAsGift;
-	private $amount;
+	public $amount;
 	
 	public function __construct() {
 		 $this->isAsGift = false;
@@ -16,7 +16,7 @@ class ShoppingCartEvent {
 		 //$this->amount = $amount;
    // }
 	
-	public function add_amount_to_event($amountFactor) {
+	public function addAmountToEvent($amountFactor) {
 		$this->amount = $this->amount + $amountFactor;
 	}
 
@@ -24,16 +24,22 @@ class ShoppingCartEvent {
 	public function setEvent($event){
 		$this->event = $event;
 	}
-	
-	public function getEvent(){
-		return $event;
+	public function setAsGift($isAsGift){
+		$this->isAsGift = $isAsGift;
+	}
+	public function setAmount($amount){
+		$this->amount = $amount;
 	}
 	
-	public function getisAsGifst(){
-		return $isAsGift;
+	public function getEvent(){
+		return $this->event;
+	}
+	
+	public function isAsGifst(){
+		return $this->isAsGift;
 	}
 	
 	public function getAmount(){
-		return $amount;
+		return $this->amount;
 	}
 }
