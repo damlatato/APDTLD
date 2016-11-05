@@ -114,7 +114,9 @@ foreach ($events as $event) {
 	$eventCounter++;
 }
 
-echo '</div>';
+if ($eventCounter>0) {
+	echo '</div>';
+}
 ?>
 
 			</div>
