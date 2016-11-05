@@ -1,19 +1,14 @@
 <?php
 class Payment implements JsonSerializable{
-	private $id;
 	private $paymentDate;	//key
 	private $paymentAmount;
 	
 	
-	public function __construct($id, $paymentDate, $paymentAmount){	
-		$this->id = $id;
+	public function __construct($paymentDate, $paymentAmount){	
 		$this->paymentDate = $paymentDate;
 		$this->paymentAmount = $paymentAmount;
 	}
 	
-	public function setId($id){
-		$this->id = $id;
-	}
 	public function setpaymentDate($paymentDate){
 		$this->paymentDate = $paymentDate;
 	}
@@ -25,9 +20,6 @@ class Payment implements JsonSerializable{
 	}
 	
 	
-	public function getId(){
-		return $this->id;
-	}
 	public function getpaymentDate(){
 		return $this->paymentDate;
 	}

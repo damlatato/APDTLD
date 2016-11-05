@@ -2,9 +2,9 @@
 
 				<?php
 					include("search-tags.php");
-					include("/Applications/XAMPP/xamppfiles/htdocs/DTLD/APDTLD/Eduvent/model/db/Event.php");
-					include("/Applications/XAMPP/xamppfiles/htdocs/DTLD/APDTLD/Eduvent/model/db/YaasConnector.php");
-					include("/Applications/XAMPP/xamppfiles/htdocs/DTLD/APDTLD/Eduvent/model/db/Address.php");
+					include("../model/db/Event.php");
+					include("../model/db/YaasConnector.php");
+					include("../model/db/Address.php");
 					$events = Event::getEventList();
 					foreach ($events as $event){
 					echo '<div class="col-md-3 event-market-col">

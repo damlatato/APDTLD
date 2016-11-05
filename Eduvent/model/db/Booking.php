@@ -1,20 +1,15 @@
 <?php
 class Booking implements JsonSerializable{
-	private $id;
 	private $eventId;	
 	private $bookingTime;
 	private $payment;	//class
 	
-	public function __construct($id, $eventId, $bookingTime, $payment){
-		$this->id = $id;
+	public function __construct($eventId, $bookingTime, $payment){
 		$this->eventId = $eventId;
 		$this->bookingTime = $bookingTime;
 		$this->payment = $payment;
 	}
 	
-	public function setId($id){
-		$this->id = $id;
-	}
 	public function seteventId($eventId){
 		$this->eventId = $eventId;
 	}
@@ -29,9 +24,6 @@ class Booking implements JsonSerializable{
 	}
 	
 	
-	public function getId(){
-		return $this->id;
-	}
 	public function geteventId(){
 		return $this->eventId;
 	}
@@ -45,7 +37,6 @@ class Booking implements JsonSerializable{
 	public function jsonSerialize(){
 		$payment = $this->getpayment();
 		return json_encode([
-		'id'=>$this->id,
 		'eventId'=>$this->eventId,	//key
 		'bookingTime'=>$this->bookingTime,
 		'payment'=>$payment->jsonSerialize()
@@ -53,7 +44,7 @@ class Booking implements JsonSerializable{
 	}
 	
 	function fromJSON($jbooking){
-		$booking = new Booking(1, 1, 1, 1);
+		$booking = new Booking(1, 1, 1);
 		$bookingv = json_decode($jbooking,true);
 		foreach($bookingv as $key=>$value){
 			if($key==='payment'){

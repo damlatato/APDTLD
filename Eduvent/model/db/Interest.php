@@ -1,19 +1,14 @@
 <?php
 class Interest implements JsonSerializable{
-	private $id;
 	private $interest;	//thesaurus
 	private $numberOfSearches;
 	
 	
-	public function __construct($id, $interest, $numberOfSearches){	
-		$this->id = $id;
+	public function __construct($interest, $numberOfSearches){	
 		$this->interest = $interest;
 		$this->numberOfSearches = $numberOfSearches;
 	}
 	
-	public function setId($id){
-		$this->id = $id;
-	}
 	public function setInterest($interest){
 		$this->interest = $interest;
 	}
@@ -25,9 +20,6 @@ class Interest implements JsonSerializable{
 	}
 	
 	
-	public function getId(){
-		return $this->id;
-	}
 	public function getInterest(){
 		return $this->interest;
 	}
@@ -37,7 +29,7 @@ class Interest implements JsonSerializable{
 	
 	function fromJSON($jinterest){
 		$interestv = json_decode($jinterest,true);
-		$interest = new Interest(1, 1, 1);
+		$interest = new Interest(1, 1);
 		foreach($interestv as $key=>$value){
 			$interest->set($key, $value);
 		}

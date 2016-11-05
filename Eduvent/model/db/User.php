@@ -1,4 +1,5 @@
 <?php
+$statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
 include 'YaasConnector.php';
 include 'Event.php';
 include 'Address.php';
@@ -21,7 +22,7 @@ class User implements JsonSerializable{
 	private $votedEvents;	//array
 	private $proposedEvents;	//array
 	
-	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $notifications, $bookings, $wishlist, $organizedEvents, $votedEvents, $proposedEvents, $imgHref){
+	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $imgHref){
 		$this->id = $id;
 		$this->email = $email;
 		$this->password = $password;
@@ -29,15 +30,16 @@ class User implements JsonSerializable{
 		$this->gender = $gender;
 		$this->birthDate = $birthDate;
 		$this->interest = $interest;
-		$this->notifications = $notifications;
-		$this->bookings = $bookings;
-		$this->wishlist = $wishlist;
+		$this->notifications = array();
+		$this->bookings = array();
+		$this->wishlist = array();
 		//$this->settings = $settings;
-		$this->organizedEvents = $organizedEvents;
-		$this->votedEvents = $votedEvents;
-		$this->proposedEvents= $proposedEvents;
+		$this->organizedEvents = array();
+		$this->votedEvents = array();
+		$this->proposedEvents= array();
 		$this->imgHref = $imgHref;
 	}
+		
 	
 	public function setId($id){
 		$this->id = $id;
@@ -174,31 +176,53 @@ class User implements JsonSerializable{
 		if ($event->geteventOrganizer() != $this->getId()){
 			$event->seteventOrganizer($this->getId());
 		}
-		$this->setOrganizedEvents(array_push($this->getOrganizedEvents(), $event->getId()));
+		if ($event->getstatus() != $event->statuses["Published"]){
+			$event->setstatus($event->statuses["Published"]);
+		}
+		$organizedEvents = $this->getOrganizedEvents();
+		array_push($organizedEvents, $event->getId());
+		$this->setOrganizedEvents($organizedEvents);
+		$this->putUser();
 		$event->postEvent();
 	}
 	
 	public function proposeEvent($event){
-		if ($event->getStatus != $statuses["Proposed"]){
-			$event->setStatus($statuses["Proposed"]);
+		if ($event->getStatus() != $event->statuses["Proposed"]){
+			$event->setStatus($event->statuses["Proposed"]);
 		}
-		$this->setProposedEvents(array_push($this->getProposedEvents(), $event->getId()));
+		$proposedEvents = $this->getProposedEvents();
+		array_push($proposedEvents, $event->getId());
+		$this->setProposedEvents($proposedEvents);
 		$event->postEvent();
 		$this->putUser();
 	}
 	
 	public function voteEvent($event){
-		$this->setVotedEvents(array_push($this->getVotedEvents(), $event->getId()));
+		$votedEvents = $this->getVotedEvents();
+		array_push($votedEvents, $event->getId());
+		$this->setVotedEvents($votedEvents);
 		$this->putUser();
 	}
 	
-	public function WishEvent($event){	//wishlist
-		$this->setWishlist(array_push($this->getWishlist(), $event->getId()));
+	public function wishEvent($event){	//wishlist
+		$wishlist = $this->getWishlist();
+		array_push($wishlist, $event->getId());
+		$this->setWishlist($wishlist);
 		$this->putUser();
 	}
 	
 	public function bookEvent($event){	//wishlist
-		$this->setBookings(array_push($this->getBookings(), $event->getId()));
+		if (!in_array($this->getId(),$event->getUsers())){
+			$eventUsers = $event->getUsers();
+			array_push($eventUsers, $this->getId());
+			$event->setUsers($eventUsers);
+		}
+		$payment1 = new Payment("25.09.2016", 1000);
+		$booking = new Booking($event->getId(), date('d.m.y'), $payment1);
+		$bookings = $this->getBookings();
+		array_push($bookings, $booking);
+		$this->setBookings($bookings);
+		$event->putEvent();
 		$this->putUser();
 	}
 	

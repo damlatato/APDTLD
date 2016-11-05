@@ -11,7 +11,9 @@ class Event  implements JsonSerializable{
     private $price;
     private $status;//thesaurus
     private $eventOrganizer;//userId
+    private $users;
     private $imgHref;
+    public $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
     
     public function __construct($id, $eventType, $title, $description, $datetime, $location, $topic, $price, $status, $imgHref){
     	$this->id = $id;
@@ -29,6 +31,7 @@ class Event  implements JsonSerializable{
     		$this->priceCategory = "Free";
     	}
     	$this->status = $status;
+    	$this->users = array();
     	$this->imgHref = $imgHref;
     }
     
@@ -67,6 +70,9 @@ class Event  implements JsonSerializable{
     } 
     public function seteventOrganizer($eventOrganizer){
     	$this->eventOrganizer = $eventOrganizer;
+    }
+    public function setUsers($users){
+    	$this->users = $users;
     }
     public function setimgHref($imgHref){
     	$this->imgHref = $imgHref;
@@ -109,6 +115,9 @@ class Event  implements JsonSerializable{
     public function geteventOrganizer(){
     	return $this->eventOrganizer;
     }
+    public function getUsers(){
+    	return $this->users;
+    }
     public function getimgHref(){
     	return $this->imgHref;
     }
@@ -127,6 +136,7 @@ class Event  implements JsonSerializable{
 		'location'=>$location->jsonSerialize(),
 		'status'=>$this->status,
 		'eventOrganizer'=>$this->eventOrganizer,
+		'users'=>$this->users,
 		'imgHref'=>$this->imgHref
 		]);
     }
