@@ -21,7 +21,7 @@
 		</div>
 		<!--/.Row 1-->
 
-		<!--Row 2: Navbar (Event market filter bar) -->
+		<!--Row 2: Navbar (Event market search bar) -->
 		<div class="row">
 			<div class="col-md-12">
 				<?php
