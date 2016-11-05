@@ -96,27 +96,9 @@ $( document ).ready(function() {
 			<!--Row 2: Navbar (Event market filter bar) -->
 			<div class="row">
 				<div class="col-md-12">
-					<h5 class="font-weight-bold">Event search</h5>
-					<nav class="navbar navbar-light grey lighten-5">
-						<div class="collapse navbar-toggleable-xs">
-							<div class="pull-xs-left">
-
-								<form class="form-inline" id="search-form" onsubmit="runSearch()">
-									<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
-									<span>within<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">5 km</button>
-										from
-										<div style="display:inline-block;">
-											<button class="btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
-											<!--<div class="dropdown-menu">
-
-											</div>-->
-										</div>
-									</span>
-								</form>
-
-							</div>
-						</div>
-					</nav>
+				<?php
+					include("search-bar.php");
+				?>
 				</div>
 			</div>
 			<!--/.Row 2: Navbar-->

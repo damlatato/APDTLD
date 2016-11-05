@@ -7,18 +7,18 @@ include 'Notification.php';
 
 class User implements JsonSerializable{
 	private $id;
-	private $email;	//=login
+	private $email;				//=login
 	private $password;
-	private $address;	//class
-	private $gender;	//thesaurus
+	private $address;			//class
+	private $gender;			//thesaurus
 	private $birthDate;
-	private $interest; //class
-	private $notifications; //class
-	private $bookings;	//array of class ->{event, payment} 
-	private $wishlist;	//array of events
-	//private $settings;	//class
+	private $interest;			//class
+	private $notifications;		//class
+	private $bookings;			//array of class ->{event, payment} 
+	private $wishlist;			//array of events
+	//private $settings;		//class
 	private $organizedEvents;	//array
-	private $votedEvents;	//array
+	private $votedEvents;		//array
 	
 	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $notifications, $bookings, $wishlist, $organizedEvents, $votedEvents){
 		$this->id = $id;

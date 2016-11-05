@@ -5,7 +5,7 @@
 // and when it finds both results in table then it will start a session and
 // allow user to access home page else it will show appropriate message.
 
-//require_once '../Eduvent/controller/login/class.user.php';
+require_once '../Eduvent/controller/login/class.user.php';
 $user_login = new USER();
 
 if($user_login->is_logged_in()!="")

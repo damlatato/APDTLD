@@ -48,7 +48,7 @@ if(isLoggedUserExisting()== true) {
 ?>
 
 <!-- $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
-<!--  	$userRow=mysql_fetch_array($res); -->
+<!-- 	$userRow=mysql_fetch_array($res); -->
 <!-- 	include 'Livechat/livechat.php' -->
 
 			<li class="nav-item dropdown">
