@@ -29,9 +29,12 @@ $(document).ready(function() {
 
 		<!--Row 1: Page heading-->
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<h1 class="h1-responsive">Page heading</h1>
 				<h3 class="h3-responsive"><small class="text-muted">Secondary text</small></h3>
+			</div>
+			<div class="col-md-3">
+				<br><a href="#!" class="btn btn-propose"><strong>Propose event!</strong></a>
 			</div>
 		</div>
 		<!--/.Page heading-->

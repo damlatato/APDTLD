@@ -495,6 +495,15 @@ html, body {
 /*         Event proposal                 */
 /******************************************/
 
+.btn-propose {
+	background-color: #fdd835;
+	font-size: 0.95em;
+}
+
+.btn-propose:hover {
+	background-color: #ffeb3b;
+}
+
 .proposal-title {
 	color: #424242;
 }
