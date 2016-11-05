@@ -193,7 +193,7 @@ $( document ).ready(function() {
 			<!--Row 4 (Popular events) -->
 			<div class="row" id="event-market-area-home">
 				<h5 class="font-weight-bold">Popular events</h5>
-				<div class="col-md-12 event-market-area grey lighten-5">
+				<div class="col-md-12 event-market-area">
 				<div class="row list-group">
 					<div class="col-md-4 event-market-col">
 						<!--Card-->
