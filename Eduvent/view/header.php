@@ -45,7 +45,7 @@ require_once 'controller/initiatePage.php';
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php">About</a></li>
-						<li class="nav-item"><a class="nav-link"
+						<li id="shoppingcartmenu" class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php?page=shoppingCart"> <i
 								class="fa fa-shopping-cart left"></i>&nbsp Shopping cart<?php printQuantityOfSelectedEvents()?>
 						</a>
