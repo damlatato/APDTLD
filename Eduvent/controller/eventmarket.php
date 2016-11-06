@@ -1,7 +1,5 @@
 <?php
-include("../Eduvent/model/Event.php");
-include("../Eduvent/model/YaasConnector.php");
-include("../Eduvent/model/Address.php");
+
 ?>
 
 <div class="container">
@@ -42,6 +40,10 @@ include("../Eduvent/model/Address.php");
 			<div class="col-md-12 event-market-area grey lighten-5" id="search-results">
 
 <?php
+include("../Eduvent/model/Event.php");
+include("../Eduvent/model/YaasConnector.php");
+include("../Eduvent/model/Address.php");
+
 $events=Event::getEventList();
 $eventCounter=0;
 
