@@ -4,12 +4,12 @@
 //  and when it finds both results in table then it will start a session and
 //   allow user to access home page else it will show appropriate message.
 
-require_once '../Eduvent/controller/login/class.user.php';
+require_once '../model/User.php';
 
-$reg_user = new USER();
+//$reg_user = new USER();
 
-if($reg_user->is_logged_in()!="") {
-	$reg_user->redirect('../Eduvent/index.php?page=settings');
+if(isset($_SESSION['usermail'])) {
+	//$reg_user->redirect('../Eduvent/index.php?page=settings');
 }
 
 
@@ -18,13 +18,48 @@ if(isset($_POST['btn-signup'])) {
 	$bday = trim($_POST['bday']);
 	$email = trim($_POST['txtemail']);
 	$upass = trim($_POST['txtpass']);
-	$code = md5(uniqid(rand()));
+	//$code = md5(uniqid(rand()));
 
-	$stmt = $reg_user->runQuery("SELECT * FROM users WHERE EmailAddress=:email_id");
+	/*$stmt = $reg_user->runQuery("SELECT * FROM users WHERE EmailAddress=:email_id");
 	$stmt->execute(array(":email_id"=>$email));
-	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);*/
+	$user = User::getUserByEmail($email);
+	if (!is_null($user)){
+		$msg = "
+			<div class='alert alert-error'>
+			<button class='close' data-dismiss='alert'>&times;</button>
+			<strong>Sorry !</strong>  email address allready exists. Please try another one.
+			</div>";
+	}
+	else{
+		//here we need more fields about the user to create the user, when we have it - recomment the next line a nd fill in the parameters
+		//$user = new User($id, $name, $email, $password, $address, $gender, $birthDate, $interest, $imgHref);
+			$id = $reg_user->lasdID();
+			$key = base64_encode($id);
+			$id = $key;
+		
+			$message = "
+			Hello $uname,
+			<br /><br />
+			Welcome to Eduvent!<br/>
+			To complete your registration, please click on the following link<br/>
+			<br /><br />
+			<a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
+			<br /><br />
+			Thanks,";
+		
+			$subject = "Confirm Registration";
+		
+			$reg_user->send_mail($email,$message,$subject);
+					$msg = "
+					<div class='alert alert-success'>
+					<button class='close' data-dismiss='alert'>&times;</button>
+					<strong>Success!</strong>  We've sent an email to $email.
+					Please click on the confirmation link in the email to create your account.
+					</div>";
+	}
 
-	if($stmt->rowCount() > 0) {
+	/*if($stmt->rowCount() > 0) {
 		$msg = "
 			<div class='alert alert-error'>
 			<button class='close' data-dismiss='alert'>&times;</button>
@@ -60,7 +95,7 @@ if(isset($_POST['btn-signup'])) {
 		else {
 			echo "Sorry, query could not be executed.";
 		}
-	}
+	}*/
 }
 ?>
 

@@ -1,7 +1,5 @@
 <?php
 include 'thesaurus.php';
-include 'Booking.php';
-include 'Payment.php';
 include 'User.php';
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
@@ -14,7 +12,7 @@ $tests = array();
 $event4 = new Event(4, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $event5 = new Event(5, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 
-$user1 = new User(111,"leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
+$user1 = new User(111,"Leonid Gunko","leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
 
 $event4->deleteEvent();
 $event5->deleteEvent();
@@ -132,6 +130,8 @@ if ($u1==true){
 
 $userlist=User::getUserListByEvent($event4);
 $user = $userlist[0];
+echo $user->getId();
+echo count($userlist);
 if ($user->getId()==111 && count($userlist)==1){
 	array_push($tests,6);
 	echo "<br>";
