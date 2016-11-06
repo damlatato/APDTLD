@@ -48,7 +48,7 @@ foreach ($events as $event) {
 		if ($eventCounter>0) {
 			echo '</div>';
 		}
-		echo '<div class="row list-group">';
+		echo '<div class="row">';
 	}
 
 	echo '
