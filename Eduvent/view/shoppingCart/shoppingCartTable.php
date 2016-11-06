@@ -109,7 +109,7 @@
  						<strong>1200 $</strong>
  					</h4>
  				</td>
- 				<td colspan="3"><button type="button" class="btn btn-primary">
+ 				<td colspan="3"><button type="button" class="btn btn-event-details">
  						Complete purchase <i class="fa fa-angle-right right"></i>
  					</button>
  				</td>
