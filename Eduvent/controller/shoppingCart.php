@@ -7,12 +7,9 @@
 			<h2 class="doc-title">Shopping Cart</h2>
 		
 			<?php
-				if (hasShoppingCartAtLeastOneEvent()){
-					//include_once 'model/Event.php';
-					include 'view/shoppingCart/shoppingCartTable.php';
-				} else {
-					include 'view/shoppingCart/emptyShoppingCart.php';
-				}
+				
+				include 'view/shoppingCart/shoppingCartTable.php';
+				
 			?>
 		
 		</div>

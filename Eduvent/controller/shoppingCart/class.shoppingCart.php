@@ -11,10 +11,6 @@ class ShoppingCart {
 
 	function addEvent($eventID,$quantity) {
 
-		include 'class.shoppingCartEvent.php';
-		//include '../../model/YaasConnector.php';
-		//include '../../model/Event.php';
-		//include '../../model/Address.php';
 		//$event = new Event(3, null, "Test event of Maria", "So good event", "25.10.2016 13:56", null, 'Studing', 11);
 		//$eventlist=get("event");
 		$eventlist=Event::getEventlist();
@@ -38,7 +34,7 @@ class ShoppingCart {
 
 		//TODO check if event already exists in shopping cart
 		if($this->isEventByIDExisting($eventID)){
-			getEventbyID($eventID)->amount +=$quantity;
+			$this->getEventbyID($eventID)->amount +=$quantity;
 		}
 		else{
 			$shoppingCartEvent = new ShoppingCartEvent;
@@ -67,18 +63,14 @@ class ShoppingCart {
 	}
 
 	function isEventByIDExisting($eventID){
-
-		$shoppingcartt = $_SESSION['shoppingCartSession'];
-		if($shoppingcartt->events->count()>0){
-
-			foreach ($shoppingcartt->events as $value) {
-				//echo $value->getEvent()->getId();
+		if($this->events->count()>0){
+			foreach ($this->events as $value) {
 				var_dump($value);
-				//	echo $value->amount;
-				//	if($value->event->getId() == $eventID){
+					echo $value->amount;
+					if($value->event->getId() == $eventID){
 
-				//		return true;
-				//	}
+						return true;
+					}
 
 			}
 		}
