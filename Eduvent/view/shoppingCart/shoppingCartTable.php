@@ -9,7 +9,7 @@
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-success btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
  			eventid="1" type="submit" value="buy" />
  	</div>
  	<div class="col-md-12">
@@ -22,7 +22,7 @@
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-success btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
  			eventid="2" type="submit" value="buy" />
  	</div>
  	<div class="col-md-12">
@@ -35,7 +35,7 @@
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-success btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
  			eventid="3" type="submit" value="buy" />
  	</div>
  </div>
@@ -50,8 +50,8 @@
  				<th>Date</th>
  				<th>Price</th>
  				<th>Quantity</th>
- 				<th>Gift</th>
  				<th>Amount</th>
+ 				<th>Gift</th>
  				<th></th>
  			</tr>
  		</thead>
@@ -81,16 +81,16 @@
  				<td><td><?php echo $shoppingCartEvent->getEvent()->getPrice() ?></td></td>
  				<td><span class="qty">1 </span>
  					<div class="btn-group" data-toggle="buttons">
- 						<label class="btn btn-sm btn-primary btn-rounded"> <input
+ 						<label class="btn btn-event-details btn-rounded"> <input
  							type="radio" name="options" id="option1">&mdash;
- 						</label> <label class="btn btn-sm btn-primary btn-rounded"> <input
+ 						</label> <label class="btn btn-event-details  btn-rounded"> <input
  							type="radio" name="options" id="option2">+
  						</label>
  					</div>
  				</td>
  				<td><?php echo $shoppingCartEvent->getAmount() ?></td>
  				<td>
- 					<button type="button" class="btn btn-sm btn-primary"
+ 					<button type="button" class="btn btn-event-details "
  						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
  				</td>
  			</tr>
