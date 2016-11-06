@@ -13,7 +13,7 @@ class Event  implements JsonSerializable{
     private $eventOrganizer;//userId
     private $users;
     private $imgHref;
-    public $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
+    public static $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
     
     public function __construct($id, $eventType, $title, $description, $datetime, $location, $topic, $price, $status, $imgHref){
     	$this->id = $id;
@@ -198,12 +198,12 @@ class Event  implements JsonSerializable{
 	}
 	
 	public static function getProposedEventList(){
-		$jeventlist = get("event?q=status:".chr(34)."Proposed".chr(34));
+		$jeventlist = get("event?q=status:".chr(34).Event::$statuses["Proposed"].chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getPublishedEventList(){
-		$jeventlist = get("event?q=status:".chr(34)."Published".chr(34));
+		$jeventlist = get("event?q=status:".chr(34).Event::$statuses["Published"].chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	

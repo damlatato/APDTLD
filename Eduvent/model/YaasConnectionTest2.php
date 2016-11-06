@@ -155,13 +155,22 @@ if ($event4->getUsersNumber()==1){
 
 $proposedevents = Event::getProposedEventList();
 $publishedevents = Event::getPublishedEventList();
-
-if (in_array($event4,$proposedevents) && in_array($event5,$proposedevents)){
+$u1=false;
+$u2=false;
+echo json_encode($proposedevents);
+foreach($proposedevents as $event) {
+	if ($event->getId() == 4) {
+		$u1=true;
+	}
+	if ($event->getId() == 5) {
+		$u2=true;
+	}
+}
+if ($u1==true && $u2=true){
 	array_push($tests,9);
 	echo "<br>";
-	echo "proposedEvents Test Successfull";
+	echo "Yaas getproposedevents Test Successfull";
 }
-
 
 if (count($tests)==9){
 	echo "<br>";

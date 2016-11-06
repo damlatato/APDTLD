@@ -184,8 +184,8 @@ class User implements JsonSerializable{
 		if ($event->geteventOrganizer() != $this->getId()){
 			$event->seteventOrganizer($this->getId());
 		}
-		if ($event->getstatus() != $event->statuses["Published"]){
-			$event->setstatus($event->statuses["Published"]);
+		if ($event->getstatus() != Event::$statuses["Published"]){
+			$event->setstatus(Event::$statuses["Published"]);
 		}
 		$organizedEvents = $this->getOrganizedEvents();
 		array_push($organizedEvents, $event->getId());
@@ -195,8 +195,8 @@ class User implements JsonSerializable{
 	}
 	
 	public function proposeEvent($event){
-		if ($event->getStatus() != $event->statuses["Proposed"]){
-			$event->setStatus($event->statuses["Proposed"]);
+		if ($event->getStatus() != Event::$statuses["Proposed"]){
+			$event->setStatus(Event::$statuses["Proposed"]);
 		}
 		$proposedEvents = $this->getProposedEvents();
 		array_push($proposedEvents, $event->getId());
