@@ -153,8 +153,17 @@ if ($event4->getUsersNumber()==1){
 	echo "getNumberOfParticipants Test Successfull";
 }
 
+$proposedevents = Event::getProposedEventList();
+$publishedevents = Event::getPublishedEventList();
 
-if (count($tests)==8){
+if (in_array($event4,$proposedevents) && in_array($event5,$proposedevents)){
+	array_push($tests,9);
+	echo "<br>";
+	echo "proposedEvents Test Successfull";
+}
+
+
+if (count($tests)==9){
 	echo "<br>";
 	echo "All the tests are done";
 }
