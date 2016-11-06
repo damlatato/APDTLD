@@ -34,7 +34,7 @@ class ShoppingCartEvent {
 		return $this->event;
 	}
 
-	public function IsAsGifst(){
+	public function IsAsGift(){
 		return $this->isAsGift;
 	}
 

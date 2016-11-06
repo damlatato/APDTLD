@@ -5,20 +5,26 @@
 // and when it finds both results in table then it will start a session and
 // allow user to access home page else it will show appropriate message.
 
-require_once '../Eduvent/controller/login/class.user.php';
-$user_login = new USER();
-
-if($user_login->is_logged_in()!="")
+require_once '../model/User.php';
+//$user_login = new USER();
+ob_start();
+session_start();
+if(isset($_SESSION['usermail']))
 {
-	$user_login->redirect('../Eduvent/index.php');
+	//$user_login->redirect('../Eduvent/index.php');
+	echo json_encode(User::getUserByEmail($_SESSION['usermail'])->getVotedEvents()); //just to test that session works
 }
 
 if(isset($_POST['btn-login'])) {
 	$email = trim($_POST['txtemail']);
 	$upass = trim($_POST['txtupass']);
  
-	if ($user_login->login($email,$upass)) {
-		$user_login->redirect('../Eduvent/index.php');
+	if (User::getPasswordByEmail($email)==$upass) {
+		//$user_login->redirect('../Eduvent/index.php');
+		$user = User::getUserByEmail($email);
+		$_SESSION['usermail'] = $user->getEmail();
+		echo $_SESSION['usermail'];
+		echo json_encode($user->getVotedEvents());
 	}
 }
 ?>

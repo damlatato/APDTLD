@@ -49,8 +49,8 @@
  				<th>Category</th>
  				<th>Date</th>
  				<th>Price</th>
- 				<th>Quantity</th>
  				<th>Amount</th>
+ 				<th></th>
  				<th>Gift</th>
  				<th></th>
  			</tr>
@@ -60,6 +60,11 @@
  		<!--Table body-->
  		<tbody>
  			<?php 
+ 			if (hasShoppingCartAtLeastOneEvent()){
+ 				
+ 			
+ 			
+ 			
  			$shoppingCart = $_SESSION['shoppingCartSession'];
  			foreach($shoppingCart->getEvents() as $shoppingCartEvent):
  			?>
@@ -78,8 +83,8 @@
  				</td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getTopic()?></td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getDateTime()?></td>
- 				<td><td><?php echo $shoppingCartEvent->getEvent()->getPrice() ?></td></td>
- 				<td><span class="qty">1 </span>
+ 				<td><?php echo $shoppingCartEvent->getEvent()->getPrice() .' Euro'?></td>
+ 				<td><span class="qty"> <?php echo $shoppingCartEvent->getAmount() ?> </span>
  					<div class="btn-group" data-toggle="buttons">
  						<label class="btn btn-event-details btn-rounded"> <input
  							type="radio" name="options" id="option1">&mdash;
@@ -88,7 +93,7 @@
  						</label>
  					</div>
  				</td>
- 				<td><?php echo $shoppingCartEvent->getAmount() ?></td>
+ 				<td><td><?php echo (string)$shoppingCartEvent->IsAsGift() ?></td></td>
  				<td>
  					<button type="button" class="btn btn-event-details "
  						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
@@ -114,7 +119,9 @@
  					</button>
  				</td>
  			</tr>
- 
+ <?php } else {?>
+ 			<tr><td align="center" colspan="9"> <?php echo "Your shopping cart is empty."; }?></td> <tr>
+ 			
  		</tbody>
  	</table>
  </div>
