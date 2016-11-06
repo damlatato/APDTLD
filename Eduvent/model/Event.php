@@ -1,15 +1,15 @@
 <?php 
 class Event  implements JsonSerializable{ 
     private $id; 
-    private $eventType; //thesaurus
+    private $eventType;		//thesaurus
     private $title; 
     private $description;
     private $datetime;
-    private $location; //class address
-    private $topic;	//same as interests in user thesaurus
+    private $location;		//class address
+    private $topic;			//same as interests in user thesaurus
     private $priceCategory; //thesaurus
     private $price;
-    private $status;//thesaurus
+    private $status;		//thesaurus
     private $eventOrganizer;//userId
     private $users;
     private $imgHref;
@@ -179,7 +179,7 @@ class Event  implements JsonSerializable{
     	return $eventsA;
     }
     
-//////////////////////////////////////////////////
+	//////////////////////////////////////////////////
 	public function postEvent(){
 		post("event", $this->jsonSerialize());
 	}
@@ -233,6 +233,5 @@ class Event  implements JsonSerializable{
 		$jeventlist = get("event?q=priceCategory:".chr(34).$priceCategory.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
-	
-}  
-?> 
+}
+?>

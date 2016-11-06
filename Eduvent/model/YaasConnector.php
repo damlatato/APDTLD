@@ -1,5 +1,4 @@
 <?php
-
 function getAccessToken(){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
@@ -12,7 +11,7 @@ function getAccessToken(){
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=200){
 		$token = getAccessToken();
-		$result=curl_exec ($ch);				//get users list from DB
+		$result=curl_exec ($ch);					//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
 	if ($code==200){
@@ -30,13 +29,13 @@ function post($datatype, $bodyjson){
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype);
 	curl_setopt($ch, CURLOPT_POST,       1 );
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $bodyjson); //created user as a body
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $bodyjson);	//created user as a body
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
-	$result=curl_exec ($ch);				//post user to DB
+	$result=curl_exec ($ch);							//post user to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=201){
 		$token = getAccessToken();
-		$result=curl_exec ($ch);				//get users list from DB
+		$result=curl_exec ($ch);						//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
 	if ($code==201){
@@ -54,7 +53,7 @@ function delete($datatype, $id){
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype."/".$id );
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
-	$result=curl_exec ($ch);				//delete from to DB
+	$result=curl_exec ($ch);					//delete from to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=204){
 		$token = getAccessToken();
@@ -76,7 +75,7 @@ function get($datatype){
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype );
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
-	$result=curl_exec ($ch);				//get users list from DB
+	$result=curl_exec ($ch);					//get users list from DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	
 	if ($code!=200){
@@ -100,7 +99,7 @@ function put($datatype, $id, $bodyjson){
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $bodyjson); //created user as a body
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
-	$result=curl_exec ($ch);				//post user to DB
+	$result=curl_exec ($ch);					//post user to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=200){
 		$token = getAccessToken();

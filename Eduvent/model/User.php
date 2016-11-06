@@ -5,6 +5,7 @@ include 'Event.php';
 include 'Address.php';
 include 'Interest.php';
 include 'Notification.php';
+include 'Booking.php';
 
 class User implements JsonSerializable{
 	private $id;
@@ -22,8 +23,9 @@ class User implements JsonSerializable{
 	private $votedEvents;	//array
 	private $proposedEvents;	//array
 	
-	public function __construct($id, $email, $password, $address, $gender, $birthDate, $interest, $imgHref){
+	public function __construct($id, $name, $email, $password, $address, $gender, $birthDate, $interest, $imgHref){
 		$this->id = $id;
+		$this->name = $name;
 		$this->email = $email;
 		$this->password = $password;
 		$this->address = $address;
@@ -43,6 +45,9 @@ class User implements JsonSerializable{
 	
 	public function setId($id){
 		$this->id = $id;
+	}
+	public function setName($name){
+		$this->name = $name;
 	}
 	public function setPassword($password){
 		$this->password = $password;
@@ -92,6 +97,9 @@ class User implements JsonSerializable{
 	
 	public function getId(){
 		return $this->id;
+	}
+	public function getName(){
+		return $this->name;
 	}
 	public function getPassword(){
 		return $this->password;
@@ -243,6 +251,7 @@ class User implements JsonSerializable{
 	public function jsonSerialize(){	
 		$str = json_encode([
 		'id'=>$this->id,
+		'name'=>$this->name,
 		'email'=>$this->email,	//=login
 		'password'=>$this->password,
 		'address'=>$this->address->jsonSerialize(),	//class

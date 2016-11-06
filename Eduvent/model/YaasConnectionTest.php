@@ -1,6 +1,5 @@
 <?php
-include 'Booking.php';
-include 'Payment.php';
+
 include 'User.php';
 include 'thesaurus.php';
 
@@ -160,8 +159,8 @@ $votedEvents = array($event2->getId());
 $proposedEvents = array($event2->getId());
 
 
-$user1 = new User(111,"leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
-$user2 = new User(222,"leonidgunko2@yandex.ru","213", $address2, $genders["Mrs."], "09.07.1994", $interestA, "/images/img2");
+$user1 = new User(111, "Leonid Gunko","leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
+$user2 = new User(222, "Leonid Gunko","leonidgunko2@yandex.ru","213", $address2, $genders["Mrs."], "09.07.1994", $interestA, "/images/img2");
 $userA = array($user1,$user2);
 //test
 	$juser1 = $user1->jsonSerialize();
@@ -175,7 +174,7 @@ $userA = array($user1,$user2);
 		array_push($tests,19);
 		echo "<br> user json is ok";
 	}
-	if ($user1->getId() == $user3->getId() && $user1->getEmail() == $user3->getEmail() && $user1->getPassword() == $user3->getPassword()
+	if ($user1->getEmail() == $user3->getEmail() && $user1->getPassword() == $user3->getPassword()
 	&&$user1->getAddress() == $user3->getAddress() && $user1->getGender() == $user3->getGender() && $user1->getBirthDate() == $user3->getBirthDate()
 	&&$user1->getInterest() == $user3->getInterest() && $user1->getNotifications() == $user3->getNotifications()
 	&&$user1->getBookings() == $user3->getBookings() && $user1->getWishlist() == $user3->getWishlist()
@@ -208,14 +207,14 @@ $userslist=User::getUserList();
 $u1=false;
 $u2=false;
 foreach($userslist as $user) {
-    if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
+    if ($user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
     	&&$user->getAddress() == $user1->getAddress() && $user->getGender() == $user1->getGender() && $user->getBirthDate() == $user1->getBirthDate()
     	&&$user->getInterest() == $user1->getInterest() && $user->getNotifications() == $user1->getNotifications()
     	&&$user->getBookings() == $user1->getBookings() && $user->getWishlist() == $user1->getWishlist()
     	&&$user->getOrganizedEvents() == $user1->getOrganizedEvents() && $user->getVotedEvents() == $user1->getVotedEvents()) {
     	$u1 = true;
     }
-    if ($user->getId() == $user2->getId() && $user->getEmail() == $user2->getEmail() && $user->getPassword() == $user2->getPassword()
+    if ($user->getEmail() == $user2->getEmail() && $user->getPassword() == $user2->getPassword()
     &&$user->getAddress() == $user2->getAddress() && $user->getGender() == $user2->getGender() && $user->getBirthDate() == $user2->getBirthDate()
     &&$user->getInterest() == $user2->getInterest() && $user->getNotifications() == $user2->getNotifications()
     &&$user->getBookings() == $user2->getBookings() && $user->getWishlist() == $user2->getWishlist()
@@ -237,7 +236,7 @@ $user1->bookEvent($event1);
 
 $userslist=User::getUserList();
 foreach($userslist as $user) {	
-	if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
+	if ($user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
 	&&$user->getAddress() == $user1->getAddress() && $user->getGender() == $user1->getGender() && $user->getBirthDate() == $user1->getBirthDate()
 	&&$user->getInterest() == $user1->getInterest() && $user->getNotifications() == $user1->getNotifications()
 	&&$user->getBookings() == $user1->getBookings() && $user->getWishlist() == $user1->getWishlist()
@@ -259,7 +258,7 @@ if ($u1==true && $u2==true){
 }
 
 $user = User::getUserByEmail("leonidgunko1@yandex.ru");
-if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
+if ($user->getEmail() == $user1->getEmail() && $user->getPassword() == $user1->getPassword()
 	&&$user->getAddress() == $user1->getAddress() && $user->getGender() == $user1->getGender() && $user->getBirthDate() == $user1->getBirthDate()
 	&&$user->getInterest() == $user1->getInterest() && $user->getNotifications() == $user1->getNotifications()
 	&&$user->getBookings() == $user1->getBookings() && $user->getWishlist() == $user1->getWishlist()
@@ -393,7 +392,18 @@ if ($u1==true && $u2==false){
 	echo "Yaas GetByDate Event TestSuccesfull";
 }
 
-if (count($tests)==32){
+$user = User::getUserByEmail("adkljfbad@adhfv.de");
+$u1=false;
+if (is_null($user)){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,33);
+	echo "<br>";
+	echo "Yaas GetUserByWrongEmail Test Succesfull";
+}
+
+if (count($tests)==33){
 	echo "<br>";
 	echo "All the tests are done";
 }
