@@ -197,6 +197,16 @@ class Event  implements JsonSerializable{
 		return Event::fromJSONa($jeventlist);
 	}
 	
+	public static function getProposedEventList(){
+		$jeventlist = get("event?q=topic:".chr(34).$statuses["Proposed"].chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
+	public static function getPublishedEventList(){
+		$jeventlist = get("event?q=topic:".chr(34).$statuses["Published"].chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
 	public static function getByTopic($topic){
 		$jeventlist = get("event?q=topic:".chr(34).$topic.chr(34));
 		return Event::fromJSONa($jeventlist);
