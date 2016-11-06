@@ -1,39 +1,44 @@
 <?php
++include 'model/db/Event.php';
+class ShoppingCartEvent {
 
-class ShoppingCartEvent {	
+	public $event;
+	public $isAsGift;
+	public $amount;
 
-	private $event;
-	private $isAsGift;
-	private $amount;
-	
 	public function __construct() {
-		 $this->isAsGift = false;
-		 $this->amount = 1;
-    }
-	
+		$this->isAsGift = false;
+		$this->amount = 1;
+	}
+
 	//public function __construct($asGift, $amount) {
-		// $this->isAsGift = $asGift;
-		 //$this->amount = $amount;
-   // }
-	
-	public function add_amount_to_event($amountFactor) {
+	// $this->isAsGift = $asGift;
+	//$this->amount = $amount;
+	// }
+
+	public function addAmountToEvent($amountFactor) {
 		$this->amount = $this->amount + $amountFactor;
 	}
 
-	
+	public function setAsGift($isAsGift){
+		$this->isAsGift = $isAsGift;
+	}
+	public function setAmount($amount){
+		$this->amount = $amount;
+	}
 	public function setEvent($event){
 		$this->event = $event;
 	}
-	
+
 	public function getEvent(){
-		return $event;
+		return $this->event;
 	}
-	
-	public function getisAsGifst(){
-		return $isAsGift;
+
+	public function IsAsGifst(){
+		return $this->isAsGift;
 	}
-	
+
 	public function getAmount(){
-		return $amount;
+		return $this->amount;
 	}
 }

@@ -1,5 +1,4 @@
 <?php
-	include_once 'shoppingCart/class.shoppingCart.php';
 	
 	session_start();
 	
@@ -8,6 +7,7 @@
 	isShoppingCartExisting();
 	
 	function isShoppingCartExisting() {
+		//$_SESSION['shoppingCartSession'] = new ShoppingCart;
 		if(!isset($_SESSION['shoppingCartSession'])){			
 			$_SESSION['shoppingCartSession'] = new ShoppingCart;
 		}

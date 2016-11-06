@@ -1,90 +1,101 @@
 <?php
 
-class ShoppingCart {	
+class ShoppingCart {
 
 	public $events;
-	
+
 	public function __construct() {
-		$events = new SplObjectStorage();
-    }
-	
+		//$events = new SplObjectStorage();
+		$this->events = new ArrayObject();
+	}
+
 	function addEvent($eventID,$quantity) {
 
 		include 'class.shoppingCartEvent.php';
 		include '../../model/db/YaasConnector.php';
 		include '../../model/db/Event.php';
+		include '../../model/db/Address.php';
 		//$event = new Event(3, null, "Test event of Maria", "So good event", "25.10.2016 13:56", null, 'Studing', 11);
 		//$eventlist=get("event");
 		$eventlist=Event::getEventlist();
-		
-		if($eventlist==null){
-			echo 'No event in eventlist';
-		}else{
-			echo 'Some events in eventlist';
+
+		if(!isset($eventlist)){
+			return;
 		}
-		
+
 		foreach ($eventlist as $value) {
 			if($value->getId() == $eventID){
 				$event = $value;
-				
+
 			}
-				
+
 		}
-		
+
 		if(!isset($event)){
 			return;
 		}
-		
 
-		$shoppingCartEvent = new ShoppingCartEvent;
-		
-		//TODO set as gift
-		
-		$shoppingCartEvent->add_amount_to_event($quantity);
-		
-		$shoppingCart = $_SESSION['shoppingCartSession'];
-		
+
 		//TODO check if event already exists in shopping cart
-		if(isEventByIDExisting($eventID)){
-			$eventTemp = getEventbyID($eventID);
-			$eventTemp->amount+=$quantity;
-			
+		if($this->isEventByIDExisting($eventID)){
+			getEventbyID($eventID)->amount +=$quantity;
 		}
 		else{
-			
+			$shoppingCartEvent = new ShoppingCartEvent;
+
 			$shoppingCartEvent->setEvent($event);
-			$shoppingCart->$events->attach($shoppingCartEvent);
-			$_SESSION['shoppingCartSession'] = $shoppingCart;
+			$shoppingCartEvent->setAmount($quantity);
+			$shoppingCartEvent->setAsGift(false);
+			//$this->events->attach($shoppingCartEvent, $eventID);
+			$this->events->append($shoppingCartEvent);
+			$_SESSION['shoppingCartSession'] = $this;
+
+
 		}
-		
-		
-		return "eventID: ".$eventID."quantity: ".$quantity;
+
+
+		return "eventID: ".$eventID."quantity: ".$quantity."eventtitle: ".$event->getTitle();
 	}
-	
-	public function removeEvent($eventID, $amount) {
-	
+
+	function removeEvent($eventID, $amount) {
+
 	}
-	
+
 	function getQuantityOfDifferentEvents(){
 		$var = count($this->{'events'});
 		return $var;
 	}
 
 	function isEventByIDExisting($eventID){
-		
-		foreach ($events as $value) {
-			if($value->id == $eventID){
-				return true;
+
+		$shoppingcartt = $_SESSION['shoppingCartSession'];
+		if($shoppingcartt->events->count()>0){
+
+			foreach ($shoppingcartt->events as $value) {
+				//echo $value->getEvent()->getId();
+				var_dump($value);
+				//	echo $value->amount;
+				//	if($value->event->getId() == $eventID){
+
+				//		return true;
+				//	}
+
 			}
 		}
 		return false;
 	}
+	
 	function getEventbyID($eventID){
-		foreach ($eventlist as $value) {
-			if($value->id == $eventID){
+
+		foreach ($this->events as $value) {
+			if($value->getEvent()->getId() == $eventID){
 				return $value;
 			}
 		}
 		return null;
+	}
+
+	public function getEvents(){
+		return $this->events;
 	}
 }

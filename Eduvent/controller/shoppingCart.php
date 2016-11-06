@@ -8,6 +8,7 @@
 		
 			<?php
 				if (hasShoppingCartAtLeastOneEvent()){
+					include_once 'model/db/Event.php';
 					include 'view/shoppingCart/shoppingCartTable.php';
 				} else {
 					include 'view/shoppingCart/emptyShoppingCart.php';
