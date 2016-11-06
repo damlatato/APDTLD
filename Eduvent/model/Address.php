@@ -10,8 +10,7 @@ class Address{
 	private $longitude;
 	private $latitude;
 	
-	public function __construct($id, $fullName, $street, $housenumber, $city, $postCode, $country){
-		$this->id = $id;
+	public function __construct($fullName, $street, $housenumber, $city, $postCode, $country){
 		$this->fullName = $fullName;
 		$this->street = $street;
 		$this->housenumber = $housenumber;
@@ -22,9 +21,6 @@ class Address{
 		//$this->latitude = $latitude;
 	}
 	
-	public function setId($id){
-		$this->id = $id;
-	}
 	public function setfullName($fullName){
 		$this->fullName = $fullName;
 	}
@@ -53,9 +49,6 @@ class Address{
 		$this->$key = $value;
 	}
 	
-	public function getId(){
-		return $this->id;
-	}
 	public function getfullName(){
 		return $this->fullName;
 	}
@@ -87,7 +80,7 @@ class Address{
 	
 	function fromJSON($jaddress){
 		$addressv = json_decode($jaddress,true);
-		$address = new Address(1, 1, 1, 1, 1, 1, 1);
+		$address = new Address( 1, 1, 1, 1, 1, 1);
 		foreach($addressv as $key=>$value){
 			$address->set($key, $value);
 		}

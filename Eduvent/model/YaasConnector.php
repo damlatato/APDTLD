@@ -9,10 +9,19 @@ function getAccessToken(){
 	curl_setopt($ch, CURLOPT_POSTFIELDS,     "grant_type=client_credentials&scope=hybris.tenant=l2913671 hybris.document_manage hybris.document_view&client_id=6rYNTHzU8iANZPtl0FvNOjZQb2IAhoOY&client_secret=a1V5gB8ItAGWCMxB" );
 	curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/x-www-form-urlencoded'));
 	$result=curl_exec ($ch);
+	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	if ($code!=200){
+		$token = getAccessToken();
+		$result=curl_exec ($ch);				//get users list from DB
+		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	}
+	if ($code==200){
+		curl_close($ch);
+		$result1 = json_decode($result, true);
+		return $result1["access_token"];
+	}
+	echo curl_error($ch);
 	curl_close($ch);
-	$result1 = json_decode($result, true);
-	//echo $result1["access_token"];
-	return $result1["access_token"];
 }
 
 function post($datatype, $bodyjson){
@@ -35,6 +44,7 @@ function post($datatype, $bodyjson){
 		return $code;
 	}
 	echo curl_error($ch);
+	curl_close($ch);
 }
 
 function delete($datatype, $id){
@@ -56,6 +66,7 @@ function delete($datatype, $id){
 		return $code;
 	}
 	echo curl_error($ch);
+	curl_close($ch);
 }
 
 function get($datatype){
@@ -78,6 +89,7 @@ function get($datatype){
 		return $result;
 	}
 	echo curl_error($ch);
+	curl_close($ch);
 }
 
 function put($datatype, $id, $bodyjson){
@@ -100,5 +112,6 @@ function put($datatype, $id, $bodyjson){
 		return $code;
 	}
 	echo curl_error($ch);
+	curl_close($ch);
 }
 ?>
