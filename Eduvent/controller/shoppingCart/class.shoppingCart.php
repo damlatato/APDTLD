@@ -12,9 +12,9 @@ class ShoppingCart {
 	function addEvent($eventID,$quantity) {
 
 		include 'class.shoppingCartEvent.php';
-		include '../../model/db/YaasConnector.php';
-		include '../../model/db/Event.php';
-		include '../../model/db/Address.php';
+		include '../../model/YaasConnector.php';
+		include '../../model/Event.php';
+		include '../../model/Address.php';
 		//$event = new Event(3, null, "Test event of Maria", "So good event", "25.10.2016 13:56", null, 'Studing', 11);
 		//$eventlist=get("event");
 		$eventlist=Event::getEventlist();

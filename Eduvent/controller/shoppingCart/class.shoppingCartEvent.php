@@ -1,5 +1,5 @@
 <?php
-+include 'model/db/Event.php';
++include 'model/Event.php';
 class ShoppingCartEvent {
 
 	public $event;

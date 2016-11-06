@@ -2,9 +2,9 @@
 
 				<?php
 					include("search-tags.php");
-					include("../model/db/Event.php");
-					include("../model/db/YaasConnector.php");
-					include("../model/db/Address.php");
+					include("../model/Event.php");
+					include("../model/YaasConnector.php");
+					include("../model/Address.php");
 					$events = Event::getEventList();
 					foreach ($events as $event){
 					echo '<div class="col-md-3 event-market-col">
