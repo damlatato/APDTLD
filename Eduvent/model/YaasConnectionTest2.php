@@ -3,6 +3,7 @@ include 'thesaurus.php';
 include 'Booking.php';
 include 'Payment.php';
 include 'User.php';
+
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");
 $interest1 = new Interest(1, $interest["Studing"], 1);
