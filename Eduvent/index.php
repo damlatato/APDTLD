@@ -73,7 +73,6 @@ include 'view/header.php';
 </main>
 <!--/.Main-->
 
-<script type="text/javascript" src="controller/js/search.js"></script>
 <script type="text/javascript" src="controller/js/shoppingCart.js"></script>
 
 <!--Footer-->
