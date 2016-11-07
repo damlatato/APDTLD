@@ -1,5 +1,6 @@
 <?php
 $proposedEvents=Event::getProposedEventList();
+
 foreach($proposedEvents as $event) {
 	echo('
 	<!--Proposal-->

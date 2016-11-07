@@ -6,9 +6,6 @@ function __autoload($class)
   include_once '../Eduvent/model/'.$class.'.php';
 }
 
-//include_once("../Eduvent/model/Event.php");
-//include_once("../Eduvent/model/Address.php");
-
 include_once 'controller/shoppingCart/class.shoppingCart.php';
 include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
 require_once 'controller/initiatePage.php';
