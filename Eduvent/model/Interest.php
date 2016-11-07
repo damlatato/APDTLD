@@ -1,8 +1,8 @@
 <?php
 class Interest implements JsonSerializable{
-	private $interest;	//thesaurus
-	private $numberOfSearches;
-	
+	private $interest;			//thesaurus
+	private $numberOfSearches;	
+
 	
 	public function __construct($interest, $numberOfSearches){	
 		$this->interest = $interest;
@@ -51,6 +51,4 @@ class Interest implements JsonSerializable{
 	}
 	
 }
-
-
 ?>

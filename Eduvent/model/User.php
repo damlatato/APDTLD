@@ -1,11 +1,11 @@
 <?php
 $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
-include 'YaasConnector.php';
+/*include 'YaasConnector.php';
 include 'Event.php';
 include 'Address.php';
 include 'Interest.php';
 include 'Notification.php';
-include 'Booking.php';
+include 'Booking.php';*/
 
 class User implements JsonSerializable{
 	private $id;

@@ -1,6 +1,6 @@
 <?php
-include 'thesaurus.php';
-include 'User.php';
+/*include 'thesaurus.php';
+include 'User.php';*/
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");

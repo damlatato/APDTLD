@@ -1,11 +1,12 @@
 <?php
-/*foreach (glob("../Eduvent/model/*.php") as $filename)
+include_once("../Eduvent/model/YaasConnector.php");
+
+function __autoload($class)
 {
-    include_once $filename;
-}*/
+  include_once '../Eduvent/model/'.$class.'.php';
+}
 
 //include_once("../Eduvent/model/Event.php");
-//include_once("../Eduvent/model/YaasConnector.php");
 //include_once("../Eduvent/model/Address.php");
 
 include_once 'controller/shoppingCart/class.shoppingCart.php';

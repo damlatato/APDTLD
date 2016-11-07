@@ -1,5 +1,5 @@
 <?php
-include "Payment.php";
+//include "Payment.php";
 class Booking implements JsonSerializable{
 	private $eventId;	
 	private $bookingTime;
