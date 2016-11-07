@@ -37,7 +37,7 @@
 									<label for="cp-topic" class="col-xs-2 col-form-label">Topic</label>
 									<div class="col-xs-3">
 										<select class="form-control" id="cp-topic" name="cp-topic">
-											<option>Topic 1</option>
+											<option>Sport</option>
 											<option>Topic 2</option>
 											<option>Topic 3</option>
 										</select>
