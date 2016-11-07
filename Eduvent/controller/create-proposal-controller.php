@@ -1,9 +1,4 @@
 <?php
-//include_once("../Eduvent/model/Event.php");
-//include_once("../Eduvent/model/YaasConnector.php");
-//include_once("../Eduvent/model/Address.php");
-//include_once("../Eduvent/model/User.php");
-
 $cp_topic      =$_POST["cp-topic"];
 $cp_title      =$_POST["cp-title"];
 $cp_description=$_POST["cp-description"];
@@ -11,8 +6,9 @@ $cp_from       =$_POST["cp-from"];
 $cp_to         =$_POST["cp-to"];
 $cp_location   =$_POST["cp-location"];
 
-$event=new Event(99, '', $cp_title, $cp_description, "26.12.2016 14:56", $cp_location, $cp_topic, 0, null, null);
-$user=new User(9999,"Leon Lourie","leonlourie@yahoo.de","213322", null, "m", "18.01.1990", null, null);
+$address=new Address("Uni Mannheim", "Universitat Strasse", 99, "Mannheim", 168159, "Germany");
+$event=new Event(99, '', $cp_title, $cp_description, "26.12.2016 14:56", $address, $cp_topic, 0, null, null);
+$user=new User(9999,"Leon Lourie","leonlourie@yahoo.de","213322", $address, "m", "18.01.1990", null, null);
 $user->proposeEvent($event);
 ?>
 
