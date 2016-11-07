@@ -10,8 +10,8 @@ $cp_from       =$_POST["cp-from"];
 $cp_to         =$_POST["cp-to"];
 $cp_location   =$_POST["cp-location"];
 
-$proposedEvent = new Event(99, '', $cp_title, $cp_description,
-							"26.12.2016 14:56", $cp_location, $interest[$cp_topic], 0, '', '');
+$proposedEvent=new Event(99, '', $cp_title, $cp_description,
+							"26.12.2016 14:56", $cp_location, $cp_topic, 0, '', '');
 ?>
 
 <div>
