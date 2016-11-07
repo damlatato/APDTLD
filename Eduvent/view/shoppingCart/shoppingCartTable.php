@@ -1,3 +1,16 @@
+<?php
+include_once 'shoppingCartpopUp.php';
+include_once 'shoppingCartPayment.php';
+?>
+<div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Event added to chopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+</div>
+
+
+<button type="button" data-toggle="modal" data-target="#shoppingCartmodal">Launch modal</button>
 <div class="row">
  	<div class="col-md-12">
  		<h4>Event 1</h4>
@@ -40,7 +53,7 @@
  	</div>
  </div>
  <div class="table-responsive">
- 	<table class="table product-table">
+ 	<table  class="table product-table">
  		<!--Table head-->
  		<thead>
  			<tr>
@@ -61,16 +74,13 @@
  		<tbody>
  			<?php 
  			if (hasShoppingCartAtLeastOneEvent()){
- 				
- 			
- 			
  			
  			$shoppingCart = $_SESSION['shoppingCartSession'];
  			foreach($shoppingCart->getEvents() as $shoppingCartEvent):
  			?>
  
  		<!--First row-->
- 			<tr>
+ 			<tr id="shoppingcarttable">
  				<th scope="row"><img
  					src="<?php echo $shoppingCartEvent->getEvent()->getimgHref()?>"
  					alt="" class="img-fluid" width="80px" height="80px">
@@ -83,19 +93,11 @@
  				</td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getTopic()?></td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getDateTime()?></td>
- 				<td><?php echo $shoppingCartEvent->getEvent()->getPrice() .' Euro'?></td>
- 				<td><span class="qty"> <?php echo $shoppingCartEvent->getAmount() ?> </span>
- 					<div class="btn-group" data-toggle="buttons">
- 						<label class="btn btn-event-details btn-rounded"> <input
- 							type="radio" name="options" id="option1">&mdash;
- 						</label> <label class="btn btn-event-details  btn-rounded"> <input
- 							type="radio" name="options" id="option2">+
- 						</label>
- 					</div>
- 				</td>
+ 				<td><?php echo $shoppingCartEvent->getEvent()->getPrice() .' &euro;'?></td>
+ 				<td><?php echo $shoppingCartEvent->getAmount() ?> </td>
  				<td><td><?php echo (string)$shoppingCartEvent->IsAsGift() ?></td></td>
  				<td>
- 					<button type="button" class="btn btn-event-details "
+ 					<button type="button" class="btn btn-event-details delete-from-shopping-cart" eventid="<?php echo $shoppingCartEvent->getEvent()->getId()?>"
  						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
  				</td>
  			</tr>
@@ -111,10 +113,17 @@
  				</td>
 			<td>
  					<h4>
- 						<strong>1200 $</strong>
+ 						<strong>
+ 							<?php
+ 								$shoppingCart = $_SESSION['shoppingCartSession'];
+ 								echo $shoppingCart->calcTotalPrice();
+ 							?>
+ 							&euro;
+ 						</strong>
  					</h4>
  				</td>
- 				<td colspan="3"><button type="button" class="btn btn-event-details">
+
+ 				<td colspan="3"><button type="button" class="btn btn-event-details" data-toggle="modal" data-target="#paymentmodal">
  						Complete purchase <i class="fa fa-angle-right right"></i>
  					</button>
  				</td>

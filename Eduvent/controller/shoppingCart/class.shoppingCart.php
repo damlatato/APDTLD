@@ -31,8 +31,6 @@ class ShoppingCart {
 			return;
 		}
 
-
-		//TODO check if event already exists in shopping cart
 		if($this->isEventByIDExisting($eventID)){
 			$this->getEventbyID($eventID)->amount +=$quantity;
 		}
@@ -53,7 +51,17 @@ class ShoppingCart {
 		return "eventID: ".$eventID."quantity: ".$quantity."eventtitle: ".$event->getTitle();
 	}
 
-	function removeEvent($eventID, $amount) {
+	function removeEvent($eventID) {
+		foreach ($this->events  as $key => $value) {
+				
+			if($value->event->getId() == $eventID){
+
+				unset($this->events[$key]);
+				$_SESSION['shoppingCartSession'] = $this;
+				return;
+			}
+
+		}
 
 	}
 
@@ -65,18 +73,17 @@ class ShoppingCart {
 	function isEventByIDExisting($eventID){
 		if($this->events->count()>0){
 			foreach ($this->events as $value) {
-				var_dump($value);
-					echo $value->amount;
-					if($value->event->getId() == $eventID){
+				//var_dump($value);
+				if($value->event->getId() == $eventID){
 
-						return true;
-					}
+					return true;
+				}
 
 			}
 		}
 		return false;
 	}
-	
+
 	function getEventbyID($eventID){
 
 		foreach ($this->events as $value) {
@@ -85,6 +92,19 @@ class ShoppingCart {
 			}
 		}
 		return null;
+	}
+	
+	public function calcTotalPrice(){
+		if($this->events->count()>0){
+			$totalPrice = 0;
+			foreach ($this->events as $value) {
+				$tmpPrice = $value->event->getPrice();
+				$tmpAmount = $value->getAmount();
+				$totalPrice += ($tmpPrice*$tmpAmount);
+			}
+			return $totalPrice;
+		}
+		return 0;
 	}
 
 	public function getEvents(){

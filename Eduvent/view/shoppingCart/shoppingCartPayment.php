@@ -1,5 +1,5 @@
-<!-- Modal -->
-<div id="shoppingCartmodal" class="modal fade modal-dialog modal-sm" role="dialog">
+<!-- Modal --> 
+<div class="modal fade ql-modal" id="paymentmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
 
     <!-- Modal content-->

@@ -10,6 +10,7 @@
 	include_once '../../model/Address.php';
 	
 	session_start();
+	
 	if(!isset($_SESSION['shoppingCartSession'])){
 		echo "0";
 		return;
@@ -24,5 +25,11 @@
 		$shoppingCart = $_SESSION['shoppingCartSession'];
 		$success = $shoppingCart->{'addEvent'}($eventID,$quantity);
 		echo $success;
+	}else if ($function == "removeEvent"){
+		$eventID = $_POST['eventID'];
+		
+		$shoppingCart = $_SESSION['shoppingCartSession'];
+		$success = $shoppingCart->{'removeEvent'}($eventID);
+		
 	}
 ?>
