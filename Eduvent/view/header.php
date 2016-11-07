@@ -104,7 +104,7 @@ require_once 'controller/initiatePage.php';
 
 						<li>
 							<a href="../Eduvent/index.php?page=login">
-								<button id="btn-login-header" type="button" class="btn">Log in</button>
+								<button type="button" class="btn btn-standard">Log in</button>
 							</a>
 						</li>
 

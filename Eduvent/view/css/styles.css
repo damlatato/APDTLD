@@ -14,6 +14,14 @@ html, body {
 	padding: 3px;
 }*/
 
+.btn-standard {
+	background-color: #1694b2;
+}
+
+.btn-standard:hover {
+	background-color: #5bb4c9;
+}
+
 /******************************************/
 /*          Nav bar                       */
 /******************************************/
@@ -28,14 +36,6 @@ html, body {
 
 .navbar-nav .nav-item > a:hover {
 	background-color: #e7f4f7;
-}
-
-.btn-standard {
-	background-color: #1694b2;
-}
-
-.btn-standard:hover {
-	background-color: #5bb4c9;
 }
 
 /******************************************/
