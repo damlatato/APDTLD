@@ -1,5 +1,4 @@
 $('.insert-to-shopping-cart').click(function() {
-	alert("abc");
 	var $eventID = $(this).attr("eventid");
 	var $quantity = $('#eventquentity'+$eventID+ ' option:selected').attr("value");
 
@@ -14,10 +13,35 @@ $('.insert-to-shopping-cart').click(function() {
 	  dataType: "text"
 	}).done(function( msg ) {
 		$('#shoppingcartmenu').load('index.php'+' #shoppingcartmenu');
+		
+		$('#successfulbuyed').css("display", "inherit");
+		
+	}).fail(function( msg ) {
+	  alert( "Request failed: " + msg );
+	});
 	
-		alert(msg);
+
+});
+
+$('.delete-from-shopping-cart').click(function() {
+	var $eventID = $(this).attr("eventid");
+
+	$.ajax({
+	  type: "POST",
+	  url: "controller/shoppingCart/shoppingCartHandler.php",
+	  data: {
+		functionname: 'removeEvent',
+		eventID: $eventID
+	  },
+	  dataType: "text"
+	}).done(function( msg ) {
+		window.location.reload();
 	}).fail(function( msg ) {
 	  alert( "Request failed: " + msg );
 	});
 
+});
+
+$("#alert-target").click(function () {
+    toastr["info"]("I was launched via jQuery!");
 });
