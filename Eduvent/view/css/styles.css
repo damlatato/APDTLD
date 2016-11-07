@@ -568,6 +568,10 @@ html, body {
 /*         Create proposal                */
 /******************************************/
 
+.cp-form-group {
+	margin-bottom: 0!important;
+}
+
 .btn-list-proposals {
 	background-color: #1694b2;
 	font-size: 0.95em;
