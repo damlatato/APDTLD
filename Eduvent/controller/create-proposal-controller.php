@@ -8,7 +8,9 @@ $cp_location   =$_POST["cp-location"];
 
 $address=new Address("Uni Mannheim", "Universitat Strasse", 99, "Mannheim", 168159, "Germany");
 $event=new Event(99, '', $cp_title, $cp_description, "26.12.2016 14:56", $address, $cp_topic, 0, null, null);
+$event->deleteEvent();
 $user=new User(9999,"Leon Lourie","leonlourie@yahoo.de","213322", $address, "m", "18.01.1990", null, null);
+$user->postUser();
 $user->proposeEvent($event);
 ?>
 

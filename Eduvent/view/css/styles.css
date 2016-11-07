@@ -30,11 +30,11 @@ html, body {
 	background-color: #e7f4f7;
 }
 
-#btn-login-header {
+.btn-standard {
 	background-color: #1694b2;
 }
 
-#btn-login-header:hover {
+.btn-standard:hover {
 	background-color: #5bb4c9;
 }
 
