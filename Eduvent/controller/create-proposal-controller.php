@@ -1,7 +1,8 @@
 <?php
-include("../Eduvent/model/Event.php");
-include("../Eduvent/model/YaasConnector.php");
-include("../Eduvent/model/Address.php");
+//include_once("../Eduvent/model/Event.php");
+//include_once("../Eduvent/model/YaasConnector.php");
+//include_once("../Eduvent/model/Address.php");
+//include_once("../Eduvent/model/User.php");
 
 $cp_topic      =$_POST["cp-topic"];
 $cp_title      =$_POST["cp-title"];
@@ -10,8 +11,9 @@ $cp_from       =$_POST["cp-from"];
 $cp_to         =$_POST["cp-to"];
 $cp_location   =$_POST["cp-location"];
 
-$proposedEvent=new Event(99, '', $cp_title, $cp_description,
-							"26.12.2016 14:56", $cp_location, $cp_topic, 0, '', '');
+$event=new Event(99, '', $cp_title, $cp_description, "26.12.2016 14:56", $cp_location, $cp_topic, 0, '', '');
+$user=new User(9999,"Leon Lourie","leonlourie@yahoo.de", 12345, '', '', '', '', '');
+$user->proposeEvent($event);
 ?>
 
 <div>

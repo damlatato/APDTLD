@@ -4,9 +4,9 @@
     include_once $filename;
 }*/
 
-//include("../Eduvent/model/Event.php");
-//include("../Eduvent/model/YaasConnector.php");
-//include("../Eduvent/model/Address.php");
+//include_once("../Eduvent/model/Event.php");
+//include_once("../Eduvent/model/YaasConnector.php");
+//include_once("../Eduvent/model/Address.php");
 
 include_once 'controller/shoppingCart/class.shoppingCart.php';
 include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
