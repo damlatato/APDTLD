@@ -1,5 +1,4 @@
 <?php
-include_once 'shoppingCartpopUp.php';
 include_once 'shoppingCartPayment.php';
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
@@ -10,7 +9,6 @@ include_once 'shoppingCartPayment.php';
 </div>
 
 
-<button type="button" data-toggle="modal" data-target="#shoppingCartmodal">Launch modal</button>
 <div class="row">
  	<div class="col-md-12">
  		<h4>Event 1</h4>

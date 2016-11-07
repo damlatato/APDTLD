@@ -6,13 +6,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Added Event</h4>
+        <h4 class="modal-title">Complete Buying</h4>
       </div>
       <div class="modal-body">
-        <p>Your selection was added to your Shopping Cart.</p>
+        <p>Select a payment method.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Buy</button>
       </div>
     </div>
 
