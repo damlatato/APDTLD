@@ -568,7 +568,7 @@ html, body {
 /*         Create proposal                */
 /******************************************/
 
-.cp-form-group {
+.cp-form-group, .cp-form-group > .md-form {
 	margin-bottom: 0!important;
 }
 

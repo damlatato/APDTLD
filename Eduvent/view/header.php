@@ -105,9 +105,10 @@ require_once 'controller/initiatePage.php';
 						<!--   $userRow=mysql_fetch_array($res); -->
 						<!--   exit; -->
 
-						<li><a href="../Eduvent/index.php?page=login">
+						<li>
+							<a href="../Eduvent/index.php?page=login">
 								<button id="btn-login-header" type="button" class="btn">Log in</button>
-						</a>
+							</a>
 						</li>
 
 						<?php } ?>
