@@ -3,23 +3,20 @@
 //  and then after submitting the form, the php code will match that user email and password combination in database 
 //  and when it finds both results in table then it will start a session and
 //   allow user to access home page else it will show appropriate message.
-
-require_once '../model/User.php';
-
+//require_once '/model/User.php';
 //$reg_user = new USER();
-
 if(isset($_SESSION['usermail'])) {
 	//$reg_user->redirect('../Eduvent/index.php?page=settings');
 }
-
-
 if(isset($_POST['btn-signup'])) {
-	$uname = trim($_POST['txtuname']);
-	$bday = trim($_POST['bday']);
+	$name = trim($_POST['txtuname']);
+	$birthDate = trim($_POST['bday']);
 	$email = trim($_POST['txtemail']);
-	$upass = trim($_POST['txtpass']);
+	$password = trim($_POST['txtpass']);
+	
+	
+	
 	//$code = md5(uniqid(rand()));
-
 	/*$stmt = $reg_user->runQuery("SELECT * FROM users WHERE EmailAddress=:email_id");
 	$stmt->execute(array(":email_id"=>$email));
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);*/
@@ -32,14 +29,16 @@ if(isset($_POST['btn-signup'])) {
 			</div>";
 	}
 	else{
-		//here we need more fields about the user to create the user, when we have it - recomment the next line a nd fill in the parameters
-		//$user = new User($id, $name, $email, $password, $address, $gender, $birthDate, $interest, $imgHref);
-			$id = $reg_user->lasdID();
-			$key = base64_encode($id);
-			$id = $key;
+		$address = new Address("", "", 0, "", 0, "");
+		$interest = new Interest("", 0);
+		$id = uniqid();
+		$code = md5(uniqid(rand()));
+		$user = new User($id, $name, $email, $password, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
+		$user->postUser();	
+		
 		
 			$message = "
-			Hello $uname,
+			Hello $name,
 			<br /><br />
 			Welcome to Eduvent!<br/>
 			To complete your registration, please click on the following link<br/>
@@ -50,15 +49,16 @@ if(isset($_POST['btn-signup'])) {
 		
 			$subject = "Confirm Registration";
 		
-			$reg_user->send_mail($email,$message,$subject);
+			$user->send_mail($email,$message,$subject);
 					$msg = "
 					<div class='alert alert-success'>
 					<button class='close' data-dismiss='alert'>&times;</button>
 					<strong>Success!</strong>  We've sent an email to $email.
 					Please click on the confirmation link in the email to create your account.
 					</div>";
+					
+					
 	}
-
 	/*if($stmt->rowCount() > 0) {
 		$msg = "
 			<div class='alert alert-error'>
@@ -71,7 +71,6 @@ if(isset($_POST['btn-signup'])) {
 			$id = $reg_user->lasdID();  
 			$key = base64_encode($id);
 			$id = $key;
-
 			$message = "
 				Hello $uname,
 				<br /><br />
@@ -83,7 +82,6 @@ if(isset($_POST['btn-signup'])) {
 				Thanks,";
       
 			$subject = "Confirm Registration";
-
 			$reg_user->send_mail($email,$message,$subject); 
 			$msg = "
 				<div class='alert alert-success'>
@@ -98,7 +96,6 @@ if(isset($_POST['btn-signup'])) {
 	}*/
 }
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -119,13 +116,11 @@ if(isset($_POST['btn-signup'])) {
 /* 	background-color: #f5f5f5; */
 /* 	background:#0ca2d1; */
 /* } */
-
 /** Login Page **/
 #login {
   
     padding-bottom: 40px;
 }
-
 #login .form-signin {
     max-width: 300px;
     padding: 19px 29px 29px;
@@ -151,7 +146,6 @@ if(isset($_POST['btn-signup'])) {
     margin-bottom: 15px;
     padding: 7px 9px;
 }
-
 /** 2 level sub menu **/
 .dropdown-menu-with-subs .sub-menu {
   left: 100%;
@@ -160,12 +154,10 @@ if(isset($_POST['btn-signup'])) {
   visibility: hidden;
   margin-top: -1px;
 }
-
 .dropdown-menu-with-subs li:hover .sub-menu {
   visibility: visible;
   display: block;
 }
-
 .navbar .sub-menu:before {
   border-bottom: 7px solid transparent;
   border-left: none;
@@ -183,7 +175,6 @@ if(isset($_POST['btn-signup'])) {
   top: 11px;
   left: -6px;
 }
-
 /** Global **/
 #content {
   margin-left:0px;
@@ -199,19 +190,16 @@ if(isset($_POST['btn-signup'])) {
 	padding: 10px 0px;
 	background-color: transparent;
 }
-
 .block {
 	border: 1px solid #ccc;
 	background: white;
 	margin: 1em 0em;
 	border-top: none;
 }
-
 .block-content {
 	margin: 1em;
 	min-height: .25em;
 }
-
 .block-header {
 	margin-bottom: 0px;
 	border-right: none;
@@ -223,13 +211,10 @@ if(isset($_POST['btn-signup'])) {
 .block-header div {
 	padding-top: 10px;
 }
-
-
 .chart-bottom-heading {
 	margin-top: 5px;
 	text-align: center;
 }
-
 /** Side Bar **/
 .bs-docs-sidenav {
   max-width: 228px;
@@ -295,7 +280,6 @@ if(isset($_POST['btn-signup'])) {
   top: auto;
   bottom: 270px;
 }
-
 /* Icons
 ------------------------- */
 .the-icons {
@@ -351,7 +335,6 @@ if(isset($_POST['btn-signup'])) {
         <button class="btn btn-large btn-primary" type="submit" name="btn-signup">Sign Up</button>
         <a href="login.php" style="float:right;background: #c12e2a;    border: 1px solid transparent;" class="btn btn-large">Sign In</a>
       </form>
-
     </div> <!-- /container -->
   </body>
 </html>

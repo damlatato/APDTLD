@@ -5,7 +5,6 @@
 // and when it finds both results in table then it will start a session and
 // allow user to access home page else it will show appropriate message.
 
-require_once '../model/User.php';
 //$user_login = new USER();
 ob_start();
 session_start();
