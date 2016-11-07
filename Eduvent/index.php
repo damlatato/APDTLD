@@ -59,15 +59,22 @@ include 'view/header.php';
 <main>
 
 <?php
-
-	if (isset($_GET['page'])) {
-		$page = $_GET['page'] . '.php';
-		include('controller/'.$page);
-	}	/* if $page has a value, include it */
+if (isset($_GET['page'])) {
+	$page=$_GET['page'];
+	
+	if ($page=='event-market' or
+		$page=='event-proposals' or
+		$page=='create-proposal')
+	{
+		include('view/'.$page.'.php');
+	}
 	else {
-		include('controller/home.php');
-	}	/* otherwise, include the default page */
-
+		include('controller/'.$page.'.php');
+	}
+}
+else {
+	include('view/home.php');
+}
 ?>
 
 </main>

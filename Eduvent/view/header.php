@@ -37,11 +37,11 @@ require_once 'controller/initiatePage.php';
 					<!--Links-->
 					<ul class="nav navbar-nav">
 						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=eventmarket">Event market</a></li>
+							href="../Eduvent/index.php?page=event-market">Event market</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php?page=createevent">Create event</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=eventproposals">Event proposal</a>
+							href="../Eduvent/index.php?page=event-proposals">Event proposal</a>
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php">About</a></li>
