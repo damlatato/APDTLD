@@ -38,7 +38,7 @@ require_once 'supportcontactform.php';
 	<ul>
 		<li>
 			<h5>Register for free</h5></li>
-		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-danger">Sign up</a></li>
+		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</a></li>
 		<li>
 			<h5>Need help?</h5></li>
 		<li><a  class="btn btn-standard" href="#" data-toggle="modal" data-target="#modal-contact">Support</a></li>
