@@ -1,3 +1,17 @@
+<script>
+$( document ).ready(function() {
+	function vote(eventId) {
+		$.ajax({
+			type: "POST",
+			url: "vote-controller.php",
+			data: { name: eventId }
+		}).done(function( msg ) {
+			alert(msg);
+		});
+	}
+});
+</script>
+
 <?php
 $proposedEvents=Event::getProposedEventList();
 
@@ -25,7 +39,7 @@ foreach($proposedEvents as $event) {
 				</div>
 				<div class="col-xs-9 pull-right">
 					<span class="requested-by">Voted by <b>' . '35' . '</b> users</span>
-					<button class="btn btn-vote">I want it also! Vote here!</button>
+					<button class="btn btn-vote" onclick="vote(' . $event->getId() . ')">I want it also! Vote here!</button>
 					<button class="btn btn-offer">Offer event</button>
 				</div>
 			</div>
