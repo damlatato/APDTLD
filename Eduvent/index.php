@@ -64,7 +64,9 @@ if (isset($_GET['page'])) {
 	
 	if ($page=='event-market' or
 		$page=='event-proposals' or
-		$page=='create-proposal')
+		$page=='create-proposal' or
+		$page=='profile'
+		)
 	{
 		include('view/'.$page.'.php');
 	}
