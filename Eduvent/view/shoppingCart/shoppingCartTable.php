@@ -1,20 +1,15 @@
 <?php
 include_once 'shoppingCartPayment.php';
-include_once 'view/contactform.php';
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-  <strong>Event added to chopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+  <strong>Event added to shopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-contact">
-Contact Form
-</button>
-                                
 
-
+                               
 <div class="row">
  	<div class="col-md-12">
  		<h4>Event 1</h4>

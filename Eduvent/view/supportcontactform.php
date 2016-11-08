@@ -35,7 +35,7 @@
                 <div class="md-form">
                     <i class="fa fa-pencil prefix"></i>
                     <textarea type="text" id="form8" class="md-textarea"></textarea>
-                    <label for="form8">Icon Prefix</label>
+                    <label for="form8">Describe your problem</label>
                 </div>
 
                 <div class="text-xs-center">
