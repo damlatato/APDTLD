@@ -9,19 +9,19 @@
 
 <!-- CSS -->
 <!-- Font Awesome-->
-<link rel="stylesheet" href="../Eduvent/view/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css">
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="../Eduvent/view/css/bootstrap.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/bootstrap.min.css">
 
 <!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="../Eduvent/view/css/mdb.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css">
 
 <!-- Custom styles -->
-<link rel="stylesheet" href="../Eduvent/view/css/styles.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/styles.css">
 
 <!-- Datepicker -->
-<link rel="stylesheet" href="../Eduvent/view/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css">
 
 </head>
 
@@ -86,7 +86,7 @@ include 'view/footer.php';
 <script type="text/javascript" src="../Eduvent/lib/mdb.min.js"></script>
 
 <!-- Datepicker -->
-<script type="text/javascript" src="../Eduvent/view/datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
 <!-- Backstretch -->
 <script type="text/javascript" src="../Eduvent/lib/jquery.backstretch.min.js"></script>
