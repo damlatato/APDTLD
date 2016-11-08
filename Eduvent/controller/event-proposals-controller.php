@@ -12,8 +12,7 @@ foreach($proposedEvents as $event) {
 			<div class="read-more text-xs-right row">
 				<div class="col-xs-3 pull-left text-xs-left">
 					<small><i>Preferred location: ' . $event->getLocation()->getcity() . '</i></small><br>
-
-					<!-- AddToAny BEGIN -->
+					<!--Share-buttons-->
 					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
 						<a class="a2a_button_linkedin"></a>
 						<a class="a2a_button_xing"></a>
@@ -22,13 +21,12 @@ foreach($proposedEvents as $event) {
 						<a class="a2a_button_google_plus"></a>
 					</div>
 					<script async src="https://static.addtoany.com/menu/page.js"></script>
-					<!-- AddToAny END -->
-
+					<!--/.Share-buttons-->
 				</div>
 				<div class="col-xs-9 pull-right">
 					<span class="requested-by">Voted by <b>' . '35' . '</b> users</span>
-					<a href="#!" class="btn btn-vote">I want it also! Vote here!</a>
-					<a href="#!" class="btn btn-offer">Offer event</a>
+					<button class="btn btn-vote">I want it also! Vote here!</button>
+					<button class="btn btn-offer">Offer event</button>
 				</div>
 			</div>
 		</div>
@@ -38,11 +36,6 @@ foreach($proposedEvents as $event) {
 }
 
 /*
-			<div class="read-more text-xs-right">
-				<small class="pull-left"><i>Preferred location: ' . $event->getLocation()->getcity() . '</i></small>
-				<span class="requested-by">Voted by <b>' . '35' . '</b> users</span>
-				<a href="#!" class="btn btn-vote">I want it also! Vote here!</a>
-				<a href="#!" class="btn btn-offer">Offer event</a>
-			</div>
+$user1->voteEvent($event4);
 */
 ?>
