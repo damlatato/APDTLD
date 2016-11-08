@@ -1,5 +1,6 @@
 <?php
 include_once 'shoppingCartPayment.php';
+include_once 'view/contactform.php';
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -7,6 +8,11 @@ include_once 'shoppingCartPayment.php';
   </button>
   <strong>Event added to chopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
 </div>
+
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-contact">
+Contact Form
+</button>
+                                
 
 
 <div class="row">

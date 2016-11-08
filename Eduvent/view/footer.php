@@ -1,3 +1,6 @@
+<?php
+include_once 'contactform.php';
+?>
 <!--Footer Links-->
 <div class="container-fluid">
 	<div class="row">
@@ -38,7 +41,7 @@
 		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-danger">Sign up</a></li>
 		<li>
 			<h5>Need help?</h5></li>
-		<li><a target="_blank" href="#" class="btn btn-default waves-effect waves-light">Support</a></li>
+		<li><a target="_blank" href="#" class="btn btn-default waves-effect waves-light" data-toggle="modal" data-target="#modal-contact">Support</a></li>
 		
 	</ul>
 </div>
