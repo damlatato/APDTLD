@@ -37,8 +37,8 @@ require_once 'controller/initiatePage.php';
 							href="../Eduvent/index.php?page=event-market">Event market</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php?page=createevent">Create event</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=event-proposals">Event proposal</a>
+						<li class="nav-item">
+							<a class="nav-link" href="../Eduvent/index.php?page=event-proposals">Event proposal</a>
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php">About</a></li>

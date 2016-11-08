@@ -1,5 +1,5 @@
 <?php 
-class Event  implements JsonSerializable{ 
+class Event implements JsonSerializable{ 
     private $id; 
     private $eventType;		//thesaurus
     private $title; 
