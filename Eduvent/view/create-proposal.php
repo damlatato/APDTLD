@@ -62,12 +62,7 @@
 								</div>
 
 								<div class="form-group row cp-form-group">
-									<p class="col-xs-3 col-form-label">Acceptable location</p>
-								</div>
-
-								<div class="form-group row cp-form-group">
-									<div class="col-xs-2"></div>
-									<label for="cp-city" class="col-xs-1 col-form-label">City</label>
+									<label for="cp-city" class="col-xs-2 col-form-label">Acceptable location (city)</label>
 									<div class="col-xs-3">
 										<input type="search" class="form-control" id="cp-city" name="cp-city" placeholder="City">
 									</div>
