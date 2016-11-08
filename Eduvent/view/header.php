@@ -82,7 +82,7 @@ require_once 'controller/initiatePage.php';
 								aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn"
 								data-dropdown-out="fadeOut">
 								<a class="dropdown-item waves-effect waves-light"
-									href="../Eduvent/index.php?page=settings">My profile</a> <a
+									href="../Eduvent/index.php?page=profile">My profile</a> <a
 									class="dropdown-item waves-effect waves-light" href="#">Create
 									Event</a> <a class="dropdown-item waves-effect waves-light"
 									href="#">Bookings</a> <a
