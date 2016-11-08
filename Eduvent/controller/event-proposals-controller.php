@@ -39,16 +39,14 @@ foreach($proposedEvents as $event) {
 				</div>
 				<div class="col-xs-9 pull-right">
 					<span class="requested-by">Voted by <b>' . '35' . '</b> users</span>
-					<button class="btn btn-vote" onclick="vote(' . $event->getId() . ')">I want it also! Vote here!</button>
-
-<div class="btn-group">
-	<button class="btn btn-offer dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offer event</button>
-	<div class="offer-event-menu dropdown-menu">
-		<a class="offer-event-item dropdown-item" href="#">Create new event</a>
-		<a class="offer-event-item dropdown-item" href="#">Offer existing event</a>
-    </div>
-</div>
-
+					<button class="btn btn-blue-yellow" onclick="vote(' . $event->getId() . ')">I want it also! Vote here!</button>
+					<div class="btn-group">
+						<button class="btn btn-dark-grey-yellow dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offer event</button>
+						<div class="offer-event-menu dropdown-menu">
+							<a class="offer-event-item dropdown-item" href="#">Create new event</a>
+							<a class="offer-event-item dropdown-item" href="#">Offer existing event</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
