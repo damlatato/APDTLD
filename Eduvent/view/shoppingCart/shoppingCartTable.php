@@ -1,5 +1,6 @@
 <?php
 include_once 'shoppingCartPayment.php';
+require_once 'view/supportcontactform.php';
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -8,7 +9,9 @@ include_once 'shoppingCartPayment.php';
   <strong>Event added to shopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-contact">
+Contact Form
+</button>
                                
 <div class="row">
  	<div class="col-md-12">
@@ -122,7 +125,7 @@ include_once 'shoppingCartPayment.php';
  					</h4>
  				</td>
 
- 				<td colspan="3"><button type="button" class="btn btn-event-details" data-toggle="modal" data-target="#paymentmodal">
+ 				<td colspan="3"><button type="button" class="btn btn-standard" data-toggle="modal" data-target="#paymentmodal">
  						Complete purchase <i class="fa fa-angle-right right"></i>
  					</button>
  				</td>
