@@ -7,7 +7,34 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Eduvent</title>
 
+<!-- SCRIPTS -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="../Eduvent/lib/js/jquery-2.2.3.min.js"></script>
+
+<!-- JQuery UI -->
+<script type="text/javascript" src="../Eduvent/lib/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../Eduvent/lib/js/tether.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../Eduvent/lib/js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../Eduvent/lib/js/mdb.min.js"></script>
+
+<!-- Datepicker -->
+<script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
+
+<!-- Backstretch -->
+<script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
+
+<!-- Custom scripts -->
+<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
+
 <!-- CSS -->
+
 <!-- Font Awesome-->
 <link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css">
 
@@ -66,33 +93,6 @@ include 'view/footer.php';
 
 </footer>
 <!--/.Footer-->
-
-
-<!-- SCRIPTS -->
-
-<!-- JQuery -->
-<script type="text/javascript" src="../Eduvent/lib/jquery-2.2.3.min.js"></script>
-
-<!-- JQuery UI -->
-<script type="text/javascript" src="../Eduvent/lib/jquery-ui.min.js"></script>
-
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../Eduvent/lib/tether.min.js"></script>
-
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../Eduvent/lib/bootstrap.min.js"></script>
-
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="../Eduvent/lib/mdb.min.js"></script>
-
-<!-- Datepicker -->
-<script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
-
-<!-- Backstretch -->
-<script type="text/javascript" src="../Eduvent/lib/jquery.backstretch.min.js"></script>
-
-<!-- Custom scripts -->
-<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
 
 </body>
 </html>
