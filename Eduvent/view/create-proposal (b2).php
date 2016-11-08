@@ -61,6 +61,23 @@
 									</div>
 								</div>
 
+								<!--<div class="form-group row cp-form-group">
+									<p class="col-xs-3 col-form-label">Acceptable time period</p>
+								</div>
+
+								<div class="form-group row cp-form-group">
+									<div class="col-xs-2"></div>
+									<label for="cp-from" class="col-xs-1 col-form-label">From</label><!--text-xs-right-->
+									<div class="col-xs-2">
+										<input type="date" class="form-control" id="cp-from" name="cp-from" placeholder="yyyy-mm-dd">
+									</div>
+
+									<label for="cp-to" class="col-xs-1 col-form-label">To</label>
+									<div class="col-xs-2">
+										<input type="date" class="form-control" id="cp-to" name="cp-to" placeholder="yyyy-mm-dd">
+									</div>
+								</div>-->
+
 								<div class="form-group row cp-form-group">
 									<p class="col-xs-3 col-form-label">Acceptable location</p>
 								</div>
