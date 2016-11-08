@@ -47,8 +47,8 @@
 <!-- Material Design Bootstrap -->
 <link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css">
 
-<!--MDB Compiled-->
-<link rel='stylesheet' id='compiled.css-css' href='../Eduvent/lib/css/compiled.min.css' type='text/css' media='all' />
+<!-- MDB Compiled
+<link rel='stylesheet' id='compiled.css-css' href='../Eduvent/lib/css/compiled.min.css' type='text/css' media='all' /> -->
 
 <!-- Custom styles -->
 <link rel="stylesheet" href="../Eduvent/lib/css/styles.css">
