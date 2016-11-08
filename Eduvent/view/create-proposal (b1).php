@@ -84,9 +84,38 @@
 
 								<div class="form-group row cp-form-group">
 									<div class="col-xs-2"></div>
+									<label for="cp-locname" class="col-xs-1 col-form-label">Name</label>
+									<div class="col-xs-3">
+										<input type="search" class="form-control" id="cp-locname" name="cp-locname" placeholder="Name">
+									</div>
+								</div>
+								<div class="form-group row cp-form-group">
+									<div class="col-xs-2"></div>
+									<label for="cp-street" class="col-xs-1 col-form-label">Street</label>
+									<div class="col-xs-3">
+										<input type="search" class="form-control" id="cp-street" name="cp-street" placeholder="Street">
+									</div>
+									<label for="cp-house" class="col-xs-1 col-form-label">House no.</label>
+									<div class="col-xs-2">
+										<input type="search" class="form-control" id="cp-house" name="cp-house" placeholder="House no.">
+									</div>
+								</div>
+								<div class="form-group row cp-form-group">
+									<div class="col-xs-2"></div>
 									<label for="cp-city" class="col-xs-1 col-form-label">City</label>
 									<div class="col-xs-3">
 										<input type="search" class="form-control" id="cp-city" name="cp-city" placeholder="City">
+									</div>
+									<label for="cp-postcode" class="col-xs-1 col-form-label">Postcode</label>
+									<div class="col-xs-2">
+										<input type="search" class="form-control" id="cp-postcode" name="cp-postcode" placeholder="Postcode">
+									</div>
+								</div>
+								<div class="form-group row cp-form-group">
+									<div class="col-xs-2"></div>
+									<label for="cp-country" class="col-xs-1 col-form-label">Country</label>
+									<div class="col-xs-3">
+										<input type="search" class="form-control" id="cp-country" name="cp-country" placeholder="Country">
 									</div>
 								</div>
 

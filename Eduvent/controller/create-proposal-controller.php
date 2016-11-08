@@ -4,19 +4,14 @@ $cp_title      =$_POST["cp-title"];
 $cp_description=$_POST["cp-description"];
 $cp_from       =$_POST["cp-from"];
 $cp_to         =$_POST["cp-to"];
+$cp_city       =$_POST["cp-city"];
 
-$cp_locname =$_POST["cp-locname"];
-$cp_street  =$_POST["cp-street"];
-$cp_house   =$_POST["cp-house"];
-$cp_city    =$_POST["cp-city"];
-$cp_postcode=$_POST["cp-postcode"];
-$cp_country =$_POST["cp-country"];
-
-$address=new Address($cp_locname, $cp_street, $cp_house, $cp_city, $cp_postcode, $cp_country);
+$address=new Address(null, null, null, $cp_city, null, null);
 $event=new Event(99, null, $cp_title, $cp_description, $cp_from, $address, $cp_topic, null, null, null);
 $event->deleteEvent();
 
 $user=new User(9999,"Leon Lourie","leonlourie@yahoo.de","213322", $address, "m", "18.01.1990", null, null);
+$user->deleteUser();
 $user->postUser();
 
 $user->proposeEvent($event);
@@ -51,7 +46,7 @@ $user->proposeEvent($event);
 
 	<div class="row">
 		<div class="col-xs-2">Acceptable location:</div>
-		<div class="col-xs-3"><?php echo $cp_location; ?></div><br>
+		<div class="col-xs-3"><?php echo $cp_city; ?></div><br>
 	</div>
 
 	<hr>

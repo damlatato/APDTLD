@@ -14,8 +14,8 @@
 		<!--Row 1: Page heading-->
 		<div class="row">
 			<div class="col-md-9">
-				<h1 class="h1-responsive">Page heading</h1>
-				<h3 class="h3-responsive"><small class="text-muted">Secondary text</small></h3>
+				<h1 class="h1-responsive">Find interesting event proposals</h1>
+				<h3 class="h3-responsive"><small class="text-muted">Vote for event proposals you would like to attend if a company organizes them.</small></h3>
 			</div>
 			<div class="col-md-3">
 				<br><a href="../Eduvent/index.php?page=create-proposal" class="btn btn-propose"><strong>Propose event!</strong></a>
