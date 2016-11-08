@@ -1,5 +1,5 @@
 <script>
-$( document ).ready(function() {
+/*$( document ).ready(function() {
 	function vote(eventId) {
 		$.ajax({
 			type: "POST",
@@ -9,7 +9,7 @@ $( document ).ready(function() {
 			alert(msg);
 		});
 	}
-});
+});*/
 </script>
 
 <?php
