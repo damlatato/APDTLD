@@ -1,5 +1,6 @@
 <?php
-$events=Event::getEventList();
+$events=Event::getPublishedEventList();
+//$events=Event::getEventList();
 $eventCounter=0;
 
 foreach ($events as $event) {

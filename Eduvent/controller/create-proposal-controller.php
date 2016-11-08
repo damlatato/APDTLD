@@ -12,6 +12,7 @@ $user=new User(uniqid(),"Leon Lourie","leonlourie@yahoo.de","12345", $address, "
 $user->deleteUser();
 $user->postUser();
 
+$event->setStatus(Event::$statuses["Proposed"]);
 $user->proposeEvent($event);
 ?>
 
