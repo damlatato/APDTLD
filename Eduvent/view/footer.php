@@ -1,5 +1,5 @@
 <?php
-include_once 'supportcontactform.php';
+require_once 'supportcontactform.php';
 ?>
 <!--Footer Links-->
 <div class="container-fluid">
