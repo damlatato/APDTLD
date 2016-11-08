@@ -25,9 +25,6 @@
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/view/datepicker/js/bootstrap-datepicker.js"></script>
 
-<!-- PrefixFree -->
-<script type="text/javascript" src="../Eduvent/lib/prefixfree.min.js"></script>
-
 <!-- Backstretch -->
 <script type="text/javascript" src="../Eduvent/lib/jquery.backstretch.min.js"></script>
 	
