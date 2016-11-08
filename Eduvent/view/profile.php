@@ -11,21 +11,21 @@
 		</div>
 	</div><br>
 
-	<ul class="nav nav-tabs md-pills pills-ins" role="tablist">
+	<ul class="nav nav-tabs md-pills" role="tablist">
 		<li class="nav-item">
-			<a class="nav-link active" data-toggle="tab" href="#profile1" role="tab"><i class="fa fa-user"></i> My data</a>
+			<a class="profile-nav-link nav-link active" data-toggle="tab" href="#profile1" role="tab"><i class="fa fa-user"></i> My data</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#profile2" role="tab"><i class="fa fa-list-ul" aria-hidden="true"></i> My events</a>
+			<a class="profile-nav-link nav-link" data-toggle="tab" href="#profile2" role="tab"><i class="fa fa-list-ul" aria-hidden="true"></i> My events</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#profile3" role="tab"><i class="fa fa-ticket" aria-hidden="true"></i> My bookings</a>
+			<a class="profile-nav-link nav-link" data-toggle="tab" href="#profile3" role="tab"><i class="fa fa-ticket" aria-hidden="true"></i> My bookings</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#profile4" role="tab"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> My proposals</a>
+			<a class="profile-nav-link nav-link" data-toggle="tab" href="#profile4" role="tab"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> My proposals</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#profile5" role="tab"><i class="fa fa-heart" aria-hidden="true"></i> My wishlist</a>
+			<a class="profile-nav-link nav-link" data-toggle="tab" href="#profile5" role="tab"><i class="fa fa-heart" aria-hidden="true"></i> My wishlist</a>
 		</li>
 	</ul>
 

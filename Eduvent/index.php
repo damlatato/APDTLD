@@ -24,6 +24,9 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../Eduvent/lib/js/mdb.min.js"></script>
 
+<!--MDB Compiled-->
+<script type='text/javascript' src='../Eduvent/lib/js/compiled.min.js'></script>
+
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
@@ -43,6 +46,9 @@
 
 <!-- Material Design Bootstrap -->
 <link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css">
+
+<!--MDB Compiled-->
+<link rel='stylesheet' id='compiled.css-css' href='../Eduvent/lib/css/compiled.min.css' type='text/css' media='all' />
 
 <!-- Custom styles -->
 <link rel="stylesheet" href="../Eduvent/lib/css/styles.css">
