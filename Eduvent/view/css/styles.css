@@ -535,6 +535,22 @@ html, body {
 	background-color: #FED835;
 }
 
+.offer-event-menu {
+	background-color: #424242;
+}
+
+.offer-event-item {
+	color: #fff;
+}
+
+.offer-event-item:hover {
+	background-color: #676767;
+}
+
+.offer-event-item:hover {
+	color: #fff;
+}
+
 .requested-by {
 	margin-bottom: 0;
 }
