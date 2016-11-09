@@ -30,6 +30,9 @@
 <!-- Datepicker -->
 <link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css" type='text/css'>
 
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="../Eduvent/view/images/favicon.png">
+
 </head>
 
 <body>

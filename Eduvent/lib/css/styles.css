@@ -626,3 +626,47 @@ html, body {
 .profile-nav-link.active {
 	background-color: #1694b2!important;
 }
+
+/*.md-pills .nav-item .nav-link.active {
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}*/
+
+/*.md-pills li {
+    padding: 10px
+}*/
+/*
+.md-pills .nav-link {
+    color: #666;
+    text-align: center
+}
+
+.md-pills .nav-item .nav-link {
+    border-radius: 2px
+}
+
+.md-pills .nav-item .nav-link,
+.md-pills .nav-item .nav-link.active {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px
+}
+
+.md-pills .nav-item .nav-link:hover {
+    background-color: rgba(158, 158, 158, .3);
+    transition: all .4s
+}
+
+.md-pills .nav-item .nav-link.active,
+.md-pills .nav-item .nav-link:hover {
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -ms-transition: all .4s
+}
+
+.md-pills .nav-item .nav-link.active {
+    color: #fff;
+    border-radius: 2px;
+    transition: all .4s
+}*/
