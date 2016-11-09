@@ -33,9 +33,6 @@
 <!-- Backstretch -->
 <script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
 
-<!-- Custom scripts -->
-<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
-
 <!-- CSS -->
 
 <!-- Font Awesome-->
@@ -99,6 +96,10 @@ include 'view/footer.php';
 
 </footer>
 <!--/.Footer-->
+
+
+<!-- Custom scripts -->
+<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
 
 </body>
 </html>

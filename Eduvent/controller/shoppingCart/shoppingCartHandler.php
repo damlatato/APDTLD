@@ -27,7 +27,6 @@
 		echo $success;
 	}else if ($function == "removeEvent"){
 		$eventID = $_POST['eventID'];
-		
 		$shoppingCart = $_SESSION['shoppingCartSession'];
 		$success = $shoppingCart->{'removeEvent'}($eventID);
 		

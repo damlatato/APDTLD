@@ -23,7 +23,7 @@
 				</label>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Buy</button>
+				<button type="button" class="btn btn-blue-yellow" data-dismiss="modal">Buy</button>
 			</div>
 		</div>
 

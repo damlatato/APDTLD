@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="text-xs-center">
-                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-blue-yellow">Submit</button>
 
                     <div class="call">
                         <p>Or would you prefer to call? <span class="cf-phone"><i class="fa fa-phone"> +49 621 565 280</i></span></p>
@@ -48,7 +48,7 @@
             </div>
             <!--Footer-->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-dark-grey-yellow" data-dismiss="modal">Close</button>
             </div>
         </div>
         <!--/.Content-->

@@ -25,7 +25,6 @@ $('.insert-to-shopping-cart').click(function() {
 
 $('.delete-from-shopping-cart').click(function() {
 	var $eventID = $(this).attr("eventid");
-
 	$.ajax({
 	  type: "POST",
 	  url: "controller/shoppingCart/shoppingCartHandler.php",

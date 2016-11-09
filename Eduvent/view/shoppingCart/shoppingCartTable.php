@@ -9,10 +9,7 @@ require_once 'view/supportcontactform.php';
   <strong>Event added to shopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-contact">
-Contact Form
-</button>
-                               
+                             
 <div class="row">
  	<div class="col-md-12">
  		<h4>Event 1</h4>
@@ -24,7 +21,7 @@ Contact Form
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
  			eventid="1" type="submit" value="buy" />
  	</div>
  	<div class="col-md-12">
@@ -37,7 +34,7 @@ Contact Form
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
  			eventid="2" type="submit" value="buy" />
  	</div>
  	<div class="col-md-12">
@@ -50,7 +47,7 @@ Contact Form
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-event-details btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
  			eventid="3" type="submit" value="buy" />
  	</div>
  </div>
@@ -99,7 +96,7 @@ Contact Form
  				<td><?php echo $shoppingCartEvent->getAmount() ?> </td>
  				<td><td><?php echo (string)$shoppingCartEvent->IsAsGift() ?></td></td>
  				<td>
- 					<button type="button" class="btn btn-event-details delete-from-shopping-cart" eventid="<?php echo $shoppingCartEvent->getEvent()->getId()?>"
+ 					<button type="button" class="btn btn-blue-yellow delete-from-shopping-cart" eventid="<?php echo $shoppingCartEvent->getEvent()->getId()?>"
  						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
  				</td>
  			</tr>
@@ -125,7 +122,7 @@ Contact Form
  					</h4>
  				</td>
 
- 				<td colspan="3"><button type="button" class="btn btn-standard" data-toggle="modal" data-target="#paymentmodal">
+ 				<td colspan="3"><button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#paymentmodal">
  						Complete purchase <i class="fa fa-angle-right right"></i>
  					</button>
  				</td>
