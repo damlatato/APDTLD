@@ -10,7 +10,7 @@
 <!-- SCRIPTS -->
 
 <!-- JQuery -->
-<script type="text/javascript" src="../Eduvent/lib/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../Eduvent/lib/js/jquery-3.1.1.min.js"></script>
 
 <!-- JQuery UI -->
 <script type="text/javascript" src="../Eduvent/lib/js/jquery-ui.min.js"></script>
