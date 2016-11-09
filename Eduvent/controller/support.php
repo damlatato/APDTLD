@@ -1,19 +1,21 @@
 <?php
 
+
 if(isset($_SESSION['usermail'])) {
 	//TODO
 	//fill the input fields with user data automatically
-	$user = User::getUserByEmail($email);
+	//$user = User::getUserByEmail($email);
 }
 
 
+
 if(isset($_POST['sendsupportmail'])) {
-	$name = trim($_POST['txtuname']);
-	$email = trim($_POST['txtemail']);
+	$name = trim($_POST['txtname']);
+	$email = trim($_POST['txtmail']);
 	$subject = trim($_POST['txtsubject']);
 	$description = trim($_POST['txtdescription']);
 	
-
+echo "blablaaaaa";
 	$user = User::getUserByEmail($email);
 
 

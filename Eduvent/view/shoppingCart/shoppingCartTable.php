@@ -6,7 +6,7 @@ require_once 'view/supportcontactform.php';
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-  <strong>Event added to shopping cart!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+  <strong>Event added to shopping cart!</strong> Go to <a href="#" class="alert-link">Shopping cart </a>to see the content.
 </div>
 
                              
