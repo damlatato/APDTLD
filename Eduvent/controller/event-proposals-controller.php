@@ -26,7 +26,7 @@ foreach($proposedEvents as $event) {
 				<div class="col-xs-9 pull-right">
 					<span class="requested-by">Voted by <b>' . $event->getVotesNumber() . '</b> users</span>
 
-					<button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#modalVote" onclick="voteForEvent(' . $event->getId() . ')">
+					<button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#modalVote" onclick="voteForEvent(\'' . $event->getId() . '\')">
 						I want it also! Vote here!</button>
 
 					<!--Modal-->
@@ -38,7 +38,8 @@ foreach($proposedEvents as $event) {
 									<h4 class="modal-title">Thank you for your vote!</h4>
 								</div>
 								<div class="modal-body">
-									<p>You voted for the event proposal <strong>"' . $event->getTitle() . '"</strong>.</p>
+									<p>You showed your interest in the event proposal <strong>"' . $event->getTitle() . '"</strong>.<br>
+									We will inform you, if a company offers this event.</p>
 								</div>
 								<div class="modal-footer text-xs-center">
 									<button type="button" class="btn btn-standard" data-dismiss="modal">Close</button>
