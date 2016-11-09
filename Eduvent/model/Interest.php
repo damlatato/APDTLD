@@ -37,6 +37,9 @@ class Interest implements JsonSerializable{
 	}
 	
 	function fromJSONa($interestAj){
+		if (is_null($interestAj)){
+			return array();
+		}
 		$interestAv = json_decode($interestAj);
 		$interestA = array();
 		foreach($interestAv as $key=>$interestj){

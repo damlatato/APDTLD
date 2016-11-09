@@ -206,9 +206,15 @@ class User implements JsonSerializable{
 	}
 	
 	public function voteEvent($event){
+		if (!in_array($this->getId(),$event->getVotes())){
+			$eventVotes = $event->getVotes();
+			array_push($eventVotes, $this->getId());
+			$event->setVotes($eventVotes);
+		}
 		$votedEvents = $this->getVotedEvents();
 		array_push($votedEvents, $event->getId());
 		$this->setVotedEvents($votedEvents);
+		$event->putEvent();
 		$this->putUser();
 	}
 	

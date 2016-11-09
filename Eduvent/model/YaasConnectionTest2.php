@@ -1,6 +1,13 @@
 <?php
-/*include 'thesaurus.php';
-include 'User.php';*/
+include "Event.php";
+include "User.php";
+include "Address.php";
+include "Interest.php";
+include "YaasConnector.php";
+include "thesaurus.php";
+include "Notification.php";
+include "Booking.php";
+include "Payment.php";
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");
@@ -9,8 +16,8 @@ $interest2 = new Interest(2, $interest["Sport"], 2);
 $interestA = array($interest1, $interest2);
 $tests = array();
 
-$event4 = new Event(4, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
-$event5 = new Event(5, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event4 = new Event(4, $eventtypes["Presentation"], "My fourth Event", "So good fourth event", "4.12.2016 14:56", $address2, "", 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event5 = new Event(5, $eventtypes["Presentation"], "My fifth Event", "So good fifth event", "4.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 
 $user1 = new User(111,"Leonid Gunko","leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
 
@@ -121,10 +128,13 @@ if ($user->getId() == $user1->getId() && $user->getEmail() == $user1->getEmail()
 		$u1 = true;
 	}
 }
-if ($u1==true){
+if (in_array($user1->getId(),$event4->getVotes()) && in_array($user1->getId(),$event5->getVotes())) {
+	$u2 = true;
+}
+if ($u1==true && $u2==true){
 	array_push($tests,5);
 	echo "<br>";
-	echo "Yaas wishevent Test Successfull";
+	echo "Yaas VoteEvent TestSuccesfull";
 }
 
 

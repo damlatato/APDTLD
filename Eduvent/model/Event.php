@@ -1,5 +1,5 @@
 <?php 
-class Event implements JsonSerializable{ 
+class Event  implements JsonSerializable{ 
     private $id; 
     private $eventType;		//thesaurus
     private $title; 
@@ -12,6 +12,7 @@ class Event implements JsonSerializable{
     private $status;		//thesaurus
     private $eventOrganizer;//userId
     private $users;
+    private $votes;
     private $imgHref;
     public static $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
     
@@ -32,6 +33,7 @@ class Event implements JsonSerializable{
     	}
     	$this->status = $status;
     	$this->users = array();
+    	$this->votes = array();
     	$this->imgHref = $imgHref;
     }
     
@@ -73,6 +75,9 @@ class Event implements JsonSerializable{
     }
     public function setUsers($users){
     	$this->users = $users;
+    }
+    public function setVotes($votes){
+    	$this->votes = $votes;
     }
     public function setimgHref($imgHref){
     	$this->imgHref = $imgHref;
@@ -118,6 +123,12 @@ class Event implements JsonSerializable{
     public function getUsers(){
     	return $this->users;
     }
+    public function getVotes(){
+    	return $this->votes;
+    }
+    public function getVotesNumber(){
+    	return count($this->votes);
+    }
     public function getUsersNumber(){
     	return count($this->users);
     }
@@ -140,6 +151,7 @@ class Event implements JsonSerializable{
 		'status'=>$this->status,
 		'eventOrganizer'=>$this->eventOrganizer,
 		'users'=>$this->users,
+		'votes'=>$this->votes,
 		'imgHref'=>$this->imgHref
 		]);
     }
