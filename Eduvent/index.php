@@ -13,22 +13,22 @@
 <!-- CSS -->
 
 <!-- Font Awesome-->
-<link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css" type='text/css'>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="../Eduvent/lib/css/bootstrap.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/bootstrap.min.css" type='text/css' media='all'>
 
 <!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css" type='text/css' media='all'>
 
 <!-- MDB Compiled
-<link rel='stylesheet' id='compiled.css-css' href='../Eduvent/lib/css/compiled.min.css' type='text/css' media='all' /> -->
+<link rel='stylesheet' href='../Eduvent/lib/css/compiled.min.css' type='text/css'/> -->
 
 <!-- Custom styles -->
-<link rel="stylesheet" href="../Eduvent/lib/css/styles.css">
+<link rel="stylesheet" href="../Eduvent/lib/css/styles.css" type='text/css'>
 
 <!-- Datepicker -->
-<link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css">
+<link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css" type='text/css'>
 
 </head>
 
