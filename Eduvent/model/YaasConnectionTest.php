@@ -1,7 +1,13 @@
 <?php
-
-include 'User.php';
-include 'thesaurus.php';
+include "Event.php";
+include "User.php";
+include "Address.php";
+include "Interest.php";
+include "YaasConnector.php";
+include "thesaurus.php";
+include "Notification.php";
+include "Booking.php";
+include "Payment.php";
 
 $tests=array();
 $payment1 = new Payment("25.09.2016", 1000);
@@ -94,7 +100,7 @@ $address2 = new Address("Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 1
 
 $event1 = new Event(1, $eventtypes["Show"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Studing'], 11, $statuses["Proposed"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
-$event4 = new Event(4, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event4 = new Event(4, $eventtypes["Presentation"], "My fourth Event", "So good fourth event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $eventA = array($event1, $event2);
 //test
 	$jevent1 = $event1->jsonSerialize();
@@ -403,7 +409,29 @@ if ($u1==true){
 	echo "Yaas GetUserByWrongEmail Test Succesfull";
 }
 
-if (count($tests)==33){
+$event = Event::getById(2);
+$u1=false;
+if ($event->getTitle() == $event2->getTitle()){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,34);
+	echo "<br>";
+	echo "Yaas GetEventById Test Succesfull";
+}
+
+$user = User::getUserById(111);
+$u1=false;
+if ($user->getEmail() == $user1->getEmail()){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,35);
+	echo "<br>";
+	echo "Yaas GetUserById Test Succesfull";
+}
+
+if (count($tests)==35){
 	echo "<br>";
 	echo "All the tests are done";
 }

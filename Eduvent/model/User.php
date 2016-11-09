@@ -149,6 +149,11 @@ class User implements JsonSerializable{
 		return User::fromJSONa($juserlist)[0];
 	}
 	
+	public static function getUserById($id){
+		$juserlist = get("user?q=id:".chr(34).$id.chr(34));
+		return User::fromJSONa($juserlist)[0];
+	}
+	
 	public static function getPasswordByEmail($email){
 		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0]->getPassword();
