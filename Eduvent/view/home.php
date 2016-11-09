@@ -289,11 +289,11 @@ $( document ).ready(function() {
 
 									<div class="event-buttons flex-center">
 										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
+											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
 										</a>
 
 										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
+											<button class="btn btn-grey" type="button">More</button>
 
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
@@ -349,11 +349,11 @@ $( document ).ready(function() {
 
 									<div class="event-buttons flex-center">
 										<a href="#">
-											<button class="btn btn-event-details" type="button">Show details</button>
+											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
 										</a>
 
 										<div class="event-menu">
-											<button class="btn btn-event-menu" type="button">More</button>
+											<button class="btn btn-grey" type="button">More</button>
 
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
