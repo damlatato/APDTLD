@@ -1,3 +1,12 @@
+<script>
+function voteForEvent(eventId) {
+	$.post( "../Eduvent/controller/vote-for-event.php", { proposalId: eventId })
+	.done(function( data ) {
+		console.log( "vote submitted: " + data );
+	});
+}
+</script>
+
 <div class="container">
 
 	<!--Sidebar (Topics)-->
