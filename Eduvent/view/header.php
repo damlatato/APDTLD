@@ -13,8 +13,9 @@ require_once 'controller/initiatePage.php';
 
 <header>
 
-	<!--Navbar-->
-	<nav class="navbar navbar-light grey lighten-5 navtop">
+	<!--Navbar
+	<nav class="navbar navbar-light grey lighten-5 navtop">-->
+	<nav class="navbar navbar-light navtop">
 		<div class="navbar-inner">
 
 			<!-- Collapse button-->

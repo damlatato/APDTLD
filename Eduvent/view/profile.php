@@ -4,7 +4,7 @@
 		<div class="col-md-12 text-xs-center">
 
 			<div>
-				<img src="http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-2.jpg" class="rounded-circle img-responsive">
+				<img src="http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-2.jpg" class="img-responsive">
 			</div>
 			<h1>Anna Doe</h1>
 
