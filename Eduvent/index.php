@@ -16,10 +16,10 @@
 <link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css" type='text/css'>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="../Eduvent/lib/css/bootstrap.min.css" type='text/css' media='all'>
+<link rel="stylesheet" href="../Eduvent/lib/css/bootstrap.min.css" type='text/css'>
 
 <!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css" type='text/css' media='all'>
+<link rel="stylesheet" href="../Eduvent/lib/css/mdb.min.css" type='text/css'>
 
 <!-- Custom styles -->
 <link rel="stylesheet" href="../Eduvent/lib/css/styles.css" type='text/css'>

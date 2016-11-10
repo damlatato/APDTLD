@@ -11,7 +11,7 @@
 		</div>
 	</div><br>
 
-	<ul class="nav nav-tabs md-pills flex-center" role="tablist">
+	<ul class="nav nav-pills flex-center" role="tablist">
 		<li class="nav-item">
 			<a class="profile-nav-link nav-link active" data-toggle="tab" href="#profile1" role="tab"><i class="fa fa-user"></i> My data</a>
 		</li>
@@ -27,7 +27,7 @@
 		<li class="nav-item">
 			<a class="profile-nav-link nav-link" data-toggle="tab" href="#profile5" role="tab"><i class="fa fa-heart" aria-hidden="true"></i> My wishlist</a>
 		</li>
-	</ul>
+	</ul><hr>
 
 	<div class="tab-content">
 		<div class="tab-pane fade in active" id="profile1" role="tabpanel">
