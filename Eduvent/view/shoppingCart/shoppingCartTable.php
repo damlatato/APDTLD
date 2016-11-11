@@ -21,7 +21,7 @@ require_once 'view/supportcontactform.php';
  			<option value="4">4</option>
  			<option value="5">5</option>
  		</select> <input
- 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
+ 			class="btn btn-blue-yellow insert-to-shopping-cart"
  			eventid="1" type="submit" value="buy" />
  	</div>
  	<div class="col-md-12">
