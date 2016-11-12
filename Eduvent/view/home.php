@@ -94,13 +94,13 @@ $( document ).ready(function() {
 			<!--/.Row 1-->
 
 			<!--Row 2: Navbar (Event market filter bar) -->
-			<div class="row">
-				<div class="col-md-12">
+			<!--<div class="row">
+				<div class="col-md-12">-->
 				<?php
-					include("search-bar.php");
+					include("search-bar2.php");
 				?>
-				</div>
-			</div>
+				<!--</div>
+			</div>-->
 			<!--/.Row 2: Navbar-->
 
 			<!--Row 3 (Event lists)-->

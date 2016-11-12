@@ -47,7 +47,7 @@
 								<div class="form-group row cp-form-group">
 									<label for="cp-title" class="col-xs-2 col-form-label">Title</label>
 									<div class="col-xs-3">
-										<input class="form-control" type="search" id="cp-title" name="cp-title" placeholder="Title" required>
+										<input class="form-control" type="input" id="cp-title" name="cp-title" placeholder="Title" required>
 									</div>
 								</div>
 
@@ -64,7 +64,7 @@
 								<div class="form-group row cp-form-group">
 									<label for="cp-city" class="col-xs-2 col-form-label">Preferable location (city)</label>
 									<div class="col-xs-3">
-										<input type="search" class="form-control" id="cp-city" name="cp-city" placeholder="City">
+										<input type="input" class="form-control" id="cp-city" name="cp-city" placeholder="City">
 									</div>
 								</div>
 

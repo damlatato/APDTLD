@@ -1,6 +1,6 @@
 <script>
 $(document).ready(function() {
-	$('.location-radius-menu > li').click(function() {
+	$('.custom-dropdown-menu > li').click(function() {
 		$('#btn-set-radius').text($(this).text());
 		$(this).prop('hidden', true);
 		$(this).siblings().prop('hidden', false);
@@ -14,17 +14,17 @@ $(document).ready(function() {
 		<div class="pull-xs-left">
 
 			<form class="form-inline" id="search-form" onsubmit="runSearch()">
-				<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search">
+				<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="input" placeholder="Search">
 				<span>within
 
-					<div class="location-radius">
-						<button class="btn btn-info-outline waves-effect dropdown-toggle" id="btn-set-radius" type="button">5 km</button>
-						<ul class="location-radius-menu">
-							<li class="dropdown-item" hidden>5 km</li>
-							<li class="dropdown-item">10 km</li>
-							<li class="dropdown-item">25 km</li>
-							<li class="dropdown-item">50 km</li>
-							<li class="dropdown-item">No limit</li>
+					<div class="custom-dropdown-btn">
+						<div class="btn btn-info-outline waves-effect" id="btn-set-radius">5 km</div>
+						<ul class="custom-dropdown-menu">
+							<li hidden>5 km</li>
+							<li>10 km</li>
+							<li>25 km</li>
+							<li>50 km</li>
+							<li>No limit</li>
 						</ul>
 					</div>
 

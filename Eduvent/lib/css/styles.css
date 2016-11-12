@@ -407,6 +407,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
 /*         Search/filter bars             */
 /******************************************/
 
+.custom-dropdown-btn {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-dropdown-btn:hover .custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-menu {
+	background-color: #f9f9f9;
+	border: 1.5px solid black;
+	border-radius: 2px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+	left: 0;
+	margin-top: -5px;
+    min-width: 160px;
+    padding: 12px 16px;
+	position: absolute;
+    z-index: 1;
+}
+
+.custom-dropdown-btn:hover .custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-menu li {
+	display: block;
+}
+
+.custom-dropdown-menu li:hover {
+	background-color: lightgrey;
+}
+
 .location-radius, .location-search, .proposal-filter {
     display: inline-block;
 }
@@ -421,7 +456,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 6px 8px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .location-radius:hover .location-radius-menu,
