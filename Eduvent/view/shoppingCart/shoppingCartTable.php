@@ -20,9 +20,9 @@ require_once 'view/supportcontactform.php';
  			<option value="3">3</option>
  			<option value="4">4</option>
  			<option value="5">5</option>
- 		</select> <input
+ 		</select> <button
  			class="btn btn-blue-yellow insert-to-shopping-cart"
- 			eventid="1" type="submit" value="buy" />
+ 			eventid="1" type="submit" value="buy">Buy</button>
  	</div>
  	<div class="col-md-12">
  		<h4>Event 2</h4>
@@ -33,9 +33,9 @@ require_once 'view/supportcontactform.php';
  			<option value="3">3</option>
  			<option value="4">4</option>
  			<option value="5">5</option>
- 		</select> <input
+ 		</select> <button
  			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
- 			eventid="2" type="submit" value="buy" />
+ 			eventid="2" type="submit" value="buy">Buy</button>
  	</div>
  	<div class="col-md-12">
  		<h4>Event 3</h4>
@@ -46,9 +46,9 @@ require_once 'view/supportcontactform.php';
  			<option value="3">3</option>
  			<option value="4">4</option>
  			<option value="5">5</option>
- 		</select> <input
+ 		</select> <button
  			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
- 			eventid="3" type="submit" value="buy" />
+ 			eventid="3" type="submit" value="buy">Buy</button>
  	</div>
  </div>
  <div class="table-responsive">

@@ -1,7 +1,7 @@
 <script>
 $(document).ready(function() {
 	$('.custom-dropdown-menu > li').click(function() {
-		$('#btn-set-radius').text($(this).text());
+		$('#btn-proposal-filter').text($(this).text());
 		$(this).prop('hidden', true);
 		$(this).siblings().prop('hidden', false);
 	}); 
@@ -28,5 +28,15 @@ $(document).ready(function() {
 		<div class="custom-dropdown-menu">
 			<input type="text" class="form-control" placeholder="Location ..." aria-describedby="location-addon1">
 		</div>
+	</div>
+	<div class="custom-dropdown-btn">
+		Sort by
+		<button class="btn btn-info-outline waves-effect" id="btn-proposal-filter" type="button">Topic</button>
+		<ul class="custom-dropdown-menu">
+			<li hidden>Topic</li>
+			<li>Location</li>
+			<li>Newest</li>
+			<li>Most voted</li>
+		</ul>
 	</div>
 </nav>

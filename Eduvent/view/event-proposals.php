@@ -37,7 +37,7 @@ function voteForEvent(eventId) {
 		<div class="row">
 			<div class="col-md-12">
 				<?php
-					include("proposal-filter-bar.php");
+					include("search-bar.php");
 				?>
 			</div>
 		</div>
