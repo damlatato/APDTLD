@@ -27,7 +27,10 @@
 <!-- Datepicker -->
 <link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css" type='text/css'>
 
-<!-- Favicon -->
+<!-- Multi-step form -->
+
+
+<!-- Favicons and touch icons -->
 <link rel="shortcut icon" type="image/x-icon" href="../Eduvent/view/images/favicon.png">
 
 </head>
@@ -46,7 +49,9 @@ include 'view/header.php';
 if (isset($_GET['page'])) {
 	$page=$_GET['page'];
 	
-	if ($page=='event-market' or
+	if ($page=='home' or
+		$page=='event-market' or
+		$page=='create-event' or
 		$page=='event-proposals' or
 		$page=='create-proposal' or
 		$page=='profile') {
@@ -91,8 +96,10 @@ include 'view/footer.php';
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
-<!-- Backstretch -->
+<!-- MSF Scripts 
 <script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="../Eduvent/lib/js/placeholder.js"></script>
+<script type="text/javascript" src="../Eduvent/lib/js/msf-scripts.js"></script>-->
 
 <!-- Custom scripts -->
 <script type="text/javascript" src="controller/js/shoppingCart.js"></script>

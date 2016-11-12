@@ -26,11 +26,11 @@
         <![endif]-->
 
         <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../Eduvent/lib/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../Eduvent/lib/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../Eduvent/lib/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Eduvent/lib/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../Eduvent/lib/ico/apple-touch-icon-57-precomposed.png">
 
     </head>
 
@@ -275,7 +275,7 @@
         <script src="../Eduvent/mdbootstrap/js/scripts.js"></script>
         
         <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
+            <script src="../Eduvent/lib/js/placeholder.js"></script>
         <![endif]-->
 
     </body>
