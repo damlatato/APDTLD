@@ -1,29 +1,41 @@
 <?php
-require_once 'class.user.php';
-$user = new USER();
+// require_once 'class.user.php';
+// $user = new USER();
+
+// requirements 
+
+// 1. $id = User::getUserIDByTokenCode($code);
+// 2. $name = User::getUserByID($id);
+// 3. update db function for changing password
+
+require_once '../../model/User.php';
+
 
 if(empty($_GET['id']) && empty($_GET['code']))
 {
-	$user->redirect('../Eduvent/index.php?page=login');
+// 	$user->redirect('../Eduvent/index.php?page=login');
 }
 
 if(isset($_GET['id']) && isset($_GET['code']))
 {
-	$id = base64_decode($_GET['id']);
+	$id_inURL = $_GET['id'];
 	$code = $_GET['code'];
 	
-	$stmt = $user->runQuery("SELECT * FROM users WHERE ID=:uid AND tokenCode=:token");
-	$stmt->execute(array(":uid"=>$id,":token"=>$code));
-	$rows = $stmt->fetch(PDO::FETCH_ASSOC);
+	$id = User::getUserIDByTokenCode($code);
+	$name = User::getUserByID($id);
 	
-	if($stmt->rowCount() == 1)
-	{
+// 	$stmt = $user->runQuery("SELECT * FROM users WHERE ID=:uid AND tokenCode=:token");
+// 	$stmt->execute(array(":uid"=>$id,":token"=>$code));
+// 	$rows = $stmt->fetch(PDO::FETCH_ASSOC);
+	
+	if ($id == $id_inURL) {
+	
 		if(isset($_POST['btn-reset-pass']))
 		{
-			$pass = $_POST['pass'];
+			$password  = $_POST['pass'];
 			$cpass = $_POST['confirm-pass'];
 			
-			if($cpass!==$pass)
+			if($cpass!==$password )
 			{
 				$msg = "<div class='alert alert-block'>
 						<button class='close' data-dismiss='alert'>&times;</button>
@@ -32,9 +44,10 @@ if(isset($_GET['id']) && isset($_GET['code']))
 			}
 			else
 			{
-				$password = md5($cpass);
-				$stmt = $user->runQuery("UPDATE users SET userPass=:upass WHERE ID=:uid");
-				
+				$password = $cpass;
+// 				$stmt = $user->runQuery("UPDATE users SET userPass=:upass WHERE ID=:uid");
+// 				call function to update db 
+
 				$msg = "<div class='alert alert-success'>
 						<button class='close' data-dismiss='alert'>&times;</button>
 						Password Changed.
@@ -72,7 +85,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
   <body id="login">
     <div class="container">
     	<div class='alert alert-success'>
-			<strong>Hello !</strong>  <?php echo $rows['userName'] ?> you are here to reset your forgetton password.
+			<strong>Hello !</strong>  <?php echo $name ?> you are here to reset your forgetton password.
 		</div>
         <form class="form-signin" method="post">
         <h3 class="form-signin-heading">Password Reset.</h3><hr />

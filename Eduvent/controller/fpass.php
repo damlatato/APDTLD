@@ -1,47 +1,85 @@
 <?php
 
-require_once '../Eduvent/controller/login/class.user.php';
-$user = new USER();
 
-if($user->is_logged_in()!="") {
-	$user->redirect('../Eduvent/index.php?page=settings');
-}
+// rewuirements 
+
+// 1. function --> User::getIDbyEmail($email) needed to be set
+// 2. function --> User::getTokenCodebyEmail($email); needed to be set
+
+require_once '../model/User.php';
+// require_once '../model/class.user.php';
+// $user = new USER();
+
+// if($user->is_logged_in()!="") {
+// 	$user->redirect('../Eduvent/index.php?page=settings');
+// }
 
 if(isset($_POST['btn-submit'])) {
 	$email = $_POST['txtemail'];
-	$stmt = $user->runQuery("SELECT ID FROM users WHERE EmailAddress=:email LIMIT 1");
-	$stmt->execute(array(":email"=>$email));
-	$row = $stmt->fetch(PDO::FETCH_ASSOC); 
-
-	if($stmt->rowCount()==1) {
-		$id = base64_encode($row['ID']);
-		$code = md5(uniqid(rand()));
-		$stmt = $user->runQuery("UPDATE users SET tokenCode=:token WHERE EmailAddress=:email");
-		$stmt->execute(array(":token"=>$code,"email"=>$email));
+	if ($password == User::getPasswordByEmail($email)) {
+		
+		$id = User::getIDbyEmail($email);
+		$code = User::getTokenCodebyEmail($email);
+// 		send message to update his or her password 
 
 		$message = "
-			Hello , $email
-			<br /><br />
-			We got requested to reset your password, if you do this then just click the following link to reset your password, if not just ignore                   this email,
-			<br /><br />Please click on the following link to reset your password<br /><br />
-			<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
-			<br /><br />
-			thank you :)";
-
+		Hello , $email
+		<br /><br />
+		We got requested to reset your password, if you do this then just click the following link to reset your password, if not just ignore                   this email,
+		<br /><br />Please click on the following link to reset your password<br /><br />
+		<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
+		<br /><br />
+		thank you :)";
+		
 		$subject = "Password Reset";
 		$user->send_mail($email,$message,$subject);
 		$msg = "<div class='alert alert-success'>
-			<button class='close' data-dismiss='alert'>&times;</button>
-			We've sent an email to $email.
-			Please click on the password reset link in the email to generate new password. 
-			</div>";
+		<button class='close' data-dismiss='alert'>&times;</button>
+		We've sent an email to $email.
+		Please click on the password reset link in the email to generate new password.
+		</div>";
 	}
+	
+	
 	else {
 		$msg = "<div class='alert alert-danger'>
 			<button class='close' data-dismiss='alert'>&times;</button>
 			<strong>Sorry!</strong>this email not found.</div>";
 	}
 }
+// 	$stmt = $user->runQuery("SELECT ID FROM users WHERE EmailAddress=:email LIMIT 1");
+// 	$stmt->execute(array(":email"=>$email));
+// 	$row = $stmt->fetch(PDO::FETCH_ASSOC); 
+
+// 	if($stmt->rowCount()==1) {
+// 		$id = base64_encode($row['ID']);
+// 		$code = md5(uniqid(rand()));
+// 		$stmt = $user->runQuery("UPDATE users SET tokenCode=:token WHERE EmailAddress=:email");
+// 		$stmt->execute(array(":token"=>$code,"email"=>$email));
+
+// 		$message = "
+// 			Hello , $email
+// 			<br /><br />
+// 			We got requested to reset your password, if you do this then just click the following link to reset your password, if not just ignore                   this email,
+// 			<br /><br />Please click on the following link to reset your password<br /><br />
+// 			<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
+// 			<br /><br />
+// 			thank you :)";
+
+// 		$subject = "Password Reset";
+// 		$user->send_mail($email,$message,$subject);
+// 		$msg = "<div class='alert alert-success'>
+// 			<button class='close' data-dismiss='alert'>&times;</button>
+// 			We've sent an email to $email.
+// 			Please click on the password reset link in the email to generate new password. 
+// 			</div>";
+// 	}
+// 	else {
+// 		$msg = "<div class='alert alert-danger'>
+// 			<button class='close' data-dismiss='alert'>&times;</button>
+// 			<strong>Sorry!</strong>this email not found.</div>";
+// 	}
+// }
 ?>
 
 <!DOCTYPE html>
