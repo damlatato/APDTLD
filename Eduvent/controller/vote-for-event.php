@@ -5,7 +5,13 @@ function __autoload($class)
 	include_once('D:/xampp/htdocs/APDTLD/Eduvent/model/'.$class.'.php');
 }
 
-$address=new Address(null, null, null, "Mannheim", null, "Germany");
+/*$eventList=Event::getEventList();
+foreach ($eventList as $varEvent) {
+    $varEvent->deleteEvent();
+}*/
+
+//$address=new Address(null, null, null, "Mannheim", null, "Germany");
+$address=new Address(null, null, null, null, null, null);
 $user=new User(uniqid(),"Leon Lourie","leonlourie@yahoo.de","12345", $address, "m", "18.01.1990", null, null);
 $user->deleteUser();
 $user->postUser();
