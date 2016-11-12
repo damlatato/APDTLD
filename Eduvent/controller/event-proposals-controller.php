@@ -53,7 +53,7 @@ foreach($proposedEvents as $event) {
 						<button class="btn btn-dark-grey-yellow dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offer event</button>
 						<div class="offer-event-menu dropdown-menu">
 							<a class="offer-event-item dropdown-item" href="../Eduvent/index.php?page=create-event">Create new event</a>
-							<a class="offer-event-item dropdown-item" href="../Eduvent/index.php?page=offer-event">Offer existing event</a>
+							<a class="offer-event-item dropdown-item" href="../Eduvent/index.php?page=offer-event&proposalId=' . $event->getId() . '">Offer existing event</a>
 						</div>
 					</div>
 				</div>

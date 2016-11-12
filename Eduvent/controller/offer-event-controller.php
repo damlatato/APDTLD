@@ -1,13 +1,15 @@
 <?php
-if (isset($_POST['oe-submit']))
+if (isset($_POST['peid']) and isset($_POST['oeid']))
 {
 	// The Code to be executed after an event was selected.
-	echo('<div><h3>Thank you for offering this event!</h3><br>
-			A notification is sent out to users who voted for the event proposal.<br><br></div>');
+	$peid=$_POST['peid'];
+	$oeid=$_POST['oeid'];
 
 	// more logic here
 	// ...
 
+	$output="proposal-id=" . $peid . ", offer-id=" . $oeid;
+	echo $output;
 }
 else               
 {
@@ -20,10 +22,10 @@ else
 			if ($eventCounter>0) {
 				echo '</div>';
 			}
-			echo ('<div class="row">');
+			echo '<div class="row">';
 		}
 
-		echo ('
+		echo '
 			<div class="col-md-4 event-market-col">
 				<!--Card-->
 				<div class="event-card card">
@@ -52,13 +54,31 @@ else
 
 						<!--Card footer-->
 						<div class="card-footer">
-							<form action="" method="post">
-								<div class="form-group event-buttons flex-center" style="margin:0;">
-									<a href="#">
-										<button type="submit" class="btn btn-blue-yellow-small" name="oe-submit">Post proposal</button>
-									</a>
+							<div class="event-buttons flex-center" style="margin:0;">
+								<a href="#">
+									<button type="button" class="btn btn-blue-yellow-small" data-toggle="modal" data-target="#modalOffer" onclick="offerEvent(\'' . $proposalId . '\',\'' . $event->getId() . '\')">
+									Offer event</button>
+								</a>
+								<!--Modal-->
+								<div class="modal fade" id="modalOffer" role="dialog">
+									<div class="modal-dialog">
+										<div class="modal-content text-xs-left">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="modal-title">Thank you for offering this event!</h4>
+											</div>
+											<div class="modal-body">
+												<p>You offered the event <strong>"' . $event->getTitle() . '"</strong>.<br>
+												A notification is sent out to users who voted for the event proposal.</p>
+											</div>
+											<div class="modal-footer text-xs-center">
+												<button type="button" class="btn btn-standard" data-dismiss="modal" onclick="window.location.href=\'../Eduvent/index.php?page=event-proposals\'">Close</button>
+											</div>
+										</div>
+									</div>
 								</div>
-							</form>
+								<!--/.Modal-->
+							</div>
 						</div>
 						<!--/.Card footer-->
 
@@ -67,13 +87,13 @@ else
 
 				</div>
 				<!--/.Card-->
-			</div>');
+			</div>';
 		
 		$eventCounter++;
 	}
 
 	if ($eventCounter>0) {
-		echo ('</div>');
+		echo '</div>';
 	}
 }
 ?>

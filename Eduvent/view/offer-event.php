@@ -1,3 +1,17 @@
+<?php
+	$proposalId=$_GET['proposalId'];
+?>
+
+<script>
+function offerEvent(proposalId, offerId) {
+	console.log("pid=" + proposalId + " / oid=" + offerId);
+	$.post( "../Eduvent/controller/offer-event-controller.php", { peid: proposalId, oeid: offerId })
+	.done(function( data ) {
+		console.log( "offer submitted: " + data );
+	});
+}
+</script>
+
 <div class="container">
 
 	<!--Row 1: Page heading-->
