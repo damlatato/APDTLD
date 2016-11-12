@@ -97,7 +97,7 @@ $( document ).ready(function() {
 			<!--<div class="row">
 				<div class="col-md-12">-->
 				<?php
-					include("search-bar2.php");
+					include("search-bar.php");
 				?>
 				<!--</div>
 			</div>-->

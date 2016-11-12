@@ -16,9 +16,9 @@ $(document).ready(function() {
 				<i class="fa fa-search" aria-hidden="true"></i><input class="form-control" id="search-input" type="text" placeholder="Search proposals">
 				<span>within
 
-					<div class="location-radius">
+					<div class="custom-dropdown-btn">
 						<button class="btn btn-info-outline waves-effect dropdown-toggle" id="btn-set-radius" type="button">5 km</button>
-						<ul class="location-radius-menu">
+						<ul class="custom-dropdown-menu">
 							<li class="dropdown-item" hidden>5 km</li>
 							<li class="dropdown-item">10 km</li>
 							<li class="dropdown-item">25 km</li>

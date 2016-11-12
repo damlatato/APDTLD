@@ -10,13 +10,9 @@ $(document).ready(function() {
 
 <h5 class="font-weight-bold">Event search</h5>
 <nav class="navbar navbar-light grey lighten-5">
-	<div class="row" id="search-form" style="display:inline;">
-		<div class="col-md-4">
-			<i class="fa fa-search" aria-hidden="true"></i>
-			<input class="form-control" id="search-input" type="search" placeholder="Search" style="display:inline;">
-		</div>
-		<div class="col-md-8">
-			within			
+		<div id="search-form">
+			<input class="search-input" id="search-input" type="search-md" placeholder="Search" style="width:20%;">
+			within
 			<div class="custom-dropdown-btn">
 				<div class="btn btn-info-outline waves-effect" id="btn-set-radius">5 km</div>
 				<ul class="custom-dropdown-menu">
@@ -26,6 +22,13 @@ $(document).ready(function() {
 					<li>50 km</li>
 					<li>No limit</li>
 				</ul>
+			</div>
+			from
+			<div class="custom-dropdown-btn">
+				<button class="btn-location-search btn btn-info-outline waves-effect dropdown-toggle" type="button">Mannheim, DE</button>
+				<div class="custom-dropdown-menu">
+					<input type="text" class="form-control" placeholder="Location ..." aria-describedby="location-addon1">
+				</div>
 			</div>
 		</div>
 </nav>

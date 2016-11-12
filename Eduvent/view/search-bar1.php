@@ -19,13 +19,13 @@ $(document).ready(function() {
 
 					<div class="custom-dropdown-btn">
 						<div class="btn btn-info-outline waves-effect" id="btn-set-radius">5 km</div>
-						<ul class="custom-dropdown-menu">
-							<li hidden>5 km</li>
-							<li>10 km</li>
-							<li>25 km</li>
-							<li>50 km</li>
-							<li>No limit</li>
-						</ul>
+						<div class="custom-dropdown-menu">
+							<p hidden>5 km</p>
+							<p>10 km</p>
+							<p>25 km</p>
+							<p>50 km</p>
+							<p>No limit</p>
+						</div>
 					</div>
 
 					from
