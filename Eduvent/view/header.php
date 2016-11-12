@@ -11,6 +11,17 @@ include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
 require_once 'controller/initiatePage.php';
 ?>
 
+<script>
+$( document ).ready(function() {
+	$(".theme-switch").click(function(){
+		$(".navtop").toggleClass("theme-dark");
+		$(".navtop").toggleClass("navbar-light");
+		$(".navtop").toggleClass("navbar-dark");
+		$(".head-logo").toggleClass("hidden-logo");
+	});
+});
+</script>
+
 <header>
 
 	<!--Navbar
@@ -29,7 +40,10 @@ require_once 'controller/initiatePage.php';
 				<!--Collapse content-->
 				<div class="collapse navbar-toggleable-xs" id="collapseEx2">
 					<a class="navbar-brand" href="../Eduvent/index.php">
-						<span><img src="../Eduvent/view/images/logo-banner-small.png" height="50"width=""> </span>
+						<span>
+							<img class="head-logo" src="../Eduvent/view/images/logo-banner-small.png" height="50" width="">
+							<img class="head-logo hidden-logo" src="../Eduvent/view/images/logo-small.png" height="50" width="">
+						</span>
 					</a>
 					<!--Links-->
 					<ul class="nav navbar-nav">
@@ -45,7 +59,12 @@ require_once 'controller/initiatePage.php';
 						<li id="shoppingcartmenu" class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php?page=shoppingCart"> <i
 								class="fa fa-shopping-cart left"></i>&nbsp Shopping cart<?php printQuantityOfSelectedEvents()?>
-						</a>
+							</a>
+						</li>
+						<li class="nav-item">
+							<label class="switch">
+								<input class="theme-switch" type="checkbox"><div class="slider round"></div>
+							</label>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav pull-right">
