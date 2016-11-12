@@ -6,8 +6,8 @@ foreach($proposedEvents as $event) {
 	<!--Proposal-->
 	<div class="row">
 		<div class="col-md-12">
-			<span class="proposal-topic">Topic</span>
-			<h4 class="proposal-title" style="display:inline-block;">' . $event->getTitle() . '</h4>&nbsp;<span class="proposal" id="' . $event->getId() . '">hola</span>
+			<span class="proposal-topic">Topic</span><br>
+			<h4 class="proposal-title" style="display:inline-block;">' . $event->getTitle() . '</h4>&nbsp;<span class="po-status" id="' . $event->getId() . '"><i>Show matching events</i></span>
 			<p>' . $event->getDescription() . '</p>
 			<div class="read-more text-xs-right row">
 				<div class="col-xs-3 pull-left text-xs-left">

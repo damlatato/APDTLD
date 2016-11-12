@@ -103,14 +103,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
 }
 
 .navtop {
-background: #dff5fa;
-background: -moz-linear-gradient(left, #dff5fa 0%, #dff5fa 0%, #badde8 50%, #dff5fa 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, #dff5fa), color-stop(0%, #dff5fa), color-stop(50%, #badde8), color-stop(100%, #dff5fa));
-background: -webkit-linear-gradient(left, #dff5fa 0%, #dff5fa 0%, #badde8 50%, #dff5fa 100%);
-background: -o-linear-gradient(left, #dff5fa 0%, #dff5fa 0%, #badde8 50%, #dff5fa 100%);
-background: -ms-linear-gradient(left, #dff5fa 0%, #dff5fa 0%, #badde8 50%, #dff5fa 100%);
-background: linear-gradient(to right, #dff5fa 0%, #dff5fa 0%, #badde8 50%, #dff5fa 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', endColorstr='#dff5fa', GradientType=1 );
+	background-color: #e7f4f7;
 }
 
 /******************************************/
@@ -574,6 +567,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
 	color: #424242;
 }
 
+.po-status {
+	color: #FED835;
+	font-weight: bold;
+}
+
 .offer-event-menu {
 	background-color: #424242;
 }
@@ -681,45 +679,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15)!important;
 	color: #fff!important;
 }
-
-/*
-.md-pills .nav-item .nav-link.active {
-	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
-	border-radius: 2px;
-	transition: all .4s
-}
-
-.md-pills li {
-	padding: 10px
-}
-
-.md-pills .nav-link {
-	color: #666;
-	text-align: center
-}
-
-.md-pills .nav-item .nav-link {
-    border-radius: 2px
-}
-
-.md-pills .nav-item .nav-link,
-.md-pills .nav-item .nav-link.active {
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px
-}
-
-.md-pills .nav-item .nav-link:hover {
-    background-color: rgba(158, 158, 158, .3);
-    transition: all .4s
-}
-
-.md-pills .nav-item .nav-link.active,
-.md-pills .nav-item .nav-link:hover {
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -o-transition: all .4s;
-    -ms-transition: all .4s
-}
-*/
