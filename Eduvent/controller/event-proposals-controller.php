@@ -7,7 +7,7 @@ foreach($proposedEvents as $event) {
 	<div class="row">
 		<div class="col-md-12">
 			<span class="proposal-topic">Topic</span>
-			<h4 class="proposal-title">' . $event->getTitle() . '</h4>
+			<h4 class="proposal-title">' . $event->getTitle() . '</h4>&nbsp;&nbsp;<span class="proposal" id="' . $event->getId() . '"></span>
 			<p>' . $event->getDescription() . '</p>
 			<div class="read-more text-xs-right row">
 				<div class="col-xs-3 pull-left text-xs-left">
