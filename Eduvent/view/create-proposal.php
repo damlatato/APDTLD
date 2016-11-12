@@ -45,7 +45,7 @@
 								<div class="form-group row cp-form-group">
 									<label for="cp-title" class="col-xs-2 col-form-label">Title</label>
 									<div class="col-xs-3">
-										<input class="form-control" type="input" id="cp-title" name="cp-title" placeholder="Title" required>
+										<input class="form-control" type="input" id="cp-title" name="cp-title" placeholder=" Title" required>
 									</div>
 								</div>
 
@@ -55,14 +55,14 @@
 										<i class="fa fa-pencil prefix" style="font-size:1.45em;"></i>
 									</label>
 									<div class="col-xs-6 md-form">
-										<textarea type="text" class="form-control md-textarea" id="cp-description" name="cp-description" placeholder="Description"></textarea>
+										<textarea type="text" class="form-control md-textarea" id="cp-description" name="cp-description" placeholder=" Description" required></textarea>
 									</div>
 								</div>
 
 								<div class="form-group row cp-form-group">
 									<label for="cp-city" class="col-xs-2 col-form-label">Preferable location (city)</label>
 									<div class="col-xs-3">
-										<input type="input" class="form-control" id="cp-city" name="cp-city" placeholder="City">
+										<input type="input" class="form-control" id="cp-city" name="cp-city" placeholder=" City" required>
 									</div>
 								</div>
 
