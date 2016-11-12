@@ -5,7 +5,7 @@ $cp_description=$_POST["cp-description"];
 $cp_city       =$_POST["cp-city"];
 
 $address=new Address(null, null, null, $cp_city, null, null);
-$event=new Event(uniqid(), null, $cp_title, $cp_description, null, $address, $cp_topic, null, null, null); //alternative:md5($str)
+$event=new Event(uniqid(), null, $cp_title, $cp_description, null, $address, $cp_topic, null, null, null);
 $event->deleteEvent();
 
 $user=new User(uniqid(),"Leon Lourie","leonlourie@yahoo.de","12345", $address, "m", "18.01.1990", null, null);
@@ -13,7 +13,9 @@ $user->deleteUser();
 $user->postUser();
 
 $event->setStatus(Event::$statuses["Proposed"]);
+//$event->setStatus(Event::$statuses["Published"]);
 $user->proposeEvent($event);
+//$user->organizeEvent($event);
 ?>
 
 <div>

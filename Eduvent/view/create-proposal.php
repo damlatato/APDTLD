@@ -70,7 +70,7 @@
 
 								<div class="form-group row cp-form-group">
 									<div class="col-xs-8 flex-center">
-										<button type="submit" class="btn btn-post-proposal pull-right" name="cp-submit">Post proposal</button>
+										<button type="submit" class="btn btn-blue-yellow" name="cp-submit">Post proposal</button>
 									</div>
 								</div>
 							</form>
