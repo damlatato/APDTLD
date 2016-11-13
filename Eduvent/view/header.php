@@ -44,6 +44,7 @@ $( document ).ready(function() {
 						<span>
 							<img class="head-logo" src="../Eduvent/view/images/logo-banner-small.png" height="50" width="">
 							<img class="head-logo hidden-logo" src="../Eduvent/view/images/logo-small.png" height="50" width="">
+							<img class="head-logo hidden-logo" src="../Eduvent/view/images/logo-small-yellow.jpg" height="42" width="">
 						</span>
 					</a>
 					<!--Links-->
