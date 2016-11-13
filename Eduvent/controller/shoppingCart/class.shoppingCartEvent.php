@@ -3,11 +3,11 @@
 class ShoppingCartEvent {
 
 	public $event;
-	public $isAsGift;
+	public $amountGift;
 	public $amount;
 
 	public function __construct() {
-		$this->isAsGift = false;
+		$this->amountGift = 0;
 		$this->amount = 1;
 	}
 
@@ -20,8 +20,8 @@ class ShoppingCartEvent {
 		$this->amount = $this->amount + $amountFactor;
 	}
 
-	public function setAsGift($isAsGift){
-		$this->isAsGift = $isAsGift;
+	public function setAmountGift($amountGift){
+		$this->amountGift = $amountGift;
 	}
 	public function setAmount($amount){
 		$this->amount = $amount;
@@ -34,8 +34,8 @@ class ShoppingCartEvent {
 		return $this->event;
 	}
 
-	public function IsAsGift(){
-		return $this->isAsGift;
+	public function getAmountGift(){
+		return $this->amountGift;
 	}
 
 	public function getAmount(){

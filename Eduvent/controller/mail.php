@@ -7,8 +7,14 @@ if(isset($_SESSION['usermail'])) {
 	//$user = User::getUserByEmail($email);
 }
 
+if (isset($_POST['purchaseshoppingCart'])){
+	$message = "WTF";
+	send_mail($message,"Purchase Confirmation","Maria.Ocon-Palma@gmx.de");
+}
+
+//TODO send mail subscribe
 if(isset($_POST['sendsubscribeconfirmation'])) {
-	$message = "";
+	$message = ""; //TODO
 	send_mail($message,"Subscribe Mail","Maria.Ocon-Palma@gmx.de");
 }
 
