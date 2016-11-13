@@ -1,12 +1,13 @@
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/YaasConnector.php');
+//include_once($_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/YaasConnector.php');
+include_once('../Eduvent/model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-    $file = $_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/'.$class.'.php';
+    $file = '../Eduvent/model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
 });
-include_once ($_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/thesaurus.php');
+include_once '../Eduvent/model/thesaurus.php');
 ?>
 
 <!DOCTYPE html>
