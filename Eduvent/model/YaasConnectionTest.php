@@ -431,7 +431,30 @@ if ($u1==true){
 	echo "Yaas GetUserById Test Succesfull";
 }
 
-if (count($tests)==35){
+$status = User::getStatusById(111);
+$u1=false;
+if ($status == $user1->getStatus()){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,36);
+	echo "<br>";
+	echo "Yaas GetStatusById Test Succesfull";
+}
+
+$name = User::getNameById(111);
+$u1=false;
+if ($name == $user1->getName()){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,37);
+	echo "<br>";
+	echo "Yaas GetNameById Test Succesfull";
+}
+
+
+if (count($tests)==37){
 	echo "<br>";
 	echo "All the tests are done";
 }

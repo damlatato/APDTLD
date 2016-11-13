@@ -9,8 +9,11 @@ include 'Booking.php';*/
 
 class User implements JsonSerializable{
 	private $id;
+	private $name;
 	private $email;				//=login
 	private $password;
+	private $status;
+	private $tokenCode;
 	private $address;			//class
 	private $gender;			//thesaurus
 	private $birthDate;
@@ -28,6 +31,8 @@ class User implements JsonSerializable{
 		$this->name = $name;
 		$this->email = $email;
 		$this->password = $password;
+		$this->status = "N";
+		$this->tokenCode = "";
 		$this->address = $address;
 		$this->gender = $gender;
 		$this->birthDate = $birthDate;
@@ -51,6 +56,12 @@ class User implements JsonSerializable{
 	}
 	public function setPassword($password){
 		$this->password = $password;
+	}
+	public function setStatus($status){
+		$this->status = $status;
+	}
+	public function setTokenCode($tokenCode){
+		$this->tokenCode = $tokenCode;
 	}
 	public function setEmail($email){
 		$this->email = $email;
@@ -104,6 +115,12 @@ class User implements JsonSerializable{
 	public function getPassword(){
 		return $this->password;
 	}
+	public function getStatus(){
+		return $this->status;
+	}
+	public function getTokenCode(){
+		return $this->tokenCode;
+	}
 	public function getEmail(){
 		return $this->email;
 	}
@@ -154,9 +171,24 @@ class User implements JsonSerializable{
 		return User::fromJSONa($juserlist)[0];
 	}
 	
+	public static function getStatusbyId($id){
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=id:".chr(34).$id.chr(34));
+		return User::fromJSONa($juserlist)[0]->getStatus();
+	}
+	
+	public static function getNamebyId($id){
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=id:".chr(34).$id.chr(34));
+		return User::fromJSONa($juserlist)[0]->getName();
+	}
+	
 	public static function getPasswordByEmail($email){
 		$juserlist = get("user?pageNumber=1&pageSize=500&q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0]->getPassword();
+	}
+	
+	public static function getUserIdByTokenCode($tokenCode){
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=tokenCode:".chr(34).$tokenCode.chr(34));
+		return User::fromJSONa($juserlist)[0]->getId();
 	}
 	
 	public static function getUserListByEvent($event){
@@ -265,6 +297,8 @@ class User implements JsonSerializable{
 		'name'=>$this->name,
 		'email'=>$this->email,	//=login
 		'password'=>$this->password,
+		'status'=>$this->status,
+		'tokenCode'=>$this->tokenCode,
 		'address'=>$this->address->jsonSerialize(),	//class
 		'gender'=>$this->gender,	//thesaurus
 		'birthDate'=>$this->birthDate,
