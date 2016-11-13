@@ -7,7 +7,7 @@ $interest = $topics;
 $eventtypes = ["Conference"=>"Conference", "Course"=>"Course", "Forum"=>"Forum", "Hackathon"=>"Hackathon", "Meeting"=>"Meeting",
 				"Online-course"=>"Online-course", "Meeting"=>"Meeting", "Presentation"=>"Presentation", "Seminar"=>"Seminar",
 				"Tutorial"=>"Tutorial", "Workshop"=>"Workshop"];
-$priceCategory = ["Expensive"=>"Expensive", "Normal"=>"Normal", "Cheap"=>"Cheap"];
+$priceCategories = ["Free"=>"Free", "Paid"=>"Paid"];
 $notificationtypes = ["Message"=>"Message", "Update"=>"Update"];
 $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
 ?>

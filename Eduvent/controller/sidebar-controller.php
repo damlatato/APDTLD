@@ -25,19 +25,10 @@ echo '
 <div class="collapse" id="collapseCategories"><!--add class \'in\' to expand-->
 	<div>
 		<ul class="list-group">';
-		
-			/*<li class="list-group-item"><a href="#">Art</a></li>
-			<li class="list-group-item"><a href="#">Business</a></li>
-			<li class="list-group-item"><a href="#">Cooking</a></li>
-			<li class="list-group-item"><a href="#">Design</a></li>
-			<li class="list-group-item"><a href="#">Entrepreneurship</a></li>
-			<li class="list-group-item"><a href="#">Finance</a></li>
-			<li class="list-group-item"><a href="#">Health</a></li>
-			<li class="list-group-item"><a href="#">HR</a></li>
-			<li class="list-group-item"><a href="#">Science</a></li>
-			<li class="list-group-item"><a href="#">Sports</a></li>
-			<li class="list-group-item"><a href="#">Technology</a></li>
-			<li class="list-group-item font-weight-bold"><a href="#"><b><i>More ...</i></b></a></li>*/
+
+		foreach ($topics as $key=>$value) {
+			echo '<li class="list-group-item"><a href="#">' . $value . '</a></li>';
+		}
 
 echo '
 		</ul>
@@ -50,10 +41,11 @@ echo '
 <div class="collapse" id="collapsePricing"><!--add class \'in\' to expand-->
 	<div>
 		<ul class="list-group">';
+			echo '<li class="list-group-item"><a href="#">All</a></li>';
 
-			/*<li class="list-group-item"><a href="#">All</a></li>
-			<li class="list-group-item"><a href="#">Free</a></li>
-			<li class="list-group-item"><a href="#">Paid</a></li>*/
+		foreach ($priceCategories as $key=>$value) {
+			echo '<li class="list-group-item"><a href="#">' . $value . '</a></li>';
+		}
 
 echo '
 		</ul>
