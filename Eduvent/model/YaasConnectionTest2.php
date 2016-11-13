@@ -11,13 +11,13 @@ include "Payment.php";
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");
-$interest1 = new Interest(1, $interest["Studing"], 1);
-$interest2 = new Interest(2, $interest["Sport"], 2);
+$interest1 = new Interest(1, $interest["Science"], 1);
+$interest2 = new Interest(2, $interest["Sports"], 2);
 $interestA = array($interest1, $interest2);
 $tests = array();
 
 $event4 = new Event(4, $eventtypes["Presentation"], "My fourth Event", "So good fourth event", "4.12.2016 14:56", $address2, "", 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
-$event5 = new Event(5, $eventtypes["Presentation"], "My fifth Event", "So good fifth event", "4.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event5 = new Event(5, $eventtypes["Presentation"], "My fifth Event", "So good fifth event", "4.12.2016 14:56", $address2, $interest['Sports'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 
 $user1 = new User(111,"Leonid Gunko","leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
 
