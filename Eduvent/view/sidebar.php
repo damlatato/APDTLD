@@ -3,7 +3,6 @@ $( document ).ready(function() {
 	$('#clear-date-from').click(function(){
 		$('#datepicker-from-sidebar').val('');
 	});
-
 	$('#clear-date-to').click(function(){
 		$('#datepicker-to-sidebar').val('');
 	});

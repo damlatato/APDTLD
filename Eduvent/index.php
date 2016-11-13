@@ -1,12 +1,12 @@
 <?php
-include_once(__DIR__.'/model/YaasConnector.php');
+require_once(__DIR__.'/model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-	//include '../Eduvent/model/'.$class.'.php';
     $file = __DIR__.'/model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
 });
+include_once ("../Eduvent/model/thesaurus.php");
 ?>
 
 <!DOCTYPE html>

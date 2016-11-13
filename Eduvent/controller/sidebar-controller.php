@@ -1,6 +1,4 @@
 <?php
-include_once ("../Eduvent/model/thesaurus.php");
-
 echo '
 <!--Group \'Event types\'-->
 <div class="list-group-item sidebar-group-head" data-toggle="collapse" href="#collapseTypes" aria-expanded="false" aria-controls="collapseTypes">
@@ -41,7 +39,7 @@ echo '
 <div class="collapse" id="collapsePricing"><!--add class \'in\' to expand-->
 	<div>
 		<ul class="list-group">';
-			echo '<li class="list-group-item"><a href="#">All</a></li>';
+			echo '<li class="list-group-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">All</li>';
 
 		foreach ($priceCategories as $key=>$value) {
 			echo '<li class="list-group-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">' . $key . '</li>';
