@@ -50,6 +50,11 @@ require_once 'view/supportcontactform.php';
  			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
  			eventid="3" type="submit" value="buy">Buy</button>
  	</div>
+ 	<div class="col-md-12">
+	 	<form action="index.php?page=mail-success" method="post">
+	 		<button name ="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
+	 	</form>
+ 	</div>
  </div>
  <div class="table-responsive">
  	<table  class="table product-table">
