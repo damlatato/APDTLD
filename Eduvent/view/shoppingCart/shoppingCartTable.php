@@ -51,9 +51,20 @@ require_once 'view/supportcontactform.php';
  			eventid="3" type="submit" value="buy">Buy</button>
  	</div>
  	<div class="col-md-12">
-	 	<form action="index.php?page=mail-success" method="post">
-	 		<button name ="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
-	 	</form>
+ 	
+ 		<div class="event-menu">
+			<button class="btn btn-grey" type="button">More</button>
+
+			<ul class="event-dropdown-menu">
+				<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' . $event->getId() . ' href="#">
+					<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+				<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+					<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+				<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+					<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+				
+			</ul>
+		</div>
  	</div>
  </div>
  <div class="table-responsive">
