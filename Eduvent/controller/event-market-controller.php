@@ -1,5 +1,19 @@
 <?php
-$events=Event::getPublishedEventList();
+if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
+	$filter=$_POST['sb-filter'];
+	$filterValue=$_POST['sb-value'];
+	
+	if ($filter=='topic') {
+		$events=Event::getByTopic($filterValue);
+	}
+	else {
+		$events=Event::getPublishedEventList();
+	}
+}
+else {
+	$events=Event::getPublishedEventList();
+}
+
 $eventCounter=0;
 
 foreach ($events as $event) {

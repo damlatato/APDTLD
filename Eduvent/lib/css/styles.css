@@ -200,25 +200,22 @@ input:checked + .slider:before {
 }
 
 .sidebar-nav li {
-	background-color: ;
-    text-indent: 4px;
-    line-height: 28px;
-}
-
-.sidebar-nav li a {
 	color: #106f85;
-    display: block;
-    text-decoration: none;
+	cursor: pointer;
+	display: block;
+	line-height: 28px;
+	text-decoration: none;
+    text-indent: 4px;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li:hover {
     text-decoration: none;
     color: #FED835;
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li:active,
+.sidebar-nav li:focus {
     text-decoration: none;
 }
 
