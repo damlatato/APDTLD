@@ -78,7 +78,7 @@ class Address{
 		return json_encode(get_object_vars($this));
 	}
 	
-	function fromJSON($jaddress){
+	public static function fromJSON($jaddress){
 		$addressv = json_decode($jaddress,true);
 		$address = new Address( 1, 1, 1, 1, 1, 1);
 		foreach($addressv as $key=>$value){

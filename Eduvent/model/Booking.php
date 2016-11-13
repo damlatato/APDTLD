@@ -44,7 +44,7 @@ class Booking implements JsonSerializable{
 		]);
 	}
 	
-	function fromJSON($jbooking){
+	public static function fromJSON($jbooking){
 		$booking = new Booking(1, 1, 1);
 		$bookingv = json_decode($jbooking,true);
 		foreach($bookingv as $key=>$value){
@@ -62,7 +62,7 @@ class Booking implements JsonSerializable{
 		return $booking;
 	}
 	
-	function fromJSONa($bookingAj){
+	public static function fromJSONa($bookingAj){
 		$bookingAv = json_decode($bookingAj);
 		$bookingsA = array();
 		foreach($bookingAv as $key=>$bookingj){

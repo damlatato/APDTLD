@@ -41,7 +41,7 @@ class Notification implements JsonSerializable{
 		return $this->readStatus;
 	}
 	
-	function fromJSON($jnotification){
+	public static function fromJSON($jnotification){
 		$notificationv = json_decode($jnotification,true);
 		$notification = new Notification(1, 1, 1, 1);
 		foreach($notificationv as $key=>$value){
@@ -50,7 +50,7 @@ class Notification implements JsonSerializable{
 		return $notification;
 	}
 	
-	function fromJSONa($notificationAj){
+	public static function fromJSONa($notificationAj){
 		$notificationAv = json_decode($notificationAj);
 		$notificationsA = array();
 		foreach($notificationAv as $key=>$notificationj){

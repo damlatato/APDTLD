@@ -156,7 +156,7 @@ class Event  implements JsonSerializable{
 		]);
     }
     
-    function fromJSON($jevent){
+    public static function fromJSON($jevent){
     	$eventv = json_decode($jevent,true);
     	$event = new Event(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
     	foreach($eventv as $key=>$value){
@@ -174,7 +174,7 @@ class Event  implements JsonSerializable{
     	return $event;
     }
     
-    function fromJSONa($eventAj){
+    public static function fromJSONa($eventAj){
     	$eventAv = json_decode($eventAj);
     	$eventsA = array();
     	foreach($eventAv as $key=>$eventj){

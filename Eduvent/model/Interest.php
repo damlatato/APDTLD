@@ -27,7 +27,7 @@ class Interest implements JsonSerializable{
 		return $this->numberOfSearches;
 	}
 	
-	function fromJSON($jinterest){
+	public static function fromJSON($jinterest){
 		$interestv = json_decode($jinterest,true);
 		$interest = new Interest(1, 1);
 		foreach($interestv as $key=>$value){
@@ -36,8 +36,8 @@ class Interest implements JsonSerializable{
 		return $interest;
 	}
 	
-	function fromJSONa($interestAj){
-		if (is_null($interestAj)){
+	public static function fromJSONa($interestAj){
+		if ($interestAj === "null"){
 			return array();
 		}
 		$interestAv = json_decode($interestAj);

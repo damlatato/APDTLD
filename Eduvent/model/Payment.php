@@ -27,11 +27,11 @@ class Payment implements JsonSerializable{
 		return $this->paymentAmount;
 	}
 	
-	public function jsonSerialize(){
+	public static public function jsonSerialize(){
 		return json_encode(get_object_vars($this));
 	}
 	
-	function fromJSON($jpayment){
+	public static function fromJSON($jpayment){
 		$paymentv = json_decode($jpayment,true);
 		$payment = new Payment(1,1,1);
 		foreach($paymentv as $key=>$value){
