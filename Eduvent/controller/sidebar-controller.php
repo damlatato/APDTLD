@@ -1,4 +1,6 @@
 <?php
+include_once ("../Eduvent/model/thesaurus.php");
+
 echo '
 <!--Group \'Event types\'-->
 <div class="list-group-item sidebar-group-head" data-toggle="collapse" href="#collapseTypes" aria-expanded="false" aria-controls="collapseTypes">
@@ -7,18 +9,10 @@ echo '
 <div class="collapse" id="collapseTypes"><!--add class \'in\' to expand-->
 	<div>
 		<ul class="list-group">';
-
-			<li class="list-group-item"><a href="#">Conference</a></li>
-			<li class="list-group-item"><a href="#">Course</a></li>
-			<li class="list-group-item"><a href="#">Forum</a></li>
-			<li class="list-group-item"><a href="#">Hackathon</a></li>
-			<li class="list-group-item"><a href="#">Meeting</a></li>
-			<li class="list-group-item"><a href="#">Online-course</a></li>
-			<li class="list-group-item"><a href="#">Meeting</a></li>
-			<li class="list-group-item"><a href="#">Presentation</a></li>
-			<li class="list-group-item"><a href="#">Seminar</a></li>
-			<li class="list-group-item"><a href="#">Tutorial</a></li>
-			<li class="list-group-item"><a href="#">Workshop</a></li>
+		
+		foreach ($eventtypes as $key=>$value) {
+			echo '<li class="list-group-item"><a href="#">' . $value . '</a></li>';
+		}
 
 echo '
 		</ul>
@@ -32,7 +26,7 @@ echo '
 	<div>
 		<ul class="list-group">';
 		
-			<li class="list-group-item"><a href="#">Art</a></li>
+			/*<li class="list-group-item"><a href="#">Art</a></li>
 			<li class="list-group-item"><a href="#">Business</a></li>
 			<li class="list-group-item"><a href="#">Cooking</a></li>
 			<li class="list-group-item"><a href="#">Design</a></li>
@@ -43,7 +37,7 @@ echo '
 			<li class="list-group-item"><a href="#">Science</a></li>
 			<li class="list-group-item"><a href="#">Sports</a></li>
 			<li class="list-group-item"><a href="#">Technology</a></li>
-			<li class="list-group-item font-weight-bold"><a href="#"><b><i>More ...</i></b></a></li>
+			<li class="list-group-item font-weight-bold"><a href="#"><b><i>More ...</i></b></a></li>*/
 
 echo '
 		</ul>
@@ -57,9 +51,9 @@ echo '
 	<div>
 		<ul class="list-group">';
 
-			<li class="list-group-item"><a href="#">All</a></li>
+			/*<li class="list-group-item"><a href="#">All</a></li>
 			<li class="list-group-item"><a href="#">Free</a></li>
-			<li class="list-group-item"><a href="#">Paid</a></li>
+			<li class="list-group-item"><a href="#">Paid</a></li>*/
 
 echo '
 		</ul>
