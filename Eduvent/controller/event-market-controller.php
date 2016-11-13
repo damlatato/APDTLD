@@ -26,13 +26,12 @@ if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
 	}
 	elseif ($filter=='topic') {
 		$events=Event::getByTopicAndStatus($filterValue, 'Published');
-		//$events=Event::getByTopicAndStatus('Business', 'Published');
 	}
 	elseif ($filter=='pricing') {
 		$events=Event::getByPriceCategory($filterValue);
 		getByDate($StartDate, $EndDate);
 	}
-	elseif ($filter=='pricing') {
+	elseif ($filter=='date') {
 		$events=Event::getByDate($filterValue, $filterValue2);
 	}
 	else {

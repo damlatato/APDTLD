@@ -1,7 +1,12 @@
 <script>
-function filterEvents(filter, value) {
-	console.log("filtering: filter=" + filter + ", value=" + value);
-	$.post('controller/event-market-controller.php', { 'sb-filter': filter, 'sb-value': value, 'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?> })
+function filterEvents(filter, value, value2) {
+	console.log("filtering: filter=" + filter + ", value=" + value + ", value2=" + value2);
+	$.post('controller/event-market-controller.php', {
+		'sb-filter': filter,
+		'sb-value' : value,
+		'sb-value2': value2,
+		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
+	})
 	.done(function( data ) {
 		$('#event-market-items').html(data);
 	});
