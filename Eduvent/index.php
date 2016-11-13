@@ -82,7 +82,7 @@ else {
 <!--/.Main-->
 
 <!--Footer-->
-<footer class="page-footer center-on-small-only">
+<footer class="page-footer center-on-small-only grey darken-3">
 
 <?php
 include 'view/footer.php';
