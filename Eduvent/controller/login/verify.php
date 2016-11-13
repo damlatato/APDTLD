@@ -23,7 +23,7 @@ if(empty($_GET['id']) && empty($_GET['code']))
 if(isset($_GET['id']) && isset($_GET['code']))
 {
  $id_inURL = $_GET['id'];
- $code = $_GET['code'];
+ $tokenCode = $_GET['code'];
  
  $statusY = "Y";
  $statusN = "N";
@@ -33,7 +33,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
 //  select from database where user id and token code are matched int provided url
  
 
- 	$id = User::getUserIDByTokenCode($code);
+ 	$id = User::getUserIdByTokenCode($tokenCode);
  	
  	if ($id == $id_inURL) {
  		if (User::getStatusbyId($id)== $statusN) {
