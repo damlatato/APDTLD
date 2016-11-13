@@ -23,21 +23,26 @@
 				if (isset($_POST['cp-submit']))
 				{
 					// The Code to be executed after the form has been submitted.
-					echo('<div><h3>Thank you for your event proposal!</h3><br><br>
-							You posted the following event proposal.<br><br></div>');
-					include('../Eduvent/controller/create-proposal-controller.php');					
+					echo '<div><h3>Thank you for your event proposal!</h3><br><br>
+							You posted the following event proposal.<br><br></div>';
+					include('../Eduvent/controller/create-proposal-controller.php');
 				}
 				else               
 				{
 					// Display the form and the submit button.
-					echo ('
+					echo '
 						<!--CP Form-->
 							<form action="" method="post" id="cp-form">
 								<div class="form-group row cp-form-group">
 									<label for="cp-topic" class="col-xs-2 col-form-label">Topic</label>
 									<div class="col-xs-3">
-										<select class="form-control" id="cp-topic" name="cp-topic">
-											<option>Others</option>
+										<select class="form-control" id="cp-topic" name="cp-topic">';
+
+									foreach ($topics as $key=>$value) {
+										echo '<option>' . $key . '</option>';
+									}
+
+					echo '
 										</select>
 									</div>
 								</div>
@@ -74,7 +79,7 @@
 									</div>
 								</div>
 							</form>
-							<!--/.CP Form-->');
+							<!--/.CP Form-->';
 				}
 				?>
 			</div>

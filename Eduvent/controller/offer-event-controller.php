@@ -4,9 +4,9 @@ if (isset($_POST['peid']) and isset($_POST['oeid']))
 	// The Code to be executed after an event was selected.
 	$peid=$_POST['peid'];
 	$oeid=$_POST['oeid'];
-
-	// more logic here
-	// ...
+	$pEvent=Event::getById($peid);
+	$oEvent=Event::getById($oeid);
+	$pEvent->addOffer($oEvent);
 
 	$output="proposal-id=" . $peid . ", offer-id=" . $oeid;
 	echo $output;
