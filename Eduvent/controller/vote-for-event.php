@@ -6,6 +6,7 @@ spl_autoload_register(function ($class) {
 		include $file;
 	}
 });
+
 /*$eventList=Event::getEventList();
 foreach ($eventList as $varEvent) {
     $varEvent->deleteEvent();
