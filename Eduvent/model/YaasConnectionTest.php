@@ -51,8 +51,8 @@ $notificationA = array($notification1, $notification2);
 	}
 //test
 
-$interest1 = new Interest($interest["Studing"], 1);
-$interest2 = new Interest($interest["Sport"], 2);	
+$interest1 = new Interest($interest["Health"], 1);
+$interest2 = new Interest($interest["HR"], 2);	
 $interestA = array($interest1, $interest2);
 //test
 	$jinterest1 = $interest1->jsonSerialize();
@@ -98,9 +98,9 @@ $address2 = new Address("Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 1
 	}
 //test
 
-$event1 = new Event(1, $eventtypes["Show"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Studing'], 11, $statuses["Proposed"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
-$event2 = new Event(2, $eventtypes["Presentation"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
-$event4 = new Event(4, $eventtypes["Presentation"], "My fourth Event", "So good fourth event", "26.12.2016 14:56", $address2, $interest['Sport'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event1 = new Event(1, $eventtypes["Conference"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Art'], 11, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event2 = new Event(2, $eventtypes["Course"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Business'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event4 = new Event(4, $eventtypes["Course"], "My fourth Event", "So good fourth event", "26.12.2016 14:56", $address2, $interest['Business'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $eventA = array($event1, $event2);
 //test
 	$jevent1 = $event1->jsonSerialize();
@@ -317,7 +317,7 @@ if ($e1==true && $e2==true){
 	echo "Yaas PutEvent TestSuccesfull";
 }
 
-$eventlist=Event::getByTopic("Studing");
+$eventlist=Event::getByTopic("Art");
 $e1=false;
 $e2=false;
 foreach($eventlist as $event) {
@@ -336,7 +336,7 @@ if ($e1==true && $e2==false){
 	echo "Yaas Get Event by Topic Test Succesfull";
 }
 
-$eventlist=Event::getByEventType("Show");
+$eventlist=Event::getByEventType("Conference");
 $e1=false;
 $e2=false;
 foreach($eventlist as $event) {
