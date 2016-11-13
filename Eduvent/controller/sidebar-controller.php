@@ -1,21 +1,3 @@
-<script>
-function getEventTypes() {
-	$.post( "../Eduvent/controller/sidebar-controller.php", { x: x })
-	.done(function( data ) {
-		console.log( "vote submitted: " + data );
-	});
-}
-
-$( document ).ready(function() {
-	$('#clear-date-from').click(function(){
-		$('#datepicker-from-sidebar').val('');
-	});
-	$('#clear-date-to').click(function(){
-		$('#datepicker-to-sidebar').val('');
-	});
-});
-</script>
-
 <div class="sidebar-nav list-group">
 
 	<!--Group 'Filters'-->
@@ -29,9 +11,17 @@ $( document ).ready(function() {
 	<div class="collapse" id="collapseTypes"><!--add class 'in' to expand-->
 		<div>
 			<ul class="list-group">
-				<?php
-					include("../Eduvent/controller/sidebar-controller.php");
-				?>
+				<li class="list-group-item"><a href="#">Conference</a></li>
+				<li class="list-group-item"><a href="#">Course</a></li>
+				<li class="list-group-item"><a href="#">Forum</a></li>
+				<li class="list-group-item"><a href="#">Hackathon</a></li>
+				<li class="list-group-item"><a href="#">Meeting</a></li>
+				<li class="list-group-item"><a href="#">Online-course</a></li>
+				<li class="list-group-item"><a href="#">Meeting</a></li>
+				<li class="list-group-item"><a href="#">Presentation</a></li>
+				<li class="list-group-item"><a href="#">Seminar</a></li>
+				<li class="list-group-item"><a href="#">Tutorial</a></li>
+				<li class="list-group-item"><a href="#">Workshop</a></li>
 			</ul>
 		</div>
 	</div>
