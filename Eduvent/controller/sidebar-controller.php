@@ -11,7 +11,7 @@ echo '
 		<ul class="list-group">';
 		
 		foreach ($eventtypes as $key=>$value) {
-			echo '<li class="list-group-item" onclick="filterEvents("topic",' . $value . ')">' . $key . '</li>';
+			echo '<li class="list-group-item" onclick="filterEvents("topic","' . $value . '")">' . $key . '</li>';
 		}
 
 echo '

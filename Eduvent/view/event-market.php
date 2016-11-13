@@ -1,7 +1,7 @@
 <script>
 //event-market-items
 function filterEvents(filter, value) {
-	alert("filter");
+	alert("filter=" + filter + " / value=" + value);
 	/*$.post( "../Eduvent/controller/event-market-controller.php", { 'sb-filter': filter, 'sb-value': value })
 	.done(function( data ) {
 		
