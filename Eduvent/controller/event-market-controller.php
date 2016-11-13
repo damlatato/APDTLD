@@ -1,4 +1,12 @@
 <?php
+include_once('../model/YaasConnector.php');
+spl_autoload_register(function ($class) {
+    $file = '../Eduvent/model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+
 if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
 	$filter=$_POST['sb-filter'];
 	$filterValue=$_POST['sb-value'];
