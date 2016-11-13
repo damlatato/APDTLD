@@ -21,9 +21,10 @@
 	if ($function == "addToShoppingCart"){
 		$eventID = $_POST['eventID'];
 		$quantity = $_POST['quantity'];
+		$amountGift = $_POST['amountGift'];
 	
 		$shoppingCart = $_SESSION['shoppingCartSession'];
-		$success = $shoppingCart->{'addEvent'}($eventID,$quantity);
+		$success = $shoppingCart->{'addEvent'}($eventID,$quantity,$amountGift);
 		echo $success;
 	}else if ($function == "removeEvent"){
 		$eventID = $_POST['eventID'];

@@ -1,6 +1,19 @@
 <?php
-include_once 'shoppingCartPayment.php';
-require_once 'view/supportcontactform.php';
+if (isset($_POST['purchaseshoppingCart'])){
+?>
+	<div class="row">
+ 		<div class="col-md-12">
+			<h5>Thank you for your Purchase!</h5>
+			You will receive a puchase confirmation by email.<br>
+<?php
+	include_once 'controller/mail.php';
+?>
+		</div>
+	</div>
+<?php 
+} else { 
+	include_once 'shoppingCartPayment.php';
+
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -10,10 +23,10 @@ require_once 'view/supportcontactform.php';
 </div>
 
                              
-<div class="row">
+<!-- <div class="row">
  	<div class="col-md-12">
  		<h4>Event 1</h4>
- 		<label>Select Quantity</label> <select id="eventquentity1"
+ 		<label>Select Quantity</label> <select id="eventquantity1"
  			class="browser-default">
  			<option value="1" selected>1</option>
  			<option value="2">2</option>
@@ -26,7 +39,7 @@ require_once 'view/supportcontactform.php';
  	</div>
  	<div class="col-md-12">
  		<h4>Event 2</h4>
- 		<label>Select Quantity</label> <select id="eventquentity2"
+ 		<label>Select Quantity</label> <select id="eventquantity2"
  			class="browser-default">
  			<option value="1" selected>1</option>
  			<option value="2">2</option>
@@ -39,7 +52,7 @@ require_once 'view/supportcontactform.php';
  	</div>
  	<div class="col-md-12">
  		<h4>Event 3</h4>
- 		<label>Select Quantity</label> <select id="eventquentity3"
+ 		<label>Select Quantity</label> <select id="eventquantity3"
  			class="browser-default">
  			<option value="1" selected>1</option>
  			<option value="2">2</option>
@@ -67,6 +80,7 @@ require_once 'view/supportcontactform.php';
 		</div>
  	</div>
  </div>
+  -->
  <div class="table-responsive">
  	<table  class="table product-table">
  		<!--Table head-->
@@ -110,7 +124,7 @@ require_once 'view/supportcontactform.php';
  				<td><?php echo $shoppingCartEvent->getEvent()->getDateTime()?></td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getPrice() .' &euro;'?></td>
  				<td><?php echo $shoppingCartEvent->getAmount() ?> </td>
- 				<td><td><?php echo (string)$shoppingCartEvent->IsAsGift() ?></td></td>
+ 				<td><td><?php echo (string)$shoppingCartEvent->getAmountGift() ?></td></td>
  				<td>
  					<button type="button" class="btn btn-blue-yellow delete-from-shopping-cart" eventid="<?php echo $shoppingCartEvent->getEvent()->getId()?>"
  						data-toggle="tooltip" data-placement="top" title="Remove item">X</button>
@@ -149,3 +163,4 @@ require_once 'view/supportcontactform.php';
  		</tbody>
  	</table>
  </div>
+ <?php } ?>

@@ -6,6 +6,8 @@
 	
 	isShoppingCartExisting();
 	
+	checkIfPurchaseHasBeenDone();
+	
 	function isShoppingCartExisting() {
 		//$_SESSION['shoppingCartSession'] = new ShoppingCart;
 		if(!isset($_SESSION['shoppingCartSession'])){			
@@ -13,6 +15,12 @@
 		}
 	}
 
+	function checkIfPurchaseHasBeenDone() {
+		if (isset($_POST['purchaseshoppingCart'])){
+			$_SESSION['shoppingCartSession'] = new ShoppingCart;
+		}
+	}
+	
 	function hasShoppingCartAtLeastOneEvent(){
 		$shoppingCart = $_SESSION['shoppingCartSession'];
 		$quantity = $shoppingCart->{'getQuantityOfDifferentEvents'}();

@@ -9,7 +9,7 @@ class ShoppingCart {
 		$this->events = new ArrayObject();
 	}
 
-	function addEvent($eventID,$quantity) {
+	function addEvent($eventID,$quantity,$amountGift) {
 
 		//$event = new Event(3, null, "Test event of Maria", "So good event", "25.10.2016 13:56", null, 'Studing', 11);
 		//$eventlist=get("event");
@@ -33,13 +33,14 @@ class ShoppingCart {
 
 		if($this->isEventByIDExisting($eventID)){
 			$this->getEventbyID($eventID)->amount +=$quantity;
+			$this->getEventbyID($eventID)->amountGift +=$amountGift;
 		}
 		else{
 			$shoppingCartEvent = new ShoppingCartEvent;
 
 			$shoppingCartEvent->setEvent($event);
 			$shoppingCartEvent->setAmount($quantity);
-			$shoppingCartEvent->setAsGift(false);
+			$shoppingCartEvent->setAmountGift($amountGift);
 			//$this->events->attach($shoppingCartEvent, $eventID);
 			$this->events->append($shoppingCartEvent);
 			$_SESSION['shoppingCartSession'] = $this;
