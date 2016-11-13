@@ -1,11 +1,12 @@
 <?php
 $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
-/*include 'YaasConnector.php';
-include 'Event.php';
-include 'Address.php';
-include 'Interest.php';
-include 'Notification.php';
-include 'Booking.php';*/
+
+spl_autoload_register(function ($class) {
+    $file = $_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
 
 class User implements JsonSerializable{
 	private $id;

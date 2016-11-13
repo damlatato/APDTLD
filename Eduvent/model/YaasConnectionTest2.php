@@ -1,13 +1,10 @@
 <?php
-include "Event.php";
-include "User.php";
-include "Address.php";
-include "Interest.php";
-include "YaasConnector.php";
-include "thesaurus.php";
-include "Notification.php";
-include "Booking.php";
-include "Payment.php";
+spl_autoload_register(function ($class) {
+    $file = $_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");
