@@ -145,17 +145,17 @@ class User implements JsonSerializable{
 	}
 	
 	public static function getUserByEmail($email){
-		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0];
 	}
 	
 	public static function getUserById($id){
-		$juserlist = get("user?q=id:".chr(34).$id.chr(34));
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=id:".chr(34).$id.chr(34));
 		return User::fromJSONa($juserlist)[0];
 	}
 	
 	public static function getPasswordByEmail($email){
-		$juserlist = get("user?q=email:".chr(34).$email.chr(34));
+		$juserlist = get("user?pageNumber=1&pageSize=500&q=email:".chr(34).$email.chr(34));
 		return User::fromJSONa($juserlist)[0]->getPassword();
 	}
 	
@@ -381,6 +381,7 @@ class User implements JsonSerializable{
 	
 	//////////////////////////////////////////////////
 	public function postUser(){
+		echo $this->jsonSerialize();
 		post("user", $this->jsonSerialize());
 	}
 	

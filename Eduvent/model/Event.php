@@ -205,38 +205,37 @@ class Event  implements JsonSerializable{
 	}
 	
 	public static function getEventList(){
-		$jeventlist = get("event");
+		$jeventlist = get("event?pageNumber=1&pageSize=500");
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getProposedEventList(){
-		$jeventlist = get("event?q=status:".chr(34).Event::$statuses["Proposed"].chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).Event::$statuses["Proposed"].chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getPublishedEventList(){
-		$jeventlist = get("event?q=status:".chr(34).Event::$statuses["Published"].chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).Event::$statuses["Published"].chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getByTopic($topic){
-		$jeventlist = get("event?q=topic:".chr(34).$topic.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=topic:".chr(34).$topic.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getByStatus($status){
-		$jeventlist = get("event?q=status:".chr(34).$status.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).$status.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getById($id){
-		$jeventlist = get("event?q=id:".chr(34).$id.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=id:".chr(34).$id.chr(34));
 		return Event::fromJSONa($jeventlist)[0];
 	}
 	
 	public static function getByDate($StartDate, $EndDate){
-		$jeventlist = get("event");
-		$eventA = Event::fromJSONa($jeventlist);
+		$eventA = Event::getEventList();
 		$eventlist = array();
 		foreach($eventA as $event){
 			if(strtotime($event->getDatetime())>strtotime($StartDate) && strtotime($event->getDatetime())<strtotime($EndDate)){
@@ -247,12 +246,12 @@ class Event  implements JsonSerializable{
 	}
 	
 	public static function getByEventType($eventtype){
-		$jeventlist = get("event?q=eventType:".chr(34).$eventtype.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=eventType:".chr(34).$eventtype.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getByPriceCategory($priceCategory){
-		$jeventlist = get("event?q=priceCategory:".chr(34).$priceCategory.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=priceCategory:".chr(34).$priceCategory.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 }
