@@ -13,6 +13,7 @@ class Event  implements JsonSerializable{
     private $eventOrganizer;//userId
     private $users;
     private $votes;
+    private $offers;
     private $imgHref;
     public static $statuses = ["Proposed"=>"Proposed", "Published"=>"Published"];
     
@@ -34,6 +35,7 @@ class Event  implements JsonSerializable{
     	$this->status = $status;
     	$this->users = array();
     	$this->votes = array();
+    	$this->offers = array();
     	$this->imgHref = $imgHref;
     }
     
@@ -78,6 +80,9 @@ class Event  implements JsonSerializable{
     }
     public function setVotes($votes){
     	$this->votes = $votes;
+    }
+    public function setOffers($offers){
+    	$this->offers = $offers;
     }
     public function setimgHref($imgHref){
     	$this->imgHref = $imgHref;
@@ -132,6 +137,9 @@ class Event  implements JsonSerializable{
     public function getUsersNumber(){
     	return count($this->users);
     }
+    public function getOffers(){
+    	return $this->offers;
+    }
     public function getimgHref(){
     	return $this->imgHref;
     }
@@ -152,6 +160,7 @@ class Event  implements JsonSerializable{
 		'eventOrganizer'=>$this->eventOrganizer,
 		'users'=>$this->users,
 		'votes'=>$this->votes,
+		'offers'=>$this->offers,
 		'imgHref'=>$this->imgHref
 		]);
     }
