@@ -1,10 +1,11 @@
 <?php
-include_once("D:/xampp/htdocs/APDTLD/Eduvent/model/YaasConnector.php");
-function __autoload($class)
-{
-	include_once('D:/xampp/htdocs/APDTLD/Eduvent/model/'.$class.'.php');
-}
-
+include_once($_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/YaasConnector.php');
+spl_autoload_register(function ($class) {
+    $file = $_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
 /*$eventList=Event::getEventList();
 foreach ($eventList as $varEvent) {
     $varEvent->deleteEvent();

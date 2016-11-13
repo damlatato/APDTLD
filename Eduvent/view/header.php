@@ -1,10 +1,11 @@
 <?php
-/*include_once("../Eduvent/model/YaasConnector.php");
-
-function __autoload($class)
-{
-  include_once '../Eduvent/model/'.$class.'.php';
-}*/
+include_once("../Eduvent/model/YaasConnector.php");
+spl_autoload_register(function ($class) {
+    $file = '../Eduvent/model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
 
 include_once 'controller/shoppingCart/class.shoppingCart.php';
 include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
