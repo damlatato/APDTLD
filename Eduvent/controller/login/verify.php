@@ -17,7 +17,7 @@ require_once '../../model/User.php';
 
 if(empty($_GET['id']) && empty($_GET['code']))
 {
- $user->redirect('../Eduvent/index.php?page=login');
+//  $user->redirect('../Eduvent/index.php?page=login');
 }
 
 if(isset($_GET['id']) && isset($_GET['code']))
@@ -39,7 +39,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
  		if (User::getStatusbyId($id)== $statusN) {
  		
 //  		update status as 'yes' in db
-
+			User::setStatus($statusY);
  			$msg = "
              <div class='alert alert-success'>
        <button class='close' data-dismiss='alert'>&times;</button>
