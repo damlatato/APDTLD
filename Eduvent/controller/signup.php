@@ -32,8 +32,8 @@ if(isset($_POST['btn-signup'])) {
 		$address = new Address("", "", 0, "", 0, "");
 		$interest = new Interest("", 0);
 		$id = uniqid();
-		$code = md5(uniqid(rand()));
-		$user = new User($id, $name, $email, $password, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
+		$tokenCode = md5(uniqid(rand()));
+		$user = new User($id, $name, $email, $password, $tokenCode, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
 		$user->postUser();	
 		
 		
@@ -43,7 +43,7 @@ if(isset($_POST['btn-signup'])) {
 			Welcome to Eduvent!<br/>
 			To complete your registration, please click on the following link<br/>
 			<br /><br />
-			<a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
+			<a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$tokenCode'>Click HERE to Activate :)</a>
 			<br /><br />
 			Thanks,";
 		

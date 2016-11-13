@@ -17,17 +17,18 @@ require_once '../model/User.php';
 if(isset($_POST['btn-submit'])) {
 	$email = $_POST['txtemail'];
 	if ($password == User::getPasswordByEmail($email)) {
-		
-		$id = User::getIDbyEmail($email);
-		$code = User::getTokenCodebyEmail($email);
+// 		need
+		$id = User::getIdbyEmail($email);
+// 		need
+		$tokenCode = User::getTokenCodebyEmail($email);
 // 		send message to update his or her password 
-
+			
 		$message = "
 		Hello , $email
 		<br /><br />
 		We got requested to reset your password, if you do this then just click the following link to reset your password, if not just ignore                   this email,
 		<br /><br />Please click on the following link to reset your password<br /><br />
-		<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$code'>click here to reset your password</a>
+		<a href='http://localhost/APDTLD/Eduvent/controller/login/resetpass.php?id=$id&code=$tokenCode'>click here to reset your password</a>
 		<br /><br />
 		thank you :)";
 		
