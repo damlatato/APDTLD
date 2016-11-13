@@ -1,6 +1,6 @@
 <?php
 spl_autoload_register(function ($class) {
-    $file = $_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/'.$class.'.php';
+    $file = '../Eduvent/model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}

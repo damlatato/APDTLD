@@ -1,5 +1,4 @@
 <?php
-//include_once($_SERVER["DOCUMENT_ROOT"] . '/APDTLD/Eduvent/model/YaasConnector.php');
 include_once('../Eduvent/model/YaasConnector.php');
 spl_autoload_register(function ($class) {
     $file = '../Eduvent/model/'.$class.'.php';
