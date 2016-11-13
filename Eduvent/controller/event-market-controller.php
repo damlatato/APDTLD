@@ -30,7 +30,7 @@ if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
 	}
 	elseif ($filter=='pricing') {
 		$events=Event::getByPriceCategory($filterValue);
-		getByDate($StartDate, $EndDate)
+		getByDate($StartDate, $EndDate);
 	}
 	elseif ($filter=='pricing') {
 		$events=Event::getByDate($filterValue, $filterValue2);
