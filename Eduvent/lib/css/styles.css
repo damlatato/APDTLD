@@ -151,7 +151,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dff5fa', end
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #1694b2;
 }
 
 input:focus + .slider {
