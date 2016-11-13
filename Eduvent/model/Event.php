@@ -243,6 +243,11 @@ class Event  implements JsonSerializable{
 		return Event::fromJSONa($jeventlist);
 	}
 	
+	public static function getByTopicAndStatus($topic, $status){
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).$status.chr(34)."+topic=".chr(34).$status.chr(34));
+		return Event::fromJSONa($jeventlist);
+	}
+	
 	public static function getById($id){
 		$jeventlist = get("event?pageNumber=1&pageSize=500&q=id:".chr(34).$id.chr(34));
 		return Event::fromJSONa($jeventlist)[0];
