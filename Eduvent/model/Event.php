@@ -137,9 +137,9 @@ class Event  implements JsonSerializable{
     public function getUsersNumber(){
     	return count($this->users);
     }
-    public function getOffers(){
+    /*public function getOffers(){
     	return $this->offers;
-    }
+    }*/
     public function getimgHref(){
     	return $this->imgHref;
     }
