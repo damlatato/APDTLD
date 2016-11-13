@@ -2,12 +2,18 @@
 $proposedEvents=Event::getProposedEventList();
 
 foreach($proposedEvents as $event) {
+	$offerStatus='';
+	$offers=$event->getOffers();
+	if (count($offers)>0) {
+		$offerStatus='&nbsp;&nbsp;<a href="" id="' . $event->getId() . '"><i class="po-status">Show matching events</i></a>';
+	}
+
 	echo('
 	<!--Proposal-->
 	<div class="row">
 		<div class="col-md-12">
 			<span class="proposal-topic">Topic</span><br>
-			<h4 class="proposal-title" style="display:inline-block;">' . $event->getTitle() . '</h4>&nbsp;<span class="po-status" id="' . $event->getId() . '"><i>Show matching events</i></span>
+			<h4 class="proposal-title" style="display:inline-block;">' . $event->getTitle() . '</h4>' . $offerStatus . '
 			<p>' . $event->getDescription() . '</p>
 			<div class="read-more text-xs-right row">
 				<div class="col-xs-3 pull-left text-xs-left">

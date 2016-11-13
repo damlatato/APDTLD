@@ -626,7 +626,7 @@ input:checked + .slider:before {
 }
 
 .po-status {
-	color: #FED835;
+	color: #FED835!important;
 	font-weight: bold;
 }
 
