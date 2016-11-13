@@ -1,3 +1,14 @@
+<?php
+include_once("../Eduvent/model/YaasConnector.php");
+spl_autoload_register(function ($class) {
+	//include '../Eduvent/model/'.$class.'.php';
+    $file = __DIR__.'/model/'. $class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

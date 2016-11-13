@@ -1,11 +1,10 @@
 <script>
-//event-market-items
 function filterEvents(filter, value) {
-	console.log("filter=" + filter + " / value=" + value);
-	/*$.post( "../Eduvent/controller/event-market-controller.php", { 'sb-filter': filter, 'sb-value': value })
+	console.log("filtering: filter=" + filter + ", value=" + value);
+	$.post( "../Eduvent/controller/event-market-controller.php", { 'sb-filter': filter, 'sb-value': value })
 	.done(function( data ) {
-		
-	});*/
+		$('#event-market-items').html(data);
+	});
 }
 </script>
 
@@ -45,7 +44,9 @@ function filterEvents(filter, value) {
 		<!--Row 3 (Event market) -->
 		<div class="row" id="event-market-area">
 			<div class="col-md-12 event-market-area grey lighten-5" id="event-market-items">
-
+				<?php
+					include( "../Eduvent/controller/event-market-controller.php");
+				?>
 			</div>
 		</div>
 		<!--/.Row 3-->

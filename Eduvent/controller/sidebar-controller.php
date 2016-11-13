@@ -11,7 +11,7 @@ echo '
 		<ul class="list-group">';
 		
 		foreach ($eventtypes as $key=>$value) {
-			echo '<li class="list-group-item" onclick="filterEvents(\'topic\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item" onclick="filterEvents(\'type\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '
@@ -27,7 +27,7 @@ echo '
 		<ul class="list-group">';
 
 		foreach ($topics as $key=>$value) {
-			echo '<li class="list-group-item"><a href="#">' . $value . '</a></li>';
+			echo '<li class="list-group-item" onclick="filterEvents(\'topic\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '
@@ -44,7 +44,7 @@ echo '
 			echo '<li class="list-group-item"><a href="#">All</a></li>';
 
 		foreach ($priceCategories as $key=>$value) {
-			echo '<li class="list-group-item"><a href="#">' . $value . '</a></li>';
+			echo '<li class="list-group-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '
