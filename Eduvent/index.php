@@ -1,12 +1,14 @@
 <?php
-include_once('../Eduvent/model/YaasConnector.php');
+define('ROOT_PATH', str_replace('\\','/',__DIR__).'/');
+
+include_once('model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-    $file = '../Eduvent/model/'.$class.'.php';
+    $file = 'model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
 });
-include_once '../Eduvent/model/thesaurus.php';
+include_once 'model/thesaurus.php';
 ?>
 
 <!DOCTYPE html>

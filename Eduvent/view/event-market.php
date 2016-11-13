@@ -1,7 +1,7 @@
 <script>
 function filterEvents(filter, value) {
 	console.log("filtering: filter=" + filter + ", value=" + value);
-	$.post( "../Eduvent/controller/event-market-controller.php", { 'sb-filter': filter, 'sb-value': value })
+	$.post('controller/event-market-controller.php', { 'sb-filter': filter, 'sb-value': value, 'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?> })
 	.done(function( data ) {
 		$('#event-market-items').html(data);
 	});

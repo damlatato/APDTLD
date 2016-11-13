@@ -1,7 +1,13 @@
 <?php
-include_once('../model/YaasConnector.php');
+
+if (isset($_POST['root-path'])) {
+	$rootPath = $_POST['root-path'];
+	define ('ROOT_PATH', $rootPath);
+}
+
+include_once(ROOT_PATH . 'model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-    $file = '../Eduvent/model/'.$class.'.php';
+	$file = ROOT_PATH . 'model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
