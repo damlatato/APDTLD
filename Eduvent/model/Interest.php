@@ -37,7 +37,8 @@ class Interest implements JsonSerializable{
 	}
 	
 	public static function fromJSONa($interestAj){
-		if ($interestAj === "null"){
+		echo $interestAj;
+		if ($interestAj === 'null'){
 			return array();
 		}
 		$interestAv = json_decode($interestAj);
