@@ -98,7 +98,7 @@ $address2 = new Address("Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 1
 	}
 //test
 
-$event1 = new Event(1, $eventtypes["Conference"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Art'], 11, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
+$event1 = new Event(1, $eventtypes["Conference"], "My first Event", "So good event", "25.10.2016 13:56", $address1, $interest['Art'], 11, $statuses["Proposed"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $event2 = new Event(2, $eventtypes["Course"], "My second Event", "So good second event", "26.12.2016 14:56", $address2, $interest['Business'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $event4 = new Event(4, $eventtypes["Course"], "My fourth Event", "So good fourth event", "26.12.2016 14:56", $address2, $interest['Business'], 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $eventA = array($event1, $event2);
@@ -453,8 +453,19 @@ if ($u1==true){
 	echo "Yaas GetNameById Test Succesfull";
 }
 
+$event1->addOffer($event2);
+$u1=false;
+$event1->getById($event1->getId());
+if (in_array($event2->getId(),$event1->getOffers())){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,38);
+	echo "<br>";
+	echo "Yaas adOffer Test Succesfull";
+}
 
-if (count($tests)==37){
+if (count($tests)==38){
 	echo "<br>";
 	echo "All the tests are done";
 }
