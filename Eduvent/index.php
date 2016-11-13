@@ -6,7 +6,7 @@ spl_autoload_register(function ($class) {
 		include $file;
 	}
 });
-include_once '../Eduvent/model/thesaurus.php');
+include_once '../Eduvent/model/thesaurus.php';
 ?>
 
 <!DOCTYPE html>

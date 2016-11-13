@@ -24,14 +24,14 @@ foreach ($events as $event) {
 		echo '<div class="row">';
 	}
 
-	echo '
+?>
 		<div class="col-md-4 event-market-col">
 			<!--Card-->
 			<div class="event-card card">
 
 				<!--Card image-->
 				<div class="event-image view overlay hm-white-slight">
-					<img src="' . $event->getimgHref() . '" class="img-fluid" alt="" height="195px">
+					<img src="<?php echo $event->getimgHref() ?>" class="img-fluid" alt="" height="195px">
 					<a href="#">
 						<div class="mask"></div>
 					</a>
@@ -42,18 +42,18 @@ foreach ($events as $event) {
 				<div class="event-body card-block text-xs-center">
 					<!--Category & Title-->
 					<div class="event-title">
-						<h5>' . $event->getTopic() . '</h5>
-						<h4 class="card-title"><strong><a href="">' . $event->getTitle() . '</a></strong></h4>
+						<h5><?php echo $event->getTopic() ?></h5>
+						<h4 class="card-title"><strong><a href=""><?php echo $event->getTitle() ?></a></strong></h4>
 					</div>
 					
 					<!--Description-->
 					<div class="event-text card-text text-xs-left">
-						<p>' . $event->getDescription() . '</p>
+						<p><?php echo $event->getDescription() ?></p>
 					</div>
 
 					<!--Card footer-->
 					<div class="card-footer">
-						<div class="ticket-price">Ticket price: ' . $event->getPrice() . '</div>
+						<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
 						<div class="event-buttons flex-center">
 							<a href="#">
 								<button class="btn btn-blue-yellow-small" type="button">Show details</button>
@@ -63,7 +63,7 @@ foreach ($events as $event) {
 								<button class="btn btn-grey" type="button">More</button>
 
 								<ul class="event-dropdown-menu">
-									<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' . $event->getId() . ' href="#">
+									<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
 										<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
 									<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 										<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
@@ -82,8 +82,8 @@ foreach ($events as $event) {
 
 			</div>
 			<!--/.Card-->
-		</div>';
-	
+		</div>
+<?php 	
 	$eventCounter++;
 }
 
