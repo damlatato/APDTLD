@@ -16,9 +16,24 @@ spl_autoload_register(function ($class) {
 if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
 	$filter=$_POST['sb-filter'];
 	$filterValue=$_POST['sb-value'];
+
+	if (isset($_POST['sb-value2'])) {
+		$filterValue2=$_POST['sb-value2'];
+	}
 	
-	if ($filter=='topic') {
-		$events=Event::getByTopic($filterValue);
+	if ($filter=='type') {
+		$events=Event::getByEventType($filterValue);
+	}
+	elseif ($filter=='topic') {
+		$events=Event::getByTopicAndStatus($filterValue, 'Published');
+		//$events=Event::getByTopicAndStatus('Business', 'Published');
+	}
+	elseif ($filter=='pricing') {
+		$events=Event::getByPriceCategory($filterValue);
+		getByDate($StartDate, $EndDate)
+	}
+	elseif ($filter=='pricing') {
+		$events=Event::getByDate($filterValue, $filterValue2);
 	}
 	else {
 		$events=Event::getPublishedEventList();
