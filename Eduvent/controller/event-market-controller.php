@@ -83,7 +83,7 @@ foreach ($events as $event) {
 					<div class="card-footer">
 						<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
 						<div class="event-buttons flex-center">
-							<a href="#">
+							<a href="#../Eduvent/index.php?page=Event_Description&eventId=<?php echo $event->getId() ?>">
 								<button class="btn btn-blue-yellow-small" type="button">Show details</button>
 							</a>
 
