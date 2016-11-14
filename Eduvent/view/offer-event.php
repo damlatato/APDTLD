@@ -5,7 +5,11 @@
 <script>
 function offerEvent(proposalId, offerId) {
 	console.log("pid=" + proposalId + " / oid=" + offerId);
-	$.post( "../Eduvent/controller/offer-event-controller.php", { peid: proposalId, oeid: offerId })
+	$.post( "../Eduvent/controller/offer-event-controller.php", {
+		'peid': proposalId,
+		'oeid': offerId,
+		'root-path': <?php echo ROOT_PATH ?>
+	})
 	.done(function( data ) {
 		console.log( "offer submitted: " + data );
 	});

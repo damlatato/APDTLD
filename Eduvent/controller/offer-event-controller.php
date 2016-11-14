@@ -1,4 +1,16 @@
 <?php
+if (isset($_POST['root-path'])) {
+	$rootPath = $_POST['root-path'];
+	define ('ROOT_PATH', $rootPath);
+}
+
+spl_autoload_register(function ($class) {
+    $file = ROOT_PATH . 'model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+
 if (isset($_POST['peid']) and isset($_POST['oeid']))
 {
 	// The Code to be executed after an event was selected.
@@ -8,7 +20,7 @@ if (isset($_POST['peid']) and isset($_POST['oeid']))
 	$oEvent=Event::getById($oeid);
 	$pEvent->addOffer($oEvent);
 
-	$output="proposal-id=" . $peid . ", offer-id=" . $oeid;
+	$output="proposal-id=" . $peid . ", offer-id=" . $oeid . ", offers: " . $pEvent->getOffers();
 	echo $output;
 }
 else               

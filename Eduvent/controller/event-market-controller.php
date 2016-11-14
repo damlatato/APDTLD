@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['root-path'])) {
 	$rootPath = $_POST['root-path'];
 	define ('ROOT_PATH', $rootPath);
