@@ -5,11 +5,10 @@ foreach($proposedEvents as $event) {
 	$offerStatus='';
 	$offers=$event->getOffers();
 	if (count($offers)>0) {
-		//<a href=""><i class="po-status">Show matching events</i></a>
 		$offerList='';
 		foreach($offers as $offerId) {
 			$offeredEvent=Event::getById($offerId);
-			$offerList=$offerList . '<li><a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">' . $offeredEvent->getTitle() . '</a></li>';
+			$offerList=$offerList . '<li><a href="../Eduvent/index.php?page=event-description&eventId=' . $offerId . '">' . $offeredEvent->getTitle() . '</a></li>';
 		}
 		
 		$offerStatus='&nbsp;&nbsp;
