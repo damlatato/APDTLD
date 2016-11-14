@@ -53,7 +53,7 @@ function voteForEvent(eventId) {
 				<br>
 				<hr>
 
-				<!--Pagination-->
+				<!--Pagination
 				<nav class="row text-xs-center page-items">
 					<ul class="pagination">
 						<li class="page-item disabled">
@@ -76,7 +76,7 @@ function voteForEvent(eventId) {
 							</a>
 						</li>
 					</ul>
-				</nav>
+				</nav>-->
 				<!--/.Pagination-->
 				<hr>
 			</div>
