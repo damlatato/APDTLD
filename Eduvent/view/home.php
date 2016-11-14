@@ -148,7 +148,7 @@ $( document ).ready(function() {
 						<div class="panel-heading"><h5 class="font-weight-bold"><b>Newest nearby</b></h5></div>
 						<div class="panel-body list-group event-items newest">
 
-							<a href="#" class="list-group-item card-overlay event-list-item">
+							<a href="view/Event_Description.php" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
 									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
@@ -156,7 +156,7 @@ $( document ).ready(function() {
 								</div>
 							</a>
 
-							<a href="#" class="list-group-item card-overlay event-list-item">
+							<a href="view/Event_Description.php" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
 									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
@@ -164,7 +164,7 @@ $( document ).ready(function() {
 								</div>
 							</a>
 
-							<a href="#" class="list-group-item card-overlay event-list-item">
+							<a href="view/Event_Description.php" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
 									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>
@@ -172,7 +172,7 @@ $( document ).ready(function() {
 								</div>
 							</a>
 
-							<a href="#" class="list-group-item card-overlay event-list-item">
+							<a href="view/Event_Description.php" class="list-group-item card-overlay event-list-item">
 								<div class="white-text text-xs-left event-list-item-text">
 									<span class="event-list-item-category" style="color:#1694b2;">Category</span>
 									<h3>Event Title</h3>

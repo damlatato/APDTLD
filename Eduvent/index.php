@@ -24,7 +24,15 @@ include_once 'model/thesaurus.php';
 <script type="text/javascript" src="../Eduvent/lib/js/jquery-3.1.1.min.js"></script>
 
 <!-- CSS -->
+ <link href="../Eduvent/lib/css/animate.min.css" rel="stylesheet">
+ 
+    <link href="../Eduvent/lib/css/owl.theme.css" rel="stylesheet">
+	
+    <link href="../Eduvent/view/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
+    <!-- your stylesheet with modifications -->
+    <link href="../Eduvent/view/css/custom.css" rel="stylesheet">
+	
 <!-- Font Awesome-->
 <link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css" type='text/css'>
 
@@ -68,6 +76,7 @@ if (isset($_GET['page'])) {
 		$page=='event-proposals' or
 		$page=='create-proposal' or
 		$page=='mail-success' or
+		$page=='Event_Description' or
 		$page=='offer-event' or
 		$page=='profile') {
 		include('view/'.$page.'.php');
@@ -110,6 +119,8 @@ include 'view/footer.php';
 
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
+
+    <script src="js/respond.min.js"></script>
 
 <!-- MSF Scripts 
 <script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
