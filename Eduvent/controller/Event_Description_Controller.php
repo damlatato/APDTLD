@@ -1,7 +1,7 @@
 <?php
-include_once('../model/YaasConnector.php');
+include_once(ROOT_PATH . 'model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-    $file = '../model/'.$class.'.php';
+    $file = ROOT_PATH . 'model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}

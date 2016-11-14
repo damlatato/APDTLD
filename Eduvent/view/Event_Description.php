@@ -1,5 +1,5 @@
 <?php
-$eventId = POST_['eventId']
+$eventId = $_GET['eventId'];
 ?>
 
 <div class="container">
@@ -9,7 +9,7 @@ $eventId = POST_['eventId']
 		
  
 	   <?php
-	   include '../controller/Event_Description_Controller.php';	
+	   include 'controller/Event_Description_Controller.php';	
 	   ?>
 	</div>
 	
