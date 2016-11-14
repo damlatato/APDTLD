@@ -1,10 +1,13 @@
 <?php
-spl_autoload_register(function ($class) {
-    $file = '../Eduvent/model/'.$class.'.php';
-	if(file_exists($file)) {
-		include $file;
-	}
-});
+include "Event.php";
+include "User.php";
+include "Address.php";
+include "Interest.php";
+include "YaasConnector.php";
+include "thesaurus.php";
+include "Notification.php";
+include "Booking.php";
+include "Payment.php";
 
 $tests=array();
 $payment1 = new Payment("25.09.2016", 1000);
@@ -462,7 +465,18 @@ if ($u1==true){
 	echo "Yaas adOffer Test Succesfull";
 }
 
-if (count($tests)==38){
+$events = Event::getByTopicAndStatus('Business', 'Published');
+$u1=false;
+if ($events[0]->getId() == $event2->getId()){
+	$u1=true;
+}
+if ($u1==true){
+	array_push($tests,39);
+	echo "<br>";
+	echo "Yaas getByTopicAndStatus Test Succesfull";
+}
+
+if (count($tests)==39){
 	echo "<br>";
 	echo "All the tests are done";
 }
