@@ -9,7 +9,7 @@ $eventId = $_GET['eventId'];
 		
  
 	   <?php
-	   include 'controller/Event_Description_Controller.php';	
+	   include 'controller/event-description-controller.php';	
 	   ?>
 	</div>
 	

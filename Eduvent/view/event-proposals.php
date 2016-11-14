@@ -77,8 +77,8 @@ function voteForEvent(eventId) {
 						</li>
 					</ul>
 				</nav>-->
-				<!--/.Pagination-->
-				<hr>
+				<!--/.Pagination
+				<hr>-->
 			</div>
 		</div>
 		<!--/.Row 3-->

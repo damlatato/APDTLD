@@ -5,7 +5,21 @@ foreach($proposedEvents as $event) {
 	$offerStatus='';
 	$offers=$event->getOffers();
 	if (count($offers)>0) {
-		$offerStatus='&nbsp;&nbsp;<a href="" id="' . $event->getId() . '"><i class="po-status">Show matching events</i></a>';
+		//<a href=""><i class="po-status">Show matching events</i></a>
+		$offerList='';
+		foreach($offers as $offerId) {
+			$offeredEvent=Event::getById($offerId);
+			$offerList=$offerList . '<li><a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">' . $offeredEvent->getTitle() . '</a></li>';
+		}
+		
+		$offerStatus='&nbsp;&nbsp;
+			<div class="custom-dropdown-btn">
+				<div class="btn-grey-special-small"><b><i>Show matching events</b></i></div>
+				<ul class="custom-dropdown-menu custom-dropdown-menu-special">'
+				. $offerList .
+				'</ul>
+			</div>
+		';
 	}
 
 	echo('

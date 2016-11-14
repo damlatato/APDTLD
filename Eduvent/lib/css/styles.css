@@ -66,6 +66,20 @@ html, body {
 	background-color: #bdbdbd;
 }
 
+.btn-grey-special-small {
+	background-color: #fafafa!important;
+	border: 0.6px solid #FED835;
+	color: #FED835!important;
+	font-size: 0.95em;
+	padding: 0.19rem 0.4rem;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.btn-grey-special-small:hover {
+	
+}
+
 .btn-dark-grey-yellow {
 	background-color: #424242;
 	font-size: 0.95em;
@@ -73,6 +87,11 @@ html, body {
 
 .btn-dark-grey-yellow:hover {
 	background-color: #FED835;
+}
+
+.custom-dropdown-menu-special {
+	margin-top: 0px!important;
+	min-width: 170px!important;
 }
 
 /******************************************/
