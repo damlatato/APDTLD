@@ -40,7 +40,7 @@ $( document ).ready(function() {
 					</a>
 				</div>
 			</div>
-			<img id="carousel-image-1" src="../Eduvent/view/images/c1.jpg">
+			<img src="../Eduvent/view/images/c1.jpg">
 		</div>
 		<div class="carousel-item">
 			<img src="../Eduvent/view/images/c2.jpg">
