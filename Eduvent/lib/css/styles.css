@@ -302,6 +302,11 @@ input:checked + .slider:before {
 	height: 400px;
 }
 
+.carousel-inner img,
+.carousel-inner > img {
+	margin: auto;
+}
+
 .carousel-item-overlay {
 	display: block;
 	position: absolute;
