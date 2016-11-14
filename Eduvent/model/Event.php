@@ -1,5 +1,5 @@
 <?php 
-class Event implements JsonSerializable{ 
+class Event  implements JsonSerializable{ 
     private $id; 
     private $eventType;		//thesaurus
     private $title; 
@@ -244,7 +244,7 @@ class Event implements JsonSerializable{
 	}
 	
 	public static function getByTopicAndStatus($topic, $status){
-		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).$status.chr(34)."+topic=".chr(34).$status.chr(34));
+		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).$status.chr(34)."+topic:".chr(34).$status.chr(34));
 		return Event::fromJSONa($jeventlist);
 	}
 	
