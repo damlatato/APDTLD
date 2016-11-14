@@ -120,7 +120,8 @@ include 'view/footer.php';
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
-    <script src="js/respond.min.js"></script>
+<!-- -->
+<script src="js/respond.min.js"></script>
 
 <!-- MSF Scripts 
 <script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
