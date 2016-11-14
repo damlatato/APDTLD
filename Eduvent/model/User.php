@@ -27,13 +27,13 @@ class User implements JsonSerializable{
 	private $votedEvents;	//array
 	private $proposedEvents;	//array
 	
-	public function __construct($id, $name, $email, $password, $address, $gender, $birthDate, $interest, $imgHref){
+	public function __construct($id, $name, $email, $password, $tokenCode, $address, $gender, $birthDate, $interest, $imgHref){
 		$this->id = $id;
 		$this->name = $name;
 		$this->email = $email;
 		$this->password = $password;
 		$this->status = "N";
-		$this->tokenCode = "";
+		$this->tokenCode = $tokenCode;
 		$this->address = $address;
 		$this->gender = $gender;
 		$this->birthDate = $birthDate;
@@ -164,7 +164,13 @@ class User implements JsonSerializable{
 	
 	public static function getUserByEmail($email){
 		$juserlist = get("user?pageNumber=1&pageSize=500&q=email:".chr(34).$email.chr(34));
+		$usera = User::fromJSONa($juserlist);
+		if (count($usera)>0){
 		return User::fromJSONa($juserlist)[0];
+		}
+		else{
+			return null;
+		}
 	}
 	
 	public static function getUserById($id){

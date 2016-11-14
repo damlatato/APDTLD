@@ -165,8 +165,8 @@ $votedEvents = array($event2->getId());
 $proposedEvents = array($event2->getId());
 
 
-$user1 = new User(111, "Leonid Gunko","leonidgunko1@yandex.ru","213322", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
-$user2 = new User(222, "Leonid Gunko","leonidgunko2@yandex.ru","213", $address2, $genders["Mrs."], "09.07.1994", $interestA, "/images/img2");
+$user1 = new User(111, "Leonid Gunko","leonidgunko1@yandex.ru","213322", "", $address1, $genders["Mr."], "09.07.1992", $interestA, "/images/img1");
+$user2 = new User(222, "Leonid Gunko","leonidgunko2@yandex.ru","213", "", $address2, $genders["Mrs."], "09.07.1994", $interestA, "/images/img2");
 $userA = array($user1,$user2);
 //test
 	$juser1 = $user1->jsonSerialize();
