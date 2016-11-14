@@ -17,10 +17,13 @@ require_once '../model/User.php';
 if(isset($_POST['btn-submit'])) {
 	$email = $_POST['txtemail'];
 	if ($password == User::getPasswordByEmail($email)) {
+		
+		$user = User::getUserByEmail($email);
+		
 // 		need
-		$id = User::getIdbyEmail($email);
+		$id = $user->getId();
 // 		need
-		$tokenCode = User::getTokenCodebyEmail($email);
+		$tokenCode = $user->getTokenCode();
 // 		send message to update his or her password 
 			
 		$message = "
