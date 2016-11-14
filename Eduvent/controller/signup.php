@@ -3,7 +3,7 @@
 //  and then after submitting the form, the php code will match that user email and password combination in database 
 //  and when it finds both results in table then it will start a session and
 //   allow user to access home page else it will show appropriate message.
-//require_once '/model/User.php';
+require_once '../model/User.php';
 //$reg_user = new USER();
 if(isset($_SESSION['usermail'])) {
 	//$reg_user->redirect('../Eduvent/index.php?page=settings');
@@ -33,7 +33,7 @@ if(isset($_POST['btn-signup'])) {
 		$interest = new Interest("", 0);
 		$id = uniqid();
 		$tokenCode = md5(uniqid(rand()));
-		$user = new User($id, $name, $email, $password, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
+		$user = new User($id, $name, $email, $password, $tokenCode, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
 		$user->postUser();	
 		
 		
@@ -43,7 +43,7 @@ if(isset($_POST['btn-signup'])) {
 			Welcome to Eduvent!<br/>
 			To complete your registration, please click on the following link<br/>
 			<br /><br />
-			<a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$tokenCode'>Click HERE to Activate :)</a>
+			<a href='http://localhost/APDTLD/Eduvent/controller/login/verify.php?id=$id&code=$tokenCode'>Click HERE to Activate :)</a>
 			<br /><br />
 			Thanks,";
 		
