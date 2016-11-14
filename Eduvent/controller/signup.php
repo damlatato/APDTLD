@@ -33,7 +33,7 @@ if(isset($_POST['btn-signup'])) {
 		$interest = new Interest("", 0);
 		$id = uniqid();
 		$tokenCode = md5(uniqid(rand()));
-		$user = new User($id, $name, $email, $password, $tokenCode, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
+		$user = new User($id, $name, $email, $password, $address, "", $birthDate, $interest, "https://appharbor.com/assets/images/stackoverflow-logo.png");
 		$user->postUser();	
 		
 		
