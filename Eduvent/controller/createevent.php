@@ -173,7 +173,16 @@ else {
 					
 					<fieldset>
 						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
-					
+					<div class="selects-1">
+							<p>Topic:</p>
+							<select class="form-control" name="select-1">
+								<option value="1">Art</option>
+								<option value="2">Business</option>
+								<option value="3">Cooking</option>
+								<option value="4">Design</option>
+								
+							</select>
+						</div>
 						<br>
 						<div class="selects-1">
 							<p>Event Type:</p>
