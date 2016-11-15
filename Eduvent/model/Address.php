@@ -1,6 +1,5 @@
 <?php
 class Address{
-	private $id;
 	private $fullName;
 	private $street;
 	private $housenumber;
