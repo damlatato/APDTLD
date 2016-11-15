@@ -202,6 +202,7 @@ input:checked + .slider:before {
 .sidebar-head {
 	background-color: #1694b2;
 	border: 1px solid #1694b2;
+	margin-bottom: 1px;
 }
 
 .sidebar-group-head {
@@ -210,6 +211,7 @@ input:checked + .slider:before {
 	color: #1694b2;
 	font-size: 1.1rem;
     line-height: 36px;
+	margin-bottom: 1px;
 }
 
 .sidebar-nav li {
@@ -217,6 +219,7 @@ input:checked + .slider:before {
 	cursor: pointer;
 	display: block;
 	line-height: 28px;
+	margin-bottom: 1px;
 	text-decoration: none;
     text-indent: 4px;
 }
@@ -230,6 +233,14 @@ input:checked + .slider:before {
 .sidebar-nav li:active,
 .sidebar-nav li:focus {
     text-decoration: none;
+}
+
+.sb-item-selected {
+	box-sizing: border-box!important;
+	-moz-box-sizing: border-box!important;
+	-webkit-box-sizing: border-box!important;
+	border: 1px solid #FED835!important;
+	color: #FED835!important;
 }
 
 #collapsedate-form {

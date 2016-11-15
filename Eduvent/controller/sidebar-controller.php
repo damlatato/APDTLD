@@ -6,10 +6,11 @@ echo '
 </div>
 <div class="collapse" id="collapseTypes"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group">';
+		<ul class="list-group">
+			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 		
 		foreach ($eventtypes as $key=>$value) {
-			echo '<li class="list-group-item" onclick="filterEvents(\'type\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'type\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '
@@ -22,10 +23,11 @@ echo '
 </div>
 <div class="collapse" id="collapseCategories"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group">';
+		<ul class="list-group">
+			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($topics as $key=>$value) {
-			echo '<li class="list-group-item" onclick="filterEvents(\'topic\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'topic\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '
@@ -38,11 +40,11 @@ echo '
 </div>
 <div class="collapse" id="collapsePricing"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group">';
-			echo '<li class="list-group-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">All</li>';
+		<ul class="list-group">
+			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($priceCategories as $key=>$value) {
-			echo '<li class="list-group-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">' . $key . '</li>';
 		}
 
 echo '

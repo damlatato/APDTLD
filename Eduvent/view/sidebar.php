@@ -1,5 +1,9 @@
 <script>
 $( document ).ready(function() {
+	$('.sb-item').click(function(){
+		$('.sb-item').removeClass('sb-item-selected');
+		$(this).addClass('sb-item-selected');
+	});
 	$('#clear-date-from').click(function(){
 		$('#datepicker-from-sidebar').val('');
 	});
