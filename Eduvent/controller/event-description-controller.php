@@ -1,13 +1,10 @@
-<?php
-include_once(ROOT_PATH . 'model/YaasConnector.php');
-spl_autoload_register(function ($class) {
-    $file = ROOT_PATH . 'model/'.$class.'.php';
-	if(file_exists($file)) {
-		include $file;
-	}
-});
-?>
 
+<div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Event added to shopping cart!</strong> Go to <a href="#" class="alert-link">Shopping cart </a>to see the content.
+</div>
 
 <!--<!DOCTYPE html>
 <html lang="en">
@@ -63,22 +60,22 @@ spl_autoload_register(function ($class) {
 		      	     <hr>
 		         </div>
 			     <div class= "row text-center ">
-                     <h5><strong><?php echo $event->getPrice() ?> </strong><h5>
-				     <h5 style= "opacity: 0.4 ;"> <?php echo $event->getUsersNumber() ?><h5>
+                     <h5><strong><?php echo $event->getPrice() .' &euro;' ?> </strong><h5>
+				     <h5 style= "opacity: 0.4 ;"> <?php echo $event->getUsersNumber() . ' users participating' ?><h5>
 					 <hr>
 				</div>
 		        <div class="row text-center ">	
 		             <h6 style= "opacity: 0.4 ;">Number of tickets<h6>
                      <div class="input-group spinner">
-                     <input type="text" class="form-control" value="1">
+                     <input id="eventquantity" type="text" class="form-control" value="1">
                      <div class="input-group-btn-vertical">
-                     <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                     <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                     <button class="btn btn-default count-amount-up" type="button"><i class="fa fa-caret-up"></i></button>
+                     <button class="btn btn-default count-amount-down" type="button"><i class="fa fa-caret-down"></i></button>
                      </div>
                      </div>
                 </div>
 				<div class="row text-center buttonsr">
-                     <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to basket</a> 
+                     <a class="btn btn-primary insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><i class="fa fa-shopping-cart"></i> Add to shopping cart</a> 
                      <a href="basket.html" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
 				</div>
              </div>
@@ -101,7 +98,7 @@ spl_autoload_register(function ($class) {
              <div class="tab-pane active" id="description">
                 <br>
                 <div class="row">
-				Description
+				<?php echo $event->getDescription() ?>
                 </div>
              </div>
          <div class="tab-pane" id="Location">
@@ -126,7 +123,7 @@ spl_autoload_register(function ($class) {
              <p class="lead">Contact Us</p>
              <form class="well span8">
                  <div class="row">
-				 organizer
+				 <?php echo $event->geteventOrganizer() ?>
                     <div class="span3">
                          <input type="text" class="span3" placeholder="Your First Name">
                          <input type="text" class="span3" placeholder="Your Last Name">

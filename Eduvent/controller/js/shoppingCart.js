@@ -1,6 +1,6 @@
 $('.insert-to-shopping-cart').click(function() {
 	var $eventID = $(this).attr("eventid");
-	var $quantity = $('#eventquantity'+$eventID+ ' option:selected').attr("value");
+	var $quantity = $('#eventquantity').attr("value");
 	var $amountGift = $('#eventamountgift'+$eventID+ ' option:selected').attr("value");
 	
 	if (typeof $quantity == 'undefined'){
@@ -55,4 +55,21 @@ $('.delete-from-shopping-cart').click(function() {
 
 $("#alert-target").click(function () {
     toastr["info"]("I was launched via jQuery!");
+});
+
+
+$('.count-amount-up').click(function() {
+	
+	$quantity = $('#eventquantity').attr("value");
+	$quantity++; 
+	 $('#eventquantity').attr("value", $quantity);
+});
+
+$('.count-amount-down').click(function() {
+	
+	$quantity = $('#eventquantity').attr("value");
+	
+	$quantity--; 
+	
+	 $('#eventquantity').attr("value", $quantity);
 });
