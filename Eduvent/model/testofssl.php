@@ -7,17 +7,7 @@ curl_setopt($ch, CURLOPT_POST,           1 );
 curl_setopt($ch, CURLOPT_POSTFIELDS,     "grant_type=client_credentials&scope=hybris.tenant=l2913671 hybris.document_manage hybris.document_view&client_id=6rYNTHzU8iANZPtl0FvNOjZQb2IAhoOY&client_secret=a1V5gB8ItAGWCMxB" );
 curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/x-www-form-urlencoded'));
 $result=curl_exec ($ch);
-$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-if ($code!=200){
-	$token = getAccessToken();
-	$result=curl_exec ($ch);					//get users list from DB
-	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-}
-if ($code==200){
-	curl_close($ch);
-	$result1 = json_decode($result, true);
-	echo $result1["access_token"];
-}
+echo $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 echo curl_error($ch);
 curl_close($ch);
 ?>
