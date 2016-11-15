@@ -60,7 +60,7 @@ function filterEvents(filter, value, value2) {
 				<div class="pull-right clear-date" id="clear-date-to"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
 				<div class="text-xs-center">
-					<button type="button" class="btn btn-grey" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
+					<button type="button" class="btn btn-grey-small" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
 				</div>
 			</div>
 		</div>

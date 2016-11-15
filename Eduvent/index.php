@@ -23,15 +23,15 @@ include_once 'model/thesaurus.php';
 <!-- JQuery -->
 <script type="text/javascript" src="../Eduvent/lib/js/jquery-3.1.1.min.js"></script>
 
-<!-- CSS -->
+<!-- CSS
  <link href="../Eduvent/lib/css/animate.min.css" rel="stylesheet">
  
     <link href="../Eduvent/lib/css/owl.theme.css" rel="stylesheet">
 	
-    <link href="../Eduvent/view/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="../Eduvent/view/css/style.default.css" rel="stylesheet" id="theme-stylesheet"> -->
 
-    <!-- your stylesheet with modifications -->
-    <link href="../Eduvent/view/css/custom.css" rel="stylesheet">
+    <!-- your stylesheet with modifications 
+    <link href="../Eduvent/view/css/custom.css" rel="stylesheet">-->
 	
 <!-- Font Awesome-->
 <link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css" type='text/css'>
@@ -120,8 +120,8 @@ include 'view/footer.php';
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
-<!-- -->
-<script src="js/respond.min.js"></script>
+<!-- 
+<script src="js/respond.min.js"></script>-->
 
 <!-- MSF Scripts 
 <script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>

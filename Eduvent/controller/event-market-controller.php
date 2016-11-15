@@ -87,7 +87,7 @@ foreach ($events as $event) {
 							</a>
 
 							<div class="event-menu">
-								<button class="btn btn-grey" type="button">More</button>
+								<button class="btn btn-grey-small" type="button">More</button>
 
 								<ul class="event-dropdown-menu">
 									<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">

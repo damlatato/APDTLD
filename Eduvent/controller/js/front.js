@@ -73,11 +73,10 @@ function productDetailGallery(confDetailSwitch) {
     }
 
     function switchImage(thumb) {
-
-	$('.thumb').removeClass('active');
-	var bigUrl = thumb.attr('href');
-	thumb.addClass('active');
-	$('#mainImage img').attr('src', bigUrl);
+		$('.thumb').removeClass('active');
+		var bigUrl = thumb.attr('href');
+		thumb.addClass('active');
+		$('#mainImage img').attr('src', bigUrl);
     }
 }
 

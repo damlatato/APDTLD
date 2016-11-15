@@ -180,7 +180,7 @@ $( document ).ready(function() {
 										</a>
 
 										<div class="event-menu">
-											<button class="btn btn-grey" type="button">More</button>
+											<button class="btn btn-grey-small" type="button">More</button>
 
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
@@ -241,7 +241,7 @@ $( document ).ready(function() {
 										</a>
 
 										<div class="event-menu">
-											<button class="btn btn-grey" type="button">More</button>
+											<button class="btn btn-grey-small" type="button">More</button>
 
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
@@ -301,7 +301,7 @@ $( document ).ready(function() {
 										</a>
 
 										<div class="event-menu">
-											<button class="btn btn-grey" type="button">More</button>
+											<button class="btn btn-grey-small" type="button">More</button>
 
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
