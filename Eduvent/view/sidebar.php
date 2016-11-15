@@ -1,5 +1,22 @@
+<?php
+if (isset($_GET['page'])) {
+	$page=$_GET['page'];
+	if ($page=='event-market') {
+		$eventMarket=true;
+	}
+	else {
+		$eventMarket=false;
+	}
+}
+else {
+	$eventMarket=false;
+}
+?>
+
 <script>
 $( document ).ready(function() {
+	eventMarket=<?php echo '\'' . $eventMarket . '\''; ?>;
+	console.log("eventMarket="+eventMarket);
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
 		$(this).addClass('sb-item-selected');

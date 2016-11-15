@@ -63,7 +63,7 @@ $( document ).ready(function() {
 							</a>
 						</li>
 						<li class="nav-item">
-							<label class="switch">
+							&nbsp&nbsp&nbsp <label class="switch">
 								<input class="theme-switch" type="checkbox"><div class="slider round"></div>
 							</label>
 						</li>
