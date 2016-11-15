@@ -9,13 +9,13 @@ if(isset($_SESSION['usermail'])) {
 
 if (isset($_POST['purchaseshoppingCart'])){
 	$message = "WTF";
-	send_mail($message,"Purchase Confirmation","Maria.Ocon-Palma@gmx.de");
+	send_mail($message,"Purchase Confirmation","maryoupi@gmail.de");
 }
 
 //TODO send mail subscribe
 if(isset($_POST['sendsubscribeconfirmation'])) {
 	$message = ""; //TODO
-	send_mail($message,"Subscribe Mail","Maria.Ocon-Palma@gmx.de");
+	send_mail($message,"Subscribe Mail","maryoupi@gmail.de");
 }
 
 if(isset($_POST['sendsupportmail'])) {
@@ -39,7 +39,7 @@ if(isset($_POST['sendsupportmail'])) {
 		Description: <br />
 		$description";
 	
-		send_mail($message,"Support Mail","Maria.Ocon-Palma@gmx.de");
+		send_mail($message,"Support Mail","maryoupi@gmail.de");
 	}
 }
 
