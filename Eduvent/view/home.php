@@ -4,11 +4,6 @@ $( document ).ready(function() {
 	overlay=$("#carousel-item-overlay");
 	overlay.hide();
 	el=$("#carousel-example-1");
-	//overlay.height("400px");
-
-	/*overlay.delay(800).animate({
-		width: el.css("width")
-	}, 2200 );*/
 	
 	overlay.delay(700).show("slide", { direction: "left" }, 1500);
 	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
@@ -76,7 +71,7 @@ $( document ).ready(function() {
 		<!--Sidebar (Topics)-->
 		<div class="col-md-2">
 			<?php
-				include("sidebar.php");
+				include("sidebar-home.php");
 			?>
 		</div>
 		<!--/.Sidebar (Topics)-->

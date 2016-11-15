@@ -1,28 +1,5 @@
-<?php
-if (isset($_POST['sb-filter'])) {
-	$filter=$_POST['sb-filter'];
-}
-if (isset($_POST['sb-value'])) {
-	$value=$_POST['sb-value'];
-}
-if (isset($_POST['sb-value2'])) {
-	$value2=$_POST['sb-value2'];
-}
-?>
-
 <script>
 $( document ).ready(function() {
-	filter=<?php echo '"' . $filter . '"'; ?>;
-	value =<?php echo '"' . $value  . '"'; ?>;
-	value2=<?php echo '"' . $value2 . '"'; ?>;
-	<?php $_POST = array(); ?>
-
-	console.log("received POST filter: filter="+filter+", value="+value+", value2="+value2);
-
-	if (filter!=='') {
-		filterEvents(filter, value, value2);
-	}
-
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
 		$(this).addClass('sb-item-selected');
@@ -36,16 +13,14 @@ $( document ).ready(function() {
 });
 
 function filterEvents(filter, value, value2) {
-	console.log("filtering: filter=" + filter + ", value=" + value + ", value2=" + value2);
-	$.post('controller/event-market-controller.php', {
-		'sb-filter': filter,
-		'sb-value' : value,
-		'sb-value2': value2,
-		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
-	})
-	.done(function( data ) {
-		$('#event-market-items').html(data);
-	});
+	var url = '../Eduvent/index.php?page=event-market';
+	var form = $('<form action="' + url + '" method="post">' +
+		'<input type="text" name="sb-filter" value="' + filter + '" />' +
+		'<input type="text" name="sb-value" value="'  + value  + '" />' +
+		'<input type="text" name="sb-value2" value="' + value2 + '" />' +
+		'</form>');
+	$('body').append(form);
+	form.submit();
 }
 </script>
 
