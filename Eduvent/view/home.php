@@ -108,7 +108,7 @@ $( document ).ready(function() {
 											echo '<div class="white-text text-xs-left event-list-item-text">';
 											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
 											echo '<h3>'.$events[$i]->getTitle().'</h3>';
-											echo '<span class="event-list-item-date">20.10., Mannheim</span>';
+											echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
 											echo '</div>';
 											echo '</a>';
 									}
@@ -127,7 +127,7 @@ $( document ).ready(function() {
 											echo '<div class="white-text text-xs-left event-list-item-text">';
 											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
 											echo '<h3>'.$events[$i]->getTitle().'</h3>';
-											echo '<span class="event-list-item-date">20.10., Mannheim</span>';
+											echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
 											echo '</div>';
 											echo '</a>';
 									}
