@@ -591,6 +591,7 @@ input:checked + .slider:before {
 }
 
 .event-image {
+	height: 12em;
 	width: 100%;
 }
 
@@ -603,6 +604,10 @@ input:checked + .slider:before {
 }
 
 /******************************************/
+
+.event-title {
+	height: 5em;
+}
 
 .event-title > h5 {
 	color: #1694b2;
@@ -619,6 +624,10 @@ input:checked + .slider:before {
 
 .event-text {
 	font-size: 0.9rem;
+	height: 7em;
+	margin-bottom: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card-footer {
