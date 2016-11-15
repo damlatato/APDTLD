@@ -175,7 +175,7 @@ else {
 						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
 					<div class="selects-1">
 							<p>Topic:</p>
-							<select class="form-control" name="select-1">
+							<select class="form-control" name="topic">
 								<option value="1">Art</option>
 								<option value="2">Business</option>
 								<option value="3">Cooking</option>
@@ -186,7 +186,7 @@ else {
 						<br>
 						<div class="selects-1">
 							<p>Event Type:</p>
-							<select class="form-control" name="select-1">
+							<select class="form-control" name="eventtype">
 								<option value="1">Conference</option>
 								<option value="2">Course</option>
 								<option value="3">Forum</option>
@@ -200,6 +200,9 @@ else {
 							<input type="text" name="price" class="address-city form-control" id="address-city">
 						</div>
 						<br>
+						 Select image to upload:
+    <input type="file" name="image" id="fileToUpload">
+    <br>
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="submit" class="btn" name="btn-signup">Submit</button>
 					</fieldset>
