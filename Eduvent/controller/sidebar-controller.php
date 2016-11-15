@@ -6,7 +6,7 @@ echo '
 </div>
 <div class="collapse" id="collapseTypes"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group filter-group-1">
+		<ul class="list-group filter-group">
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 		
 		foreach ($eventtypes as $key=>$value) {
@@ -23,7 +23,7 @@ echo '
 </div>
 <div class="collapse" id="collapseCategories"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group filter-group-2">
+		<ul class="list-group filter-group">
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($topics as $key=>$value) {
@@ -40,7 +40,7 @@ echo '
 </div>
 <div class="collapse" id="collapsePricing"><!--add class \'in\' to expand-->
 	<div>
-		<ul class="list-group filter-group-3">
+		<ul class="list-group filter-group">
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($priceCategories as $key=>$value) {

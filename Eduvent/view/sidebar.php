@@ -21,6 +21,10 @@ $( document ).ready(function() {
 
 	if (filter!=='') {
 		filterEvents(filter, value, value2);
+		if (filter!=='date') {
+			$('.sb-item').removeClass('sb-item-selected');
+			$( '.sb-item:contains("' + value + '")' ).addClass('sb-item-selected');
+		}
 	}
 
 	$('.sb-item').click(function(){
