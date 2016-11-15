@@ -173,85 +173,22 @@ else {
 					
 					<fieldset>
 						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
-						<div class="radio-buttons-1">
-							<p>Radio Buttons 1:</p>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-1"> Option 1
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-2"> Option 2
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-3"> Option 3
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-1-options" value="radio-buttons-1-option-4"> Option 4
-							</label>
-						</div>
-						<div class="radio-buttons-2">
-							<p>Radio Buttons 2:</p>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-1"> Option 1
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-2"> Option 2
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-3"> Option 3
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="radio-buttons-2-options" value="radio-buttons-2-option-4"> Option 4
-							</label>
-						</div>
-						<br>
-						<div class="checkboxes-1">
-							<p>Checkboxes 1:</p>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-1-options" value="checkboxes-1-option-1"> Option 1
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-1-options" value="checkboxes-1-option-2"> Option 2
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-1-options" value="checkboxes-1-option-3"> Option 3
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-1-options" value="checkboxes-1-option-4"> Option 4
-							</label>
-						</div>
-						<div class="checkboxes-2">
-							<p>Checkboxes 2:</p>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-2-options" value="checkboxes-2-option-1"> Option 1
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-2-options" value="checkboxes-2-option-2"> Option 2
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-2-options" value="checkboxes-2-option-3"> Option 3
-							</label>
-							<label class="checkbox-inline">
-								<input type="checkbox" name="checkboxes-2-options" value="checkboxes-2-option-4"> Option 4
-							</label>
-						</div>
+					
 						<br>
 						<div class="selects-1">
-							<p>Select 1:</p>
+							<p>Event Type:</p>
 							<select class="form-control" name="select-1">
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-								<option value="4">Option 4</option>
+								<option value="1">Conference</option>
+								<option value="2">Course</option>
+								<option value="3">Forum</option>
+								<option value="4">Hackathon</option>
+								<option value="4">Meeting</option>
 							</select>
 						</div>
-						<div class="selects-2">
-							<p>Select 2:</p>
-							<select class="form-control" name="select-2">
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-								<option value="3">Option 3</option>
-								<option value="4">Option 4</option>
-							</select>
+						<br>
+						<div class="form-group">
+							<label for="address-city">Price:</label><br>
+							<input type="text" name="price" class="address-city form-control" id="address-city">
 						</div>
 						<br>
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
