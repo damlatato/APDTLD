@@ -27,6 +27,7 @@ function post($datatype, $bodyjson){
 	$token = getAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype);
 	curl_setopt($ch, CURLOPT_POST,       1 );
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $bodyjson);	//created user as a body
@@ -50,6 +51,7 @@ function delete($datatype, $id){
 	$token = getAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype."/".$id );
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
@@ -96,6 +98,7 @@ function put($datatype, $id, $bodyjson){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype."/".$id );
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $bodyjson); //created user as a body
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));

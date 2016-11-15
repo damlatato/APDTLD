@@ -1,32 +1,27 @@
 <?php
-require_once '../../model/User.php';
-// $user = new USER();
-// -----------------REQUIREMENTS TO ARRANGE-------------------------------------
-// needs:  adding two field to db 
-// 1.'userStatus'--> enum('Y', 'N') --> userStatus default value has to be set as 'N'
-// 2. 'tokenCode' --> varchar(100) --> token code deafult value has to be empty
-// other requirements:
-// creating functions,
-// 1. $id = User::getUserByTokenCode($code);  --> to get id I need to create this function by using Tokencode to get the id of a user
-// 2. User::getStatusbyId($id)  --> to get status I need to create this function by using ID to get status of a user
-// -----------------END OF REQUIREMENTS TO ARRANGE-------------------------------------
-//if(empty($_GET['id']) && empty($_GET['code']))
-//{
-//  $user->redirect('../Eduvent/index.php?page=login');
-//}
-if(isset($_SESSION['usermail']))
+include_once('../../model/YaasConnector.php');
+spl_autoload_register(function ($class) {
+    $file = '../../model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+echo "HI!";
+echo $_GET['id'];
+
+if(isset($_GET['id']))
 {
+ $id = $_GET['id'];
  $statusY = "Y";
  $statusN = "N";
- $usermail = $_SESSION['usermail'];
  
- header("Location: ../../index.php");
 //  select from database where user id and token code are matched int provided url
- 		$user = User::getUserByEmail($usermail);
- 		if (User::getStatusbyId($user->getId())== $statusN) {
- 		
+ 		$user = User::getUserById($id);
+ 		echo $user->getStatus();
+ 		if ($user->getStatus()== $statusN) {
 //  		update status as 'yes' in db
 			$user->setStatus($statusY);
+			echo "updating status";
 			$user->putUser();
 			header("Location: ../../index.php?page=login");
  			$msg = "
@@ -37,7 +32,7 @@ if(isset($_SESSION['usermail']))
           ";
  	}
 else {
-	
+	echo $_SESSION['usermail'];
 	
 	$msg = "
              <div class='alert alert-error'>
