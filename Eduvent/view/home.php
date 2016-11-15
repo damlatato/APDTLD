@@ -103,7 +103,7 @@ $( document ).ready(function() {
 							<?php
 								$events=Event::getPublishedEventList();
 								$colsize = (int) (count($events)/2);
-									for ($i = 1; $i <= $colsize; $i++) {
+									for ($i = 0; $i < $colsize; $i++) {
 											echo '<a href="#" class="list-group-item card-overlay event-list-item">';
 											echo '<div class="white-text text-xs-left event-list-item-text">';
 											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
@@ -122,7 +122,7 @@ $( document ).ready(function() {
 						<div class="panel-heading"><h5 class="font-weight-bold"><b>Newest nearby</b></h5></div>
 						<div class="panel-body list-group event-items newest">
 						<?php
-							for ($i = $colsize+1; $i < count($events); $i++) {
+							for ($i = $colsize; $i < count($events); $i++) {
 											echo '<a href="#" class="list-group-item card-overlay event-list-item">';
 											echo '<div class="white-text text-xs-left event-list-item-text">';
 											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
