@@ -11,7 +11,7 @@ require_once 'model/User.php';
 if(isset($_SESSION['usermail']))
 {
 	//$user_login->redirect('../Eduvent/index.php');
-	echo json_encode(User::getUserByEmail($_SESSION['usermail'])->getVotedEvents()); //just to test that session works
+// 	echo json_encode(User::getUserByEmail($_SESSION['usermail'])->getVotedEvents()); //just to test that session works
 }
 
 if(isset($_POST['btn-login'])) {
@@ -24,8 +24,8 @@ if(isset($_POST['btn-login'])) {
 		$_SESSION['username'] = $user->getName();
 		$_SESSION['userSession'] = $user->getId();
 		$_SESSION['usermail'] = $user->getEmail();
-		echo $_SESSION['usermail'];
-		echo json_encode($user->getVotedEvents());
+// 		echo $_SESSION['usermail'];
+// 		echo json_encode($user->getVotedEvents());
 // 		echo "you passed";
    		header("Location: http://localhost/APDTLD/Eduvent/index.php");
 	}
