@@ -1,27 +1,30 @@
-<?php 
-require_once '../model/User.php';
+	<?php 
+	spl_autoload_register(function ($class) {
+		$file = '../model/'.$class.'.php';
+		if(file_exists($file)) {
+			include $file;
+		}
+	});
+require_once '../model/YaasConnector.php';
+require_once '../model/thesaurus.php';
 require_once 'initiatePage.php';
 $check = isLoggedUserExisting();
 if($check === true){
 	if(isset($_POST['btn-signup'])) {
+		
 	$email = $_SESSION['usermail'];
-	$user = User::getPasswordByEmail($email);
+	$user = User::getUserByEmail($email);
 	
 	$id = uniqid();
 	$title = $_POST['first-name'];
 	$description = $_POST['about-you'];
 	$datetime =   $_POST['birth-date'];
-	$location = $_POST['address'] . ',' . $_POST['address-city'] . ',' . $_POST['address-state'] . ',' . $_POST['address-country'] . ',' . $_POST['address-postal-code'] ;
-// 	$topic = $_POST['last-name'];
-	// 		$price =$_POST['birth-date'];
-	$event = new Event($id, null, $title, $description, $datetime, $location, null, null);
-	$event = deleteEvent();
-	$user = deleteUser();
+	$location =  new Address($_POST['address'], $_POST['address-street'], $_POST['address-housenumber'], $_POST['address-city'], $_POST['address-postal-code'], $_POST['address-country']) ;
 	
-	$event = setStatus(Event::$statuses[Published]);
-	$user = organizeEvent($event);
+	$event = new Event($id, $_POST['eventtype'], $title, $description, $datetime, $location, $_POST['topic'], $_POST['price'], $statuses["Published"]);
+	$user -> organizeEvent($event);
 	$message = "
-	Hello $name,
+	Hello". $_SESSION['username'].",
 	<br /><br />
 	Hello!<br/>
 	you have just created an event!";}
@@ -70,7 +73,6 @@ else {
 		<div class="row" style="    background-color: #fafafa!important;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);">
 			<div class="col-sm-12 msf-form">
-				
 				<form role="form" action="" method="post" class="form-inline">
 					
 					<fieldset>
@@ -200,9 +202,7 @@ else {
 							<input type="text" name="price" class="address-city form-control" id="address-city">
 						</div>
 						<br>
-						 Select image to upload:
-    <input type="file" name="image" id="fileToUpload">
-    <br>
+    
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="submit" class="btn" name="btn-signup">Submit</button>
 					</fieldset>
