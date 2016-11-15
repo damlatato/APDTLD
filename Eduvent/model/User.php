@@ -422,7 +422,6 @@ class User implements JsonSerializable{
 	
 	//////////////////////////////////////////////////
 	public function postUser(){
-		echo $this->jsonSerialize();
 		post("user", $this->jsonSerialize());
 	}
 	
