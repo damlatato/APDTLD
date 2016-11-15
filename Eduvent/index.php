@@ -72,7 +72,7 @@ if (isset($_GET['page'])) {
 	
 	if ($page=='home' or
 		$page=='event-market' or
-		$page=='create-event' or
+// 		$page=='create-event' or
 		$page=='event-proposals' or
 		$page=='create-proposal' or
 		$page=='mail-success' or

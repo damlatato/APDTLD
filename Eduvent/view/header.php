@@ -1,5 +1,7 @@
 <?php
 include_once('model/YaasConnector.php');
+ob_start();
+// require_once 'controller/initiatePage.php';
 spl_autoload_register(function ($class) {
     $file = 'model/'.$class.'.php';
 	if(file_exists($file)) {
@@ -11,7 +13,6 @@ include_once 'controller/shoppingCart/class.shoppingCart.php';
 include_once 'controller/shoppingCart/class.shoppingCartEvent.php';
 require_once 'controller/initiatePage.php';
 ?>
-
 <script>
 $( document ).ready(function() {
 	$(".theme-switch").click(function(){
@@ -51,7 +52,7 @@ $( document ).ready(function() {
 						<li class="nav-item"><a class="nav-link"
 							href="../Eduvent/index.php?page=event-market">Event market</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=create-event">Create event</a></li>
+							href="../Eduvent/controller/createevent.php">Create event</a></li>
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-proposals">Event proposals</a>
 						</li>
@@ -63,7 +64,7 @@ $( document ).ready(function() {
 							</a>
 						</li>
 						<li class="nav-item">
-							&nbsp&nbsp&nbsp <label class="switch">
+							<label class="switch">
 								<input class="theme-switch" type="checkbox"><div class="slider round"></div>
 							</label>
 						</li>
@@ -73,20 +74,17 @@ $( document ).ready(function() {
 
 						<!-- this part  shows welcome message of logged in user with username and  -->
 						<!-- a hyper link to logout the user and redirects the logout.php page. -->
-
-						<?php
-						//  ob_start();
-						//  session_start();
-						//  require_once '../Eduvent/controller/login/dbconfig.php';
-
-
+<?php
+	
 						// if session is not set this will redirect to login page
-						if(isLoggedUserExisting()== true) {
-							$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
-							$stmt->execute(array(":uid"=>$_SESSION['userSession']));
-							$row = $stmt->fetch(PDO::FETCH_ASSOC);
-							?>
-
+// 						if(isLoggedUserExisting()== true) {
+// 							$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
+// 							$stmt->execute(array(":uid"=>$_SESSION['userSession']));
+// 							$row = $stmt->fetch(PDO::FETCH_ASSOC);
+							$check = isLoggedUserExisting();
+							if($check == true)
+							{							
+?>
 						<!-- $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
 						<!-- 	$userRow=mysql_fetch_array($res); -->
 						<!-- 	include 'Livechat/livechat.php' -->
@@ -95,7 +93,7 @@ $( document ).ready(function() {
 							class="nav-link dropdown-toggle waves-effect waves light"
 							type="button" id="dropdownMenu1" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="true"> <i class="fa fa-user"></i>
-								<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $row['userName']; ?>&nbsp;<span
+								<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $_SESSION['username']; ?>&nbsp;<span
 								class="caret"></span>
 						</a>
 							<div class="dropdown-menu dropdown-default"
@@ -107,29 +105,22 @@ $( document ).ready(function() {
 									Event</a> <a class="dropdown-item waves-effect waves-light"
 									href="#">Bookings</a> <a
 									class="dropdown-item waves-effect waves-light"
-									href="../Eduvent/controller/login/logout.php?logout">Sign out</a>
+									href="controller/login/logout.php">Sign out</a>
 							</div>
 						</li>
-
-
-						<?php
-} else {
+<?php
+	} 
+	else 
+{
 ?>
-
-						<!-- header("Location: login.php"); -->
-						<!--   // select loggedin users detail -->
-						<!--   $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
-						<!--   $userRow=mysql_fetch_array($res); -->
-						<!--   exit; -->
-
 						<li>
 							<a href="../Eduvent/index.php?page=login">
 								<button type="button" class="btn btn-standard">Log in</button>
 							</a>
 						</li>
-
-						<?php } ?>
-
+<?php 
+	} 
+?>
 					</ul>
 
 					<!--Search form-->
@@ -143,5 +134,4 @@ $( document ).ready(function() {
 		</div>
 	</nav>
 	<!--/.Navbar-->
-
 </header>

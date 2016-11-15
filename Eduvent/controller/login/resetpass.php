@@ -20,15 +20,18 @@ if(isset($_GET['id']) && isset($_GET['code']))
 {
 	$id_inURL = $_GET['id'];
 	$tokenCode = $_GET['code'];
+	$usermail = $_SESSION['usermail'];
 	
-	$id = User::getUserIdByTokenCode($tokenCode);
-	$name = User::getUserById($id);
+	$user = User::getUserByEmail($usermail);
+	
+// 	$id = User::getUserIdByTokenCode($tokenCode);
+// 	$name = User::getUserById($id);
 	
 // 	$stmt = $user->runQuery("SELECT * FROM users WHERE ID=:uid AND tokenCode=:token");
 // 	$stmt->execute(array(":uid"=>$id,":token"=>$code));
 // 	$rows = $stmt->fetch(PDO::FETCH_ASSOC);
 	
-	if ($id == $id_inURL) {
+	
 	
 		if(isset($_POST['btn-reset-pass']))
 		{
@@ -47,7 +50,8 @@ if(isset($_GET['id']) && isset($_GET['code']))
 				$password = $cpass;
 // 				$stmt = $user->runQuery("UPDATE users SET userPass=:upass WHERE ID=:uid");
 // 				call function to update db 
-				
+				$user->setPassword($password);
+				$user->putUser();
 				$msg = "<div class='alert alert-success'>
 						<button class='close' data-dismiss='alert'>&times;</button>
 						Password Changed.
@@ -66,7 +70,7 @@ if(isset($_GET['id']) && isset($_GET['code']))
 	}
 	
 	
-}
+
 
 ?>
 <!DOCTYPE html>

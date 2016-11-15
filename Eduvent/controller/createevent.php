@@ -1,3 +1,54 @@
+<?php 
+require_once '../model/User.php';
+require_once 'initiatePage.php';
+$check = isLoggedUserExisting();
+if($check === true){
+	if(isset($_POST['btn-signup'])) {
+	$email = $_SESSION['usermail'];
+	$user = User::getPasswordByEmail($email);
+	
+	$id = uniqid();
+	$title = $_POST['first-name'];
+	$description = $_POST['about-you'];
+	$datetime =   $_POST['birth-date'];
+	$location = $_POST['address'] . ',' . $_POST['address-city'] . ',' . $_POST['address-state'] . ',' . $_POST['address-country'] . ',' . $_POST['address-postal-code'] ;
+// 	$topic = $_POST['last-name'];
+	// 		$price =$_POST['birth-date'];
+	$event = new Event($id, null, $title, $description, $datetime, $location, null, null);
+	$event = deleteEvent();
+	$user = deleteUser();
+	
+	$event = setStatus(Event::$statuses[Published]);
+	$user = organizeEvent($event);
+	$message = "
+	Hello $name,
+	<br /><br />
+	Hello!<br/>
+	you have just created an event!";}
+}
+
+else {
+	
+	
+	header('Location: ../index.php?page=login');
+	
+	
+	
+	
+}
+
+
+
+
+?>
+ <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+        <link rel="stylesheet" href="../lib/createevent/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../lib/createevent/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../lib/createevent/assets/css/form-elements.css">
+        <link rel="stylesheet" href="../lib/createevent/assets/css/style.css">
+        <link rel="stylesheet" href="../lib/createevent/assets/css/media-queries.css">
+        
 <!-- Description -->
 <div class="description-container">
 	<div class="container">
@@ -9,58 +60,38 @@
 <!-- Multi Step Form -->
 <div class="msf-container">
 	<div class="container">
+<?php if(isset($msg)) { echo $msg; } ?>
 		<div class="row">
 			<div class="col-sm-12 msf-title">
-				<h3>Create Event</h3>
+				<h3>Create <span style="color:#1694b2;">Event</span></h3>
 				<p>Please complete the form below to create your event:</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" style="    background-color: #fafafa!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);">
 			<div class="col-sm-12 msf-form">
 				
 				<form role="form" action="" method="post" class="form-inline">
 					
 					<fieldset>
-						<h4>Information <span class="step">(Step 1 / 6)</span></h4>
+						<h4>Information <span class="step">(Step 1 / 4)</span></h4>
 						<div class="form-group">
-							<label for="first-name">First Name:</label><br>
+							<label for="first-name">Company Name:</label><br>
 							<input type="text" name="first-name" class="first-name form-control" id="first-name">
 						</div>
-						<div class="form-group">
-							<label for="last-name">Last Name:</label><br>
-							<input type="text" name="last-name" class="last-name form-control" id="last-name">
-						</div>
-					   
-					   
 						<br>
-						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
-					</fieldset>
-					
-					<fieldset>
-						<h4>Place and Date <span class="step">(Step 2 / 6)</span></h4>
-						<div class="form-group">
-							<label for="birth-city">City:</label><br>
-							<input type="text" name="birth-city" class="birth-city form-control" id="birth-city">
-						</div>
-						<div class="form-group">
-							<label for="birth-state">State / Province:</label><br>
-							<input type="text" name="birth-state" class="birth-state form-control" id="birth-state">
-						</div>
-						<div class="form-group">
-							<label for="birth-country">Country:</label><br>
-							<input type="text" name="birth-country" class="birth-country form-control" id="birth-country">
-						</div>
-						<div class="form-group">
+					   <div class="form-group">
 							<label for="birth-date">Date (YYYY/MM/DD):</label><br>
-							<input type="text" name="birth-date" class="birth-date form-control" id="birth-date">
+							<input type="date" name="birth-date" class="birth-date form-control" id="birth-date">
 						</div>
+					   
 						<br>
-						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
 					
+					
 					<fieldset>
-						<h4>Address and Contact Information <span class="step">(Step 3 / 6)</span></h4>
+						<h4>Address and Contact Information <span class="step">(Step 2 / 4)</span></h4>
 						<div class="form-group">
 							<label for="address">Address:</label><br>
 							<input type="text" name="address" class="address form-control" id="address">
@@ -98,32 +129,32 @@
 						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
 					
-					<fieldset>
-						<h4>Social Media Profiles <span class="step">(Step 4 / 6)</span></h4>
-						<div class="form-group">
-							<label for="social-facebook">Facebook:</label><br>
-							<input type="text" name="social-facebook" class="social-facebook form-control" id="social-facebook">
-						</div>
-						<div class="form-group">
-							<label for="social-twitter">Twitter:</label><br>
-							<input type="text" name="social-twitter" class="social-twitter form-control" id="social-twitter">
-						</div>
-						<div class="form-group">
-							<label for="social-google-plus">Google Plus:</label><br>
-							<input type="text" name="social-google-plus" class="social-google-plus form-control" id="social-google-plus">
-						</div>
+<!-- 					<fieldset> -->
+<!-- 						<h4>Social Media Profiles <span class="step">(Step 4 / 6)</span></h4> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="social-facebook">Facebook:</label><br> -->
+<!-- 							<input type="text" name="social-facebook" class="social-facebook form-control" id="social-facebook"> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="social-twitter">Twitter:</label><br> -->
+<!-- 							<input type="text" name="social-twitter" class="social-twitter form-control" id="social-twitter"> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="social-google-plus">Google Plus:</label><br> -->
+<!-- 							<input type="text" name="social-google-plus" class="social-google-plus form-control" id="social-google-plus"> -->
+<!-- 						</div> -->
 					 
 					  
-						<br>
-						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
-					</fieldset>
+<!-- 						<br> -->
+<!-- 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button> -->
+<!-- 						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button> -->
+<!-- 					</fieldset> -->
 					
 					<fieldset>
-						<h4>Description of Event <span class="step">(Step 5 / 6)</span></h4>
+						<h4>Description of Event <span class="step">(Step 3 / 4)</span></h4>
 						<div class="form-group">
 							<label for="about-you">Tell us a bit about the event:</label><br>
-							<textarea name="about-you" class="about-you form-control" id="about-you"></textarea>
+							<textarea name="about-you" class="about-you form-control" id="about-you" style="border: 1px solid #ccc;"></textarea>
 						</div>
 						<br>
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
@@ -133,7 +164,7 @@
 			
 					
 					<fieldset>
-						<h4>Other Form Elements <span class="step">(Step 6 / 6)</span></h4>
+						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
 						<div class="radio-buttons-1">
 							<p>Radio Buttons 1:</p>
 							<label class="radio-inline">
@@ -216,7 +247,7 @@
 						</div>
 						<br>
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-						<button type="submit" class="btn">Submit</button>
+						<button type="submit" class="btn" name="btn-signup">Submit</button>
 					</fieldset>
 					
 				</form>
@@ -226,6 +257,11 @@
 	</div>
 </div>
 
+        <!-- Javascript -->
+        <script src="../lib/createevent/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="../lib/createevent/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../lib/createevent/assets/js/jquery.backstretch.min.js"></script>
+        <script src="../lib/createevent/assets/js/scripts.js"></script>
 
 <!--[if lt IE 10]>
 	<script src="assets/js/placeholder.js"></script>

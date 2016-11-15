@@ -3,7 +3,7 @@
 //  and then after submitting the form, the php code will match that user email and password combination in database 
 //  and when it finds both results in table then it will start a session and
 //   allow user to access home page else it will show appropriate message.
-require_once '../model/User.php';
+require_once 'model/User.php';
 //$reg_user = new USER();
 if(isset($_SESSION['usermail'])) {
 	//$reg_user->redirect('../Eduvent/index.php?page=settings');
