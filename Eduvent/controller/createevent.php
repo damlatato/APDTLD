@@ -97,6 +97,14 @@ else {
 							<input type="text" name="address" class="address form-control" id="address">
 						</div>
 						<div class="form-group">
+							<label for="address">Street:</label><br>
+							<input type="text" name="address-street" class="address form-control" id="address">
+						</div>
+						<div class="form-group">
+							<label for="address">House Number:</label><br>
+							<input type="text" name="address-housenumber" class="address form-control" id="address">
+						</div>
+						<div class="form-group">
 							<label for="address-city">City:</label><br>
 							<input type="text" name="address-city" class="address-city form-control" id="address-city">
 						</div>
@@ -112,18 +120,18 @@ else {
 							<label for="address-postal-code">Postal Code:</label><br>
 							<input type="text" name="address-postal-code" class="address-postal-code form-control" id="address-postal-code">
 						</div>
-						<div class="form-group">
-							<label for="telephone">Telephone:</label><br>
-							<input type="text" name="telephone" class="telephone form-control" id="telephone">
-						</div>
-						<div class="form-group">
-							<label for="mobile-phone">Mobile Phone:</label><br>
-							<input type="text" name="mobile-phone" class="mobile-phone form-control" id="mobile-phone">
-						</div>
-						<div class="form-group">
-							<label for="email">Email:</label><br>
-							<input type="text" name="email" class="email form-control" id="email">
-						</div>
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="telephone">Telephone:</label><br> -->
+<!-- 							<input type="text" name="telephone" class="telephone form-control" id="telephone"> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="mobile-phone">Mobile Phone:</label><br> -->
+<!-- 							<input type="text" name="mobile-phone" class="mobile-phone form-control" id="mobile-phone"> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="email">Email:</label><br> -->
+<!-- 							<input type="text" name="email" class="email form-control" id="email"> -->
+<!-- 						</div> -->
 						<br>
 						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
