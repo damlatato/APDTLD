@@ -210,7 +210,7 @@ input:checked + .slider:before {
   transform: translateX(13px);
 }
 
-/* Rounded sliders */
+/************ Rounded sliders *************/
 
 .slider.round {
   border-radius: 30px;
@@ -415,10 +415,15 @@ input:checked + .slider:before {
 }
 
 .event-list-item {
-	padding-top: 35px;
-	padding-bottom: 35px;
+	height: 10.7em;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
 	padding-left: 12px;
 	padding-right: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .event-list-item:hover {
