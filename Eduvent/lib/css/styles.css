@@ -539,7 +539,7 @@ input:checked + .slider:before {
 
 .custom-dropdown-menu li {
 	border-bottom: 0.6px solid lightgrey;
-	display: inline-block;
+	display: block;
 	margin: 0.2em;
 }
 
