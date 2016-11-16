@@ -82,8 +82,8 @@ if(isset($_POST['btn-login'])) {
 						</div>
 
 						<div class="text-xs-center">
-							<a href="../Eduvent/index.php?page=fpass" class="btn btn-standard" type="submit" name="btn-login">Log in</a>
-							<a href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</a>
+							<button class="btn btn-standard" type="submit" name="btn-login">Log in</button>
+							<button href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</button>
 						</div>
 						<hr>
 						<a href="../Eduvent/index.php?page=fpass">Lost your password?</a>
