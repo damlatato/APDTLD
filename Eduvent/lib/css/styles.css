@@ -10,10 +10,6 @@ html, body {
 	margin-top: 10px;
 }
 
-/*.list-group-item {
-	padding: 3px;
-}*/
-
 /******************************************/
 /*             Buttons                    */
 /******************************************/
@@ -100,9 +96,9 @@ html, body {
 	margin-bottom: 0;
 }
 
-.btn-grey-special-small:hover {
+/*.btn-grey-special-small:hover {
 	
-}
+}*/
 
 .btn-dark-grey-yellow {
 	background-color: #424242;
@@ -151,7 +147,7 @@ html, body {
 	color: lightgrey!important;
 }
 
-/* Theme switcher */
+/************ Theme switcher **************/
 
 .switch {
   position: relative;
@@ -236,7 +232,7 @@ input:checked + .slider:before {
 	color: #1694b2;
 	font-size: 1.1rem;
     line-height: 36px;
-	margin-bottom: 1px;
+	margin-bottom: -1.1px;
 }
 
 .sidebar-nav li {
