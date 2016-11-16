@@ -79,7 +79,6 @@ function get($datatype){
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("authorization: Bearer ".$token, 'Content-Type: application/json'));
 	$result=curl_exec ($ch);					//get users list from DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-	
 	if ($code!=200){
 		$token = getAccessToken();
 		$result=curl_exec ($ch);				//get users list from DB

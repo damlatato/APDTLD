@@ -37,10 +37,10 @@ class Interest implements JsonSerializable{
 	}
 	
 	public static function fromJSONa($interestAj){
-		if ($interestAj === 'null'){
+		$interestAv = json_decode($interestAj);
+		if (count($interestAv)<1){
 			return array();
 		}
-		$interestAv = json_decode($interestAj);
 		$interestA = array();
 		foreach($interestAv as $key=>$interestj){
 			$interest = Interest::fromJSON($interestj);
