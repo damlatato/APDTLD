@@ -23,17 +23,9 @@ include_once 'model/thesaurus.php';
 <!-- JQuery -->
 <script type="text/javascript" src="../Eduvent/lib/js/jquery-3.1.1.min.js"></script>
 
-<!-- CSS
- <link href="../Eduvent/lib/css/animate.min.css" rel="stylesheet">
- 
-    <link href="../Eduvent/lib/css/owl.theme.css" rel="stylesheet">
+<!-- CSS -->
 	
-    <link href="../Eduvent/view/css/style.default.css" rel="stylesheet" id="theme-stylesheet"> -->
-
-    <!-- your stylesheet with modifications 
-    <link href="../Eduvent/view/css/custom.css" rel="stylesheet">-->
-	
-<!-- Font Awesome-->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="../Eduvent/lib/font-awesome/css/font-awesome.min.css" type='text/css'>
 
 <!-- Bootstrap core CSS -->
@@ -47,9 +39,6 @@ include_once 'model/thesaurus.php';
 
 <!-- Datepicker -->
 <link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css" type='text/css'>
-
-<!-- Multi-step form -->
-
 
 <!-- Favicons and touch icons -->
 <link rel="shortcut icon" type="image/x-icon" href="../Eduvent/view/images/favicon.png">
@@ -119,14 +108,6 @@ include 'view/footer.php';
 
 <!-- Datepicker -->
 <script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
-
-<!-- 
-<script src="js/respond.min.js"></script>-->
-
-<!-- MSF Scripts 
-<script type="text/javascript" src="../Eduvent/lib/js/jquery.backstretch.min.js"></script>
-<script type="text/javascript" src="../Eduvent/lib/js/placeholder.js"></script>
-<script type="text/javascript" src="../Eduvent/lib/js/msf-scripts.js"></script>-->
 
 <!-- Custom scripts -->
 <script type="text/javascript" src="controller/js/shoppingCart.js"></script>

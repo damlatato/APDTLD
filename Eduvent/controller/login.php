@@ -40,8 +40,9 @@ if(isset($_POST['btn-login'])) {
 }
 ?>
 
-<div id="login">
-	<div class="container">
+<div class="container flex-center">
+	<div class="row">
+		<div class="col-lg-12">
 
 <?php 
 	if(isset($_GET['error'])) {
@@ -49,45 +50,49 @@ if(isset($_POST['btn-login'])) {
 
 		<div class='alert alert-error'>
 			<button class='close' data-dismiss='alert'>&times;</button>
-			<strong>Sorry!</strong>Wrong details!</div>
+			<strong>Sorry!</strong>This Account is not activated. Please click on the activation link in your email. 
+		</div>
 
 <?php
 	}
 ?>
 
-		<form class="form-signin" method="post"
-			style="margin-top: 50px;
-				max-width: 300px;
-				padding: 19px 29px 29px;
-				margin: 34px auto 20px;
-				background-color: #fff;
-				border: 1px solid #e5e5e5;
-				font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-				font-size: 14px;
-				line-height: 20px;
-				color: #333;
-				border-radius: 5px;box-shadow: 0 1px 2px rgba(0,0,0,.05);">
-<?php if(isset($msg)) echo $msg;  ?>
-			<h2 class="form-signin-heading" >Log In.</h2><hr />
-			<input type="email" class="input-block-level"
-				style="font-size: 16px;
-					height: auto;
-					margin-bottom: 15px;
-					padding: 7px 9px;  border: 1px solid #ccc;  border-radius: 4px;width: 226px;"
-				placeholder="Email address" name="txtemail" required />
-			<input type="password" class="input-block-level"
-				style="font-size: 16px;
-					height: auto;
-					margin-bottom: 15px;
-					padding: 7px 9px; border: 1px solid #ccc;   border-radius: 4px;width: 226px;" placeholder="Password" name="txtupass" required />
-			<hr />
-			<button class="btn btn-standard pull-left" type="submit" name="btn-login">Log in</button>
-			
-			<br>
-			<!--<a href="../Eduvent/controller/signup.php" style="float:right;background: #c12e2a;" class="btn">Sign up</a><hr />-->
-			<a href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</a><hr />
-			<a href="../Eduvent/index.php?page=fpass">Lost your password?</a>
-		</form>
+			<form class="form-signin" method="post">
 
-	</div> <!-- /container -->
+<?php if(isset($msg)) echo $msg;  ?>
+
+				<div class="card">
+					<div class="card-block">
+
+						<div class="text-xs-center">
+							<h3><i class="fa fa-user"></i> Log in:</h3>
+							<hr>
+						</div>
+
+						<div class="md-form">
+							<i class="fa fa-envelope prefix"></i>
+							<input type="text" id="li-email" class="form-control">
+							<label for="li-email">Your email</label>
+						</div>
+
+						<div class="md-form">
+							<i class="fa fa-lock prefix"></i>
+							<input type="password" id="li-password" class="form-control">
+							<label for="li-password">Your password</label>
+						</div>
+
+						<div class="text-xs-center">
+							<a href="../Eduvent/index.php?page=fpass" class="btn btn-standard" type="submit" name="btn-login">Log in</a>
+							<a href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</a>
+						</div>
+						<hr>
+						<a href="../Eduvent/index.php?page=fpass">Lost your password?</a>
+
+					</div>
+				</div>
+			</form>
+			<!--/.Form-->
+
+		</div>
+	</div>
 </div>
