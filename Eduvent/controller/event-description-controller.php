@@ -14,7 +14,15 @@
     <div class="col-md-12">
 		<div class="row">
 			<div class="col-md-7">
-				<img src="<?php echo $event->getimgHref() ?>" class="event-img img-fluid">
+				<img src="
+						<?php
+							if ($event->getimgHref()!=='') {
+								echo $event->getimgHref();
+							}
+							else {
+								echo 'view/images/event-img.png'
+							}
+						?>" class="event-img img-fluid">
 			</div>	
 			<div class="col-sm-5">
 				<div class="row">
