@@ -66,7 +66,7 @@ foreach ($events as $event) {
 								echo $event->getimgHref();
 							}
 							else {
-								echo 'view/images/event-img.png'
+								echo 'view/images/event-img.png';
 							}
 						?>" class="em-event-img img-fluid" alt="" height="195px">
 					<a href="#">
