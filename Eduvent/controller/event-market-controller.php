@@ -56,10 +56,10 @@ foreach ($events as $event) {
 ?>
 		<div class="col-md-4 event-market-col">
 			<!--Card-->
-			<div class="event-card card">
+			<div class="event-card card hoverable">
 
 				<!--Card image-->
-				<div class="event-image view overlay hm-white-slight">
+				<div class="event-image view overlay">
 					<img src="<?php echo $event->getimgHref() ?>" class="em-event-img img-fluid" alt="" height="195px">
 					<a href="#">
 						<div class="mask"></div>

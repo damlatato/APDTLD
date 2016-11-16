@@ -602,7 +602,6 @@ input:checked + .slider:before {
 /******************************************/
 
 .event-card {
-	/*margin-bottom: 0;*/
 	margin: 6px;
 }
 
@@ -629,6 +628,8 @@ input:checked + .slider:before {
 
 .event-title {
 	height: 5em;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .event-title > h5 {
