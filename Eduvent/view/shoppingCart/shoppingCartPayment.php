@@ -19,6 +19,7 @@
 				            <th></th>
 				            <th></th>
 				            <th>payment method</th>
+				            <th></th>
 				        </tr>
 				    </thead>
 					<tbody>

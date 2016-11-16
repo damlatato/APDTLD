@@ -189,8 +189,11 @@ $( document ).ready(function() {
 													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+												<li class="text-xs-left">
+													<a class="event-dropdown-item" href="#">
+														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
+													</a>
+												</li>
 											</ul>
 										</div>
 									</div>

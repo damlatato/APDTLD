@@ -1,7 +1,7 @@
 $('.insert-to-shopping-cart').click(function() {
-	var $eventID = $(this).attr("eventid");
-	var $quantity = $('#eventquantity').attr("value");
-	var $amountGift = $('#eventamountgift'+$eventID+ ' option:selected').attr("value");
+	$eventID = $(this).attr("eventid");
+	$quantity = $('#eventquantity').attr("value");
+	$amountGift = $('#eventamountgift'+$eventID+ ' option:selected').attr("value");
 	
 	if (typeof $quantity == 'undefined'){
 		//only in detail view the quantity can be choosed, not in event market 
@@ -36,7 +36,7 @@ $('.insert-to-shopping-cart').click(function() {
 });
 
 $('.delete-from-shopping-cart').click(function() {
-	var $eventID = $(this).attr("eventid");
+	$eventID = $(this).attr("eventid");
 	$.ajax({
 	  type: "POST",
 	  url: "controller/shoppingCart/shoppingCartHandler.php",
@@ -59,17 +59,20 @@ $("#alert-target").click(function () {
 
 
 $('.count-amount-up').click(function() {
-	
 	$quantity = $('#eventquantity').attr("value");
 	$quantity++; 
 	 $('#eventquantity').attr("value", $quantity);
 });
 
 $('.count-amount-down').click(function() {
-	
 	$quantity = $('#eventquantity').attr("value");
-	
 	$quantity--; 
-	
 	 $('#eventquantity').attr("value", $quantity);
 });
+
+
+$('.subscribe-event').click(function() {
+	$eventID = $(this).attr("eventid");
+	$('#modalEventID').attr("value", $eventID);
+});
+

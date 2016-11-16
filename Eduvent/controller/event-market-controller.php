@@ -43,6 +43,8 @@ else {
 
 $eventCounter=0;
 
+require_once 'view/subscribeform.php';
+
 foreach ($events as $event) {
 	if ($eventCounter%3==0) {
 		if ($eventCounter>0) {
@@ -96,8 +98,11 @@ foreach ($events as $event) {
 										<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
 									<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 										<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-									<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-										<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+									<li class="text-xs-left">
+										<a eventid="<?php echo $event->getId() ?>" class="event-dropdown-item subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe">
+											<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
+										</a>
+									</li>
 								</ul>
 							</div>
 						</div>

@@ -7,6 +7,7 @@ if (isset($_POST['purchaseshoppingCart'])){
 			You will receive a puchase confirmation by email.<br>
 <?php
 	include_once 'controller/mail.php';
+	deleteShoppingCart();
 ?>
 		</div>
 	</div>

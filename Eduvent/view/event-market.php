@@ -1,5 +1,9 @@
 <div class="container">
-
+<?php
+	if(isset($_POST['sendsubscribeconfirmation'])) {
+		include('view/subscription-success.php');
+	} else {
+?>
 	<!--Sidebar (Topics)-->
 	<div class="col-md-2">
 		<?php
@@ -43,4 +47,6 @@
 
 	</div>
 	<!--/.Content-->
+	
+<?php } ?>
 </div>

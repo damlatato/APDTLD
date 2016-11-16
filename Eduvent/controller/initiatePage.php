@@ -12,6 +12,10 @@
 			$_SESSION['shoppingCartSession'] = new ShoppingCart;
 		}
 	}
+	
+	function deleteShoppingCart(){
+		$_SESSION['shoppingCartSession'] = new ShoppingCart;
+	}
 
 	function hasShoppingCartAtLeastOneEvent(){
 		$shoppingCart = $_SESSION['shoppingCartSession'];

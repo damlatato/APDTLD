@@ -9,13 +9,24 @@ if(isset($_SESSION['usermail'])) {
 
 if (isset($_POST['purchaseshoppingCart'])){
 	$message = "WTF";
-	send_mail($message,"Purchase Confirmation","maryoupi@gmail.de");
+	$success = send_mail($message,"Purchase Confirmation","donloco1@gmx.de");
 }
 
 //TODO send mail subscribe
 if(isset($_POST['sendsubscribeconfirmation'])) {
-	$message = ""; //TODO
-	send_mail($message,"Subscribe Mail","maryoupi@gmail.de");
+	if ($email == ""){
+		echo "Please type a correct email.";
+	} else {
+		$message = "You successfully subscribed to newsletter of the company ".$event->geteventOrganizer().".";
+		$success = send_mail($message,"Subscribe Mail",$email); //maryoupi@gmail.de
+		if ($success){
+			echo "You successfully subscribed to newsletter: ".$event->geteventOrganizer()." with your email ".$email.".</br>";
+			echo "Message has been sent.";
+		} else {
+			echo "Subscription to the newsletter fails. </br>";
+			echo 'Message could not be sent.';
+		}
+	}
 }
 
 if(isset($_POST['sendsupportmail'])) {
@@ -27,7 +38,7 @@ if(isset($_POST['sendsupportmail'])) {
 	//$user = User::getUserByEmail($email);
 
 	if ($name == "" || $email == "" || $subject == "" || $description == "") {
-		echo 'At least one of the form inputs not correct given.';
+		echo 'At least one of the form inputs are not correct given.';
 	} else {
 	
 		$message = "
@@ -39,7 +50,12 @@ if(isset($_POST['sendsupportmail'])) {
 		Description: <br />
 		$description";
 	
-		send_mail($message,"Support Mail","maryoupi@gmail.de");
+		$success = send_mail($message,"Support Mail","maryoupi@gmail.de");
+		if ($success){
+			echo 'Message has been sent.';
+		} else {
+			echo 'Message could not be sent. ' . $mail->ErrorInfo;
+		}
 	}
 }
 
@@ -63,10 +79,9 @@ function send_mail($message,$mailsubject,$emailTo)
 	//$mail->Send();
 	
 	if(!$mail->send()) {
-		echo 'Message could not be sent.';
-		echo 'Mailer Error: ' . $mail->ErrorInfo;
+		return false;
 	} else {
-		echo 'Message has been sent.';
+		return true;
 	}
 }
 ?>
