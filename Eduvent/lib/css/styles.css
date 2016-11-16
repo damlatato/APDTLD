@@ -113,11 +113,6 @@ html, body {
 	background-color: #FED835;
 }
 
-.custom-dropdown-menu-special {
-	margin-top: 0px!important;
-	min-width: 170px!important;
-}
-
 /******************************************/
 /*          Event page                    */
 /******************************************/
@@ -523,12 +518,13 @@ input:checked + .slider:before {
 }
 
 /******************************************/
-/*         Search/filter bars             */
+/*        Dropdown menu                   */
 /******************************************/
 
 .custom-dropdown-btn {
     position: relative;
     display: inline-block;
+	margin-bottom: 0;
 }
 
 .custom-dropdown-menu {
@@ -540,9 +536,10 @@ input:checked + .slider:before {
 	left: 0;
 	margin-top: -5px;
     min-width: 160px;
-    padding: 0.3em 0.5em;
+	width: auto;
+    padding: 0.3em 0.3em;
 	position: absolute;
-    z-index: 1;
+    z-index: 10;
 }
 
 .custom-dropdown-btn:hover .custom-dropdown-menu {
@@ -550,8 +547,9 @@ input:checked + .slider:before {
 }
 
 .custom-dropdown-menu li {
-	display: block;
-	margin: 0.3em;
+	border-bottom: 0.6px solid lightgrey;
+	display: inline-block;
+	margin: 0.2em;
 }
 
 .custom-dropdown-menu li:hover {
@@ -562,6 +560,17 @@ input:checked + .slider:before {
 .custom-dropdown-menu input {
 	margin: 0!important;
 }
+
+/******************************************/
+
+.custom-dropdown-menu-special {
+	margin-top: 0px!important;
+	width: 300px!important;
+}
+
+/******************************************/
+/*         Search/filter bars             */
+/******************************************/
 
 .btn-grid-view-small, .btn-grid-view, .btn-list-view {
 	background-color: #1694b2;
@@ -664,14 +673,14 @@ input:checked + .slider:before {
 }
 
 .event-dropdown-menu {
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 180px;
 	width: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .event-menu:hover .event-dropdown-menu {
@@ -688,7 +697,7 @@ input:checked + .slider:before {
 }
 
 /******************************************/
-/*         Event proposal                 */
+/*         Event proposals                */
 /******************************************/
 
 .btn-propose {
