@@ -58,7 +58,7 @@ foreach ($events as $event) {
 
 				<!--Card image-->
 				<div class="event-image view overlay hm-white-slight">
-					<img src="<?php echo $event->getimgHref() ?>" class="img-fluid" alt="" height="195px">
+					<img src="<?php echo $event->getimgHref() ?>" class="em-event-img img-fluid" alt="" height="195px">
 					<a href="#">
 						<div class="mask"></div>
 					</a>
