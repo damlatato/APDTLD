@@ -20,7 +20,7 @@
 								echo $event->getimgHref();
 							}
 							else {
-								echo 'view/images/event-img.png'
+								echo 'view/images/event-img.png';
 							}
 						?>" class="event-img img-fluid">
 			</div>	
