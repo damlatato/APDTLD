@@ -77,19 +77,15 @@ $( document ).ready(function() {
 						<!-- this part  shows welcome message of logged in user with username and  -->
 						<!-- a hyper link to logout the user and redirects the logout.php page. -->
 <?php
-	
-						// if session is not set this will redirect to login page
-// 						if(isLoggedUserExisting()== true) {
-// 							$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
-// 							$stmt->execute(array(":uid"=>$_SESSION['userSession']));
-// 							$row = $stmt->fetch(PDO::FETCH_ASSOC);
-							$check = isLoggedUserExisting();
-							if($check == true)
-							{							
+
+// if session is not set this will redirect to login page
+// 	if(isLoggedUserExisting()== true) {
+// 	$stmt = $user_home->runQuery("SELECT * FROM users WHERE ID=:uid");
+// 	$stmt->execute(array(":uid"=>$_SESSION['userSession']));
+// 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	$check = isLoggedUserExisting();
+	if ($check == true) {
 ?>
-						<!-- $res=mysql_query("SELECT * FROM users WHERE ID=".$_SESSION['user']); -->
-						<!-- 	$userRow=mysql_fetch_array($res); -->
-						<!-- 	include 'Livechat/livechat.php' -->
 
 						<li class="nav-item dropdown">
 							<a class="hd-account nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
