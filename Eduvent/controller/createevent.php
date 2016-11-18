@@ -21,13 +21,64 @@ if($check === true){
 	$datetime =   $_POST['birth-date'];
 	$location =  new Address($_POST['address'], $_POST['address-street'], $_POST['address-housenumber'], $_POST['address-city'], $_POST['address-postal-code'], $_POST['address-country']) ;
 	
-	$event = new Event($id, $_POST['eventtype'], $title, $description, $datetime, $location, $_POST['topic'], $_POST['price'], $statuses["Published"]);
+
+	
+//---image upload ---------------------------------------------------------------------------------------	
+	$target_dir = "../view/images/eventimages/";
+	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	// Check if image file is a actual image or fake image
+	if(isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+		if($check !== false) {
+			echo "File is an image - " . $check["mime"] . ".";
+			$uploadOk = 1;
+		} else {
+			echo "File is not an image.";
+			$uploadOk = 0;
+		}
+	}
+	
+	// Check if file already exists
+	if (file_exists($target_file)) {
+		echo "Sorry, file already exists.";
+		$uploadOk = 0;
+	}
+	// Check file size
+	if ($_FILES["fileToUpload"]["size"] > 500000) {
+		echo "Sorry, your file is too large.";
+		$uploadOk = 0;
+	}
+	// Allow certain file formats
+	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+	&& $imageFileType != "gif" ) {
+		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		$uploadOk = 0;
+	}
+	// Check if $uploadOk is set to 0 by an error
+	if ($uploadOk == 0) {
+		echo "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+	} else {
+		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+		} else {
+			echo "Sorry, there was an error uploading your file.";
+		}
+	}
+//---------------------------------------------------------------------------------------	
+	
+	$event = new Event($id, $_POST['eventtype'], $title, $description, $datetime, $location, $_POST['topic'], $_POST['price'], $statuses["Published"], $target_file);
 	$user -> organizeEvent($event);
 	$message = "
 	Hello". $_SESSION['username'].",
 	<br /><br />
 	Hello!<br/>
-	you have just created an event!";}
+	you have just created an event!";
+	
+	
+	}
 }
 
 else {
@@ -73,7 +124,7 @@ else {
 		<div class="row" style="    background-color: #fafafa!important;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);">
 			<div class="col-sm-12 msf-form">
-				<form role="form" action="" method="post" class="form-inline">
+				<form role="form" action="" method="post" class="form-inline" enctype="multipart/form-data">
 					
 					<fieldset>
 						<h4>Information <span class="step">(Step 1 / 4)</span></h4>
@@ -200,6 +251,11 @@ else {
 						<div class="form-group">
 							<label for="address-city">Price:</label><br>
 							<input type="text" name="price" class="address-city form-control" id="address-city">
+						</div>
+						<br>
+    						<div class="form-group">
+							<label for="address-city">Upload Image:</label><br>
+							<input type="file" name="fileToUpload" id="fileToUpload">
 						</div>
 						<br>
     
