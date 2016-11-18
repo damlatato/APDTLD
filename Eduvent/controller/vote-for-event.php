@@ -1,26 +1,24 @@
 <?php
-include_once('../Eduvent/model/YaasConnector.php');
+session_start();
+
+if (isset($_POST['root-path'])) {
+	$rootPath = $_POST['root-path'];
+	define ('ROOT_PATH', $rootPath);
+}
+
+include_once(ROOT_PATH . 'model/YaasConnector.php');
 spl_autoload_register(function ($class) {
-    $file = '../Eduvent/model/'.$class.'.php';
+    $file = ROOT_PATH . 'model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
 });
 
-/*$eventList=Event::getEventList();
-foreach ($eventList as $varEvent) {
-    $varEvent->deleteEvent();
-}*/
-
-//$address=new Address(null, null, null, "Mannheim", null, "Germany");
-$address=new Address(null, null, null, null, null, null);
-$user=new User(uniqid(),"Leon Lourie","leonlourie@yahoo.de","12345", $address, "m", "18.01.1990", null, null);
-$user->deleteUser();
-$user->postUser();
-
-$event=Event::getById($_POST['proposalId']);
+$userId = $_SESSION['userSession'];
+$user = User::getUserById($userId);
+$event = Event::getById($_POST['proposalId']);
 $user->voteEvent($event);
 
-$output="vote-id=" . $_POST['proposalId'] . " / " . $event->getId();
+$output = "vote-id=" . $_POST['proposalId'] . " / " . $event->getId();
 echo $output;
 ?>

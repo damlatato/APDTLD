@@ -1,6 +1,10 @@
 <script>
 function voteForEvent(eventId) {
-	$.post( "../Eduvent/controller/vote-for-event.php", { proposalId: eventId })
+	$.post( "../Eduvent/controller/vote-for-event.php",
+	{
+		'proposalId': eventId,
+		'root-path' : <?php echo '\'' . ROOT_PATH . '\''; ?>
+	})
 	.done(function( data ) {
 		console.log( "vote submitted: " + data );
 	});
