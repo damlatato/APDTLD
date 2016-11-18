@@ -25,7 +25,6 @@ $( document ).ready(function() {
 </script>
 
 <header>
-
 	<!--Navbar-->
 	<nav class="navbar navbar-light navtop">
 		<div class="navbar-inner">
