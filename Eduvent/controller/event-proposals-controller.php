@@ -44,7 +44,7 @@ foreach($proposedEvents as $event) {
 					<!--/.Share-buttons-->
 				</div>
 				<div class="col-xs-9 pull-right">
-					<span class="requested-by">Voted by <b>' . $event->getVotesNumber() . '</b> users</span>
+					<span class="requested-by">Voted by <b id="ev-' . $event->getId() . '">' . $event->getVotesNumber() . '</b> users</span>
 
 					<button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#modalVote' . $eventCounter . '" onclick="voteForEvent(\'' . $event->getId() . '\')">
 						I want it also! Vote here!</button>
@@ -62,7 +62,7 @@ foreach($proposedEvents as $event) {
 									We will inform you, if a company offers this event.</p>
 								</div>
 								<div class="modal-footer text-xs-center">
-									<button type="button" class="btn btn-standard" data-dismiss="modal" onclick="window.location.reload()">Close</button>
+									<button type="button" class="btn btn-standard" data-dismiss="modal" onclick="window.location.reload()">Close</button><!---->
 								</div>
 							</div>
 						</div>

@@ -6,7 +6,17 @@ function voteForEvent(eventId) {
 		'root-path' : <?php echo '\'' . ROOT_PATH . '\''; ?>
 	})
 	.done(function( data ) {
-		console.log( "vote submitted: " + data );
+		data = JSON.parse(data);
+		console.log(
+			"proposalId: " + data.proposalId +
+			", eventId: "  + data.eventId +
+			", votes: "    + data.votes +
+			", userIdS: "   + data.userIdS +
+			", userId: "   + data.userId);
+
+		elId = "#ev-" + data.proposalId;
+		console.log( "elId=" + elId);
+		$(elId).text(data.votes);
 	});
 }
 </script>

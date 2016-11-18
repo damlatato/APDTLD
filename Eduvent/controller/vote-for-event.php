@@ -16,9 +16,18 @@ spl_autoload_register(function ($class) {
 
 $userId = $_SESSION['userSession'];
 $user = User::getUserById($userId);
-$event = Event::getById($_POST['proposalId']);
+$eventId = $_POST['proposalId'];
+$event = Event::getById($eventId);
 $user->voteEvent($event);
+$votes = $event->getVotesNumber();
 
-$output = "vote-id=" . $_POST['proposalId'] . " / " . $event->getId();
-echo $output;
+$arr = array(
+	'proposalId'	=> $eventId,
+	'eventId'		=> $event->getId(),
+	'votes'			=> $votes,
+	'userIdS'		=> $userId,
+	'userId'		=> $user->getId()
+);
+
+echo json_encode($arr);
 ?>
