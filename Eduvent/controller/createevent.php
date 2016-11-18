@@ -24,8 +24,10 @@ if($check === true){
 
 	
 //---image upload ---------------------------------------------------------------------------------------	
+	$target_event_dir = "../Eduvent/view/images/eventimages/";
 	$target_dir = "../view/images/eventimages/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$target_file_event = $target_event_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	// Check if image file is a actual image or fake image
@@ -69,7 +71,7 @@ if($check === true){
 	}
 //---------------------------------------------------------------------------------------	
 	
-	$event = new Event($id, $_POST['eventtype'], $title, $description, $datetime, $location, $_POST['topic'], $_POST['price'], $statuses["Published"], $target_file);
+	$event = new Event($id, $_POST['eventtype'], $title, $description, $datetime, $location, $_POST['topic'], $_POST['price'], $statuses["Published"], $target_file_event);
 	$user -> organizeEvent($event);
 	$message = "
 	Hello". $_SESSION['username'].",
