@@ -233,9 +233,9 @@ input:checked + .slider:before {
 }
 
 .sidebar-head {
-	background-color: #1694b2;
+	background-color: #73bed0;
 	border: 1px solid #1694b2;
-	margin-bottom: 1px;
+	font-size: 1.1rem!important;
 }
 
 .sidebar-group-head {

@@ -57,7 +57,7 @@ function filterEvents(filter, value, value2) {
 
 	<!--Group 'Filters'-->
 	<div class="list-group-item sidebar-head white-text">
-		<span class="font-weight-bold">Event filters</span>
+		<span>Event filters</span>
 	</div>
 
 	<?php
