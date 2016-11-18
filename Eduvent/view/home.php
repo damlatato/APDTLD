@@ -23,19 +23,19 @@
 					</a>
 				</div>
 			</div>
-			<img src="../Eduvent/view/images/c1.jpg">
+			<img src="../Eduvent/view/images/c1.jpg" class="img-fluid img-repsonsive">
 		</div>
 		<div class="carousel-item">
-			<img src="../Eduvent/view/images/c2.jpg">
+			<img src="../Eduvent/view/images/c2.jpg" class="img-fluid img-repsonsive">
 		</div>
 		<div class="carousel-item">
-			<img src="../Eduvent/view/images/c3.jpg">
+			<img src="../Eduvent/view/images/c3.jpg" class="img-fluid img-repsonsive">
 		</div>
 		<div class="carousel-item">
-			<img src="../Eduvent/view/images/c4.jpg">
+			<img src="../Eduvent/view/images/c4.jpg" class="img-fluid img-repsonsive">
 		</div>
 		<div class="carousel-item">
-			<img src="../Eduvent/view/images/c5.jpg">
+			<img src="../Eduvent/view/images/c5.jpg" class="img-fluid img-repsonsive">
 		</div>
 	</div>
 	<!--/.Slides-->

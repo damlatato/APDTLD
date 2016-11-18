@@ -11,7 +11,7 @@ $(document).ready(function() {
 <h5 class="font-weight-bold">Event search</h5>
 <nav class="navbar navbar-light grey lighten-5">
 	<input class="search-input" id="search-input" type="search-md" placeholder="Search" style="width:20%;">
-	within
+	<!--within
 	<div class="custom-dropdown-btn">
 		<div class="btn btn-info-outline waves-effect" id="btn-set-radius">5 km</div>
 		<ul class="custom-dropdown-menu">
@@ -38,5 +38,5 @@ $(document).ready(function() {
 			<li>Newest</li>
 			<li>Most voted</li>
 		</ul>
-	</div>
+	</div>-->
 </nav>

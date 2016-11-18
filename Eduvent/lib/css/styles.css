@@ -10,6 +10,10 @@ html, body {
 	margin-top: 10px;
 }
 
+.img-repsonsive {
+	max-width: 100%;
+	height: auto;
+}
 /******************************************/
 /*             Buttons                    */
 /******************************************/
@@ -349,7 +353,8 @@ input:checked + .slider:before {
 /******************************************/
 
 #carousel-example-1, .carousel-inner {
-	height: 400px;
+	max-height: 400px;
+	height: auto;
 }
 
 .carousel-inner img,
