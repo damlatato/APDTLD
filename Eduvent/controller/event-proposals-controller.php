@@ -1,7 +1,8 @@
 <?php
 $proposedEvents=Event::getProposedEventList();
-
+$eventCounter=0;
 foreach($proposedEvents as $event) {
+	$eventCounter++;
 	$offerStatus='';
 	$offers=$event->getOffers();
 	if (count($offers)>0) {
@@ -45,11 +46,11 @@ foreach($proposedEvents as $event) {
 				<div class="col-xs-9 pull-right">
 					<span class="requested-by">Voted by <b>' . $event->getVotesNumber() . '</b> users</span>
 
-					<button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#modalVote" onclick="voteForEvent(\'' . $event->getId() . '\')">
+					<button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#modalVote' . $eventCounter . '" onclick="voteForEvent(\'' . $event->getId() . '\')">
 						I want it also! Vote here!</button>
 
 					<!--Modal-->
-					<div class="modal fade" id="modalVote" role="dialog">
+					<div class="modal fade" id="modalVote' . $eventCounter . '" role="dialog">
 						<div class="modal-dialog">
 							<div class="modal-content text-xs-left">
 								<div class="modal-header">
