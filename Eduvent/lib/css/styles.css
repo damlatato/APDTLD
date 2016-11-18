@@ -681,7 +681,7 @@ input:checked + .slider:before {
     display: none;
     position: absolute;
 	margin-bottom: 0;
-    min-width: 190px;
+    min-width: 200px!important;
 	width: auto;
     padding: 6px 6px;
     z-index: 10;

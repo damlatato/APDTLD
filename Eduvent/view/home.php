@@ -130,189 +130,66 @@
 				<h5 class="font-weight-bold">Popular events</h5>
 				<div class="col-md-12 event-market-area">
 				<div class="row">
-					<div class="col-md-4 event-market-col">
-						<!--Card-->
-						<div class="event-card card">
+					<?php
+						for ($i = 8; $i < 11; $i++) {
+							if ($events[$i]->getimgHref()!=='') {
+								$eventImage = $events[$i]->getimgHref();
+								//$eventImage = ROOT_PATH . $events[$i]->getimgHref();
+							}
+							else {
+								$eventImage = ROOT_PATH . '/view/images/event-img.png';
+							}
 
-							<!--Card image-->
-							<div class="event-image view overlay hm-white-slight">
-								<img src="https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg" class="img-fluid">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="event-body card-block text-xs-center">
-								<!--Category & Title-->
-								<div class="event-title">
-									<h5>Topic</h5>
-									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-								</div>
-								
-								<!--Description-->
-								<div class="event-text card-text text-xs-left">
-									<p>
-										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
-									</p>
-								</div>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-									<div class="event-buttons flex-center">
-										<a href="#">
-											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
+							echo '
+							<div class="col-md-4 event-market-col">
+								<div class="event-card card">
+									<div class="event-image view overlay hm-white-slight">
+										<img src="' . $eventImage . '" class="img-fluid">
+										<a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'">
+											<div class="mask"></div>
 										</a>
+									</div>
 
-										<div class="event-menu">
-											<button class="btn btn-grey-small" type="button">More</button>
+									<div class="event-body card-block text-xs-center">
+										<div class="event-title">
+											<h5>'.$events[$i]->getTopic().'</h5>
+											<h4 class="card-title"><strong><a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'">'.$events[$i]->getTitle().'</a></strong></h4>
+										</div>
+										
+										<div class="event-text card-text text-xs-left">
+											<p>'.$events[$i]->getDescription().'</p>
+										</div>
 
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left">
-													<a class="event-dropdown-item" href="#">
-														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
-													</a>
-												</li>
-											</ul>
+										<div class="card-footer">
+											<div class="ticket-price">'.$events[$i]->getPrice().'€</div>
+											<div class="event-buttons flex-center">
+												<a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'">
+													<button class="btn btn-blue-yellow-small" type="button">Show details</button>
+												</a>
+
+												<div class="event-menu">
+													<button class="btn btn-grey-small" type="button">More</button>
+													<ul class="event-dropdown-menu">
+														<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+															<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+														<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+															<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+														<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+															<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+														<li class="text-xs-left">
+															<a class="event-dropdown-item subscribe-event" href="#"  data-toggle="modal" data-target="#modal-subscribe">
+																<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-4 event-market-col">
-						<!--Card-->
-						<div class="event-card card">
-
-							<!--Card image-->
-							<div class="event-image view overlay hm-white-slight">
-								<img src="https://static.pexels.com/photos/177598/pexels-photo-177598-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="event-body card-block text-xs-center">
-								<!--Category & Title-->
-								<div class="event-title">
-									<h5>Topic</h5>
-									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-								</div>
-
-								<!--Description-->
-								<div class="card-text event-text text-xs-left">
-									<p>
-										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
-									</p>
-								</div>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="event-buttons flex-center">
-										<a href="#">
-											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-grey-small" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
-					<div class="col-md-4 event-market-col">
-						<!--Card-->
-						<div class="event-card card">
-
-							<!--Card image-->
-							<div class="event-image view overlay hm-white-slight">
-								<img src="https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg" class="img-fluid" alt="">
-								<a href="#">
-									<div class="mask"></div>
-								</a>
-							</div>
-							<!--/.Card image-->
-
-							<!--Card content-->
-							<div class="event-body card-block text-xs-center">
-								<!--Category & Title-->
-								<div class="event-title">
-									<h5>Topic</h5>
-									<h4 class="card-title"><strong><a href="">Event title</a></strong></h4>
-								</div>
-
-								<!--Description-->
-								<div class="card-text event-text text-xs-left">
-									<p>
-										Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
-									</p>
-								</div>
-
-								<!--Card footer-->
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: 49€</div>
-
-									<div class="event-buttons flex-center">
-										<a href="#">
-											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-grey-small" type="button">More</button>
-
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-								<!--/.Card footer-->
-
-							</div>
-							<!--/.Card content-->
-
-						</div>
-						<!--/.Card-->
-					</div>
+							</div>';
+						}
+					?>
 				</div>
 				<div class="row">
 					<?php
@@ -354,7 +231,6 @@
 
 												<div class="event-menu">
 													<button class="btn btn-grey-small" type="button">More</button>
-
 													<ul class="event-dropdown-menu">
 														<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 															<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
@@ -363,7 +239,7 @@
 														<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 															<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
 														<li class="text-xs-left">
-															<a class="event-dropdown-item" href="#">
+															<a class="event-dropdown-item subscribe-event" href="#"  data-toggle="modal" data-target="#modal-subscribe">
 																<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
 															</a>
 														</li>
