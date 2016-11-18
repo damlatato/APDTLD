@@ -11,8 +11,6 @@ class ShoppingCart {
 
 	function addEvent($eventID,$quantity,$amountGift) {
 
-		//$event = new Event(3, null, "Test event of Maria", "So good event", "25.10.2016 13:56", null, 'Studing', 11);
-		//$eventlist=get("event");
 		$eventlist=Event::getEventlist();
 
 		if(!isset($eventlist)){
@@ -48,7 +46,7 @@ class ShoppingCart {
 
 		}
 
-
+	
 		return "eventID: ".$eventID."quantity: ".$quantity."eventtitle: ".$event->getTitle();
 	}
 

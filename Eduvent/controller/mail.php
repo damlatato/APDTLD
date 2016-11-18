@@ -1,15 +1,8 @@
 <?php
 
-
-if(isset($_SESSION['usermail'])) {
-	//TODO
-	//fill the input fields with user data automatically
-	//$user = User::getUserByEmail($email);
-}
-
 if (isset($_POST['purchaseshoppingCart'])){
-	$message = "WTF";
-	$success = send_mail($message,"Purchase Confirmation","donloco1@gmx.de");
+	$message = "Thank you for your booking.";
+	$success = send_mail($message,"Purchase Confirmation","maryoupi@gmail.com");
 }
 
 //TODO send mail subscribe
@@ -18,7 +11,7 @@ if(isset($_POST['sendsubscribeconfirmation'])) {
 		echo "Please type a correct email.";
 	} else {
 		$message = "You successfully subscribed to newsletter of the company ".$event->geteventOrganizer().".";
-		$success = send_mail($message,"Subscribe Mail",$email); //maryoupi@gmail.de
+		$success = send_mail($message,"Subscribe Mail",$email); 
 		if ($success){
 			echo "You successfully subscribed to newsletter: ".$event->geteventOrganizer()." with your email ".$email.".</br>";
 			echo "Message has been sent.";
