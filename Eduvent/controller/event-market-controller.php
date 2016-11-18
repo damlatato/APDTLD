@@ -69,7 +69,7 @@ foreach ($events as $event) {
 								echo 'view/images/event-img.png';
 							}
 						?>" class="em-event-img img-fluid" alt="" height="195px">
-					<a href="#">
+					<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">
 						<div class="mask"></div>
 					</a>
 				</div>
@@ -80,7 +80,11 @@ foreach ($events as $event) {
 					<!--Category & Title-->
 					<div class="event-title">
 						<h5><?php echo $event->getTopic() ?></h5>
-						<h4 class="card-title"><strong><a href=""><?php echo $event->getTitle() ?></a></strong></h4>
+						<h4 class="card-title">
+							<strong>
+								<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>"><?php echo $event->getTitle() ?></a>
+							</strong>
+						</h4>
 					</div>
 					
 					<!--Description-->
@@ -92,9 +96,9 @@ foreach ($events as $event) {
 					<div class="card-footer">
 						<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
 						<div class="event-buttons flex-center">
-							<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">
+							<!--<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">-->
 								<button class="btn btn-blue-yellow-small" type="button">Show details</button>
-							</a>
+							<!--</a>-->
 
 							<div class="event-menu">
 								<button class="btn btn-grey-small" type="button">More</button>

@@ -6,6 +6,10 @@ html, body {
 	height: 100%;
 }
 
+main {
+	min-height: 30em;
+}
+
 .row {
 	margin-top: 10px;
 }
