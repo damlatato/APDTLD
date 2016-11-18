@@ -568,6 +568,10 @@ input:checked + .slider:before {
 /*         Search/filter bars             */
 /******************************************/
 
+.search-input {
+	width: 14em!important;
+}
+
 .btn-grid-view-small, .btn-grid-view, .btn-list-view {
 	background-color: #1694b2;
 }
