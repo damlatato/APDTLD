@@ -88,19 +88,19 @@
 					<div class="panel panel-default event-list">
 						<div class="panel-heading"><h5 class="font-weight-bold"><b>Highlights</b></h5></div>
 						<div class="panel-body list-group event-items highlights">
-							<?php
-								$events=Event::getPublishedEventList();
-								$colsize = (int) (count($events)/2);
-									for ($i = 0; $i < $colsize; $i++) {
-											echo '<a href="#" class="list-group-item card-overlay event-list-item">';
-											echo '<div class="white-text text-xs-left event-list-item-text">';
-											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
-											echo '<h3>'.$events[$i]->getTitle().'</h3>';
-											echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
-											echo '</div>';
-											echo '</a>';
-									}
-							?>
+						<?php
+							$events=Event::getPublishedEventList();
+							$colsize = 4;
+							for ($i = 0; $i < $colsize; $i++) {
+								echo '<a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'" class="list-group-item card-overlay event-list-item">';
+								echo '<div class="white-text text-xs-left event-list-item-text">';
+								echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
+								echo '<h3>'.$events[$i]->getTitle().'</h3>';
+								echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
+								echo '</div>';
+								echo '</a>';
+							}
+						?>
 						</div>
 					</div>
 				</div>
@@ -110,15 +110,15 @@
 						<div class="panel-heading"><h5 class="font-weight-bold"><b>Newest nearby</b></h5></div>
 						<div class="panel-body list-group event-items newest">
 						<?php
-							for ($i = $colsize; $i < count($events); $i++) {
-											echo '<a href="#" class="list-group-item card-overlay event-list-item">';
-											echo '<div class="white-text text-xs-left event-list-item-text">';
-											echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
-											echo '<h3>'.$events[$i]->getTitle().'</h3>';
-											echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
-											echo '</div>';
-											echo '</a>';
-									}
+							for ($i = $colsize; $i < $colsize+4; $i++) {
+								echo '<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>" class="list-group-item card-overlay event-list-item">';
+								echo '<div class="white-text text-xs-left event-list-item-text">';
+								echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
+								echo '<h3>'.$events[$i]->getTitle().'</h3>';
+								echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
+								echo '</div>';
+								echo '</a>';
+							}
 						?>
 						</div>
 					</div>
