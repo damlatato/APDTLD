@@ -104,9 +104,9 @@ $( document ).ready(function() {
 							</div>
 						</li>
 <?php
-	} 
+	}
 	else 
-{
+	{
 ?>
 						<li>
 							<a href="../Eduvent/index.php?page=login">
@@ -117,11 +117,6 @@ $( document ).ready(function() {
 	} 
 ?>
 					</ul>
-
-					<!--Search form-->
-					<!--<form class="form-inline">
-					<input id="search-general" class="form-control" type="text" placeholder="Search">
-				</form>-->
 
 				</div>
 				<!--/.Collapse content-->
