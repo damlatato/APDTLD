@@ -49,18 +49,19 @@ $( document ).ready(function() {
 					</a>
 					<!--Links-->
 					<ul class="nav navbar-nav">
-						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=event-market">Event market</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/controller/createevent.php">Create event</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="../Eduvent/index.php?page=event-market">Event market</a></li>
+						<li class="nav-item">
+							<a class="nav-link" href="../Eduvent/controller/createevent.php">Create event</a></li>
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-proposals">Event proposals</a>
 						</li>
-						<li class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php">About</a></li>
-						<li id="shoppingcartmenu" class="nav-item"><a class="nav-link"
-							href="../Eduvent/index.php?page=shoppingCart"> <i
-								class="fa fa-shopping-cart left"></i>&nbsp Shopping cart<?php if (!isset($_POST['purchaseshoppingCart'])){ printQuantityOfSelectedEvents();} ?>
+						<li class="nav-item">
+							<a class="nav-link" href="../Eduvent/index.php">About</a></li>
+						<li id="shoppingcartmenu" class="nav-item">
+							<a class="nav-link" href="../Eduvent/index.php?page=shoppingCart">
+								<i class="fa fa-shopping-cart left"></i>
+								&nbsp Shopping cart<?php if (!isset($_POST['purchaseshoppingCart'])){ printQuantityOfSelectedEvents();} ?>
 							</a>
 						</li>
 						<li class="nav-item">
@@ -90,23 +91,16 @@ $( document ).ready(function() {
 						<!-- 	$userRow=mysql_fetch_array($res); -->
 						<!-- 	include 'Livechat/livechat.php' -->
 
-						<li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle waves-effect waves light"
-							type="button" id="dropdownMenu1" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="true"> <i class="fa fa-user"></i>
-								<span class="glyphicon glyphicon-user"></span>&nbsp;Hi! <?php echo $_SESSION['username']; ?>&nbsp;<span
-								class="caret"></span>
-						</a>
-							<div class="dropdown-menu dropdown-default"
-								aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn"
-								data-dropdown-out="fadeOut">
-								<a class="dropdown-item waves-effect waves-light"
-									href="../Eduvent/index.php?page=profile">My profile</a> <a
-									class="dropdown-item waves-effect waves-light" href="#">Create
-									Event</a> <a class="dropdown-item waves-effect waves-light"
-									href="#">Bookings</a> <a
-									class="dropdown-item waves-effect waves-light"
-									href="controller/login/logout.php">Sign out</a>
+						<li class="nav-item dropdown">
+							<a class="hd-account nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<b><img class="head-logo" src="../Eduvent/view/images/user.png" height="35" width="">
+								<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $_SESSION['username']; ?>&nbsp;</b>
+							</a>
+							<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">My profile</a>
+								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/createevent.php">Create Event</a>
+								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">Bookings</a>
+								<a class="dropdown-item waves-effect waves-light" href="controller/login/logout.php">Sign out</a>
 							</div>
 						</li>
 <?php

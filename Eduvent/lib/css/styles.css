@@ -155,6 +155,10 @@ main {
 	color: lightgrey!important;
 }
 
+.hd-account {
+	background-color: #eeeeee!important;
+}
+
 /************ Theme switcher **************/
 
 .switch {
