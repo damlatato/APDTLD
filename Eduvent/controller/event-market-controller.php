@@ -105,7 +105,7 @@ foreach ($events as $event) {
 
 								<ul class="event-dropdown-menu">
 									<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
-										<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
 									<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 										<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
 									<li class="text-xs-left"><a class="event-dropdown-item" href="#">
