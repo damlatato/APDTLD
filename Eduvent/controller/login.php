@@ -6,12 +6,12 @@ require_once 'model/User.php';
 // allow user to access home page else it will show appropriate message.
 
 //$user_login = new USER();
-// ob_start();
-// session_start();
-if(isset($_SESSION['usermail']))
+//ob_start();
+//session_start();
+if (isset($_SESSION['usermail']))
 {
 	//$user_login->redirect('../Eduvent/index.php');
-// 	echo json_encode(User::getUserByEmail($_SESSION['usermail'])->getVotedEvents()); //just to test that session works
+	//echo json_encode(User::getUserByEmail($_SESSION['usermail'])->getVotedEvents()); //just to test that session works
 }
 
 if(isset($_POST['btn-login'])) {
@@ -30,12 +30,10 @@ if(isset($_POST['btn-login'])) {
    		header("Location: http://localhost/APDTLD/Eduvent/index.php");
 	}
 	else {
-		
 		$msg = "
-					<div class='alert alert-success'>
-					
+				<div class='alert alert-success'>
 					Sorry! Wrong detail! Please check your password or username.
-					</div>";
+				</div>";
 	}
 }
 ?>
