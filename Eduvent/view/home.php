@@ -93,7 +93,7 @@
 							for ($i = 0; $i < 4; $i++) {
 								echo '<a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'" class="list-group-item card-overlay event-list-item">';
 								echo '<div class="white-text text-xs-left event-list-item-text">';
-								echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
+								echo '<span class="event-list-item-category"style="color:#1694b2;">'.$events[$i]->getTopic().'</span>';
 								echo '<h3>'.$events[$i]->getTitle().'</h3>';
 								echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
 								echo '</div>';
@@ -112,7 +112,7 @@
 							for ($i = 4; $i < 8; $i++) {
 								echo '<a href="../Eduvent/index.php?page=event-description&eventId='.$events[$i]->getId().'" class="list-group-item card-overlay event-list-item">';
 								echo '<div class="white-text text-xs-left event-list-item-text">';
-								echo '<span class="event-list-item-category"style="color:#1694b2;">Category</span>';
+								echo '<span class="event-list-item-category"style="color:#1694b2;">'.$events[$i]->getTopic().'</span>';
 								echo '<h3>'.$events[$i]->getTitle().'</h3>';
 								echo '<span class="event-list-item-date">'.$events[$i]->getDatetime().', '.$events[$i]->getLocation()->getfullName().'</span>';
 								echo '</div>';

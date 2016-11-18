@@ -446,14 +446,14 @@ input:checked + .slider:before {
 
 .highlights > .event-list-item:nth-child(2) {
 	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
-				url('https://static.pexels.com/photos/51079/pexels-photo-51079-large.jpeg');
+				url('https://images.pexels.com/photos/191830/pexels-photo-191830.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .highlights > .event-list-item:nth-child(3) {
 	background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),
-				url('https://static.pexels.com/photos/73760/swimming-swimmer-female-race-73760-large.jpeg');
+				url('https://images.pexels.com/photos/40120/pexels-photo-40120.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
