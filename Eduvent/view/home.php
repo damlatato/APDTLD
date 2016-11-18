@@ -1,15 +1,3 @@
-<script>
-$( document ).ready(function() {
-	$("#carousel-overlay-text").hide();
-	overlay=$("#carousel-item-overlay");
-	overlay.hide();
-	el=$("#carousel-example-1");
-	
-	overlay.delay(700).show("slide", { direction: "left" }, 1500);
-	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
-});
-</script>
-
 <!--Carousel Wrapper-->
 <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
 	<!--Indicators-->
@@ -25,7 +13,7 @@ $( document ).ready(function() {
 	<!--Slides-->
 	<div class="carousel-inner" role="listbox">
 		<div class="carousel-item active">
-			<div id="carousel-item-overlay" class="carousel-item-overlay">
+			<div id="carousel-item-overlay" class="carousel-item-overlay hidden">
 				<div id="carousel-overlay-text">
 					<br/><br/>
 					<span id="text-carousel-1">Finding educational events.</span>
@@ -338,3 +326,16 @@ $( document ).ready(function() {
 	
 	</div>
 </div>
+
+<script>
+$( document ).ready(function() {
+	$("#carousel-overlay-text").hide();
+	overlay=$("#carousel-item-overlay");
+	overlay.hide();
+	$("#carousel-overlay-text").removeClass("hidden");
+	overlay.removeClass("hidden");
+	
+	overlay.delay(700).show("slide", { direction: "left" }, 1500);
+	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
+});
+</script>

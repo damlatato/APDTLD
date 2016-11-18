@@ -309,7 +309,7 @@ class Event  implements JsonSerializable{
 
 		$urlPriceCat='';
 		if ($priceCategory!=='') {
-			$urlPriceCat="+topic:".chr(34).$priceCategory.chr(34);
+			$urlPriceCat="+priceCategory:".chr(34).$priceCategory.chr(34);
 		}
 		
 		$url = "event?pageNumber=1&pageSize=500&q=" . $urlStatus . $urlType . $urlTopic . $urlPriceCat;

@@ -123,8 +123,8 @@ html, body {
 	padding: 0;
 }
 
-.hidden-logo {
-	display: none;
+.hidden {
+	display: none!important;
 }
 
 .navtop {

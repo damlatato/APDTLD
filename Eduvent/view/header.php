@@ -19,7 +19,7 @@ $( document ).ready(function() {
 		$(".navtop").toggleClass("theme-dark");
 		$(".navtop").toggleClass("navbar-light");
 		$(".navtop").toggleClass("navbar-dark");
-		$(".head-logo").toggleClass("hidden-logo");
+		$(".head-logo").toggleClass("hidden");
 	});
 });
 </script>
@@ -43,8 +43,8 @@ $( document ).ready(function() {
 					<a class="navbar-brand" href="../Eduvent/index.php">
 						<span>
 							<img class="head-logo" src="../Eduvent/view/images/logo-banner-small.png" height="50" width="">
-							<img class="head-logo hidden-logo" src="../Eduvent/view/images/logo-small.png" height="50" width="">
-							<img class="head-logo hidden-logo" src="../Eduvent/view/images/logo-small-yellow.jpg" height="42" width="">
+							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small.png" height="50" width="">
+							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small-yellow.jpg" height="42" width="">
 						</span>
 					</a>
 					<!--Links-->
