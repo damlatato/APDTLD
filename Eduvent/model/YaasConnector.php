@@ -10,21 +10,31 @@ function getAccessToken(){
 	$result=curl_exec ($ch);
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=200){
-		$token = getAccessToken();
 		$result=curl_exec ($ch);					//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
 	if ($code==200){
 		curl_close($ch);
 		$result1 = json_decode($result, true);
+		$GLOBALS['token'] = $result1["access_token"];
+		$GLOBALS['time'] = (new DateTime())->getTimestamp();
 		return $result1["access_token"];
 	}
 	echo curl_error($ch);
 	curl_close($ch);
 }
 
+function checkAccessToken(){
+	if ( !isset($GLOBALS['time']) || (new DateTime())->getTimestamp() > ($GLOBALS['time']+3550) ){
+		return getAccessToken();
+	}
+	else{
+		return $GLOBALS['token'];
+	}
+}
+
 function post($datatype, $bodyjson){
-	$token = getAccessToken();
+	$token = checkAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
@@ -35,7 +45,7 @@ function post($datatype, $bodyjson){
 	$result=curl_exec ($ch);							//post user to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=201){
-		$token = getAccessToken();
+		$token = checkAccessToken();
 		$result=curl_exec ($ch);						//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
@@ -48,7 +58,7 @@ function post($datatype, $bodyjson){
 }
 
 function delete($datatype, $id){
-	$token = getAccessToken();
+	$token = checkAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
@@ -58,7 +68,7 @@ function delete($datatype, $id){
 	$result=curl_exec ($ch);					//delete from to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=204){
-		$token = getAccessToken();
+		$token = checkAccessToken();
 		$result=curl_exec ($ch);				//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
@@ -71,7 +81,7 @@ function delete($datatype, $id){
 }
 
 function get($datatype){
-	$token = getAccessToken();
+	$token = checkAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype );
@@ -80,7 +90,7 @@ function get($datatype){
 	$result=curl_exec ($ch);					//get users list from DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=200){
-		$token = getAccessToken();
+		$token = checkAccessToken();
 		$result=curl_exec ($ch);				//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
@@ -93,7 +103,7 @@ function get($datatype){
 }
 
 function put($datatype, $id, $bodyjson){
-	$token = getAccessToken();
+	$token = checkAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 	curl_setopt($ch, CURLOPT_URL,        "https://api.yaas.io/hybris/document/v1/l2913671/l2913671.wish/data/".$datatype."/".$id );
@@ -104,7 +114,7 @@ function put($datatype, $id, $bodyjson){
 	$result=curl_exec ($ch);					//post user to DB
 	$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	if ($code!=200){
-		$token = getAccessToken();
+		$token = checkAccessToken();
 		$result=curl_exec ($ch);				//get users list from DB
 		$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	}
