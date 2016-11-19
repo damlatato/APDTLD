@@ -1,5 +1,35 @@
 <?php
-$proposedEvents=Event::getProposedEventList();
+if (isset($_POST['root-path'])) {
+	$rootPath = $_POST['root-path'];
+	define ('ROOT_PATH', $rootPath);
+}
+
+include_once(ROOT_PATH . 'model/YaasConnector.php');
+spl_autoload_register(function ($class) {
+	$file = ROOT_PATH . 'model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+
+//------------------------------------------
+
+$f_status = "Proposed";
+$f_type = "All";
+
+if (isset($_POST['topic'])) {
+	$f_topic = $_POST['topic'];
+}
+else {
+	$f_topic = "All";
+}
+
+$f_pricing = "All";
+$f_startDate = "All";
+$f_endDate = "All";
+
+$proposedEvents=Event::filterEvents($f_status, $f_type, $f_topic, $f_pricing, $f_startDate, $f_endDate);
+//$proposedEvents=Event::getProposedEventList();
 $eventCounter=0;
 foreach($proposedEvents as $event) {
 	$eventCounter++;
@@ -27,7 +57,7 @@ foreach($proposedEvents as $event) {
 	<!--Proposal-->
 	<div class="row">
 		<div class="col-md-12">
-			<span class="proposal-topic">Topic</span><br>
+			<span class="proposal-topic">' . $event->getTopic() . '</span><br>
 			<h4 class="proposal-title" style="display:inline-block;">' . $event->getTitle() . '</h4>' . $offerStatus . '
 			<p>' . $event->getDescription() . '</p>
 			<div class="read-more text-xs-right row">

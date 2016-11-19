@@ -1,65 +1,87 @@
-<div class="sidebar-nav list-group">
+<script>
+$( document ).ready(function() {
+	filterEvents("Proposed","All","All","All","All","All");
+
+	$( ".sb-item:contains(All)" ).addClass("sb-item-selected");
+
+	$('.sb-item').click(function(){
+		$('.sb-item').removeClass('sb-item-selected');
+		$(this).addClass('sb-item-selected');
+	});
+	$('#clear-date-from').click(function(){
+		$('#datepicker-from-sidebar').val('');
+	});
+	$('#clear-date-to').click(function(){
+		$('#datepicker-to-sidebar').val('');
+	});
+});
+
+var filter = {
+		status: "Proposed",
+		type: "All",
+		topic: "All",
+		priceCategory: "All",
+		startDate: "All",
+		endDate: "All",
+		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
+};
+
+function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
+	console.log(
+		"status="+status+", "+
+		"type="+type+", "+
+		"topic="+topic+", "+
+		"priceCategory="+priceCategory+", "+
+		"startDate="+startDate+", "+
+		"endDate="+endDate
+	);
+
+	//--------------------------------------
+	if (status!=="") {
+		filter["status"] = status;
+	}
+
+	if (type!=="") {
+		filter["type"] = type;
+	}
+
+	if (topic!=="") {
+		filter["topic"] = topic;
+	}
+
+	if (priceCategory!=="") {
+		filter["priceCategory"] = priceCategory;
+	}
+
+	if (startDate!=="") {
+		filter["startDate"] = startDate;
+	}
+
+	if (endDate!=="") {
+		filter["endDate"] = endDate;
+	}	
+	//--------------------------------------
+	
+	console.log("current filter: " + JSON.stringify(filter));
+
+	$.post('controller/event-proposals-controller.php', filter)
+	.done(function( data ) {
+		$('#event-proposals-items').html(data);
+	});
+}
+</script>
+
+<div class="sidebar-nav list-group sb-proposals">
 
 	<!--Group 'Filters'-->
 	<div class="list-group-item proposal-sidebar-head white-text">
 		<span class="font-weight-bold">Proposal filters</span>
 	</div>
-	<!--Group 'Event types'-->
-	<div class="list-group-item proposal-sidebar-group-head" data-toggle="collapse" href="#collapseTypes" aria-expanded="false" aria-controls="collapseTypes">
-		<a>Event types<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
-	</div>
-	<div class="collapse" id="collapseTypes"><!--add class 'in' to expand-->
-		<div>
-			<ul class="list-group">
-				<li class="list-group-item"><a href="#">Conference</a></li>
-				<li class="list-group-item"><a href="#">Course</a></li>
-				<li class="list-group-item"><a href="#">Forum</a></li>
-				<li class="list-group-item"><a href="#">Hackathon</a></li>
-				<li class="list-group-item"><a href="#">Meeting</a></li>
-				<li class="list-group-item"><a href="#">Online-course</a></li>
-				<li class="list-group-item"><a href="#">Meeting</a></li>
-				<li class="list-group-item"><a href="#">Presentation</a></li>
-				<li class="list-group-item"><a href="#">Seminar</a></li>
-				<li class="list-group-item"><a href="#">Tutorial</a></li>
-				<li class="list-group-item"><a href="#">Workshop</a></li>
-			</ul>
-		</div>
-	</div>
-	<!--Group 'Topics'-->
-	<div class="list-group-item proposal-sidebar-group-head" data-toggle="collapse" href="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
-		<a>Topics<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
-	</div>
-	<div class="collapse" id="collapseCategories"><!--add class 'in' to expand-->
-		<div>
-			<ul class="list-group">
-				<li class="list-group-item"><a href="#">Art</a></li>
-				<li class="list-group-item"><a href="#">Business</a></li>
-				<li class="list-group-item"><a href="#">Cooking</a></li>
-				<li class="list-group-item"><a href="#">Design</a></li>
-				<li class="list-group-item"><a href="#">Entrepreneurship</a></li>
-				<li class="list-group-item"><a href="#">Finance</a></li>
-				<li class="list-group-item"><a href="#">Health</a></li>
-				<li class="list-group-item"><a href="#">HR</a></li>
-				<li class="list-group-item"><a href="#">Science</a></li>
-				<li class="list-group-item"><a href="#">Sports</a></li>
-				<li class="list-group-item"><a href="#">Technology</a></li>
-				<li class="list-group-item font-weight-bold"><a href="#"><b><i>More ...</i></b></a></li>
-			</ul>
-		</div>
-	</div>
-	<!--Group 'Pricing'-->
-	<div class="list-group-item proposal-sidebar-group-head" data-toggle="collapse" href="#collapsePricing" aria-expanded="false" aria-controls="collapsePricing">
-		<a>Pricing<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
-	</div>
-	<div class="collapse" id="collapsePricing"><!--add class 'in' to expand-->
-		<div>
-			<ul class="list-group">
-				<li class="list-group-item"><a href="#">All</a></li>
-				<li class="list-group-item"><a href="#">Free</a></li>
-				<li class="list-group-item"><a href="#">Paid</a></li>
-			</ul>
-		</div>
-	</div>
+
+	<?php
+		include ("../Eduvent/controller/sidebar-controller.php");
+	?>
+
 	<!--Group 'Date'-->
 	<div class="list-group-item proposal-sidebar-group-head" data-toggle="collapse" href="#collapseDate" aria-expanded="false" aria-controls="collapseDate">
 		<a>Date<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>

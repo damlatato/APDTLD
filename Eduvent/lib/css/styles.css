@@ -779,9 +779,10 @@ input:checked + .slider:before {
 	border: 1px solid #424242;
 }
 
-.proposal-sidebar-group-head {
+.proposal-sidebar-group-head,
+.sb-proposals .sidebar-group-head {
 	background-color: #fafafa;
-	border: 1px solid #424242;
+	border: 1px solid #424242!important;
 	color: #424242;
 	font-size: 1.1rem;
     line-height: 36px;

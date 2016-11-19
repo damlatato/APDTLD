@@ -36,9 +36,9 @@
 
 		<!--Row 3 (Proposal list) -->
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" id="event-proposals-items">
 				<?php
-					include("../Eduvent/controller/event-proposals-controller.php");
+					//include("../Eduvent/controller/event-proposals-controller.php");
 				?>
 
 				<br>
