@@ -52,7 +52,7 @@ $( document ).ready(function() {
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-market">Event market</a></li>
 						<li class="nav-item">
-							<a class="nav-link" href="../Eduvent/controller/createevent.php">Create event</a></li>
+							<a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-proposals">Event proposals</a>
 						</li>
