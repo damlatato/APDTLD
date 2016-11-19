@@ -97,7 +97,7 @@ function voteForEvent(eventId) {
 
 		elId = "#ev-" + data.proposalId;
 		console.log( "elId=" + elId);
-		$(elId).text(data.votes);
+		$(elId).text(data.votes2);
 	});
 }
 </script>
