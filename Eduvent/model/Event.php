@@ -185,6 +185,9 @@ class Event  implements JsonSerializable{
     
     public static function fromJSONa($eventAj){
     	$eventAv = json_decode($eventAj);
+    	if (count($eventAv)<1){
+    		return array();
+    	}
     	$eventsA = array();
     	foreach($eventAv as $key=>$eventj){
     	if (gettype($eventj)=="string"){

@@ -406,6 +406,9 @@ class User implements JsonSerializable{
 	
 	public static function fromJSONa($userAj){
 		$userAv = json_decode($userAj);
+		if (count($userAv)<1){
+			return array();
+		}
 		$userA = array();
 		foreach($userAv as $key=>$userj){
 			if (gettype($userj)=="string"){

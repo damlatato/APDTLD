@@ -51,6 +51,9 @@ class Booking implements JsonSerializable{
 	
 	public static function fromJSONa($bookingAj){
 		$bookingAv = json_decode($bookingAj);
+		if (count($bookingAv)<1){
+    		return array();
+    	}
 		$bookingsA = array();
 		foreach($bookingAv as $key=>$bookingj){
 			$booking = Booking::fromJSON($bookingj);

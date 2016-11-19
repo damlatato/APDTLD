@@ -52,6 +52,9 @@ class Notification implements JsonSerializable{
 	
 	public static function fromJSONa($notificationAj){
 		$notificationAv = json_decode($notificationAj);
+		if (count($notificationAv)<1){
+			return array();
+		}
 		$notificationsA = array();
 		foreach($notificationAv as $key=>$notificationj){
 			$notification = Notification::fromJSON($notificationj);
