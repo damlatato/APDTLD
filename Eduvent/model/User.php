@@ -37,6 +37,9 @@ class User implements JsonSerializable{
 		$this->address = $address;
 		$this->gender = $gender;
 		$this->birthDate = $birthDate;
+		if ($interest == ""){
+			$interest = array();
+		}
 		$this->interest = $interest;
 		$this->notifications = array();
 		$this->bookings = array();
@@ -344,7 +347,7 @@ class User implements JsonSerializable{
 				continue;
 			}
 			if($key=='interest'){
-				$interestvA = Interest::fromJSONa($value);
+				$interestvA = json_decode($value);
 				$user->set('interest', $interestvA);
 				continue;
 			}
