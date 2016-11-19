@@ -50,6 +50,7 @@ $user = User::getUserByEmail($email);
 				
 				$eventCounter=0;
 				
+				if (count($events)>0){
 				foreach ($events as $event) {
 					if ($eventCounter%3==0) {
 						if ($eventCounter>0) {
@@ -120,6 +121,7 @@ $user = User::getUserByEmail($email);
 				<?php 	
 					$eventCounter++;
 				}
+				}
 				
 				if ($eventCounter>0) {
 					echo '</div>';
@@ -132,9 +134,92 @@ $user = User::getUserByEmail($email);
 		<div class="tab-pane fade" id="profile3" role="tabpanel">
 			<br>
 			<p>
-			<?php
-			echo json_encode($user->getBookings()); 
-			?>
+			<?php 
+				$bookings = $user->getBookings();
+				
+				$bookingCounter=0;
+				
+				if (count($bookings)>0){
+				foreach ($bookings as $booking) {
+					$bookedEventId = $booking->getEventId();
+					$bookingTime = $booking->getbookingTime();
+					$event = Event::getById($bookedEventId);
+					if ($bookingCounter%3==0) {
+						if ($bookingCounter>0) {
+							echo '</div>';
+						}
+						echo '<div class="row">';
+					}
+				
+					?>
+						<div class="col-md-4 event-market-col">
+							<!--Card-->
+							<h5><?php echo $bookingTime ?></h5>
+							<div class="event-card card">
+				
+								<!--Card image-->
+								<div class="event-image view overlay hm-white-slight">
+									<img src="<?php echo $event->getimgHref() ?>" class="img-fluid" alt="" height="195px">
+									<a href="#">
+										<div class="mask"></div>
+									</a>
+								</div>
+								<!--/.Card image-->
+				
+								<!--Card content-->
+								<div class="event-body card-block text-xs-center">
+									<!--Category & Title-->
+									<div class="event-title">
+										<h5><?php echo $event->getTopic() ?></h5>
+										<h4 class="card-title"><strong><a href=""><?php echo $event->getTitle() ?></a></strong></h4>
+									</div>
+									
+									<!--Description-->
+									<div class="event-text card-text text-xs-left">
+										<p><?php echo $event->getDescription() ?></p>
+									</div>
+				
+									<!--Card footer-->
+									<div class="card-footer">
+										<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
+										<div class="event-buttons flex-center">
+											<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">
+												<button class="btn btn-blue-yellow-small" type="button">Show details</button>
+											</a>
+				
+											<div class="event-menu">
+												<button class="btn btn-grey" type="button">More</button>
+				
+												<ul class="event-dropdown-menu">
+													<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
+														<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!--/.Card footer-->
+				
+								</div>
+								<!--/.Card content-->
+				
+							</div>
+							<!--/.Card-->
+						</div>
+				<?php 	
+					$bookingCounter++;
+				}
+				}
+				
+				if ($bookingCounter>0) {
+					echo '</div>';
+				}
+				?>
 			</p>
 		</div>
 
@@ -229,7 +314,88 @@ $user = User::getUserByEmail($email);
 		<div class="tab-pane fade" id="profile5" role="tabpanel">
 			<br>
 			<p>
-			<?php echo json_encode($user->getWishlist()); ?>
+			<?php 
+				$s = str_replace('[','',json_encode($user->getWishlist()));
+				$s = str_replace(']','',$s);
+				$events = Event::getListById($s);
+				
+				$eventCounter=0;
+				
+				foreach ($events as $event) {
+					if ($eventCounter%3==0) {
+						if ($eventCounter>0) {
+							echo '</div>';
+						}
+						echo '<div class="row">';
+					}
+				
+					?>
+						<div class="col-md-4 event-market-col">
+							<!--Card-->
+							<div class="event-card card">
+				
+								<!--Card image-->
+								<div class="event-image view overlay hm-white-slight">
+									<img src="<?php echo $event->getimgHref() ?>" class="img-fluid" alt="" height="195px">
+									<a href="#">
+										<div class="mask"></div>
+									</a>
+								</div>
+								<!--/.Card image-->
+				
+								<!--Card content-->
+								<div class="event-body card-block text-xs-center">
+									<!--Category & Title-->
+									<div class="event-title">
+										<h5><?php echo $event->getTopic() ?></h5>
+										<h4 class="card-title"><strong><a href=""><?php echo $event->getTitle() ?></a></strong></h4>
+									</div>
+									
+									<!--Description-->
+									<div class="event-text card-text text-xs-left">
+										<p><?php echo $event->getDescription() ?></p>
+									</div>
+				
+									<!--Card footer-->
+									<div class="card-footer">
+										<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
+										<div class="event-buttons flex-center">
+											<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">
+												<button class="btn btn-blue-yellow-small" type="button">Show details</button>
+											</a>
+				
+											<div class="event-menu">
+												<button class="btn btn-grey" type="button">More</button>
+				
+												<ul class="event-dropdown-menu">
+													<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
+														<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!--/.Card footer-->
+				
+								</div>
+								<!--/.Card content-->
+				
+							</div>
+							<!--/.Card-->
+						</div>
+				<?php 	
+					$eventCounter++;
+				}
+				
+				if ($eventCounter>0) {
+					echo '</div>';
+				}
+				?>
 			</p>
 		</div>
 	</div>
