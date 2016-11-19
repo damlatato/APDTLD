@@ -254,12 +254,14 @@ class User implements JsonSerializable{
 			$eventVotes = $event->getVotes();
 			array_push($eventVotes, $this->getId());
 			$event->setVotes($eventVotes);
+			$event->putEvent();
 		}
-		$votedEvents = $this->getVotedEvents();
-		array_push($votedEvents, $event->getId());
-		$this->setVotedEvents($votedEvents);
-		$event->putEvent();
-		$this->putUser();
+		if (!in_array($event->getId(),$this->getVotedEvents())){
+			$votedEvents = $this->getVotedEvents();
+			array_push($votedEvents, $event->getId());
+			$this->setVotedEvents($votedEvents);
+			$this->putUser();
+		}
 	}
 	
 	public function wishEvent($event){	//wishlist
@@ -275,8 +277,7 @@ class User implements JsonSerializable{
 			array_push($eventUsers, $this->getId());
 			$event->setUsers($eventUsers);
 		}
-		$payment1 = new Payment("25.09.2016", 1000);
-		$booking = new Booking($event->getId(), date('d.m.y'), $payment1);
+		$booking = new Booking($event->getId(), date('d.m.y'));
 		$bookings = $this->getBookings();
 		array_push($bookings, $booking);
 		$this->setBookings($bookings);
