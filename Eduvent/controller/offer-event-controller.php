@@ -78,11 +78,11 @@ else
 										<div class="modal-content text-xs-left">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal">&times;</button>
-												<h4 class="modal-title">Thank you for offering this event!</h4>
+												<h2 class="modal-title">Thank you for offering this event!</h2>
 											</div>
 											<div class="modal-body">
-												<p>You offered the event <strong>"' . $event->getTitle() . '"</strong>.<br>
-												A notification is sent out to users who voted for the event proposal.</p>
+												<h3><small>You offered the event <strong>"' . $event->getTitle() . '"</strong>.
+												A notification is sent out to users who voted for the event proposal.</small></h3>
 											</div>
 											<div class="modal-footer text-xs-center">
 												<button type="button" class="btn btn-standard" data-dismiss="modal" onclick="window.location.href=\'../Eduvent/index.php?page=event-proposals\'">Close</button>

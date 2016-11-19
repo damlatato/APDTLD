@@ -56,11 +56,11 @@ foreach($proposedEvents as $event) {
 							<div class="modal-content text-xs-left">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h3 class="modal-title">Thank you for your vote!</h3>
+									<h2 class="modal-title">Thank you for your vote!</h2>
 								</div>
 								<div class="modal-body">
-									<p>You showed your interest in the event proposal <strong>"' . $event->getTitle() . '"</strong>.
-									We will inform you, if a company offers this event.</p>
+									<h3><small>You showed your interest in the event proposal <strong>"' . $event->getTitle() . '"</strong>.
+									We will inform you, if a company offers this event.</small></h3>
 								</div>
 								<div class="modal-footer text-xs-center">
 									<button type="button" class="btn btn-standard" data-dismiss="modal">Close</button>
