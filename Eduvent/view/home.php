@@ -1,3 +1,16 @@
+<script>
+$( document ).ready(function() {
+	$("#carousel-overlay-text").hide();
+	overlay=$("#carousel-item-overlay");
+	overlay.hide();
+	$("#carousel-overlay-text").removeClass("hidden");
+	overlay.removeClass("hidden");
+	
+	overlay.delay(700).show("slide", { direction: "left" }, 1500);
+	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
+});
+</script>
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
 	<!--Indicators-->
@@ -261,16 +274,3 @@
 	
 	</div>
 </div>
-
-<script>
-$( document ).ready(function() {
-	$("#carousel-overlay-text").hide();
-	overlay=$("#carousel-item-overlay");
-	overlay.hide();
-	$("#carousel-overlay-text").removeClass("hidden");
-	overlay.removeClass("hidden");
-	
-	overlay.delay(700).show("slide", { direction: "left" }, 1500);
-	$("#carousel-overlay-text").delay(1600).show("slide", { direction: "left" }, 1400);
-});
-</script>

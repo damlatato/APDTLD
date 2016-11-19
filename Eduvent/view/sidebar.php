@@ -1,43 +1,6 @@
-<?php
-/*if (isset($_POST['sb-filter'])) {
-	$filter=$_POST['sb-filter'];
-}
-if (isset($_POST['sb-value'])) {
-	$value=$_POST['sb-value'];
-}
-if (isset($_POST['sb-value2'])) {
-	$value2=$_POST['sb-value2'];
-}*/
-?>
-
 <script>
-var filter = {
-		status: "Published",
-		type: "All",
-		topic: "All",
-		priceCategory: "All",
-		startDate: "All",
-		endDate: "All",
-		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
-	};
-
 $( document ).ready(function() {
-	
 	filterEvents("Published","All","All","All","All","All");
-/*	filter=<?php echo '"' . $filter . '"'; ?>;
-	value =<?php echo '"' . $value  . '"'; ?>;
-	value2=<?php echo '"' . $value2 . '"'; ?>;
-	<?php $_POST = array(); ?>
-
-	console.log("received POST filter: filter="+filter+", value="+value+", value2="+value2);
-
-	if (filter!=='') {
-		filterEvents(filter, value, value2);
-		if (filter!=='date') {
-			$('.sb-item').removeClass('sb-item-selected');
-			$( '.sb-item:contains("' + value + '")' ).addClass('sb-item-selected');
-		}
-	}*/
 
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
@@ -50,6 +13,16 @@ $( document ).ready(function() {
 		$('#datepicker-to-sidebar').val('');
 	});
 });
+
+var filter = {
+		status: "Published",
+		type: "All",
+		topic: "All",
+		priceCategory: "All",
+		startDate: "All",
+		endDate: "All",
+		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
+};
 
 function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	console.log(

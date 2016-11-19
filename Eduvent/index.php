@@ -40,8 +40,8 @@ include_once 'model/thesaurus.php';
 <!-- Datepicker -->
 <link rel="stylesheet" href="../Eduvent/lib/datepicker/css/datepicker.css" type='text/css'>
 
-<!-- Favicons and touch icons -->
-<link rel="shortcut icon" type="image/x-icon" href="../Eduvent/view/images/favicon.png">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../Eduvent/view/images/favicon.png" type="image/x-icon">
 
 </head>
 

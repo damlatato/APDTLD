@@ -1,29 +1,3 @@
-<script>
-$( document ).ready(function() {
-	$('.sb-item').click(function(){
-		$('.sb-item').removeClass('sb-item-selected');
-		$(this).addClass('sb-item-selected');
-	});
-	$('#clear-date-from').click(function(){
-		$('#datepicker-from-sidebar').val('');
-	});
-	$('#clear-date-to').click(function(){
-		$('#datepicker-to-sidebar').val('');
-	});
-});
-
-function filterEvents(filter, value, value2) {
-	var url = '../Eduvent/index.php?page=event-market';
-	var form = $('<form action="' + url + '" method="post">' +
-		'<input type="text" name="sb-filter" value="' + filter + '" />' +
-		'<input type="text" name="sb-value" value="'  + value  + '" />' +
-		'<input type="text" name="sb-value2" value="' + value2 + '" />' +
-		'</form>');
-	$('body').append(form);
-	form.submit();
-}
-</script>
-
 <div class="sidebar-nav list-group">
 
 	<!--Group 'Filters'-->
@@ -32,6 +6,7 @@ function filterEvents(filter, value, value2) {
 	</div>
 
 	<?php
+		//include (ROOT_PATH . "controller/sidebar-controller.php");
 		include ("../Eduvent/controller/sidebar-controller.php");
 	?>
 
@@ -58,19 +33,92 @@ function filterEvents(filter, value, value2) {
 				<div class="pull-right clear-date" id="clear-date-to"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
 				<div class="text-xs-center">
-					<button type="button" class="btn btn-grey-small" style="margin:0;" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
+					<button type="button" class="btn btn-grey-small" style="margin:0;" onclick="filterEvents('Published','','','',$('#datepicker-from-sidebar','').val(),$('#datepicker-to-sidebar').val())">Filter</button>
 				</div>
 			</div>
 		</div>
 
 		<script type="text/javascript">
-			$(function () {
+			/*$(function () {
 				$('#datepicker-sidebar .datepicker-sidebar').datepicker({
 					format: "dd.mm.yyyy"
 				});
-			});
+			});*/
 		</script>
 
 	</div>
 
 </div>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('.sb-item').click(function(){
+		$('.sb-item').removeClass('sb-item-selected');
+		$(this).addClass('sb-item-selected');
+	});
+	$('#clear-date-from').click(function(){
+		$('#datepicker-from-sidebar').val('');
+	});
+	$('#clear-date-to').click(function(){
+		$('#datepicker-to-sidebar').val('');
+	});
+});
+
+var filter = {
+		status: "Published",
+		type: "All",
+		topic: "All",
+		priceCategory: "All",
+		startDate: "All",
+		endDate: "All",
+		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
+};
+
+function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
+	console.log("home:");
+	console.log(
+		" status="+status+", "+
+		" type="+type+", "+
+		" topic="+topic+", "+
+		" priceCategory="+priceCategory+", "+
+		" startDate="+startDate+", "+
+		" endDate="+endDate
+	);
+
+	//--------------------------------------
+	if (status!=="") {
+		filter["status"] = status;
+	}
+
+	if (type!=="") {
+		filter["type"] = type;
+	}
+
+	if (topic!=="") {
+		filter["topic"] = topic;
+	}
+
+	if (priceCategory!=="") {
+		filter["priceCategory"] = priceCategory;
+	}
+
+	if (startDate!=="") {
+		filter["startDate"] = startDate;
+	}
+
+	if (endDate!=="") {
+		filter["endDate"] = endDate;
+	}	
+	//--------------------------------------
+	
+	console.log("current filter (home): " + JSON.stringify(filter));
+	
+	var url = '../Eduvent/index.php?page=event-market';
+	var form = $(
+		'<form action="' + url + '" method="post">' +
+		'<input type="text" name="filter" value="' + JSON.stringify(filter) + '" />' +
+		'</form>');
+	$('body').append(form);
+	//form.submit();
+}
+</script>

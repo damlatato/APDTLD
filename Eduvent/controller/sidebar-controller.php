@@ -5,7 +5,7 @@ echo '
 	<a>Event types<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
 </div>
 <div class="collapse" id="collapseTypes"><!--add class \'in\' to expand-->
-	<div><form action="controller/event-market-controller.php" method="post">
+	<div>
 		<ul class="list-group filter-group">
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents(&#39;Published&#39;,&#39All&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">All</li>';
 		
@@ -14,7 +14,7 @@ echo '
 		}
 
 echo '
-		</ul></form>
+		</ul>
 	</div>
 </div>
 <!--Group \'Topics\'-->

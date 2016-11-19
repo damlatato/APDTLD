@@ -324,7 +324,7 @@ class Event implements JsonSerializable{
 			if ($StartDate=="All") {
 				$StartDate="";
 			}
-			
+
 			if ($EndDate=="All") {
 				$EndDate="";
 			}
