@@ -17,20 +17,20 @@ spl_autoload_register(function ($class) {
 $userId = $_SESSION['userSession'];
 $user = User::getUserById($userId);
 
-$event=Event::getById($_POST['proposalId']);
-$user->voteEvent($event);
+$eventId = $_POST['proposalId'];
+$event = Event::getById($eventId);
 
-//$eventId = $_POST['proposalId'];
-//$event = Event::getById($eventId);
-//$user->voteEvent($event);
-$votes = $event->getVotesNumber();
+$votes1 = $event->getVotesNumber();
+$user->voteEvent($event);
+set_time_limit(5);
+$votes2 = $event->getVotesNumber();
 
 $arr = array(
-	'proposalId'	=> $eventId,
-	'eventId'		=> $event->getId(),
-	'votes'			=> $votes,
-	'userIdS'		=> $userId,
-	'userId'		=> $user->getId()
+	'proposalId'	=> $event->getId(),
+	'votes1'		=> $votes1,
+	'votes2'		=> $votes2,
+	'userId'		=> $user->getId(),
+	'userName'		=> $user->getName()
 );
 
 echo json_encode($arr);

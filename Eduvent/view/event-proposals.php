@@ -1,26 +1,3 @@
-<script>
-function voteForEvent(eventId) {
-	$.post( "../Eduvent/controller/vote-for-event.php",
-	{
-		'proposalId': eventId,
-		'root-path' : <?php echo '\'' . ROOT_PATH . '\''; ?>
-	})
-	.done(function( data ) {
-		data = JSON.parse(data);
-		console.log(
-			"proposalId: " + data.proposalId +
-			", eventId: "  + data.eventId +
-			", votes: "    + data.votes +
-			", userIdS: "   + data.userIdS +
-			", userId: "   + data.userId);
-
-		elId = "#ev-" + data.proposalId;
-		console.log( "elId=" + elId);
-		$(elId).text(data.votes);
-	});
-}
-</script>
-
 <div class="container">
 
 	<!--Sidebar (Topics)-->
@@ -100,3 +77,27 @@ function voteForEvent(eventId) {
 	</div>
 	<!--/.Content-->
 </div>
+
+<script>
+function voteForEvent(eventId) {
+	$.post( "../Eduvent/controller/vote-for-event.php",
+	{
+		'proposalId': eventId,
+		'root-path' : <?php echo '\'' . ROOT_PATH . '\''; ?>
+	})
+	.done(function( data ) {
+		data = JSON.parse(data);
+		console.log(
+			"proposalId: " + data.proposalId +
+			", votes1: "   + data.votes1 +
+			", votes2: "   + data.votes2 +
+			", userId: "   + data.userId +
+			", userName: " + data.userName
+		);
+
+		elId = "#ev-" + data.proposalId;
+		console.log( "elId=" + elId);
+		$(elId).text(data.votes);
+	});
+}
+</script>
