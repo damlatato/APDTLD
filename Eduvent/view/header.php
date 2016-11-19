@@ -52,7 +52,7 @@ $( document ).ready(function() {
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-market">Event market</a></li>
 						<li class="nav-item">
-							<a class="nav-link" href="../Eduvent/index.php?page=createevent">Create event</a></li>
+							<a class="nav-link" href="../Eduvent/index.php?page=create-event">Create event</a></li>
 						<li class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=event-proposals">Event proposals</a>
 						</li>
@@ -94,7 +94,7 @@ $( document ).ready(function() {
 							</a>
 							<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">My profile</a>
-								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/createevent.php">Create Event</a>
+								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=create-event">Create Event</a>
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">Bookings</a>
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=analytics">Eduvent Analytics</a>
 								<a class="dropdown-item waves-effect waves-light" href="controller/login/logout.php">Sign out</a>
