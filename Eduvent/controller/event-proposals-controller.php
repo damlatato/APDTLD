@@ -62,7 +62,7 @@ foreach($proposedEvents as $event) {
 									We will inform you, if a company offers this event.</p>
 								</div>
 								<div class="modal-footer text-xs-center">
-									<button type="button" class="btn btn-standard" data-dismiss="modal">Close</button><!-- onclick="window.location.reload()"-->
+									<button type="button" class="btn btn-standard" data-dismiss="modal">Close</button>
 								</div>
 							</div>
 						</div>
