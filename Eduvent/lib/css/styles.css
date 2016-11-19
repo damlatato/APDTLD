@@ -147,10 +147,6 @@ main {
 	background-color: #424242!important;
 }
 
-.hd-account-dark {
-	background-color: #212121!important;
-}
-
 .navtop .navbar-nav li a {
 	line-height: 36px;
 }
@@ -161,6 +157,10 @@ main {
 
 .hd-account {
 	background-color: #eeeeee!important;
+}
+
+.hd-account-dark {
+	background-color: #212121!important;
 }
 
 /************ Theme switcher **************/

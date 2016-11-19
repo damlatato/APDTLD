@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		$(".navtop").toggleClass("navbar-light");
 		$(".navtop").toggleClass("navbar-dark");
 		$(".head-logo").toggleClass("hidden");
-		$(".hd-account").toggleClass("hd-account-dark");
+		$(".hd-account").toggleClass("hd-account-dark hd-account");
 	});
 });
 </script>
