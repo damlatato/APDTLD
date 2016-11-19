@@ -86,7 +86,7 @@ if($check === true){
 else {
 	
 	
-	header('Location: ../index.php?page=login');
+	header('Location: ../Eduvent/index.php?page=login');
 		
 }
 
