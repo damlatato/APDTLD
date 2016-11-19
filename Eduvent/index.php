@@ -70,7 +70,7 @@ if (isset($_GET['page'])) {
 		$page=='profile') {
 		include('view/'.$page.'.php');
 	}
-	elseif($page=='createevent') {
+	else {
 		include('controller/'.$page.'.php');
 	}
 }
