@@ -14,12 +14,6 @@ if(isset($_POST['btn-signup'])) {
 	$email = trim($_POST['txtemail']);
 	$password = trim($_POST['txtpass']);
 	
-	
-	
-	//$code = md5(uniqid(rand()));
-	/*$stmt = $reg_user->runQuery("SELECT * FROM users WHERE EmailAddress=:email_id");
-	$stmt->execute(array(":email_id"=>$email));
-	$row = $stmt->fetch(PDO::FETCH_ASSOC);*/
 	$user = User::getUserByEmail($email);
 	if (!is_null($user)){
 		$msg = "
@@ -43,7 +37,7 @@ if(isset($_POST['btn-signup'])) {
 			Welcome to Eduvent!<br/>
 			To complete your registration, please click on the following link<br/>
 			<br /><br />
-			<a href='http://localhost/dttld/APDTLD/Eduvent/controller/login/verify.php?id=$id&code=$tokenCode'>Click HERE to Activate :)</a>
+			<a href='../Eduvent/controller/login/verify.php?id=$id&code=$tokenCode'>Please click here to activate :)</a>
 			<br /><br />
 			Thanks,";
 		
@@ -55,45 +49,8 @@ if(isset($_POST['btn-signup'])) {
 					<button class='close' data-dismiss='alert'>&times;</button>
 					<strong>Success!</strong>  We've sent an email to $email.
 					Please click on the confirmation link in the email to create your account.
-					</div>";
-					
-					
+					</div>";										
 	}
-	/*if($stmt->rowCount() > 0) {
-		$msg = "
-			<div class='alert alert-error'>
-			<button class='close' data-dismiss='alert'>&times;</button>
-			<strong>Sorry !</strong>  email address allready exists. Please try another one.
-			</div>";
-	}
-	else {
-		if($reg_user->register($uname,$bday,$email,$upass,$code)) {   
-			$id = $reg_user->lasdID();  
-			$key = base64_encode($id);
-			$id = $key;
-			$message = "
-				Hello $uname,
-				<br /><br />
-				Welcome to Eduvent!<br/>
-				To complete your registration, please click on the following link<br/>
-				<br /><br />
-				<a href='http://localhost/APDTLD/Eduvent/php/login/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
-				<br /><br />
-				Thanks,";
-      
-			$subject = "Confirm Registration";
-			$reg_user->send_mail($email,$message,$subject); 
-			$msg = "
-				<div class='alert alert-success'>
-				<button class='close' data-dismiss='alert'>&times;</button>
-				<strong>Success!</strong>  We've sent an email to $email.
-				Please click on the confirmation link in the email to create your account. 
-				</div>";
-		}
-		else {
-			echo "Sorry, query could not be executed.";
-		}
-	}*/
 }
 ?>
 <!DOCTYPE html>
@@ -298,10 +255,12 @@ if(isset($_POST['btn-signup'])) {
   </head>
   <body id="login">
     <div class="container" style="margin-top: 50px;">
-    <?php if(isset($msg)) echo $msg;  ?>
+    
       <form class="form-signin" method="post" style="    max-width: 479px;
     padding: 21px 96px 29px;">
+    
         <h2 class="form-signin-heading">Sign Up</h2><hr />
+        <?php if(isset($msg)) echo $msg;  ?>
         <p> Username: </p><input type="text" class="input-block-level" style="font-size: 16px;
     height: auto;
     margin-bottom: 15px;
