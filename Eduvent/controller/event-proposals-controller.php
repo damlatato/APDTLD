@@ -9,6 +9,7 @@ foreach($proposedEvents as $event) {
 		$offerList='';
 		foreach($offers as $offerId) {
 			$offeredEvent=Event::getById($offerId);
+			//This might cause an error if there is no event with the offeredId.
 			$offerList=$offerList . '<li><a href="../Eduvent/index.php?page=event-description&eventId=' . $offerId . '">' . $offeredEvent->getTitle() . '</a></li>';
 		}
 		
@@ -55,10 +56,10 @@ foreach($proposedEvents as $event) {
 							<div class="modal-content text-xs-left">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title">Thank you for your vote!</h4>
+									<h3 class="modal-title">Thank you for your vote!</h3>
 								</div>
 								<div class="modal-body">
-									<p>You showed your interest in the event proposal <strong>"' . $event->getTitle() . '"</strong>.<br>
+									<p>You showed your interest in the event proposal <strong>"' . $event->getTitle() . '"</strong>.
 									We will inform you, if a company offers this event.</p>
 								</div>
 								<div class="modal-footer text-xs-center">
