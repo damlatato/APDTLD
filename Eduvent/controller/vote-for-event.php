@@ -16,9 +16,13 @@ spl_autoload_register(function ($class) {
 
 $userId = $_SESSION['userSession'];
 $user = User::getUserById($userId);
-$eventId = $_POST['proposalId'];
-$event = Event::getById($eventId);
+
+$event=Event::getById($_POST['proposalId']);
 $user->voteEvent($event);
+
+//$eventId = $_POST['proposalId'];
+//$event = Event::getById($eventId);
+//$user->voteEvent($event);
 $votes = $event->getVotesNumber();
 
 $arr = array(
