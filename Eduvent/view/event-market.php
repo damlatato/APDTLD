@@ -1,14 +1,14 @@
-<div class="container">
 <?php
-	if(isset($_POST['sendsubscribeconfirmation'])) {
-		include('view/subscription-success.php');
-	} else {
+if(isset($_POST['sendsubscribeconfirmation'])) {
+	include('view/subscription-success.php');
+}
+else {
 ?>
+
+<div class="container">
 	<!--Sidebar (Topics)-->
 	<div class="col-md-2">
-		<?php
-			include("sidebar.php");
-		?>
+		<?php include("sidebar.php"); ?>
 	</div>
 	<!--/.Sidebar (Topics)-->
 
@@ -18,9 +18,7 @@
 		<!--Row 1 (Popular search tags) -->
 		<div class="row">
 			<div class="col-md-12">
-				<?php
-					include("search-tags.php");
-				?>
+				<?php include("search-tags.php"); ?>
 			</div>
 		</div>
 		<!--/.Row 1-->
@@ -28,9 +26,7 @@
 		<!--Row 2: Navbar (Event market search bar) -->
 		<div class="row">
 			<div class="col-md-12">
-				<?php
-					include("search-bar.php");
-				?>
+				<?php include("search-bar.php"); ?>
 			</div>
 		</div>
 		<!--/.Row 2: Navbar-->
@@ -38,9 +34,7 @@
 		<!--Row 3 (Event market) -->
 		<div class="row" id="event-market-area">
 			<div class="col-md-12 event-market-area" id="event-market-items">
-				<?php
-					include( "../Eduvent/controller/event-market-controller.php");
-				?>
+				<?php include( "../Eduvent/controller/event-market-controller.php"); ?>
 			</div>
 		</div>
 		<!--/.Row 3-->
@@ -48,5 +42,7 @@
 	</div>
 	<!--/.Content-->
 	
-<?php } ?>
+<?php
+}
+?>
 </div>

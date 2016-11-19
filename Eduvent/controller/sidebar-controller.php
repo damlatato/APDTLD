@@ -10,7 +10,7 @@ echo '
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 		
 		foreach ($eventtypes as $key=>$value) {
-			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'type\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(&#39;Published&#39;,&#39;' . $value . '&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">' . $key . '</li>';
 		}
 
 echo '
@@ -27,7 +27,7 @@ echo '
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($topics as $key=>$value) {
-			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'topic\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(&#39;Published&#39;,&#39;&#39;,&#39;' . $value . '&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">' . $key . '</li>';
 		}
 
 echo '
@@ -44,7 +44,7 @@ echo '
 			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents()">All</li>';
 
 		foreach ($priceCategories as $key=>$value) {
-			echo '<li class="list-group-item sb-item" onclick="filterEvents(\'pricing\',\'' . $value . '\')">' . $key . '</li>';
+			echo '<li class="list-group-item sb-item" onclick="filterEvents(&#39;Published&#39;,&#39;&#39;,&#39;&#39;,&#39;' . $value . '&#39;,&#39;&#39;,&#39;&#39;)">' . $key . '</li>';
 		}
 
 echo '

@@ -12,38 +12,16 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-if (isset($_POST['sb-filter']) and isset($_POST['sb-value'])) {
-	$filter=$_POST['sb-filter'];
-	$filterValue=$_POST['sb-value'];
+require_once 'view/subscribeform.php';
 
-	if (isset($_POST['sb-value2'])) {
-		$filterValue2=$_POST['sb-value2'];
-	}
-	
-	if ($filter=='type') {
-		$events=Event::getByEventType($filterValue);
-	}
-	elseif ($filter=='topic') {
-		$events=Event::getByTopicAndStatus($filterValue, 'Published');
-	}
-	elseif ($filter=='pricing') {
-		$events=Event::getByPriceCategory($filterValue);
-		getByDate($StartDate, $EndDate);
-	}
-	elseif ($filter=='date') {
-		$events=Event::getByDate($filterValue, $filterValue2);
-	}
-	else {
-		$events=Event::getPublishedEventList();
-	}
+if (isset($_POST['a']) and isset($_POST['b'])) {
+	//here filter
 }
 else {
 	$events=Event::getPublishedEventList();
 }
 
 $eventCounter=0;
-
-require_once 'view/subscribeform.php';
 
 foreach ($events as $event) {
 	if ($eventCounter%3==0) {
@@ -96,9 +74,9 @@ foreach ($events as $event) {
 					<div class="card-footer">
 						<div class="ticket-price">Ticket price: <?php echo $event->getPrice() ?></div>
 						<div class="event-buttons flex-center">
-							<!--<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">-->
+							<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $event->getId() ?>">
 								<button class="btn btn-blue-yellow-small" type="button">Show details</button>
-							<!--</a>-->
+							</a>
 
 							<div class="event-menu">
 								<button class="btn btn-grey-small" type="button">More</button>

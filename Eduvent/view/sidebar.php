@@ -39,17 +39,28 @@ $( document ).ready(function() {
 	});
 });
 
-function filterEvents(filter, value, value2) {
-	console.log("filtering: filter=" + filter + ", value=" + value + ", value2=" + value2);
-	$.post('controller/event-market-controller.php', {
-		'sb-filter': filter,
-		'sb-value' : value,
-		'sb-value2': value2,
+function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
+	console.log(
+		"status="+status+", "+
+		"type="+type+", "+
+		"topic="+topic+", "+
+		"priceCategory="+priceCategory+", "+
+		"startDate="+startDate+", "+
+		"endDate="+endDate
+	);
+
+	/*$.post('controller/event-market-controller.php', {
+		'status': status,
+		'type': type,
+		'topic': topic,
+		'priceCategory': priceCategory,
+		'startDate': startDate,
+		'endDate': endDate,
 		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
 	})
 	.done(function( data ) {
 		$('#event-market-items').html(data);
-	});
+	});*/
 }
 </script>
 
@@ -87,7 +98,7 @@ function filterEvents(filter, value, value2) {
 				<div class="pull-right clear-date" id="clear-date-to"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
 				<div class="text-xs-center">
-					<button type="button" class="btn btn-grey-small" style="margin:0;" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
+					<button type="button" class="btn btn-grey-small" style="margin:0;" onclick="filterEvents('Published','','','',$('#datepicker-from-sidebar','').val(),$('#datepicker-to-sidebar').val())">Filter</button>
 				</div>
 			</div>
 		</div>
