@@ -145,8 +145,12 @@ main {
 
 .theme-dark {
 	background-color: #424242!important;
-
 }
+
+.hd-account-dark {
+	background-color: #212121!important;
+}
+
 .navtop .navbar-nav li a {
 	line-height: 36px;
 }
