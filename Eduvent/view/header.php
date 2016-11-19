@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		$(".navtop").toggleClass("navbar-light");
 		$(".navtop").toggleClass("navbar-dark");
 		$(".head-logo").toggleClass("hidden");
-		$(".hd-account").toggleClass("hd-account-dark hd-account");
+		$("#dropdownMenu1").toggleClass("hd-account hd-account-dark");
 	});
 });
 </script>
@@ -43,8 +43,8 @@ $( document ).ready(function() {
 					<a class="navbar-brand" href="../Eduvent/index.php">
 						<span>
 							<img class="head-logo" src="../Eduvent/view/images/logo-banner-small.png" height="50" width="">
-							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small.png" height="50" width="">
-							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small-yellow.jpg" height="42" width="">
+							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small.png" height="48" width="">
+							<img class="head-logo hidden" src="../Eduvent/view/images/logo-small-yellow.jpg" height="40" width="">
 						</span>
 					</a>
 					<!--Links-->
@@ -89,7 +89,7 @@ $( document ).ready(function() {
 
 						<li class="nav-item dropdown">
 							<a class="hd-account nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								<b><img class="head-logo" src="../Eduvent/view/images/user.png" height="35" width="">
+								<b><img src="../Eduvent/view/images/user.png" height="35" width="">
 								<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $_SESSION['username']; ?>&nbsp;</b>
 							</a>
 							<div class="dropdown-menu dropdown-default" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
