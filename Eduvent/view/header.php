@@ -61,7 +61,7 @@ $( document ).ready(function() {
 						<li id="shoppingcartmenu" class="nav-item">
 							<a class="nav-link" href="../Eduvent/index.php?page=shoppingCart">
 								<i class="fa fa-shopping-cart left"></i>
-								&nbsp Shopping cart<?php if (!isset($_POST['purchaseshoppingCart'])){ printQuantityOfSelectedEvents();} ?>
+								 Shopping cart<?php if (!isset($_POST['purchaseshoppingCart'])){ printQuantityOfSelectedEvents();} ?>
 							</a>
 						</li>
 						<li class="nav-item">
