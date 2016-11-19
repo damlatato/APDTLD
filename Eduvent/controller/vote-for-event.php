@@ -22,7 +22,6 @@ $event = Event::getById($eventId);
 
 $votes1 = $event->getVotesNumber();
 $user->voteEvent($event);
-set_time_limit(5);
 $votes2 = $event->getVotesNumber();
 
 $arr = array(
