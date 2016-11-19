@@ -41,8 +41,8 @@ else {
 
 	</div>
 	<!--/.Content-->
-	
+
+</div>
 <?php
 }
 ?>
-</div>

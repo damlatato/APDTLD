@@ -251,6 +251,7 @@ input:checked + .slider:before {
 	font-size: 1.1rem;
     line-height: 36px;
 	margin-bottom: -1.1px;
+	z-index: 3;
 }
 
 .sidebar-nav li {
@@ -275,11 +276,14 @@ input:checked + .slider:before {
 }
 
 .sb-item-selected {
+	background-color: #FED835!important;
 	box-sizing: border-box!important;
 	-moz-box-sizing: border-box!important;
 	-webkit-box-sizing: border-box!important;
-	border: 1px solid #FED835!important;
-	color: #FED835!important;
+}
+
+.sb-item-selected:hover {
+	color: white!important;
 }
 
 /******************************************/

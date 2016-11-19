@@ -12,7 +12,7 @@ if (isset($_POST['sb-value2'])) {
 
 <script>
 $( document ).ready(function() {
-	filter=<?php echo '"' . $filter . '"'; ?>;
+/*	filter=<?php echo '"' . $filter . '"'; ?>;
 	value =<?php echo '"' . $value  . '"'; ?>;
 	value2=<?php echo '"' . $value2 . '"'; ?>;
 	<?php $_POST = array(); ?>
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 			$('.sb-item').removeClass('sb-item-selected');
 			$( '.sb-item:contains("' + value + '")' ).addClass('sb-item-selected');
 		}
-	}
+	}*/
 
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
@@ -39,6 +39,15 @@ $( document ).ready(function() {
 	});
 });
 
+var filter = {
+		status: "",
+		type: "",
+		topic: "",
+		priceCategory: "",
+		startDate: "",
+		endDate: ""
+	};
+
 function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	console.log(
 		"status="+status+", "+
@@ -48,6 +57,34 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 		"startDate="+startDate+", "+
 		"endDate="+endDate
 	);
+
+	//--------------------------------------
+	if (status!=="") {
+		filter["status"] = status;
+	}
+
+	if (type!=="") {
+		filter["type"] = type;
+	}
+
+	if (topic!=="") {
+		filter["topic"] = topic;
+	}
+
+	if (priceCategory!=="") {
+		filter["priceCategory"] = priceCategory;
+	}
+
+	if (startDate!=="") {
+		filter["startDate"] = startDate;
+	}
+
+	if (endDate!=="") {
+		filter["endDate"] = endDate;
+	}	
+	//--------------------------------------
+	
+	console.log("current filter: " + JSON.stringify(filter));
 
 	/*$.post('controller/event-market-controller.php', {
 		'status': status,
