@@ -38,11 +38,11 @@
 		</div>
 
 		<script type="text/javascript">
-			/*$(function () {
+			$(function () {
 				$('#datepicker-sidebar .datepicker-sidebar').datepicker({
 					format: "dd.mm.yyyy"
 				});
-			});*/
+			});
 		</script>
 
 	</div>
@@ -63,7 +63,7 @@ $( document ).ready(function() {
 	});
 });
 
-var filter = {
+/*var filter = {
 		status: "Published",
 		type: "All",
 		topic: "All",
@@ -71,7 +71,7 @@ var filter = {
 		startDate: "All",
 		endDate: "All",
 		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
-};
+};*/
 
 function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	console.log("home:");
@@ -86,36 +86,43 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 
 	//--------------------------------------
 	if (status!=="") {
-		filter["status"] = status;
+		//filter["status"] = status;
+		f = ["status",status];
 	}
 
 	if (type!=="") {
-		filter["type"] = type;
+		//filter["type"] = type;
+		f = ["type",type];
 	}
 
 	if (topic!=="") {
-		filter["topic"] = topic;
+		//filter["topic"] = topic;
+		f = ["topic",topic];
 	}
 
 	if (priceCategory!=="") {
-		filter["priceCategory"] = priceCategory;
+		//filter["priceCategory"] = priceCategory;
+		f = ["priceCategory",priceCategory];
 	}
 
 	if (startDate!=="") {
-		filter["startDate"] = startDate;
+		//filter["startDate"] = startDate;
+		f = ["startDate",startDate];
 	}
 
 	if (endDate!=="") {
-		filter["endDate"] = endDate;
+		//filter["endDate"] = endDate;
+		f = ["endDate",endDate];
 	}	
 	//--------------------------------------
 	
-	console.log("current filter (home): " + JSON.stringify(filter));
+	//console.log("current filter (home): " + JSON.stringify(filter));
+	console.log("filter post data (home): " + f);
 	
 	var url = '../Eduvent/index.php?page=event-market';
 	var form = $(
 		'<form action="' + url + '" method="post">' +
-		'<input type="text" name="filter" value="' + JSON.stringify(filter) + '" />' +
+		'<input type="text" name="filter" value="' + f + '" />' +
 		'</form>');
 	$('body').append(form);
 	form.submit();

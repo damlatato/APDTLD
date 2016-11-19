@@ -1,6 +1,44 @@
+<?php
+if (isset($_POST['filter'])) {
+	$homeFilter = explode(",",$_POST['filter']);
+	$v = $homeFilter[1];
+	switch ($homeFilter[0]) {
+		case "status":
+			$f = '"' . $homeFilter[1] . '","All","All","All","All","All"';
+			break;
+		case "type":
+			$f = '"Published","' . $homeFilter[1] . '","All","All","All","All"';
+			break;
+		case "topic":
+			$f = '"Published","All","' . $homeFilter[1] . '","All","All","All"';
+			break;
+		case "priceCategory":
+			$f = '"Published","All","All","' . $homeFilter[1] . '","All","All"';
+			break;
+		case "startDate":
+			$f = '"Published","All","All","All","' . $homeFilter[1] . '","All"';
+			break;
+		case "endDate":
+			$f = '"Published","All","All","All","All","' . $homeFilter[1] . '"';
+			break;
+		default:
+			$f = '"Published","All","All","All","All","All"';
+	}
+}
+else {
+	$f = '"Published","All","All","All","All","All"';
+}
+?>
+
 <script>
 $( document ).ready(function() {
-	filterEvents("Published","All","All","All","All","All");
+	//filterEvents("Published","All","All","All","All","All");
+	filterEvents(<?php echo $f ?>);
+	//console.log('test: <?php //echo (implode(",",$homeFilter)); ?>');
+	v=<?php echo $homeFilter[1] ?>;
+	if (v!=='') {
+		$( ".sb-item-selected:contains('" + v + "')" ).addClass('sb-item-selected');
+	}
 
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
