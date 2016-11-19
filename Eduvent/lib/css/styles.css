@@ -238,6 +238,8 @@ input:checked + .slider:before {
 	font-size: 1.1rem!important;
 }
 
+/******************************************/
+
 .sidebar-group-head {
 	background-color: #fafafa;
 	border: 1px solid #1694b2;
@@ -248,13 +250,13 @@ input:checked + .slider:before {
 }
 
 .sidebar-nav li {
+	border-style: none;
 	color: #106f85;
 	cursor: pointer;
 	display: block;
-	line-height: 28px;
+	line-height: 10px;
 	margin-bottom: 1px;
 	text-decoration: none;
-    text-indent: 4px;
 }
 
 .sidebar-nav li:hover {
@@ -276,6 +278,8 @@ input:checked + .slider:before {
 	color: #FED835!important;
 }
 
+/******************************************/
+
 #collapsedate-form {
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -287,11 +291,12 @@ input:checked + .slider:before {
 #datepicker-sidebar {
 	padding-left: 6px;
 	padding-right: 6px;
+	padding-top: 20px;
 	margin-bottom: 0;
 }
 
 .date-group {
-	width: 90%;
+	width: 85%;
 }
 
 .clear-date {
@@ -306,9 +311,6 @@ input:checked + .slider:before {
 #datepicker-from-sidebar {
 	color: #1694b2;
 	height: 0.8em;
-	padding-top: 10px;
-	padding-bottom: 8px;
-	text-indent: 8px;
 }
 
 #datepicker-addon2 {
@@ -318,9 +320,10 @@ input:checked + .slider:before {
 #datepicker-to-sidebar {
 	color: #1694b2;
 	height: 0.8em;
-	padding-top: 10px;
-	padding-bottom: 8px;
-	text-indent: 8px;
+}
+
+.date-group {
+	margin-right: 1px;
 }
 
 /******************************************/

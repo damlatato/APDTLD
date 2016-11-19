@@ -43,24 +43,22 @@ function filterEvents(filter, value, value2) {
 
 		<div class="form-group" id="collapsedate-form">
 			<div class='md-form input-group date' id='datepicker-sidebar'>
-				<div><span><small>From</small></span></div>
-				<div class="input-group pull-left date-group">
-					<span class="input-group-addon" id="datepicker-addon1">
-						<i class="fa fa-calendar" aria-hidden="true"></i></span>
+				<div class="md-form date-group pull-left">
+					<span class="input-group-addon" id="datepicker-addon1" hidden></span>
 					<input type="text" class="form-control datepicker-sidebar" id="datepicker-from-sidebar" placeholder="dd.mm.yyyy" aria-describedby="datepicker-addon1">
+					<label for="datepicker-from-sidebar">From</label>
 				</div>
 				<div class="pull-right clear-date" id="clear-date-from"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
-				<div><span><small>To</small></span></div>
-				<div class="input-group pull-left date-group">
-					<span class="input-group-addon" id="datepicker-addon2">
-						<i class="fa fa-calendar" aria-hidden="true"></i></span>
-					<input type="text" class="form-control datepicker-sidebar" id="datepicker-to-sidebar" placeholder="dd.mm.yyyy" aria-describedby="datepicker-addon2">
+				<div class="md-form date-group pull-left">
+					<span class="input-group-addon" id="datepicker-addon2" hidden></span>
+					<input type="text" class="form-control datepicker-sidebar" id="datepicker-to-sidebar" placeholder="dd.mm.yyyy" aria-describedby="datepicker-addon1">
+					<label for="datepicker-to-sidebar">To</label>
 				</div>
 				<div class="pull-right clear-date" id="clear-date-to"><i class="fa fa-remove" aria-hidden="true"></i></div>
 
 				<div class="text-xs-center">
-					<button type="button" class="btn btn-grey-small" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
+					<button type="button" class="btn btn-grey-small" style="margin:0;" onclick="filterEvents('date',$('#datepicker-from-sidebar').val(),$('#datepicker-to-sidebar').val())">Filter</button>
 				</div>
 			</div>
 		</div>

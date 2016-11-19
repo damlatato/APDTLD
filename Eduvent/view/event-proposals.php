@@ -26,7 +26,7 @@ function voteForEvent(eventId) {
 	<!--Sidebar (Topics)-->
 	<div class="col-md-2">
 		<?php
-			include("proposals-sidebar.php");
+			include("sidebar-proposals.php");
 		?>
 	</div>
 	<!--/.Sidebar (Topics)-->
