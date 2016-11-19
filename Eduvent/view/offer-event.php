@@ -1,5 +1,10 @@
 <?php
-	$proposalId=$_GET['proposalId'];
+$check = isLoggedUserExisting();
+if ($check !== true) {
+	header('Location: ../Eduvent/index.php?page=login');
+}
+
+$proposalId=$_GET['proposalId'];
 ?>
 
 <script>
