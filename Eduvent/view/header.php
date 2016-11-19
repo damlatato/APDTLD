@@ -95,6 +95,7 @@ $( document ).ready(function() {
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">My profile</a>
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/controller/createevent.php">Create Event</a>
 								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=profile">Bookings</a>
+								<a class="dropdown-item waves-effect waves-light" href="../Eduvent/index.php?page=analytics">Eduvent Analytics</a>
 								<a class="dropdown-item waves-effect waves-light" href="controller/login/logout.php">Sign out</a>
 							</div>
 						</li>
