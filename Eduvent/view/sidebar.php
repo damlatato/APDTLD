@@ -35,10 +35,19 @@ $( document ).ready(function() {
 	//filterEvents("Published","All","All","All","All","All");
 	filterEvents(<?php echo $f ?>);
 	//console.log('test: <?php //echo (implode(",",$homeFilter)); ?>');
-	v=<?php echo $homeFilter[1] ?>;
-	if (v!=='') {
-		$( ".sb-item-selected:contains('" + v + "')" ).addClass('sb-item-selected');
-	}
+
+	<?php
+		if (isset($_POST['filter'])) {
+			echo 'v="' . $homeFilter[1] .  '";
+			if (v!=="") {
+				console.log("v="+v);
+				$( ".sb-item:contains(" + v + ")" ).addClass("sb-item-selected");
+			}';
+		}
+		else {
+			echo '$( ".sb-item:contains(All)" ).addClass("sb-item-selected");';
+		}
+	?>
 
 	$('.sb-item').click(function(){
 		$('.sb-item').removeClass('sb-item-selected');
