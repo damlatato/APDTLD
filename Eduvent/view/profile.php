@@ -36,8 +36,20 @@ $user = User::getUserByEmail($email);
 	<div class="tab-content">
 		<div class="tab-pane fade in active" id="profile1" role="tabpanel">
 			<br>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate
-				odit minima.</p>
+			<p>
+			<?php
+			echo "E-mail:	".$user->getEmail();
+			$address = $user->getAddress();
+			echo "<br>";
+			echo "Address:	".$address->getfullName();
+			echo "<br>";
+			echo "Birth Date:	".$user->getBirthDate();
+			echo "<br>";
+			$s = str_replace('[','',json_encode($user->getInterest()));
+			$s = str_replace(']','',$s);
+			echo "Interests:	".$s;
+			?> 
+			</p>
 		</div>
 
 		<div class="tab-pane fade" id="profile2" role="tabpanel">
