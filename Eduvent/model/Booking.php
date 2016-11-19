@@ -9,12 +9,10 @@ spl_autoload_register(function ($class) {
 class Booking implements JsonSerializable{
 	private $eventId;	
 	private $bookingTime;
-	private $payment;	//class
 	
-	public function __construct($eventId, $bookingTime, $payment){
+	public function __construct($eventId, $bookingTime){
 		$this->eventId = $eventId;
 		$this->bookingTime = $bookingTime;
-		$this->payment = $payment;
 	}
 	
 	public function seteventId($eventId){
@@ -22,9 +20,6 @@ class Booking implements JsonSerializable{
 	}
 	public function setbookingTime($bookingTime){
 		$this->bookingTime = $bookingTime;
-	}
-	public function setpayment($payment){
-		$this->payment = $payment;
 	}
 	public function set($key, $value){
 		$this->$key = $value;
@@ -37,32 +32,18 @@ class Booking implements JsonSerializable{
 	public function getbookingTime(){
 		return $this->bookingTime;
 	}
-	public function getpayment(){
-		return $this->payment;
-	}
 	
 	public function jsonSerialize(){
-		$payment = $this->getpayment();
 		return json_encode([
 		'eventId'=>$this->eventId,	//key
-		'bookingTime'=>$this->bookingTime,
-		'payment'=>$payment->jsonSerialize()
+		'bookingTime'=>$this->bookingTime
 		]);
 	}
 	
 	public static function fromJSON($jbooking){
-		$booking = new Booking(1, 1, 1);
+		$booking = new Booking(1, 1);
 		$bookingv = json_decode($jbooking,true);
 		foreach($bookingv as $key=>$value){
-			if($key==='payment'){
-				$paymentv = json_decode($value);
-				$payment = new Payment(1,1,1);
-				foreach($paymentv as $key=>$value){
-					$payment->set($key, $value);
-				}
-				$booking->set('payment', $payment);
-				continue;
-			}
 			$booking->set($key, $value);
 		}
 		return $booking;
