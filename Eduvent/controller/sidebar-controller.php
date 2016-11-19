@@ -5,16 +5,16 @@ echo '
 	<a>Event types<span class="pull-right"><i class="fa fa-caret-down" aria-hidden="true"></i></span></a>
 </div>
 <div class="collapse" id="collapseTypes"><!--add class \'in\' to expand-->
-	<div>
+	<div><form action="controller/event-market-controller.php" method="post">
 		<ul class="list-group filter-group">
-			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents(&#39;Published&#39;,&#39;All&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">All</li>';
+			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents(&#39;Published&#39;,&#39All&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">All</li>';
 		
 		foreach ($eventtypes as $key=>$value) {
 			echo '<li class="list-group-item sb-item" onclick="filterEvents(&#39;Published&#39;,&#39;' . $value . '&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;)">' . $key . '</li>';
 		}
 
 echo '
-		</ul>
+		</ul></form>
 	</div>
 </div>
 <!--Group \'Topics\'-->
@@ -41,7 +41,7 @@ echo '
 <div class="collapse" id="collapsePricing"><!--add class \'in\' to expand-->
 	<div>
 		<ul class="list-group filter-group">
-			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents(&#39;Published&#39;,&#39;&#39;,&#39;&#39;,&#39;All&#39;,&#39;&#39;,&#39;&#39;)">All</li>';
+			<li class="list-group-item sb-item sb-item-selected" onclick="filterEvents(&#39;Published&#39;,&#39;&#39;,&#39;&#39;,&#39All&#39;,&#39;&#39;,&#39;&#39;)">All</li>';
 
 		foreach ($priceCategories as $key=>$value) {
 			echo '<li class="list-group-item sb-item" onclick="filterEvents(&#39;Published&#39;,&#39;&#39;,&#39;&#39;,&#39;' . $value . '&#39;,&#39;&#39;,&#39;&#39;)">' . $key . '</li>';

@@ -1,5 +1,5 @@
 <?php 
-class Event  implements JsonSerializable{ 
+class Event implements JsonSerializable{ 
     private $id; 
     private $eventType;		//thesaurus
     private $title; 
@@ -298,30 +298,37 @@ class Event  implements JsonSerializable{
 		if ($status=='') {
 			$status="Published";
 		}
-		$urlStatus="status:".chr(34).$status.chr(34);
+		$urlStatus="status:".chr(34).Event::$statuses[$status].chr(34);
 
 		$urlType='';
-		if ($type!=='') {
+		if ($type!=='All') {
 			$urlType="+type:".chr(34).$type.chr(34);
 		}
 
 		$urlTopic='';
-		if ($topic!=='') {
+		if ($topic!=='All') {
 			$urlTopic="+topic:".chr(34).$topic.chr(34);
 		}
 
 		$urlPriceCat='';
-		if ($priceCategory!=='') {
+		if ($priceCategory!=='All') {
 			$urlPriceCat="+priceCategory:".chr(34).$priceCategory.chr(34);
 		}
 		
 		$url = "event?pageNumber=1&pageSize=500&q=" . $urlStatus . $urlType . $urlTopic . $urlPriceCat;
-
 		$jeventlist = get($url);
 		$eventlist = Event::fromJSONa($jeventlist);
 		$eventlist2 = array();
 		
-		if ($StartDate!=='' or $EndDate!=='') {
+		if ($StartDate!=="All" or $EndDate!=="All") {
+			if ($StartDate=="All") {
+				$StartDate="";
+			}
+			
+			if ($EndDate=="All") {
+				$EndDate="";
+			}
+
 			foreach($eventlist as $event){
 				if(strtotime($event->getDatetime())>strtotime($StartDate) && strtotime($event->getDatetime())<strtotime($EndDate)){
 					array_push($eventlist2, $event);

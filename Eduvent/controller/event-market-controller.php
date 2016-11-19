@@ -4,7 +4,7 @@ if (isset($_POST['root-path'])) {
 	define ('ROOT_PATH', $rootPath);
 }
 
-//include_once(ROOT_PATH . 'model/YaasConnector.php');
+include_once(ROOT_PATH . 'model/YaasConnector.php');
 spl_autoload_register(function ($class) {
 	$file = ROOT_PATH . 'model/'.$class.'.php';
 	if(file_exists($file)) {
@@ -12,14 +12,54 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-require_once 'view/subscribeform.php';
+require_once ROOT_PATH . 'view/subscribeform.php';
 
-if (isset($_POST['a']) and isset($_POST['b'])) {
-	//here filter
+//------------------------------------------
+
+if (isset($_POST['status'])) {
+	$f_status = $_POST['status'];
 }
 else {
-	$events=Event::getPublishedEventList();
+	$f_status = "Published";
 }
+
+if (isset($_POST['type'])) {
+	$f_type = $_POST['type'];
+}
+else {
+	$f_type = "All";
+}
+
+if (isset($_POST['topic'])) {
+	$f_topic = $_POST['topic'];
+}
+else {
+	$f_topic = "All";
+}
+
+if (isset($_POST['priceCategory'])) {
+	$f_pricing = $_POST['priceCategory'];
+}
+else {
+	$f_pricing = "All";
+}
+
+if (isset($_POST['startDate'])) {
+	$f_startDate = $_POST['startDate'];
+}
+else {
+	$f_startDate = "All";
+}
+
+if (isset($_POST['endDate'])) {
+	$f_endDate = $_POST['endDate'];
+}
+else {
+	$f_endDate = "All";
+}
+
+//print_r ("php filter: " . $f_status . ", " . $f_type . ", " . $f_topic . ", " . $f_pricing . ", " . $f_startDate . ", " . $f_endDate);
+$events=Event::filterEvents($f_status, $f_type, $f_topic, $f_pricing, $f_startDate, $f_endDate);
 
 $eventCounter=0;
 
@@ -30,7 +70,6 @@ foreach ($events as $event) {
 		}
 		echo '<div class="row">';
 	}
-
 ?>
 		<div class="col-md-4 event-market-col">
 			<!--Card-->

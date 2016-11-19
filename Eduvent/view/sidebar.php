@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['sb-filter'])) {
+/*if (isset($_POST['sb-filter'])) {
 	$filter=$_POST['sb-filter'];
 }
 if (isset($_POST['sb-value'])) {
@@ -7,11 +7,23 @@ if (isset($_POST['sb-value'])) {
 }
 if (isset($_POST['sb-value2'])) {
 	$value2=$_POST['sb-value2'];
-}
+}*/
 ?>
 
 <script>
+var filter = {
+		status: "Published",
+		type: "All",
+		topic: "All",
+		priceCategory: "All",
+		startDate: "All",
+		endDate: "All",
+		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
+	};
+
 $( document ).ready(function() {
+	
+	filterEvents("Published","All","All","All","All","All");
 /*	filter=<?php echo '"' . $filter . '"'; ?>;
 	value =<?php echo '"' . $value  . '"'; ?>;
 	value2=<?php echo '"' . $value2 . '"'; ?>;
@@ -38,15 +50,6 @@ $( document ).ready(function() {
 		$('#datepicker-to-sidebar').val('');
 	});
 });
-
-var filter = {
-		status: "",
-		type: "",
-		topic: "",
-		priceCategory: "",
-		startDate: "",
-		endDate: ""
-	};
 
 function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	console.log(
@@ -86,18 +89,10 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	
 	console.log("current filter: " + JSON.stringify(filter));
 
-	/*$.post('controller/event-market-controller.php', {
-		'status': status,
-		'type': type,
-		'topic': topic,
-		'priceCategory': priceCategory,
-		'startDate': startDate,
-		'endDate': endDate,
-		'root-path': <?php echo '\'' . ROOT_PATH . '\''; ?>
-	})
+	$.post('controller/event-market-controller.php', filter)
 	.done(function( data ) {
 		$('#event-market-items').html(data);
-	});*/
+	});
 }
 </script>
 

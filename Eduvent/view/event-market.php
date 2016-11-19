@@ -34,7 +34,7 @@ else {
 		<!--Row 3 (Event market) -->
 		<div class="row" id="event-market-area">
 			<div class="col-md-12 event-market-area" id="event-market-items">
-				<?php include( "../Eduvent/controller/event-market-controller.php"); ?>
+				<?php //include( "../Eduvent/controller/event-market-controller.php"); ?>
 			</div>
 		</div>
 		<!--/.Row 3-->
