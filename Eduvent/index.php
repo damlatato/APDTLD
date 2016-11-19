@@ -61,7 +61,7 @@ if (isset($_GET['page'])) {
 	
 	if ($page=='home' or
 		$page=='event-market' or
-// 		$page=='create-event' or
+//  		$page=='createevent' or
 		$page=='event-proposals' or
 		$page=='create-proposal' or
 		$page=='mail-success' or
@@ -70,7 +70,7 @@ if (isset($_GET['page'])) {
 		$page=='profile') {
 		include('view/'.$page.'.php');
 	}
-	else {
+	elseif($page=='createevent') {
 		include('controller/'.$page.'.php');
 	}
 }
