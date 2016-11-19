@@ -7,22 +7,8 @@ include "YaasConnector.php";
 include "thesaurus.php";
 include "Notification.php";
 include "Booking.php";
-include "Payment.php";
 
-$tests=array();
-$payment1 = new Payment("25.09.2016", 1000);
-$payment2 = new Payment("26.09.2016", 2000);
-//test
-	$jpayment1 = $payment1->jsonSerialize();
-	$payment3 = Payment::fromJSON($jpayment1);
-	$jpayment3 = $payment3->jsonSerialize();
-	if ($jpayment1 == $jpayment3) {
-		echo "<br> payment json is ok";
-	}
-	if ($payment1 == $payment3) {
-		echo "<br> payment from json is ok";
-	}
-//test
+$tests= array();
 
 $notification1 = new Notification(1, "25.10.2016 13:56", $notificationtypes["Message"], true);	
 $notification2 = new Notification(2, "27.10.2016 11:56", $notificationtypes["Update"], false);	
@@ -127,8 +113,8 @@ $eventA = array($event1, $event2);
 	}
 //test
 
-$booking1 = new Booking($event1->getId(), "24.09.2016 13:56", $payment1);
-$booking2 = new Booking($event2->getId(), "25.09.2016 13:56", $payment2);
+$booking1 = new Booking($event1->getId(), "24.09.2016 13:56");
+$booking2 = new Booking($event2->getId(), "25.09.2016 13:56");
 $bookingA = array();
 array_push($bookingA, $booking2);
 array_push($bookingA, $booking1);

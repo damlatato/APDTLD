@@ -1,10 +1,21 @@
 <?php
+include "Event.php";
+include "User.php";
+include "Address.php";
+include "Interest.php";
+include "YaasConnector.php";
+include "thesaurus.php";
+include "Notification.php";
+include "Booking.php";
+
 spl_autoload_register(function ($class) {
     $file = '../Eduvent/model/'.$class.'.php';
 	if(file_exists($file)) {
 		include $file;
 	}
 });
+
+$time1 = (new DateTime())->getTimestamp();
 
 $address1 = new Address(1, "Uni Mannheim", "Universitat Strasse", 53, "Mannheim", 168159, "Germany");
 $address2 = new Address(2, "Uni Mannheim", "Universitat Strasse", 54, "Mannheim", 168160, "Germany");
@@ -164,7 +175,6 @@ $proposedevents = Event::getProposedEventList();
 $publishedevents = Event::getPublishedEventList();
 $u1=false;
 $u2=false;
-echo json_encode($proposedevents);
 foreach($proposedevents as $event) {
 	if ($event->getId() == 4) {
 		$u1=true;
@@ -178,6 +188,10 @@ if ($u1==true && $u2=true){
 	echo "<br>";
 	echo "Yaas getproposedevents Test Successfull";
 }
+$time2 = (new DateTime())->getTimestamp();
+
+echo "<br>";
+echo ($time2-$time1);
 
 if (count($tests)==9){
 	echo "<br>";
