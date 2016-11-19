@@ -1,3 +1,10 @@
+<?php
+$check = isLoggedUserExisting();
+if ($check !== true) {
+	header('Location: ../Eduvent/index.php?page=login');
+}
+?>
+
 <div class="container">
 
 	<!--Content-->

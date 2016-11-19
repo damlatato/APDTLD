@@ -77,28 +77,15 @@ if($check === true){
 	Hello". $_SESSION['username'].",
 	<br /><br />
 	Hello!<br/>
-	you have just created an event!";
-	
-	
+	you have just created an event!";	
 	}
 }
-
 else {
-	
-	
 	header('Location: ../Eduvent/index.php?page=login');
-		
 }
 
 ?>
- <!-- CSS -->
- <!--         <link rel="stylesheet" href="../lib/createevent/assets/css/media-queries.css"> -->
- <!--         <link rel="stylesheet" href="../lib/createevent/assets/font-awesome/css/font-awesome.min.css"> -->
-<!-- 		<link rel="stylesheet" href="../lib/createevent/assets/css/form-elements.css"> -->
-<!--         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700"> -->
-<head>     
-<!--         <link rel="stylesheet" href="../lib/mdbootstrap/css/bootstrap.min.css"> -->
-<!--         <link rel="stylesheet" href="../lib/createevent/assets/css/style.css"> -->
+<head>
 <style>/***** Multi Step Form *****/
 
 .msf-container { padding-bottom: 80px; text-align: center; }
