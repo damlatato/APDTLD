@@ -20,8 +20,22 @@ include_once 'model/thesaurus.php';
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Eduvent</title>
 
+<!-- SCRIPTS -->
+
 <!-- JQuery -->
 <script type="text/javascript" src="../Eduvent/lib/js/jquery-3.1.1.min.js"></script>
+
+<!-- JQuery UI -->
+<script type="text/javascript" src="../Eduvent/lib/js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../Eduvent/lib/js/tether.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../Eduvent/lib/js/bootstrap.min.js"></script>
+
+<!-- Datepicker -->
+<script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
 <!-- CSS -->
 	
@@ -92,22 +106,8 @@ include 'view/footer.php';
 </footer>
 <!--/.Footer-->
 
-<!-- SCRIPTS -->
-
-<!-- JQuery UI -->
-<script type="text/javascript" src="../Eduvent/lib/js/jquery-ui.min.js"></script>
-
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../Eduvent/lib/js/tether.min.js"></script>
-
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../Eduvent/lib/js/bootstrap.min.js"></script>
-
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../Eduvent/lib/js/mdb.min.js"></script>
-
-<!-- Datepicker -->
-<script type="text/javascript" src="../Eduvent/lib/datepicker/js/bootstrap-datepicker.js"></script>
 
 <!-- Custom scripts -->
 <script type="text/javascript" src="controller/js/shoppingCart.js"></script>

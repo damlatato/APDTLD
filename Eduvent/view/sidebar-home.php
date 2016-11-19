@@ -6,7 +6,6 @@
 	</div>
 
 	<?php
-		//include (ROOT_PATH . "controller/sidebar-controller.php");
 		include ("../Eduvent/controller/sidebar-controller.php");
 	?>
 
@@ -119,6 +118,6 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 		'<input type="text" name="filter" value="' + JSON.stringify(filter) + '" />' +
 		'</form>');
 	$('body').append(form);
-	//form.submit();
+	form.submit();
 }
 </script>
