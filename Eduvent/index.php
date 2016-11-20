@@ -117,7 +117,7 @@ include 'view/footer.php';
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.widgets.js"></script>-->
 
 <!-- Custom scripts -->
-<script type="text/javascript" src="controller/js/shoppingCart.js"></script>
+<script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
 
 </body>
 </html>

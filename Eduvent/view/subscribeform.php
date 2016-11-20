@@ -14,7 +14,7 @@
             </div>
             <!--Body-->
             <div class="modal-body">
-                <p>Subscribe the this newsletter to get more informations about the events offered by this company.</p>
+                <p>Subscribe to this newsletter to get more informations about the events offered by this company.</p>
                 <form action="index.php?page=event-market" method="post">
 					<input id="modalEventID" style="display:none;" name="eventID" value="">			
 					<div class="md-form">

@@ -1,3 +1,10 @@
+<div class="alert alert-success" role="alert" id="successfulbuyed" style="display:none;">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<strong>Event added to shopping cart!</strong> Go to <a href="#" class="alert-link">Shopping cart </a>to see the content.
+</div>
+
 <?php
 if (isset($_POST['root-path'])) {
 	$rootPath = $_POST['root-path'];
@@ -118,28 +125,21 @@ foreach ($events as $event) {
 							</a>
 
 							<div class="event-menu">
-								<button class="btn btn-grey-small" type="button">More</button>
-
-								<ul class="event-dropdown-menu">
-									<li class="text-xs-left">
-										<a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
-										<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a>
-									</li>
-									<li class="text-xs-left">
-										<a class="event-dropdown-item" href="#">
-										<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a>
-									</li>
-									<li class="text-xs-left">
-										<a class="event-dropdown-item" href="#">
-										<i class="fa fa-share-alt"></i>&nbsp Share this event</a>
-									</li>
-									<li class="text-xs-left">
-										<a eventid="<?php echo $event->getId() ?>" class="event-dropdown-item subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe">
-											<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
-										</a>
-									</li>
-								</ul>
-							</div>
+											<button class="btn btn-grey-small" type="button">More</button>
+											<ul class="event-dropdown-menu">
+												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId()?>  href="#">
+													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
+													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
+												<li class="text-xs-left">
+													<a class="event-dropdown-item subscribe-event" eventid=<?php echo $event->getId()?> href="#"  data-toggle="modal" data-target="#modal-subscribe">
+														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
+													</a>
+												</li>
+											</ul>
+										</div>
 						</div>
 					</div>
 					<!--/.Card footer-->

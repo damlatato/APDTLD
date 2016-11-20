@@ -1,7 +1,10 @@
 <?php
+	require_once ROOT_PATH . 'view/subscribeform.php';
 	$event = Event::getById($eventId);
 	$eventLocation = $event->getLocation(); //required later for google maps API
 ?>
+	
+
 
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display:none;">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -50,7 +53,7 @@
 					<div class="col-md-8">
 						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
 						<a href="" class="btn btn-dark-grey-yellow"><i class="fa fa-heart"></i> Add to wishlist</a><br>
-						<a href="" class="btn btn-dark-grey-yellow"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
+						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
 					</div>
 				</div>
 				<div class="social">
