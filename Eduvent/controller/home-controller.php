@@ -77,7 +77,7 @@
 								</div>
 
 								<div class="card-footer">
-									<div class="ticket-price"><?php echo $events[$i]->getPrice() ?>€</div>
+									<div class="ticket-price">Ticket price: <?php echo $events[$i]->getPrice() ?>€</div>
 									<div class="event-buttons flex-center">
 										<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $events[$i]->getId() ?>">
 											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
@@ -141,7 +141,7 @@
 								</div>
 
 								<div class="card-footer">
-									<div class="ticket-price"><?php echo $events[$i]->getPrice() ?>€</div>
+									<div class="ticket-price">Ticket price: <?php echo $events[$i]->getPrice() ?>€</div>
 									<div class="event-buttons flex-center">
 										<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $events[$i]->getId() ?>">
 											<button class="btn btn-blue-yellow-small" type="button">Show details</button>

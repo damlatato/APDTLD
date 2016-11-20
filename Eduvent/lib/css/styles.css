@@ -662,12 +662,16 @@ input:checked + .slider:before {
 	font-size: 0.9rem;
 	height: 7em;
 	margin-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 4px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
 .card-footer {
 	padding: 0;
+	padding-bottom: 4px!important;
 }
 
 .event-buttons {
