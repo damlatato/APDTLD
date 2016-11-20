@@ -8,6 +8,7 @@ include "YaasConnector.php";
 include "thesaurus.php";
 include "Notification.php";
 include "Booking.php";
+include "../controller/searchbarcontroller.php";
 
 spl_autoload_register(function ($class) {
     $file = '../Eduvent/model/'.$class.'.php';
@@ -188,6 +189,12 @@ if ($u1==true && $u2=true){
 	echo "<br>";
 	echo "Yaas getproposedevents Test Successfull";
 }
+
+$searchstr = "swift";
+echo json_encode(autoSuggest($searchstr));
+echo '<br>';
+echo json_encode(searchEvents(autoSuggest($searchstr)[0]));
+
 $time2 = (new DateTime())->getTimestamp();
 
 echo "<br>";

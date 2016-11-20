@@ -88,6 +88,7 @@ function delete($datatype, $id){
 }
 
 function get($datatype){
+	$datatype = str_replace(" ","+",$datatype);
 	$token = checkAccessToken();
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
