@@ -191,7 +191,7 @@ jQuery(document).ready(function() {
 						</div>
 					   
 						<br>
-						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
 					
 					
@@ -238,8 +238,8 @@ jQuery(document).ready(function() {
 <!-- 							<input type="text" name="email" class="email form-control" id="email"> -->
 <!-- 						</div> -->
 						<br>
-						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
+						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
 					
 <!-- 					<fieldset> -->
@@ -270,8 +270,8 @@ jQuery(document).ready(function() {
 							<textarea name="about-you" class="about-you form-control" id="about-you" style="border: 1px solid #ccc;background: white;"></textarea>
 						</div>
 						<br>
-						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-						<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
+						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
 					
 			
@@ -311,8 +311,8 @@ jQuery(document).ready(function() {
 						</div>
 						<br>
     
-						<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
-						<button type="submit" class="btn" name="btn-signup">Submit</button>
+						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
+						<button type="submit" class="btn" name="btn-signup" style="background: #1694b2;">Submit</button>
 					</fieldset>
 					
 				</form>
