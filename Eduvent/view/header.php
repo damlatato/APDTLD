@@ -103,15 +103,24 @@ $( document ).ready(function() {
 <?php
 	}
 	else 
-	{
+	{	
+		$page_login = $_SERVER['REQUEST_URI'];
+		if(substr($page_login, -5) === 'login') {
+				
+				
+	?>
+	
+	<script> $('#btn_login').hide();</script>
+	<?php 
+	} else{
 ?>
 						<li>
 							<a href="../Eduvent/index.php?page=login">
-								<button type="button" class="btn btn-standard">Log in</button>
+								<button type="button" class="btn btn-standard" id="btn_login">Log in</button>
 							</a>
 						</li>
 <?php 
-	} 
+	 }} 
 ?>
 					</ul>
 
