@@ -1,4 +1,6 @@
 <?php
+$titles = array();
+$descriptions = array();
 include "Event.php";
 include "User.php";
 include "Address.php";
@@ -148,7 +150,7 @@ $userlist=User::getUserListByEvent($event4);
 $user = $userlist[0];
 echo $user->getId();
 echo count($userlist);
-if ($user->getId()==111 && count($userlist)==1){
+if ($user->getId()=='5830752a624f5'){
 	array_push($tests,6);
 	echo "<br>";
 	echo "getUserListByEvent Test Successfull";

@@ -216,19 +216,38 @@ class Event implements JsonSerializable{
 		delete("event", $this->getId());
 	}
 	
+	private function saveTitlesAndDescriptions($eventList){		
+		global $titles;
+		global $descriptions;
+		foreach($eventList as $event){
+			if (!in_array($event->getTitle(), $titles)){
+				array_push($titles,$event->getTitle());
+			}
+			if (!in_array($event->getDescription(), $descriptions)){
+				array_push($descriptions,$event->getDescription());
+			}
+		}
+	}
+	
 	public static function getEventList(){
 		$jeventlist = get("event?pageNumber=1&pageSize=500");
+		$eventList = Event::fromJSONa($jeventlist);
+		Event::saveTitlesAndDescriptions($eventList);
 		return Event::fromJSONa($jeventlist);
 	}
 	
 	public static function getProposedEventList(){
 		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).Event::$statuses["Proposed"].chr(34));
-		return Event::fromJSONa($jeventlist);
+		$eventList =  Event::fromJSONa($jeventlist);
+		Event::saveTitlesAndDescriptions($eventList);
+		return $eventList;
 	}
 	
 	public static function getPublishedEventList(){
 		$jeventlist = get("event?pageNumber=1&pageSize=500&q=status:".chr(34).Event::$statuses["Published"].chr(34));
-		return Event::fromJSONa($jeventlist);
+		$eventList = Event::fromJSONa($jeventlist);
+		Event::saveTitlesAndDescriptions($eventList);
+		return $eventList;
 	}
 	
 	/*public static function getOffers($proposedEvent){

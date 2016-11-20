@@ -1,4 +1,6 @@
 <?php
+$titles = array();
+$descriptions = array();
 include "Event.php";
 include "User.php";
 include "Address.php";
@@ -8,6 +10,8 @@ include "Notification.php";
 include "Booking.php";
 
 $tests= array();
+
+
 
 $notification1 = new Notification(1, "25.10.2016 13:56", $notificationtypes["Message"], true);	
 $notification2 = new Notification(2, "27.10.2016 11:56", $notificationtypes["Update"], false);	
