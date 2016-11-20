@@ -81,6 +81,7 @@ if (isset($_GET['page'])) {
 		$page=='mail-success' or
 		$page=='event-description' or
 		$page=='offer-event' or
+		$page=='analytics' or
 		$page=='profile') {
 		include('view/'.$page.'.php');
 	}
@@ -108,6 +109,12 @@ include 'view/footer.php';
 
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../Eduvent/lib/js/mdb.min.js"></script>
+
+<!-- Fusion Charts 
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.js"></script>
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.theme.fint.js"></script>
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.charts.js"></script>
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.widgets.js"></script>-->
 
 <!-- Custom scripts -->
 <script type="text/javascript" src="controller/js/shoppingCart.js"></script>
