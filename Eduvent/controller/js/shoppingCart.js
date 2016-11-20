@@ -1,7 +1,11 @@
 $('.insert-to-shopping-cart').click(function() {
 	$eventID = $(this).attr("eventid");
 	$quantity = $('#eventquantity').attr("value");
-	$amountGift = $('#eventamountgift'+$eventID+ ' option:selected').attr("value");
+	
+	if($(this).attr("id") == "gift"){
+		$amountGift = $quantity;
+	}
+	
 	
 	if (typeof $quantity == 'undefined'){
 		//only in detail view the quantity can be choosed, not in event market 
