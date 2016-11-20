@@ -36,7 +36,7 @@ if(isset($_POST['btn-signup'])) {
 			Welcome to Eduvent!<br/>
 			To complete your registration, please click on the following link<br/>
 			<br /><br />
-			<a href='../Eduvent/controller/login/verify.php?id=$id&code=$tokenCode'>Please click here to activate :)</a>
+			<a href='localhost/APDTLD/Eduvent/controller/login/verify.php?id=$id&code=$tokenCode'>Please click here to activate :)</a>
 			<br /><br />
 			Thanks,
 			<br>
