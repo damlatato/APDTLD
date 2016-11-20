@@ -127,7 +127,7 @@
 		<div class="row-fluid">
 			<div class="col-md-7">
 				<div class="span12 chart">
-					<div class="span12">
+					<div class="span12 c-caption">
 					Tickets sold this month    <span class="i-month">Nov</span></p>
 					</div>
 					<div class="span12 text-xs-left" id="c-current-tickets">
@@ -146,7 +146,7 @@
 			<div class="col-md-5">
 				<div class="span12 chart">
 					<div class="span12 c-caption">
-						<br>
+						This month revenue
 					</div>
 					<div class="span12 text-xs-center" id="c-tickets-types">
 
@@ -512,6 +512,7 @@ function loadTicketsTypes(){
 								"chart": {
 									"animation": "1",
 									"lowerLimit": "0",
+									"numberprefix": "€",
 									"plotFillColor": "#0075c2",
 									"targetColor": "#8e0000",
 									"showHoverEffect": "1",
@@ -525,26 +526,26 @@ function loadTicketsTypes(){
 									"color": [
 										{
 											"minValue": "0",
-											"maxValue": "485",
+											"maxValue": "700",
 											"code": "#e44a00",
 											"alpha": "70"
 										},
 										{
-											"minValue": "486",
-											"maxValue": "1106",
+											"minValue": "701",
+											"maxValue": "3000",
 											"code": "#f2c500",
 											"alpha": "70"
 										},
 										{
-											"minValue": "1107",
-											"maxValue": "1407",
+											"minValue": "3001",
+											"maxValue": "4000",
 											"code": "#1aaf5d",
 											"alpha": "70"
 										}
 									]
 								},
-								"value": "1300",
-								"target": "1500"
+								"value": "3550",
+								//"target": "3800"
 							}
 		});
 
