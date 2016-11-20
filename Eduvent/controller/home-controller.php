@@ -2,6 +2,8 @@
 	require_once ROOT_PATH . 'view/subscribeform.php';
 ?>
 
+<script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
+
 <!--Row 3 (Event lists)-->
 <div class="row evet-list-area">
 	<div class="col-md-6">

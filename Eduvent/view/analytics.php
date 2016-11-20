@@ -73,11 +73,11 @@
 
 <div class="row-fluid" style="">
 	<div class="col-md-12">
-		<div class="span12 chart" id="" style="background-color:#f5f5f5;margin:20px;">
+		<div class="span12 chart" style="margin:20px;">
 			<div class="span12 c-caption">
 			Monthly sales analysis    <span class="i-year">2016</span>
 			</div>
-			<div class="span12 text-xs-center" id="c-monthly-analysis" style="">
+			<div class="span12 text-xs-center" id="c-monthly-analysis">
 			text
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 
 <div class="row-fluid" style="padding:20px;">
 	<div class="col-md-5">
-		<div class="span12 chart" id="" style="background-color:lightgrey;">
+		<div class="span12 chart">
 			<div class="span12 c-caption">
 			Top 5 topics by sales
 			</div>
@@ -96,24 +96,24 @@
 		</div>
 	</div>
 	<div class="col-md-7">
-		<div class="span12 chart" id="" style="background-color:lightgrey;">
-			<div class="span12" id="" style="">
-			Ticket sales this month
+		<div class="span12 chart">
+			<div class="span12">
+			Tickets sold this month    <span class="i-month">Nov</span></p>
 			</div>
-			<div class="span12 text-xs-center" id="" style="">
+			<div class="span12 text-xs-center" id="">
 			text
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="row-fluid" style="">
+<div class="row-fluid">
 	<div class="col-md-12">
-		<div class="span12 chart" id="" style="background-color:lightgrey;margin:20px;">
-			<div class="span12" id="" style="">
+		<div class="span12 chart" style="margin:20px;">
+			<div class="span12">
 			Orders
 			</div>
-			<div class="span12 text-xs-center" id="" style="">
+			<div class="span12 text-xs-center" id="">
 			text
 			</div>
 		</div>
@@ -306,43 +306,40 @@ function loadTopTopics(){
 								"chart": {
 									"animation": 1,
 									"caption": "",
+									"bgcolor": "fafafa",
+									"xAxisname": "Topic",
 									"yaxisname": "Sales",
 									"numberprefix": "€",
-									//"yaxismaxvalue": "250000",
-									"rotatevalues": "1",
-									//"theme": "zune",
-									"palettecolors": "#FED835"
+									"plotgradientcolor": "",
+									"showalternatehgridcolor": "0",
+									"showplotborder": "0",
+									"showcanvasborder": "0",
+									"canvasborderalpha": "0",
+									"legendshadow": "0",
+									"legendborderalpha": "0",
+									"showborder": "0",
+									"palettecolors": "#ffcb2a"
 								},
 								"data": [
 									{
-										"label": "Jul",
-										"value": "150000",
-										"tooltext": "Occupancy: 67%{br}Revenue: $150,000{br}3 conferences hosted!"
+										"label": "Technology",
+										"value": "800"
 									},
 									{
-										"label": "Aug",
-										"value": "130000",
-										"tooltext": "Occupancy: 64%{br}Revenue: $130,000{br}Lean summer period!"
+										"label": "Business",
+										"value": "700"
 									},
 									{
-										"label": "Sep",
-										"tooltext": "Occupancy: 44%{br}Revenue: $80,000{br}Reason: Renovating the Lobby",
-										"value": "95000"
+										"label": "Entrepreneurship",
+										"value": "500"
 									},
 									{
-										"label": "Oct",
-										"value": "170000",
-										"tooltext": "Occupancy: 73%{br}Revenue: $170,000{br}Anniversary Discount: 25%"
+										"label": "Sports",
+										"value": "400"
 									},
 									{
-										"label": "Nov",
-										"value": "155000",
-										"tooltext": "Occupancy: 70%{br}Revenue: $155,000{br}2 conferences cancelled!"
-									},
-									{
-										"label": "Dec",
-										"value": "230000",
-										"tooltext": "Occupancy: 95%{br}Revenue: $230,000{br}Crossed last year record!"
+										"label": "Art",
+										"value": "200"
 									}
 								]
 							}
