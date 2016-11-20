@@ -52,7 +52,7 @@
 				<div class="row">-->
 					<div class="col-md-8">
 						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
-						<a href="" class="btn btn-dark-grey-yellow" style="min-width:192px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</a><br>
+						<button href="" id="gift" class="btn btn-dark-grey-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> style="min-width:192px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</button><br>
 						<a href="" class="btn btn-dark-grey-yellow" style="min-width:192px;"><i class="fa fa-heart"></i> Add to wishlist</a><br>
 						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
 					</div>

@@ -2,7 +2,6 @@
 
 if (isset($_POST['purchaseshoppingCart'])){
 	
-	//$usermail = User::getUserById($_SESSION['userSession']);
 	$message = "Thank you for your booking.";
 	$success = send_mail($message,"Purchase Confirmation",$_SESSION['usermail']);
 }
