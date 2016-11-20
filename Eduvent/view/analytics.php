@@ -61,6 +61,17 @@
 </style>
 
 <div class="container">
+
+<!--Page heading-->
+<div class="row">
+	<div class="col-md-12">
+		<h1 class="h1-responsive">Eduvent Analytics</h1>
+		<h3 class="h3-responsive"><small class="text-muted">Track and monitor your business operations in real-time.</small></h3>
+	</div>
+</div>
+<!--/.Page heading-->
+<hr>
+
 <div class="row-fluid" style="padding:20px;">
 	<div class="col-md-3">
 		<div class="span12 chart text-xs-center">
@@ -121,9 +132,9 @@
 					</div>
 					<div class="span12 text-xs-left" id="c-current-tickets">
 						<ul class="list-group" id="list-current-tickets">
-							<li class="list-group-item">Tickets sold<span class="pull-right font-weight-bold">506</span></li>
+							<li class="list-group-item">Tickets sold<span class="pull-right font-weight-bold">1106</span></li>
 							<li class="list-group-item">Paid tickets<span class="pull-right font-weight-bold">485</span></li>
-							<li class="list-group-item">Free tickets<span class="pull-right font-weight-bold">21</span></li>
+							<li class="list-group-item">Free tickets<span class="pull-right font-weight-bold">621</span></li>
 						</ul>
 						<ul class="list-group" id="list-current-tickets">
 							<li class="list-group-item">Tickets available<span class="pull-right font-weight-bold">300</span></li>
@@ -514,19 +525,19 @@ function loadTicketsTypes(){
 									"color": [
 										{
 											"minValue": "0",
-											"maxValue": "475",
+											"maxValue": "485",
 											"code": "#e44a00",
 											"alpha": "70"
 										},
 										{
-											"minValue": "476",
-											"maxValue": "507",
+											"minValue": "486",
+											"maxValue": "1106",
 											"code": "#f2c500",
 											"alpha": "70"
 										},
 										{
-											"minValue": "508",
-											"maxValue": "806",
+											"minValue": "1107",
+											"maxValue": "1407",
 											"code": "#1aaf5d",
 											"alpha": "70"
 										}
