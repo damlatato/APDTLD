@@ -543,8 +543,8 @@ function loadTicketsTypes(){
 										}
 									]
 								},
-								"value": "680",
-								"target": "710"
+								"value": "1300",
+								"target": "1500"
 							}
 		});
 
