@@ -1,6 +1,7 @@
 <?php
+$titles = array();
+$descriptions = array();
 define('ROOT_PATH', str_replace('\\','/',__DIR__).'/');
-
 include_once('model/YaasConnector.php');
 spl_autoload_register(function ($class) {
     $file = 'model/'.$class.'.php';
