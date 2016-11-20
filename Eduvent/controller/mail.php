@@ -1,11 +1,13 @@
 <?php
 
 if (isset($_POST['purchaseshoppingCart'])){
+	
+	//$usermail = User::getUserById($_SESSION['userSession']);
 	$message = "Thank you for your booking.";
-	$success = send_mail($message,"Purchase Confirmation","maryoupi@gmail.com");
+	$success = send_mail($message,"Purchase Confirmation",$_SESSION['usermail']);
 }
 
-//TODO send mail subscribe
+
 if(isset($_POST['sendsubscribeconfirmation'])) {
 	if ($email == ""){
 		echo "Please type a correct email.";

@@ -4,9 +4,15 @@ if (isset($_POST['purchaseshoppingCart'])){
 	<div class="row">
  		<div class="col-md-12">
 			<h5>Thank you for your Purchase!</h5>
-			You will receive a puchase confirmation by email.<br>
+			You will receive a puchase confirmation by email. <br>
 <?php
 	include_once 'controller/mail.php';
+	$shoppingCart = $_SESSION['shoppingCartSession'];
+	$logggeduser = User::getUserById($_SESSION['userSession']);
+	
+	foreach($shoppingCart->getEvents() as $shoppingCartEvent){
+		$logggeduser->bookEvent($shoppingCartEvent->getEvent());
+	}
 	deleteShoppingCart();
 ?>
 		</div>
@@ -42,64 +48,6 @@ if (isset($_POST['purchaseshoppingCart'])){
 </div>
 
                              
-<!-- <div class="row">
- 	<div class="col-md-12">
- 		<h4>Event 1</h4>
- 		<label>Select Quantity</label> <select id="eventquantity1"
- 			class="browser-default">
- 			<option value="1" selected>1</option>
- 			<option value="2">2</option>
- 			<option value="3">3</option>
- 			<option value="4">4</option>
- 			<option value="5">5</option>
- 		</select> <button
- 			class="btn btn-blue-yellow insert-to-shopping-cart"
- 			eventid="1" type="submit" value="buy">Buy</button>
- 	</div>
- 	<div class="col-md-12">
- 		<h4>Event 2</h4>
- 		<label>Select Quantity</label> <select id="eventquantity2"
- 			class="browser-default">
- 			<option value="1" selected>1</option>
- 			<option value="2">2</option>
- 			<option value="3">3</option>
- 			<option value="4">4</option>
- 			<option value="5">5</option>
- 		</select> <button
- 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
- 			eventid="2" type="submit" value="buy">Buy</button>
- 	</div>
- 	<div class="col-md-12">
- 		<h4>Event 3</h4>
- 		<label>Select Quantity</label> <select id="eventquantity3"
- 			class="browser-default">
- 			<option value="1" selected>1</option>
- 			<option value="2">2</option>
- 			<option value="3">3</option>
- 			<option value="4">4</option>
- 			<option value="5">5</option>
- 		</select> <button
- 			class="btn btn-blue-yellow btn-rounded insert-to-shopping-cart"
- 			eventid="3" type="submit" value="buy">Buy</button>
- 	</div>
- 	<div class="col-md-12">
- 	
- 		<div class="event-menu">
-			<button class="btn btn-grey-small" type="button">More</button>
-
-			<ul class="event-dropdown-menu">
-				<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' . $event->getId() . ' href="#">
-					<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-				<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-					<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
-				<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-					<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-				
-			</ul>
-		</div>
- 	</div>
- </div>
-  -->
  <div class="table-responsive">
  	<table  class="table product-table">
  		<!--Table head-->
