@@ -2,6 +2,7 @@
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.theme.fint.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.charts.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.widgets.js"></script>
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.maps.js"></script>
 
 
 <style>
@@ -10,7 +11,7 @@
 }
 
 .c-caption {
-	/*font-weight: bold;*/
+	font-weight: bold;
 	padding: 2px 8px;
 }
 
@@ -40,6 +41,22 @@
 	font-size: 12px;
 	font-weight: normal;
 	padding: 1px 8px;
+}
+
+#c-current-tickets {
+	padding: 0 10px 10px 10px;
+}
+
+#list-current-tickets {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	margin-bottom: 10px;
+}
+
+#tbl-orders {
+	height: 20em;
+	overflow: auto;
 }
 </style>
 
@@ -96,12 +113,34 @@
 		</div>
 	</div>
 	<div class="col-md-7">
-		<div class="span12 chart">
-			<div class="span12">
-			Tickets sold this month    <span class="i-month">Nov</span></p>
+		<div class="row-fluid">
+			<div class="col-md-7">
+				<div class="span12 chart">
+					<div class="span12">
+					Tickets sold this month    <span class="i-month">Nov</span></p>
+					</div>
+					<div class="span12 text-xs-left" id="c-current-tickets">
+						<ul class="list-group" id="list-current-tickets">
+							<li class="list-group-item">Tickets sold<span class="pull-right font-weight-bold">506</span></li>
+							<li class="list-group-item">Paid tickets<span class="pull-right font-weight-bold">485</span></li>
+							<li class="list-group-item">Free tickets<span class="pull-right font-weight-bold">21</span></li>
+						</ul>
+						<ul class="list-group" id="list-current-tickets">
+							<li class="list-group-item">Tickets available<span class="pull-right font-weight-bold">300</span></li>
+							<li class="list-group-item">Tickets pending<span class="pull-right font-weight-bold">0</span></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="span12 text-xs-center" id="">
-			text
+			<div class="col-md-5">
+				<div class="span12 chart">
+					<div class="span12 c-caption">
+						<br>
+					</div>
+					<div class="span12 text-xs-center" id="c-tickets-types">
+
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -109,12 +148,107 @@
 
 <div class="row-fluid">
 	<div class="col-md-12">
-		<div class="span12 chart" style="margin:20px;">
-			<div class="span12">
+		<div class="span12" style="margin:20px;">
+			<div class="span12 c-caption grey lighten-4">
 			Orders
 			</div>
-			<div class="span12 text-xs-center" id="">
-			text
+			<div class="span12" id="tbl-orders">
+
+				<table class="table table-hover">
+					<thead class="blue-grey lighten-5">
+						<tr>
+							<th>Order#</th>
+							<th>Purchaser</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th>Date</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">cmroicv</th>
+							<td>Elma Sylvester</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">x1pgfoj</th>
+							<td>Gregor Anne</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">riauxk4</th>
+							<td>Antonia Gratia</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">8cyqjfr</th>
+							<td>Ursula Fenstermacher</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">xc4nxu4</th>
+							<td>Andrea Pfeiffer</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">yemk8vd</th>
+							<td>Marina Theissen</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">s9xalsy</th>
+							<td>Jan Lehmann</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">yopy4ux</th>
+							<td>Benjamin Pfeifer</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">wvqep8c</th>
+							<td>Sandra Wirtz</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<th scope="row">6ep4d3p</th>
+							<td>Uwe Wagner</td>
+							<td>1</td>
+							<td>€300.00</td>
+							<td>11/11/2016</td>
+							<td>Success</td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
 		</div>
 	</div>
@@ -299,8 +433,8 @@ function loadTopTopics(){
 		chartTopTopics = new FusionCharts({
                             "type": "bar2d",
                             "renderAt": "c-top-topics",
-                            "width": "400",
-                            "height":"400",
+                            "width": "390",
+                            "height":"283",
                             "dataFormat": "json",
                             "dataSource": {
 								"chart": {
@@ -308,7 +442,7 @@ function loadTopTopics(){
 									"caption": "",
 									"bgcolor": "fafafa",
 									"xAxisname": "Topic",
-									"yaxisname": "Sales",
+									"yAxisName": "Sales",
 									"numberprefix": "€",
 									"plotgradientcolor": "",
 									"showalternatehgridcolor": "0",
@@ -318,6 +452,7 @@ function loadTopTopics(){
 									"legendshadow": "0",
 									"legendborderalpha": "0",
 									"showborder": "0",
+									"showAlternateVGridColor": "0",
 									"palettecolors": "#ffcb2a"
 								},
 								"data": [
@@ -330,7 +465,7 @@ function loadTopTopics(){
 										"value": "700"
 									},
 									{
-										"label": "Entrepreneurship",
+										"label": "Finance",
 										"value": "500"
 									},
 									{
@@ -346,6 +481,63 @@ function loadTopTopics(){
 		});
 		
 		chartTopTopics.render();			
+	});
+}
+
+/////////////////////////////////////////////////////////////////////
+
+var chartTicketsTypes;
+loadTicketsTypes();
+
+function loadTicketsTypes(){
+	FusionCharts.ready(function(){
+		chartTicketsTypes = new FusionCharts({
+                            "type": "vbullet",
+                            "renderAt": "c-tickets-types",
+                            "width": "200",
+                            "height":"283",
+                            "dataFormat": "json",
+                            "dataSource": {
+								"chart": {
+									"animation": "1",
+									"lowerLimit": "0",
+									"plotFillColor": "#0075c2",
+									"targetColor": "#8e0000",
+									"showHoverEffect": "1",
+									"showBorder": "0",
+									"bgColor": "#ffffff",
+									"showShadow": "0",
+									"colorRangeFillMix": "{light}",
+									"chartBottomMargin": "20"
+								},
+								"colorRange": {
+									"color": [
+										{
+											"minValue": "0",
+											"maxValue": "475",
+											"code": "#e44a00",
+											"alpha": "70"
+										},
+										{
+											"minValue": "476",
+											"maxValue": "507",
+											"code": "#f2c500",
+											"alpha": "70"
+										},
+										{
+											"minValue": "508",
+											"maxValue": "806",
+											"code": "#1aaf5d",
+											"alpha": "70"
+										}
+									]
+								},
+								"value": "680",
+								"target": "710"
+							}
+		});
+
+		chartTicketsTypes.render();
 	});
 }
 </script>

@@ -113,6 +113,7 @@ include 'view/footer.php';
 
 <!-- Fusion Charts 
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.js"></script>
+<script src="../Eduvent/lib/fusioncharts/fusioncharts.maps.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.theme.fint.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.charts.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.widgets.js"></script>-->
