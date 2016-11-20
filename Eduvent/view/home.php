@@ -98,7 +98,17 @@ $(document).ready(function() {
 				include("controller/home-controller.php");
 			?>
 
-		<!--/.Content-->
+			<!-- -------------------------------------------------------- -->
+			<div class="row">
+				<div class="col-md-12 text-xs-center">
+					<hr>
+					<h3>Didn't find your desired event? Come here and propose!</h3>
+					<a href="../Eduvent/index.php?page=create-proposal" class="btn btn-propose"><strong>Propose event!</strong></a>
+					<hr>
+				</div>
+			</div>
+
 		</div>
+		<!--/.Content-->
 	</div>
 </div>
