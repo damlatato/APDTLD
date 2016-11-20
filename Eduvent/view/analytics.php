@@ -16,14 +16,31 @@
 </div>
 
 <div class="row">
-	<div class="col-md-4">
-		<div id="CIchartContainer">Chart will be here</div>
-	</div>
-	<div class="col-md-4">
-		<div id="DPIview">Chart will be here</div>
-	</div>
-	<div class="col-md-4">
-		<div id="DCTview">Chart will be here</div>
+	<div class="col-md-12">
+                <div id="kpi-container">
+                    <div class="stats">
+                        <p class="category">Total sales this year</p>
+                        <p class="value">$89,360,000</p>
+                    </div>
+                    <div class="stats">
+                        <p class="category">Maximum sales this year</p>
+                        <p class="value">
+                            <span>$390,000</span>
+                            <span class="kpi-month">December</span>
+                        </p>
+                    </div>
+                    <div class="stats">
+                        <p class="category">Total units sold this year</p>
+                        <p class="value">8,448,000</p>
+                    </div>
+                    <div class="stats">
+                        <p class="category">Maximum units sold this year</p>
+                        <p class="value">
+                            <span>48,000</span>
+                            <span class="kpi-month max-units">December</span>
+                        </p>
+                    </div>
+                </div>
 	</div>
 </div>
 
