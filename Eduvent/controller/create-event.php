@@ -1,13 +1,15 @@
-	<?php 
-	spl_autoload_register(function ($class) {
-		$file = '../model/'.$class.'.php';
-		if(file_exists($file)) {
-			include $file;
-		}
-	});
+<?php 
+spl_autoload_register(function ($class) {
+	$file = '../model/'.$class.'.php';
+	if(file_exists($file)) {
+		include $file;
+	}
+});
+
 require_once 'model/YaasConnector.php';
 require_once 'model/thesaurus.php';
 require_once 'initiatePage.php';
+
 $check = isLoggedUserExisting();
 if($check === true){
 	if(isset($_POST['btn-signup'])) {
@@ -18,10 +20,8 @@ if($check === true){
 	$id = uniqid();
 	$title = $_POST['first-name'];
 	$description = $_POST['about-you'];
-	$datetime =   $_POST['birth-date'];
-	$location =  new Address($_POST['address'], $_POST['address-street'], $_POST['address-housenumber'], $_POST['address-city'], $_POST['address-postal-code'], $_POST['address-country']) ;
-	
-
+	$datetime = $_POST['birth-date'];
+	$location = new Address($_POST['address'], $_POST['address-street'], $_POST['address-housenumber'], $_POST['address-city'], $_POST['address-postal-code'], $_POST['address-country']);
 	
 //---image upload ---------------------------------------------------------------------------------------	
 	$target_event_dir = "../Eduvent/view/images/eventimages/";

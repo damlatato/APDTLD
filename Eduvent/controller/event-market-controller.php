@@ -1,3 +1,5 @@
+<script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
+
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display:none;">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
@@ -127,7 +129,7 @@ foreach ($events as $event) {
 							<div class="event-menu">
 											<button class="btn btn-grey-small" type="button">More</button>
 											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId()?>  href="#">
+												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId()?> href="#">
 													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
