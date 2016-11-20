@@ -15,6 +15,24 @@ if (isset($_POST['purchaseshoppingCart'])){
 } else { 
 	include_once 'shoppingCartPayment.php';
 
+	function shorten_string($string, $wordsreturned)
+	{
+		$retval = $string;
+		$string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $string);
+		$string = str_replace("\n", " ", $string);
+		$array = explode(" ", $string);
+		if (count($array)<=$wordsreturned)
+		{
+			$retval = $string;
+		}
+		else
+		{
+			array_splice($array, $wordsreturned);
+			$retval = implode(" ", $array)." ...";
+		}
+		return $retval;
+	}	
+	
 ?>
 <div class="alert alert-success" role="alert" id="successfulbuyed" style="display: none">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -113,13 +131,13 @@ if (isset($_POST['purchaseshoppingCart'])){
  			<tr id="shoppingcarttable">
  				<th scope="row"><img
  					src="<?php echo $shoppingCartEvent->getEvent()->getimgHref()?>"
- 					alt="" class="img-fluid" width="80px" height="80px">
+ 					alt="" class="img-fluid" min-width="80px width="80px" height="80px">
  				</th>
  				<td>
  					<h5>
  						<strong><?php echo $shoppingCartEvent->getEvent()->getTitle() ?></strong>
  					</h5>
- 					<p class="text-muted"><?php echo $shoppingCartEvent->getEvent()->getDescription()?></p>
+ 					<p class="text-muted"><?php echo shorten_string($shoppingCartEvent->getEvent()->getDescription(), 15)?></p>
  				</td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getTopic()?></td>
  				<td><?php echo $shoppingCartEvent->getEvent()->getDateTime()?></td>
@@ -152,11 +170,17 @@ if (isset($_POST['purchaseshoppingCart'])){
  						</strong>
  					</h4>
  				</td>
-
+				<?php  if (!isLoggedUserExisting()){?>
+				<td colspan="3"><a class="btn btn-blue-yellow" href="index.php?page=login">
+ 						Complete purchase <i class="fa fa-angle-right right"></i>
+ 					</a>
+ 				</td>
+				<?php } else {?>
  				<td colspan="3"><button type="button" class="btn btn-blue-yellow" data-toggle="modal" data-target="#paymentmodal">
  						Complete purchase <i class="fa fa-angle-right right"></i>
  					</button>
  				</td>
+ 				 <?php }?>
  			</tr>
  <?php } else {?>
  			<tr><td align="center" colspan="9"> <?php echo "Your shopping cart is empty."; }?></td> <tr>
