@@ -30,23 +30,28 @@
 					<hr>
 				</div>
 				<div class="row text-center">
-					<h4><strong><?php echo $event->getPrice() .' &euro;'; ?> </strong></h4>
-					<h5><?php echo $event->getUsersNumber() . ' people booked'; ?></h5>
+					<h5>Ticket price: <strong><?php echo $event->getPrice() .' &euro;'; ?> </strong></h5>
+					<h6><?php echo $event->getUsersNumber() . ' people booked'; ?></h6>
 					<hr>
 				</div>
-				<div class="row text-center ">	
-					<h6>Number of tickets</h6>
-					<div class="input-group spinner">
-						<input id="eventquantity" type="text" class="form-control text-xs-right" value="1" style="width:6em;">
-						<div class="input-group-btn-vertical">
-							<button class="btn btn-standard count-amount-up" type="button"><i class="fa fa-caret-up"></i></button>
-							<button class="btn btn-standard count-amount-down" type="button"><i class="fa fa-caret-down"></i></button>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="spinner">
+							<h6>Number of tickets</h6>
+							<input id="eventquantity" type="text" class="form-control text-xs-right" value="1" style="width:5em;">
+							<div class="btn-group">
+								<button class="btn btn-standard count-amount-up" type="button"><strong>+</strong></button>
+								<button class="btn btn-standard count-amount-down" type="button"><strong>–</strong></button>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row text-xs-center">
-					<a class="btn btn-standard insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><i class="fa fa-shopping-cart"></i> Add to shopping cart</a> 
-					<a href="basket.html" class="btn btn-grey"><i class="fa fa-heart"></i> Add to wishlist</a>
+				<!--</div>
+				<div class="row">-->
+					<div class="col-md-8">
+						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
+						<a href="" class="btn btn-dark-grey-yellow"><i class="fa fa-heart"></i> Add to wishlist</a><br>
+						<a href="" class="btn btn-dark-grey-yellow"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
+					</div>
 				</div>
 				<div class="social">
 					<hr>
