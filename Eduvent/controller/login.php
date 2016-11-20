@@ -69,13 +69,13 @@ if(isset($_POST['btn-login'])) {
 
 						<div class="md-form">
 							<i class="fa fa-envelope prefix"></i>
-							<input type="text" class="form-control" id="txtupass" name="txtemail">
+							<input type="text" class="form-control" id="txtupass" name="txtemail" required>
 							<label for="txtemail">Your email</label>
 						</div>
 
 						<div class="md-form">
 							<i class="fa fa-lock prefix"></i>
-							<input type="password" id="txtupass" class="form-control" name="txtupass">
+							<input type="password" id="txtupass" class="form-control" name="txtupass" required>
 							<label for="txtupass">Your password</label>
 						</div>
 
