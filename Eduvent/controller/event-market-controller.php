@@ -1,5 +1,12 @@
 <script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
+<script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
 
+<div class="alert alert-success" role="alert" id="successfulbuyed" style="display:none;">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<strong>Event added to shopping cart!</strong> Go to <a href="#" class="alert-link">Shopping cart </a>to see the content.
+</div>
 
 <?php
 if (isset($_POST['root-path'])) {
@@ -125,8 +132,8 @@ foreach ($events as $event) {
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId()?> href="#">
 													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
+												<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail();?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
+													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
 												<li class="text-xs-left">
