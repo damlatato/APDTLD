@@ -277,6 +277,13 @@ class User implements JsonSerializable{
 		$this->putUser();
 	}
 	
+	public function wishEventById($eventId){	//wishlist
+		$wishlist = $this->getWishlist();
+		array_push($wishlist, $eventId);
+		$this->setWishlist($wishlist);
+		$this->putUser();
+	}
+	
 	public function bookEvent($event){	//wishlist
 		if (!in_array($this->getId(),$event->getUsers())){
 			$eventUsers = $event->getUsers();
