@@ -1,4 +1,7 @@
 <?php
+$email = $_SESSION['usermail'];
+$user = User::getUserByEmail($email);
+
 include("../Eduvent/controller/profile-controller.php");
 ?>
 
@@ -10,7 +13,7 @@ include("../Eduvent/controller/profile-controller.php");
 				<img src="../Eduvent/view/images/event-img.png" class="img-responsive" height="140">
 			</div>
 			<h1>
-				<div class="editable-name"></div>
+				<div id="name" title="name" class="editable-name"></div>
 			</h1>
 
 		</div>
@@ -41,31 +44,51 @@ include("../Eduvent/controller/profile-controller.php");
 				<div class="row">
 					<div class="col-md-12">
 
+
 						<table class="table table-bordered">
-							<!--<thead>
+							<thead>
 								<tr>
 									<th></th>
 									<th></th>
 								</tr>
-							</thead>-->
+							</thead>
 							<tbody>
 								<tr>
 									<td>E-mail:</td>
-									<td><?php echo $userEmail; ?></td>
+									<td>
+									<?php
+										//echo 'E-mail: '.$user->getEmail();
+										echo $userEmail;
+									?>
+									</td>
 								</tr>
 								<tr>
 									<td>Address:</td>
-									<td><!--<div class="editable-name" title="user-name"></div>--><?php echo $userAddress; ?>
+									<td>
+									<?php
+										//echo "Address:	".'<div class="editable-address"></div>';
+										echo $userAddress;
+									?>
 									</td>
 								</tr>
 								<tr>
 									<td>Date of birth:</td>
-									<td><?php echo $userDOB; ?>
+									<td>
+									<?php
+										//echo "Birth Date:	".'<div class="editable-BirthDate"></div>';
+										echo $userDOB;
+									?>
 									</td>
 								</tr>
 								<tr>
-									<td><!--Interests:--></td>
-									<td><?php //echo $userInterests; ?></td>
+									<td>Interests:</td>
+									<td>
+									<?php
+										//$s = str_replace('[','',json_encode($user->getInterest()));
+										//$s = str_replace(']','',$s);
+										//echo "Interests:	".$s;
+									?>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -409,39 +432,27 @@ include("../Eduvent/controller/profile-controller.php");
 </div>
 <script type="text/javascript" src='../Eduvent/lib/js/profile.js'></script>
 
-<script>
-function saveEdit() {
-	  // However we want to save it to the database
-	  this.value = this.tempValue;
-	  this.disableEditing();
-	  //alert(this.title);
-
-	  if (this.title == "name"){
-		  $.post('../Eduvent/controller/profile-controller.php',
-			{ 
-				'p_field'		: 'userName',
-				'p_value'		: this.value,
-				'root-path'		: <?php echo '\'' . ROOT_PATH . '\''; ?>
-			})
-			.done(function( data ) {
-				alert( "Name changed. Message: " + data );
-			})
-			.fail(function() {
-				alert( "Error" );
-			});
-	  }
-	  if (this.title == "address"){
-		  alert('address changed');
-		  <?php echo $user->setAddress('Mannheim, Universitat Strasse, 2');?>
-	  }
-	  if (this.title == "dob"){
-		  alert('date of birth changed');
-		  <?php echo $user->setBirthDate('01.01.1990');?>
-	  }
-		<?php //echo $user->putUser();?>
-};
-
-editableField('.editable-name',		'<?php echo $userName; ?>',				saveEdit, "name");
-editableField('.editable-address',	'<?php echo $user->getAddress();?>',	saveEdit, "address");
-editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',	saveEdit, "dob");
-</script>
+	<script>
+	function saveEdit() {
+	      // However we want to save it to the database
+	      this.value = this.tempValue;
+	      this.disableEditing();
+	      alert(this.title);
+	      if (this.title == "name"){
+	    	  alert('name changed');
+	    	  <?php echo $user->setName('Leon');?>
+	      }
+	      if (this.title == "address"){
+	    	  alert('address changed');
+	    	  <?php echo $user->setAddress('Mannheim, Universitat Strasse, 2');?>
+	      }
+	      if (this.title == "birthdate"){
+	    	  alert('burthdate changed');
+	    	  <?php echo $user->setBirthDate('01.01.1990');?>
+	      }
+	     	<?php //echo $user->putUser();?>
+	    };
+	editableField('.editable-name','<?php echo $user->getName();?>',saveEdit, "name");
+	editableField('.editable-address','<?php echo $user->getAddress();?>',saveEdit, "address");
+	editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',saveEdit, "birthdate");
+	</script>
