@@ -44,7 +44,7 @@ if(isset($_POST['sendsupportmail'])) {
 		Description: <br />
 		$description";
 	
-		$success = send_mail($message,"Support Mail","maryoupi@gmail.de");
+		$success = send_mail($message,"Support Mail","educationevent1@gmail.com");
 		if ($success){
 			echo 'Message has been sent.';
 		} else {
