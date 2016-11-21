@@ -28,7 +28,7 @@ $tests = array();
 $event4 = new Event(4, $eventtypes["Presentation"], "My fourth Event", "So good fourth event", "4.12.2016 14:56", $address2, $interest2, 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 $event5 = new Event(5, $eventtypes["Presentation"], "My fifth Event", "So good fifth event", "4.12.2016 14:56", $address2, $interest1, 0, $statuses["Published"], "https://static.pexels.com/photos/191830/pexels-photo-191830-large.jpeg");
 
-$user1 = new User(111,"Leonid Gunko","leonidgunko1@yandex.ru","213322","", $address1, $genders["Mr."], "09.07.1992", $interest1, "/images/img1");
+$user1 = new User(111,"Leonid Gunko","leonidgunko1@yandex.ru","213322","", "mannheim hans sachs", $genders["Mr."], "09.07.1992", $interest1, "/images/img1");
 
 $event4->deleteEvent();
 $event5->deleteEvent();

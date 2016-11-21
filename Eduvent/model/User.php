@@ -129,6 +129,9 @@ class User implements JsonSerializable{
 		return $this->email;
 	}
 	public function getAddress(){
+		if ($this->address == ""){
+			return "not specified";
+		}
 		return $this->address;
 	}
 	public function getGender(){
@@ -310,7 +313,7 @@ class User implements JsonSerializable{
 		'password'=>$this->password,
 		'status'=>$this->status,
 		'tokenCode'=>$this->tokenCode,
-		'address'=>$this->address->jsonSerialize(),	//class
+		'address'=>$this->address,	//class
 		'gender'=>$this->gender,	//thesaurus
 		'birthDate'=>$this->birthDate,
 		'interest'=>json_encode($this->interest), //thesaurus
@@ -337,15 +340,6 @@ class User implements JsonSerializable{
 		$userv = json_decode($juser,true);
 		$user = new User(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 		foreach($userv as $key=>$value){
-			if($key=='address'){
-				$addressv = json_decode($value);
-				$address = new Address(1, 1, 1, 1, 1, 1, 1);
-				foreach($addressv as $key=>$value){
-					$address->set($key, $value);
-				}
-				$user->set('address', $address);
-				continue;
-			}
 			if($key=='interest'){
 				$interestvA = json_decode($value);
 				$user->set('interest', $interestvA);
