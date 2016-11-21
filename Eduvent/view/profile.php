@@ -2,18 +2,23 @@
 $email = $_SESSION['usermail'];
 $user = User::getUserByEmail($email);
 ?>
+	
+	
 <div class="container">
-
 	<div class="row">
 		<div class="col-md-12 text-xs-center">
 
 			<div>
 				<img src="../Eduvent/view/images/event-img.png" class="img-responsive" height="140">
 			</div>
-			<h1><?php echo $user->getName(); ?></h1>
+			<h1>
+				<div id="name" title="name" class="editable-name">
+				</div>
+			</h1>
 
 		</div>
-	</div><br>
+	</div>
+	<br>
 
 	<ul class="nav nav-pills flex-center" role="tablist">
 		<li class="nav-item">
@@ -36,20 +41,32 @@ $user = User::getUserByEmail($email);
 	<div class="tab-content">
 		<div class="tab-pane fade in active" id="profile1" role="tabpanel">
 			<br>
-			<p>
-			<?php
-			echo "E-mail:	".$user->getEmail();
-			$address = $user->getAddress();
-			echo "<br>";
-			echo "Address:	".$address->getfullName();
-			echo "<br>";
-			echo "Birth Date:	".$user->getBirthDate();
-			echo "<br>";
-			$s = str_replace('[','',json_encode($user->getInterest()));
-			$s = str_replace(']','',$s);
-			echo "Interests:	".$s;
-			?> 
-			</p>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<?php
+						echo 'E-mail: '.$user->getEmail();
+						?>
+					</div>
+					<div class="col-md-12">
+						<?php
+						echo "Address:	".'<div class="editable-address"></div>';
+						?>
+					</div>
+					<div class="col-md-12">
+						<?php
+						echo "Birth Date:	".'<div class="editable-BirthDate"></div>';
+						?>
+					</div>
+					<div class="col-md-12">
+						<?php
+						//$s = str_replace('[','',json_encode($user->getInterest()));
+						//$s = str_replace(']','',$s);
+						//echo "Interests:	".$s;
+						?>
+					</div>	 
+				</div>
+			</div>
 		</div>
 
 		<div class="tab-pane fade" id="profile2" role="tabpanel">
@@ -384,3 +401,29 @@ $user = User::getUserByEmail($email);
 	</div>
 
 </div>
+<script type="text/javascript" src='../Eduvent/lib/js/profile.js'></script>
+
+	<script>
+	function saveEdit() {
+	      // However we want to save it to the database
+	      this.value = this.tempValue;
+	      this.disableEditing();
+	      alert(this.title);
+	      if (this.title == "name"){
+	    	  alert('name changed');
+	    	  <?php echo $user->setName('Leon');?>
+	      }
+	      if (this.title == "address"){
+	    	  alert('address changed');
+	    	  <?php echo $user->setAddress('Mannheim, Universitat Strasse, 2');?>
+	      }
+	      if (this.title == "birthdate"){
+	    	  alert('burthdate changed');
+	    	  <?php echo $user->setBirthDate('01.01.1990');?>
+	      }
+	     	<?php //echo $user->putUser();?>
+	    };
+	editableField('.editable-name','<?php echo $user->getName();?>',saveEdit, "name");
+	editableField('.editable-address','<?php echo $user->getAddress();?>',saveEdit, "address");
+	editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',saveEdit, "birthdate");
+	</script>
