@@ -23,10 +23,9 @@ if(isset($_POST['btn-signup'])) {
 			</div>";
 	}
 	else{
-		$address = new Address("", "", 0, "", 0, "");
 		$id = uniqid();
 		$tokenCode = md5(uniqid(rand()));
-		$user = new User($id, $name, $email, $password, $tokenCode, $address, "", $birthDate, "", "https://appharbor.com/assets/images/stackoverflow-logo.png");
+		$user = new User($id, $name, $email, $password, $tokenCode, "", "", $birthDate, "", "https://appharbor.com/assets/images/stackoverflow-logo.png");
 		$user->postUser();	
 		
 		
@@ -293,7 +292,7 @@ if(isset($_POST['btn-signup'])) {
     width: 283px;" placeholder="Password" name="txtpass" required />
       <hr />
         <button class="btn btn-large btn-primary" type="submit" name="btn-signup">Sign Up</button>
-        <a href="../Eduvent/index.php?page=login" style="float:right;background: #c12e2a;    border: 1px solid transparent;" class="btn btn-large">Sign In</a>
+        <a href="login.php" style="float:right;background: #c12e2a;    border: 1px solid transparent;" class="btn btn-large">Sign In</a>
       </form>
     </div> <!-- /container -->
   </body>
