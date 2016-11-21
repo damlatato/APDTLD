@@ -8,7 +8,10 @@ require_once 'supportcontactform.php';
 		<!--First column-->
 		<div class="col-md-7 col-md-offset-1">
 			<h5 class="title">About Eduvent</h5>
-			<p>Eduvent is a online platform where you can register for educational events or create your own educational events.</p>
+			<p>Eduvent is a online platform where you can find educational events in your location. Just register to provide or book educational events.
+			You can easily find events by using the filtering options.
+			Haven't found the event you are interested in? Look in the event proposal section to create a event proposals.
+			Or you want to offer a proposed event? Go to the event proposal section and offer an existing event or create a new one.</p>
 		</div>
 		<!--/.First column-->
 
