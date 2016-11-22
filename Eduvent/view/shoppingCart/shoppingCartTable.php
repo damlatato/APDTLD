@@ -37,8 +37,7 @@ if (isset($_POST['purchaseshoppingCart'])){
 			$retval = implode(" ", $array)." ...";
 		}
 		return $retval;
-	}	
-	
+	}
 ?>
 
                            

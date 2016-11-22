@@ -244,7 +244,6 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 				});
 			});
 		</script>
-
 	</div>
 
 </div>

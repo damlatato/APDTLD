@@ -19,13 +19,14 @@
 	                    <input name="subemail" type="email" id="subemail" class="form-control validate">
 	                    <label for="subemail" data-error="wrong" data-success="right">Your email</label>
 	                </div>
-	                <div class="text-xs-center">
+	                <!--<div class="text-xs-center">
 	                    <button name="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
-	                </div>
+	                </div>-->
 	        	</form>
             </div>
             <!--Footer-->
-            <div class="modal-footer">
+            <div class="modal-footer text-xs-center">
+				<button name="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
                 <button type="button" class="btn btn-dark-grey-yellow" data-dismiss="modal">Close</button>
             </div>
         </div>
