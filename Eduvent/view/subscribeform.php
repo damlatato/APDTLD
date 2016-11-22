@@ -22,16 +22,16 @@
 	                    <input name="subemail" type="email" id="subemail" class="form-control validate">
 	                    <label for="subemail" data-error="wrong" data-success="right">Your email</label>
 	                </div>
-	                <!--<div class="text-xs-center">
-	                    <button name="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
-	                </div>-->
+	                <div class="text-xs-center">
+	                    <button type="submit" name="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
+						<button class="btn btn-dark-grey-yellow" data-dismiss="modal">Close</button>
+	                </div>
 	        	</form>
             </div>
-            <!--Footer-->
+            <!--Footer
             <div class="modal-footer text-xs-center">
-				<button name="sendsubscribeconfirmation" class="btn btn-blue-yellow">Subscribe</button>
-                <button type="submit" class="btn btn-dark-grey-yellow" data-dismiss="modal">Close</button>
-            </div>
+                <button class="btn btn-dark-grey-yellow" data-dismiss="modal">Close</button>
+            </div>-->
         </div>
         <!--/.Content-->
     </div>

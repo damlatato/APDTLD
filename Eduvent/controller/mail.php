@@ -1,12 +1,12 @@
 <?php
 if (isset($_POST['purchaseshoppingCart'])){
-	
 	$message = "Thank you for your booking.";
 	$success = send_mail($message,"Purchase Confirmation",$_SESSION['usermail']);
+	$_POST = array();
 }
 
 
-if(isset($_POST['sendsubscribeconfirmation'])) {
+if (isset($_POST['sendsubscribeconfirmation'])) {
 	if ($email == ""){
 		echo "Please type a correct email.";
 	} else {
@@ -20,9 +20,10 @@ if(isset($_POST['sendsubscribeconfirmation'])) {
 			echo 'Message could not be sent.';
 		}
 	}
+	$_POST = array();
 }
 
-if(isset($_POST['sendsupportmail'])) {
+if (isset($_POST['sendsupportmail'])) {
 	$name = trim($_POST['txtname']);
 	$email = trim($_POST['txtmail']);
 	$subject = trim($_POST['txtsubject']);
@@ -50,6 +51,7 @@ if(isset($_POST['sendsupportmail'])) {
 			echo 'Message could not be sent. ' . $mail->ErrorInfo;
 		}
 	}
+	$_POST = array();
 }
 
 function send_mail($message,$mailsubject,$emailTo)

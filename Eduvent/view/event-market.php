@@ -139,7 +139,7 @@ $(document).ready(function() {
 		if (isset($_POST['filter'])) {
 			echo 'v="' . $homeFilter[1] .  '";
 			if (v!=="") {
-				console.log("v="+v);
+				//console.log("v="+v);
 				$( ".sb-item:contains(" + v + ")" ).addClass("sb-item-selected");
 			}';
 		}
@@ -179,14 +179,14 @@ var filter = {
 };
 
 function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
-	console.log(
+	/*console.log(
 		"status="+status+", "+
 		"type="+type+", "+
 		"topic="+topic+", "+
 		"priceCategory="+priceCategory+", "+
 		"startDate="+startDate+", "+
 		"endDate="+endDate
-	);
+	);*/
 
 	//--------------------------------------
 	if (status!=="") {
@@ -214,7 +214,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 	}	
 	//--------------------------------------
 	
-	console.log("current filter: " + JSON.stringify(filter));
+	//console.log("current filter: " + JSON.stringify(filter));
 
 	$.get('controller/event-market-controller.php', filter)
 	.done(function( data ) {
@@ -227,7 +227,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 		
 		$.each(jsonData, function() {
 			$.each(this, function(objIndex, event) {
-				console.log(objIndex + ") eventid: " + event.id);
+				//console.log(objIndex + ") eventid: " + event.id);
 				
 				//----------------------------------------------
 				result='';
