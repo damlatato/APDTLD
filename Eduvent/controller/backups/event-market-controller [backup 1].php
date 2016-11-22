@@ -2,8 +2,8 @@
 <script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
 
 <?php
-if (isset($_GET['root-path'])) {
-	$rootPath = $_GET['root-path'];
+if (isset($_POST['root-path'])) {
+	$rootPath = $_POST['root-path'];
 	define ('ROOT_PATH', $rootPath);
 }
 
@@ -19,43 +19,43 @@ require_once ROOT_PATH . 'view/subscribeform.php';
 
 //------------------------------------------
 
-if (isset($_GET['status'])) {
-	$f_status = $_GET['status'];
+if (isset($_POST['status'])) {
+	$f_status = $_POST['status'];
 }
 else {
 	$f_status = "Published";
 }
 
-if (isset($_GET['type'])) {
-	$f_type = $_GET['type'];
+if (isset($_POST['type'])) {
+	$f_type = $_POST['type'];
 }
 else {
 	$f_type = "All";
 }
 
-if (isset($_GET['topic'])) {
-	$f_topic = $_GET['topic'];
+if (isset($_POST['topic'])) {
+	$f_topic = $_POST['topic'];
 }
 else {
 	$f_topic = "All";
 }
 
-if (isset($_GET['priceCategory'])) {
-	$f_pricing = $_GET['priceCategory'];
+if (isset($_POST['priceCategory'])) {
+	$f_pricing = $_POST['priceCategory'];
 }
 else {
 	$f_pricing = "All";
 }
 
-if (isset($_GET['startDate'])) {
-	$f_startDate = $_GET['startDate'];
+if (isset($_POST['startDate'])) {
+	$f_startDate = $_POST['startDate'];
 }
 else {
 	$f_startDate = "All";
 }
 
-if (isset($_GET['endDate'])) {
-	$f_endDate = $_GET['endDate'];
+if (isset($_POST['endDate'])) {
+	$f_endDate = $_POST['endDate'];
 }
 else {
 	$f_endDate = "All";
