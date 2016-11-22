@@ -13,6 +13,9 @@
 	if ($function == "addToWishlist"){
 		$eventID = $_POST['eventID'];
 		$usermail = $_POST['userMail'];
+		if ($usermail === "NO EMAIL"){
+			header ('Location: ../../index.php?page=login');
+		}
 		echo "<script>alert('wishlist handler'+$eventID+'  '+$usermail);</script>";
 		$user = User::getUserByEmail($usermail);
 		$user->wishEventById($eventID);	
