@@ -161,11 +161,11 @@ $(document).ready(function() {
 		$('#datepicker-to-sidebar').val('');
 	});
 	
-	$(document).on('click', '.subscribe-event', function() {
+	/*$(document).on('click', '.subscribe-event', function() {
 		alert("set value for subscribe");
 		eventId = $(this).attr("eventid");
 		$('#modalEventID').attr("value", eventId);
-	});
+	});*/
 });
 
 var filter = {

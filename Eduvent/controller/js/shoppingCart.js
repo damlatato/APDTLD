@@ -34,7 +34,7 @@ $(document).on('click', '.insert-to-shopping-cart', function() {
 		$('#successfulbuyed').css("display", "inherit");
 		
 	}).fail(function( msg ) {
-	  alert( "Request failed: " + msg );
+	  console.log( "Request failed: " + msg );
 	});
 	
 
@@ -53,7 +53,7 @@ $(document).on('click', '.delete-from-shopping-cart', function() {
 	}).done(function( msg ) {
 		window.location.reload();
 	}).fail(function( msg ) {
-	  alert( "Request failed: " + msg );
+	  console.log( "Request failed: " + msg );
 	});
 
 });
@@ -75,7 +75,6 @@ $(document).on('click', '.count-amount-down', function() {
 });
 
 $(document).on('click', '.subscribe-event', function() {
-	alert("set value for subscribe");
 	$eventID = $(this).attr("eventid");
 	$('#modalEventID').attr("value", $eventID);
 });
