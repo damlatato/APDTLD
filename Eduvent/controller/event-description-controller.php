@@ -46,7 +46,7 @@
 					<div class="col-md-8">
 						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
 						<button href="" id="gift" class="btn btn-dark-grey-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> style="min-width:192px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</button><br>
-						<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NO EMAIL"; }?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
+						<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NOEMAIL"; }?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
 						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
 					</div>
 				</div>
@@ -205,6 +205,27 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+$('.add-to-wishlist').click(function() {
+	alert( "we are here" );
+	$eventID = $(this).attr("eventid");
+	$userMail = $(this).attr("usermail");
+	alert("in wishlist js"+$eventID + '   '+ $userMail);
+	$.ajax({
+	  type: "POST",
+	  url: "controller/wishlistHandler.php",
+	  data: {
+		functionname: 'addToWishlist',
+		eventID: $eventID,
+		userMail: $userMail
+	  },
+	  dataType: "text"
+	}).done(function( msg ) {
+		alert( "done: " + msg );
+	}).fail(function( msg ) {
+	  alert( "Request failed: " + msg );
+	});
+	
 
+});
 
 </script>
