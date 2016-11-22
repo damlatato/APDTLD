@@ -1,6 +1,4 @@
 <!--
-- replace bullet graph by pie chart (event types) nad move it to the center
-- remove pending tickets
 - add fake filter to orders list#
 -->
 
@@ -9,7 +7,6 @@
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.charts.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.widgets.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.maps.js"></script>
-
 
 <style>
 .chart {
@@ -50,7 +47,8 @@
 }
 
 #c-current-tickets {
-	padding: 0 10px 10px 10px;
+	min-height: 274px;
+	padding: 0 10px 0 10px;
 }
 
 #list-current-tickets {
@@ -119,7 +117,26 @@
 </div>
 
 <div class="row-fluid" style="padding:20px;">
-	<div class="col-md-5">
+
+	<div class="col-md-3">
+		<div class="span12 chart">
+			<div class="span12 c-caption">
+			Tickets sold this month    <span class="i-month">Nov</span></p>
+			</div>
+			<div class="span12 text-xs-left" id="c-current-tickets">
+				<ul class="list-group" id="list-current-tickets">
+					<li class="list-group-item">Tickets sold<span class="pull-right font-weight-bold">1106</span></li>
+					<li class="list-group-item">Paid tickets<span class="pull-right font-weight-bold">485</span></li>
+					<li class="list-group-item">Free tickets<span class="pull-right font-weight-bold">621</span></li>
+				</ul>
+				<ul class="list-group" id="list-current-tickets">
+					<li class="list-group-item">Tickets available<span class="pull-right font-weight-bold">300</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
 		<div class="span12 chart">
 			<div class="span12 c-caption">
 			Top 5 topics by sales
@@ -129,38 +146,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-7">
-		<div class="row-fluid">
-			<div class="col-md-7">
-				<div class="span12 chart">
-					<div class="span12 c-caption">
-					Tickets sold this month    <span class="i-month">Nov</span></p>
-					</div>
-					<div class="span12 text-xs-left" id="c-current-tickets">
-						<ul class="list-group" id="list-current-tickets">
-							<li class="list-group-item">Tickets sold<span class="pull-right font-weight-bold">1106</span></li>
-							<li class="list-group-item">Paid tickets<span class="pull-right font-weight-bold">485</span></li>
-							<li class="list-group-item">Free tickets<span class="pull-right font-weight-bold">621</span></li>
-						</ul>
-						<ul class="list-group" id="list-current-tickets">
-							<li class="list-group-item">Tickets available<span class="pull-right font-weight-bold">300</span></li>
-							<li class="list-group-item">Tickets pending<span class="pull-right font-weight-bold">0</span></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-5">
-				<div class="span12 chart">
-					<div class="span12 c-caption">
-						This month revenue
-					</div>
-					<div class="span12 text-xs-center" id="c-tickets-types">
 
-					</div>
-				</div>
+	<div class="col-md-5">
+		<div class="span12 chart">
+			<div class="span12 c-caption">
+				Sales by event type
+			</div>
+			<div class="span12 text-xs-center" id="c-tickets-types">
+
 			</div>
 		</div>
 	</div>
+
 </div>
 
 <div class="row-fluid">
@@ -174,12 +171,12 @@
 				<table class="table table-hover">
 					<thead class="blue-grey lighten-5">
 						<tr>
-							<th>Order#</th>
-							<th>Purchaser</th>
-							<th>Quantity</th>
-							<th>Price</th>
-							<th>Date</th>
-							<th>Status</th>
+							<th>Order# &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
+							<th>Purchaser &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
+							<th>Quantity &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
+							<th>Price &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
+							<th>Date &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
+							<th>Status &nbsp;<i class="fa fa-unsorted" aria-hidden="true"></i></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -450,7 +447,7 @@ function loadTopTopics(){
 		chartTopTopics = new FusionCharts({
                             "type": "bar2d",
                             "renderAt": "c-top-topics",
-                            "width": "390",
+                            "width": "300",
                             "height":"283",
                             "dataFormat": "json",
                             "dataSource": {
@@ -458,7 +455,7 @@ function loadTopTopics(){
 									"animation": 1,
 									"caption": "",
 									"bgcolor": "fafafa",
-									"xAxisname": "Topic",
+									//"xAxisname": "Topic",
 									"yAxisName": "Sales",
 									"numberprefix": "€",
 									"plotgradientcolor": "",
@@ -509,13 +506,13 @@ loadTicketsTypes();
 function loadTicketsTypes(){
 	FusionCharts.ready(function(){
 		chartTicketsTypes = new FusionCharts({
-                            "type": "vbullet",
+                            "type": "pie2d",
                             "renderAt": "c-tickets-types",
-                            "width": "200",
+                            "width": "390",
                             "height":"283",
                             "dataFormat": "json",
                             "dataSource": {
-								"chart": {
+								/*"chart": {
 									"animation": "1",
 									"lowerLimit": "0",
 									"numberprefix": "€",
@@ -527,31 +524,48 @@ function loadTicketsTypes(){
 									"showShadow": "0",
 									"colorRangeFillMix": "{light}",
 									"chartBottomMargin": "20"
+								},*/
+								"chart": {
+									//"caption": "",
+									"bgcolor": "fafafa",
+									"showvalues": "1",
+									"showpercentvalues": "1",
+									"showborder": "0",
+									"showplotborder": "0",
+									"showlegend": "0",
+									"legendborder": "0",
+									"enablesmartlabels": "1",
+									"use3dlighting": "0",
+									"showshadow": "0",
+									"pieRadius": "90",
+									"palettecolors": "#f8bd19,#e44a00,#008ee4,#33bdda,#6baa01,#583e78"
 								},
-								"colorRange": {
-									"color": [
-										{
-											"minValue": "0",
-											"maxValue": "700",
-											"code": "#e44a00",
-											"alpha": "70"
-										},
-										{
-											"minValue": "701",
-											"maxValue": "3000",
-											"code": "#f2c500",
-											"alpha": "70"
-										},
-										{
-											"minValue": "3001",
-											"maxValue": "4000",
-											"code": "#1aaf5d",
-											"alpha": "70"
-										}
-									]
-								},
-								"value": "3550",
-								//"target": "3800"
+								"data": [
+									{
+										"label": "Course",
+										"value": "35"
+									},
+									{
+										"label": "Seminar",
+										"value": "10"
+									},
+									{
+										"label": "Meeting",
+										"value": "5"
+									},
+									{
+										"label": "Präsenation",
+										"value": "10"
+									},
+									{
+										"label": "Forum",
+										"value": "10"
+									},
+									{
+										"label": "Workshop",
+										"value": "30"
+									}
+								]
 							}
 		});
 
