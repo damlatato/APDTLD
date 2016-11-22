@@ -19,15 +19,17 @@ if (isset($_POST['p_field'])) {
 
 	$p_field = $_POST['p_field'];
 	$p_value = $_POST['p_value'];
-	print_r ("f: " . $p_field . ", v: " . $p_value);
+	print_r ("f: " . $p_field . ", v: " . $p_value . " | ");
 	
 	switch ($p_field) {
 		case 'userName':
-			print_r ('php usr mail: ' . $email);
-			print_r ('php set name: ' . $p_value);
+			print_r ('php usr mail: ' . $email . " | ");
+			print_r ('php set name: ' . $p_value . " | ");
+			$oldName = $user->getName($p_value);
+			print_r ('php old name: ' . $oldName . " | ");
 			$user->setName($p_value);
 			$newName = $user->getName();
-			print_r ('php new name: ' . $newName);
+			print_r ('php new name: ' . $newName . " | ");
 			break;
 		default:
 			print_r ('switch error');

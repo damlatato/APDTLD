@@ -424,7 +424,7 @@ function saveEdit() {
 				'root-path'		: <?php echo '\'' . ROOT_PATH . '\''; ?>
 			})
 			.done(function( data ) {
-				alert( "Name changed. Message: " + data );
+				console.log( "Name changed. Message: " + data );
 			})
 			.fail(function() {
 				alert( "Error" );
