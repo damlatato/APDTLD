@@ -195,7 +195,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					'<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter' +
 					'</a></li></ul></div></div></div></div></div></div>';
 
-				eventCounter=eventCounter+1;
+				//eventCounter=eventCounter+1;
 
 				/*if (eventCounter>0) {
 					//result = result + '</div>';
