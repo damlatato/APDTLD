@@ -46,7 +46,7 @@
 					<div class="col-md-8">
 						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
 						<button href="" id="gift" class="btn btn-dark-grey-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> style="min-width:192px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</button><br>
-						<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail();?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
+						<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NO EMAIL"; }?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
 						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
 					</div>
 				</div>
