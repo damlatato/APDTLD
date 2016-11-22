@@ -25,6 +25,14 @@ if (isset($_POST['p_field'])) {
 			$user->setName($p_value);
 			$user->putUser();
 			break;
+		case 'userAddress':
+			$user->setAddress($p_value);
+			$user->putUser();
+			break;
+		case 'userDOB':
+			$user->setBirthDate($p_value);
+			$user->putUser();
+			break;
 		default:
 			print_r ('php switch error');
 	}

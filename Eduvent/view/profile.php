@@ -411,37 +411,24 @@ include("../Eduvent/controller/profile-controller.php");
 
 <script>
 function saveEdit() {
-	  // However we want to save it to the database
-	  this.value = this.tempValue;
-	  this.disableEditing();
-	  //alert(this.title);
+	this.value = this.tempValue;
+	this.disableEditing();
 
-	  if (this.title == "name"){
-		  $.post('../Eduvent/controller/profile-controller.php',
-			{ 
-				'p_field'		: 'userName',
-				'p_value'		: this.value,
-				'root-path'		: <?php echo '\'' . ROOT_PATH . '\''; ?>
-			})
-			.done(function( data ) {
-				console.log( "Name changed. Message: " + data );
-			})
-			.fail(function() {
-				alert( "Error" );
-			});
-	  }
-	  if (this.title == "address"){
-		  alert('address changed');
-		  <?php echo $user->setAddress('Mannheim, Universitat Strasse, 2');?>
-	  }
-	  if (this.title == "dob"){
-		  alert('date of birth changed');
-		  <?php echo $user->setBirthDate('01.01.1990');?>
-	  }
-		<?php //echo $user->putUser();?>
+	$.post('../Eduvent/controller/profile-controller.php',
+	{ 
+		'p_field'		: this.title,
+		'p_value'		: this.value,
+		'root-path'		: <?php echo '\'' . ROOT_PATH . '\''; ?>
+	})
+	.done(function( data ) {
+		console.log( "Name changed. Message: " + data );
+	})
+	.fail(function( data ) {
+		alert( "Error: " + data );
+	});
 };
 
-editableField('.editable-name',		'<?php echo $userName; ?>',				saveEdit, "name");
-editableField('.editable-address',	'<?php echo $user->getAddress();?>',	saveEdit, "address");
-editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',	saveEdit, "dob");
+editableField('.editable-name',		'<?php echo $userName; ?>',				saveEdit, "userName");
+editableField('.editable-address',	'<?php echo $user->getAddress();?>',	saveEdit, "userAddress");
+editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',	saveEdit, "userDOB");
 </script>
