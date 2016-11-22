@@ -1,4 +1,11 @@
 <?php
+if (isset($_SESSION['usermail'])) {
+	$email = $_SESSION['usermail'];
+}
+else {
+	$email = '';
+}
+
 if (isset($_POST['filter'])) {
 	$homeFilter = explode(",",$_POST['filter']);
 	$v = $homeFilter[1];
@@ -124,13 +131,15 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 				
 				//----------------------------------------------
 				result='';
+				
+				var email = <?php echo $email; ?>;
 
-				if (eventCounter%3==0) {
+				/*if (eventCounter%3==0) {
 					if (eventCounter>0) {
 						//result='</div>';
 					}
 					//result='<div class="row">';
-				}
+				}*/
 
 				result = result +
 					'<div class="col-md-4 event-market-col">'+
@@ -139,7 +148,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					'<img src="';
 							
 				if (event.imgHref=='') {
-					result = result + 'view/images/event-img.png';
+					result = result + '../Eduvent/view/images/event-img.png';
 				}
 				else {
 					result = result + event.imgHref;
@@ -169,13 +178,16 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>' +
 					'<ul class="event-dropdown-menu">' +
 					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + 'href="#">' +
-					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>' +
-					'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id +
+					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>';
 					
-					
-					' usermail=EMAIL ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
-					
-					'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>' +
+				if (email!=='') {
+					result = result + 
+						'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id +
+						' usermail=' + email + '><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
+						'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>';
+				}
+				
+				result = result +				
 					'<li class="text-xs-left"><a class="event-dropdown-item" href="#">' +
 					'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>' +
 					'<li class="text-xs-left">' +
@@ -185,9 +197,9 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 
 				eventCounter=eventCounter+1;
 
-				if (eventCounter>0) {
+				/*if (eventCounter>0) {
 					//result = result + '</div>';
-				}
+				}*/
 
 				//----------------------------------------------
 				$('#event-market-items').append( result );
