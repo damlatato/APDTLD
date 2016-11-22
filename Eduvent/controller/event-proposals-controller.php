@@ -30,6 +30,7 @@ $f_endDate = "All";
 
 $proposedEvents=Event::filterEvents($f_status, $f_type, $f_topic, $f_pricing, $f_startDate, $f_endDate);
 //$proposedEvents=Event::getProposedEventList();
+$proposedEvents=Event::fromJSONa($proposedEvents);
 $eventCounter=0;
 foreach($proposedEvents as $event) {
 	$eventCounter++;
