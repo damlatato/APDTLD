@@ -131,15 +131,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 				
 				//----------------------------------------------
 				result='';
-				
-				var email = <?php echo $email; ?>;
-
-				/*if (eventCounter%3==0) {
-					if (eventCounter>0) {
-						//result='</div>';
-					}
-					//result='<div class="row">';
-				}*/
+				var email = "<?php echo $email; ?>";
 
 				result = result +
 					'<div class="col-md-4 event-market-col">'+
@@ -168,22 +160,27 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					event.title + '</a></strong></h4></div>';
 					
 				result = result +
-					'<div class="event-text card-text text-xs-left"><p>' +
-					event.description + '</p></div>' +
+					'<div class="event-text card-text text-xs-left"><p>' + event.description + '</p></div>' +
 					'<div class="card-footer">' +
 					'<div class="ticket-price">Ticket price:' + event.price + '</div>' +
 					'<div class="event-buttons flex-center">' +
 					'<a href="../Eduvent/index.php?page=event-description&eventId=' + event.id + '">' +
 					'<button class="btn btn-blue-yellow-small" type="button">Show details</button></a>' +
-					'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>' +
-					'<ul class="event-dropdown-menu">' +
+					'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>';
+					
+				result = result +
+					'<ul class="event-dropdown-menu">' +/*
 					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + 'href="#">' +
-					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>';
+					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>';*/
+					
+					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + ' href="#">' +
+					'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>';
 					
 				if (email!=='') {
 					result = result + 
-						'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id +
-						' usermail=' + email + '><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
+						'<li class="text-xs-left">' +
+						'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id + ' usermail=' + email + '>' +
+						'<strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
 						'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>';
 				}
 				
@@ -191,15 +188,9 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					'<li class="text-xs-left"><a class="event-dropdown-item" href="#">' +
 					'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>' +
 					'<li class="text-xs-left">' +
-					'<a class="event-dropdown-item subscribe-event" eventid=' + event.id + ' href="#"  data-toggle="modal" data-target="#modal-subscribe">' +
+					'<a class="event-dropdown-item subscribe-event" eventid=' + event.id + ' href="#" data-toggle="modal" data-target="#modal-subscribe">' +
 					'<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter' +
 					'</a></li></ul></div></div></div></div></div></div>';
-
-				//eventCounter=eventCounter+1;
-
-				/*if (eventCounter>0) {
-					//result = result + '</div>';
-				}*/
 
 				//----------------------------------------------
 				$('#event-market-items').append( result );
