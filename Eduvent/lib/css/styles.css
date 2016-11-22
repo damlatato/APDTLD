@@ -18,6 +18,10 @@ main {
 	max-width: 100%;
 	height: auto;
 }
+
+footer {
+	margin-top: 0!important;
+}
 /******************************************/
 /*             Buttons                    */
 /******************************************/
@@ -345,7 +349,7 @@ input:checked + .slider:before {
 	margin: auto!important;
 	padding: 0!important;
 	height: 100%!important;
-	min-height: 35.5em;
+	min-height: 37em;
 	width: 100%!important;
 }
 
