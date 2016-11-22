@@ -1,4 +1,5 @@
 $('.add-to-wishlist').click(function() {
+	alert( "we are here" );
 	$eventID = $(this).attr("eventid");
 	$userMail = $(this).attr("usermail");
 	alert("in wishlist js"+$eventID + '   '+ $userMail);
