@@ -1,7 +1,7 @@
 <!--
 - replace bullet graph by pie chart (event types) nad move it to the center
 - remove pending tickets
-- add fake filter to orders list
+- add fake filter to orders list#
 -->
 
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.js"></script>

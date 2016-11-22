@@ -338,9 +338,29 @@ input:checked + .slider:before {
 /*          Login form                    */
 /******************************************/
 
+.login-container {
+	background-image: url("../../view/images/login-background.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+	margin: auto!important;
+	padding: 0!important;
+	height: 100%!important;
+	min-height: 35.5em;
+	width: 100%!important;
+}
+
+.form-signin {
+	margin-top: 10px;
+}
+
+.form-signin-content {
+	min-width: 310px;
+}
+
+/*
 #loginform {
-	z-index: 100;
-	width: 100%;
+	background:#EBF4FB;
+	border:1px solid #ACD8F0;
 	right: 0px;
 	width: 300px;
 	bottom: 0px;
@@ -348,14 +368,14 @@ input:checked + .slider:before {
 	margin:0 auto;
 	margin-right:0px;
 	padding-bottom:25px;
-	background:#EBF4FB;
 	float: bottom;
-	border:1px solid #ACD8F0;
+	width: 100%;
+	z-index: 100;
 }
   
 #loginform { padding-top:18px; }
   
-#loginform p { margin: 5px; }
+#loginform p { margin: 5px; }*/
   
 #submit { width: 60px; }
   

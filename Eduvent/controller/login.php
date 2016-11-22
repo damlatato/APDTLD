@@ -41,7 +41,7 @@ if(isset($_POST['btn-login'])) {
 	}
 }
 ?>
-
+<div class="login-container">
 <div class="container flex-center">
 	<div class="row">
 		<div class="col-lg-12">
@@ -64,7 +64,7 @@ if(isset($_POST['btn-login'])) {
 <?php if(isset($msg)) echo $msg;  ?>
 
 				<div class="card">
-					<div class="card-block">
+					<div class="card-block form-signin-content">
 
 						<div class="text-xs-center">
 							<h3><i class="fa fa-user"></i> Log in:</h3>
@@ -98,4 +98,5 @@ if(isset($_POST['btn-login'])) {
 
 		</div>
 	</div>
+</div>
 </div>
