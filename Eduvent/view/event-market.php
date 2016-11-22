@@ -1,9 +1,13 @@
 <?php
+/*
 if(isset($_POST['sendsubscribeconfirmation'])) {
 	include('view/subscription-success.php');
 }
-else {
+else {*/
 ?>
+
+<script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
+<script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
 
 <div class="alert alert-info" role="alert" id="successfulbuyed" style="display:none;">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -52,5 +56,5 @@ else {
 </div>
 
 <?php
-}
+//}
 ?>

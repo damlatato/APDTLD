@@ -1,6 +1,3 @@
-<script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
-<script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
-
 <?php
 if (isset($_GET['root-path'])) {
 	$rootPath = $_GET['root-path'];
@@ -15,7 +12,7 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-require_once ROOT_PATH . 'view/subscribeform.php';
+//require_once ROOT_PATH . 'view/subscribeform.php';
 
 //------------------------------------------
 
@@ -61,9 +58,10 @@ else {
 	$f_endDate = "All";
 }
 
-//print_r ("php filter: " . $f_status . ", " . $f_type . ", " . $f_topic . ", " . $f_pricing . ", " . $f_startDate . ", " . $f_endDate);
 $events=Event::filterEvents($f_status, $f_type, $f_topic, $f_pricing, $f_startDate, $f_endDate);
-
+//echo json_encode($events);
+echo $events;
+/*
 $eventCounter=0;
 
 foreach ($events as $event) {
@@ -142,5 +140,5 @@ foreach ($events as $event) {
 
 if ($eventCounter>0) {
 	echo '</div>';
-}
+}*/
 ?>

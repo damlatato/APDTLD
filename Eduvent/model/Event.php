@@ -366,7 +366,8 @@ class Event implements JsonSerializable{
 			$eventlist=$eventlist2;
 		}
 		
-		return $eventlist;
+		//return $eventlist;
+		return $jeventlist;
 	}
 	
 	public function addOffer($organizedEvent){	//$this - Event Proposal

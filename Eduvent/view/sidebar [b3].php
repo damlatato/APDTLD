@@ -111,91 +111,81 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 
 	$.get('controller/event-market-controller.php', filter)
 	.done(function( data ) {
-		data= "[" + data + "]"
 		var jsonData = jQuery.parseJSON( data );
 
-		var eventCounter=0;
-		var result;
-		$('#event-market-items').html( "" );
-		
-		$.each(jsonData, function() {
-			$.each(this, function(objIndex, event) {
-				console.log(objIndex + ") eventid: " + event.id);
-				
-				//----------------------------------------------
-				result='';
+		var e;
+		for (e in jsonData) {
+			console.log(jsonData[e]);
+			result='';
+			eventCounter=0;
 
-				if (eventCounter%3==0) {
-					if (eventCounter>0) {
-						result='</div>';
-					}
-					result='<div class="row">';
-				}
-
-				result = result +
-					'<div class="col-md-4 event-market-col">'+
-					'<div class="event-card card hoverable">'+
-					'<div class="event-image view overlay">' +
-					'<img src="';
-							
-				if (event.imgHref=='') {
-					result = result + 'view/images/event-img.png';
-				}
-				else {
-					result = result + event.imgHref;
-				}
-				
-				result = result +
-					'" class="em-event-img img-fluid" alt="" height="195px">' +
-					'<a href="../Eduvent/index.php?page=event-description&eventId=' + event.id + '">' + 
-					'<div class="mask"></div></a></div>';
-
-				result = result +
-					'<div class="event-body card-block text-xs-center">' + 
-					'<div class="event-title">' +
-					'<h5>' + event.topic + '</h5>' +
-					'<h4 class="card-title"><strong>' +
-					'<a href="../Eduvent/index.php?page=event-description&eventId=' + event.id + '">' +
-					event.title + '</a></strong></h4></div>';
-					
-				result = result +
-					'<div class="event-text card-text text-xs-left"><p>' +
-					event.description + '</p></div>' +
-					'<div class="card-footer">' +
-					'<div class="ticket-price">Ticket price:' + event.price + '</div>' +
-					'<div class="event-buttons flex-center">' +
-					'<a href="../Eduvent/index.php?page=event-description&eventId=' + event.id + '">' +
-					'<button class="btn btn-blue-yellow-small" type="button">Show details</button></a>' +
-					'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>' +
-					'<ul class="event-dropdown-menu">' +
-					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + 'href="#">' +
-					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>' +
-					'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id +
-					
-					
-					' usermail=EMAIL ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
-					
-					'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>' +
-					'<li class="text-xs-left"><a class="event-dropdown-item" href="#">' +
-					'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>' +
-					'<li class="text-xs-left">' +
-					'<a class="event-dropdown-item subscribe-event" eventid=' + event.id + ' href="#"  data-toggle="modal" data-target="#modal-subscribe">' +
-					'<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter' +
-					'</a></li></ul></div></div></div></div></div></div>';
-
-				eventCounter=eventCounter+1;
-
+			if (eventCounter%3==0) {
 				if (eventCounter>0) {
-					result = result + '</div>';
+					result='</div>';
 				}
+				result='<div class="row">';
+			}
 
-				//----------------------------------------------
-				$('#event-market-items').append( result );
-			});
-		});
+			result = result +
+				'<div class="col-md-4 event-market-col">'+
+				'<div class="event-card card hoverable">'+
+				'<div class="event-image view overlay">' +
+				'<img src="';
+						
+			if (jsonData[e].imgHref=='') {
+				result = result + 'view/images/event-img.png';
+			}
+			else {
+				result = result + jsonData[e].imgHref;
+			}
+			
+			result = result +
+				'" class="em-event-img img-fluid" alt="" height="195px">' +
+				'<a href="../Eduvent/index.php?page=event-description&eventId=' + jsonData[e].id + '">' + 
+				'<div class="mask"></div></a></div>';
 
+			result = result +
+				'<div class="event-body card-block text-xs-center">' + 
+				'<div class="event-title">' +
+				'<h5>' + jsonData[e].topic + '</h5>' +
+				'<h4 class="card-title"><strong>' +
+				'<a href="../Eduvent/index.php?page=event-description&eventId=' + jsonData[e].id + '">' +
+				jsonData[e].title + '</a></strong></h4></div>';
+				
+			result = result +
+				'<div class="event-text card-text text-xs-left"><p>' +
+				jsonData[e].description + '</p></div>' +
+				'<div class="card-footer">' +
+				'<div class="ticket-price">Ticket price:' + jsonData[e].price + '</div>' +
+				'<div class="event-buttons flex-center">' +
+				'<a href="../Eduvent/index.php?page=event-description&eventId=' + jsonData[e].id + '">' +
+				'<button class="btn btn-blue-yellow-small" type="button">Show details</button></a>' +
+				'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>' +
+				'<ul class="event-dropdown-menu">' +
+				'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + jsonData[e].id + 'href="#">' +
+				'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>' +
+				'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + jsonData[e].id +
+				
+				
+				' usermail=EMAIL ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
+				
+				'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>' +
+				'<li class="text-xs-left"><a class="event-dropdown-item" href="#">' +
+				'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>' +
+				'<li class="text-xs-left">' +
+				'<a class="event-dropdown-item subscribe-event" eventid=' + jsonData[e].id + ' href="#"  data-toggle="modal" data-target="#modal-subscribe">' +
+				'<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter' +
+				'</a></li></ul></div></div></div></div></div></div>';
+
+			eventCounter=eventCounter+1;
+
+			if (eventCounter>0) {
+				result = result + '</div>';
+			}
+			
+			$('#event-market-items').html( result );
+		}
 	});
-}
 </script>
 
 <div class="sidebar-nav list-group">
