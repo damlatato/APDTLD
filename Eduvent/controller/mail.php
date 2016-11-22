@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['purchaseshoppingCart'])){
 	
 	$message = "Thank you for your booking.";

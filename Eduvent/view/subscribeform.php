@@ -1,5 +1,3 @@
-
-
 <!-- Modal Contact -->
 <div class="modal fade modal-ext" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:black">
     <div class="modal-dialog" role="document">

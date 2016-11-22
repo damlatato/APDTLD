@@ -127,9 +127,9 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 
 				if (eventCounter%3==0) {
 					if (eventCounter>0) {
-						result='</div>';
+						//result='</div>';
 					}
-					result='<div class="row">';
+					//result='<div class="row">';
 				}
 
 				result = result +
@@ -186,7 +186,7 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 				eventCounter=eventCounter+1;
 
 				if (eventCounter>0) {
-					result = result + '</div>';
+					//result = result + '</div>';
 				}
 
 				//----------------------------------------------

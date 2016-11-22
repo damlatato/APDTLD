@@ -1,9 +1,10 @@
 <?php
-/*
-if(isset($_POST['sendsubscribeconfirmation'])) {
+require_once ROOT_PATH . 'view/subscribeform.php';
+
+if (isset($_POST['sendsubscribeconfirmation'])) {
 	include('view/subscription-success.php');
 }
-else {*/
+else {
 ?>
 
 <script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
@@ -56,5 +57,5 @@ else {*/
 </div>
 
 <?php
-//}
+}
 ?>
