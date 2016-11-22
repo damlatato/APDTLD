@@ -77,6 +77,7 @@ $('.count-amount-down').click(function() {
 
 
 $('.subscribe-event').click(function() {
+	alert("set value for subscribe");
 	$eventID = $(this).attr("eventid");
 	$('#modalEventID').attr("value", $eventID);
 });
