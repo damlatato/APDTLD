@@ -169,12 +169,9 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					'<div class="event-menu"><button class="btn btn-grey-small" type="button">More</button>';
 					
 				result = result +
-					'<ul class="event-dropdown-menu">' +/*
-					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + 'href="#">' +
-					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>';*/
-					
-					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=' + event.id + ' href="#">' +
-					'<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>';
+					'<ul class="event-dropdown-menu">' +
+					'<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid="' + event.id + '" href="#">' +
+					'<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>';
 					
 				if (email!=='') {
 					result = result + 
