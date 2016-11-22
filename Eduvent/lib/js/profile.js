@@ -2,7 +2,7 @@ function editableField(div, string, saveEdit, title) {
 	return new Vue({
 		  el: div,
 		  prop: ['type'],
-		  template: '\n    <div v-if="!editing">\n      <span class=\'text\' @click="enableEditing">{{value}}</span>\n    </div>\n    <div v-if="editing">\n      <input v-model="tempValue" class="input"/>\n      <button @click="disableEditing"> Cancel </button>\n      <button @click="saveEdit"> Save </button>\n    </div>\n  ',
+		  template: '\n    <div v-if="!editing">\n      <span class=\'text\' @click="enableEditing">{{value}}</span>\n    </div>\n    <div v-if="editing">\n      <input v-model="tempValue" class="input"/>\n      <button @click="saveEdit" class="btn btn-dark-grey-yellow"> Save </button>\n    <button @click="disableEditing" class="btn btn-dark-grey-yellow"> Cancel </button>\n    </div>\n  ',
 		  data: {
 			value: string,
 			tempValue: null,

@@ -5,14 +5,8 @@ include("../Eduvent/controller/profile-controller.php");
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-xs-center">
-
-			<div>
-				<img src="../Eduvent/view/images/event-img.png" class="img-responsive" height="140">
-			</div>
-			<h1>
-				<div class="editable-name"></div>
-			</h1>
-
+			<div><img src="../Eduvent/view/images/event-img.png" class="img-responsive" height="140"></div>
+			<h1><div class="editable-name"></div></h1>
 		</div>
 	</div><br>
 
@@ -55,18 +49,17 @@ include("../Eduvent/controller/profile-controller.php");
 								</tr>
 								<tr>
 									<td>Address:</td>
-									<td><!--<div class="editable-name" title="user-name"></div>--><?php echo $userAddress; ?>
-									</td>
+									<td><div class="editable-address"></div></td>
 								</tr>
 								<tr>
 									<td>Date of birth:</td>
 									<td><?php echo $userDOB; ?>
 									</td>
 								</tr>
-								<tr>
-									<td><!--Interests:--></td>
+								<!--<tr>
+									<td>Interests:</td>
 									<td><?php //echo $userInterests; ?></td>
-								</tr>
+								</tr>-->
 							</tbody>
 						</table>
 
@@ -130,17 +123,11 @@ include("../Eduvent/controller/profile-controller.php");
 											</a>
 				
 											<div class="event-menu">
-												<button class="btn btn-grey" type="button">More</button>
+												<button class="btn btn-grey-small" type="button">More</button>
 				
 												<ul class="event-dropdown-menu">
-													<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
-														<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
 													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 														<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter</a></li>
 												</ul>
 											</div>
 										</div>
@@ -223,13 +210,9 @@ include("../Eduvent/controller/profile-controller.php");
 											</a>
 				
 											<div class="event-menu">
-												<button class="btn btn-grey" type="button">More</button>
+												<button class="btn btn-grey-small" type="button">More</button>
 				
 												<ul class="event-dropdown-menu">
-													<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
-														<i class="fa fa-shopping-cart " aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-														<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Save to wishlist</a></li>
 													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 														<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
 													<li class="text-xs-left"><a class="event-dropdown-item" href="#">
@@ -371,7 +354,7 @@ include("../Eduvent/controller/profile-controller.php");
 											</a>
 				
 											<div class="event-menu">
-												<button class="btn btn-grey" type="button">More</button>
+												<button class="btn btn-grey-small" type="button">More</button>
 				
 												<ul class="event-dropdown-menu">
 													<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> href="#">
@@ -428,7 +411,7 @@ function saveEdit() {
 	});
 };
 
-editableField('.editable-name',		'<?php echo $userName; ?>',				saveEdit, "userName");
-editableField('.editable-address',	'<?php echo $user->getAddress();?>',	saveEdit, "userAddress");
-editableField('.editable-BirthDate','<?php echo $user->getBirthDate();?>',	saveEdit, "userDOB");
+editableField('.editable-name',		 '<?php echo $userName; ?>',	saveEdit, "userName");
+editableField('.editable-address',	 '<?php echo $userAddress ?>',	saveEdit, "userAddress");
+editableField('.editable-BirthDate', '<?php echo $userDOB ?>',		saveEdit, "userDOB");
 </script>
