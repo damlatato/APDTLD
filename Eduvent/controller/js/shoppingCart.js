@@ -1,4 +1,4 @@
-$('.insert-to-shopping-cart').click(function() {
+$(document).on('click', '.insert-to-shopping-cart', function() {
 	$eventID = $(this).attr("eventid");
 	console.log("ev-id="+$eventID);
 	$quantity = $('#eventquantity').attr("value");
@@ -40,7 +40,7 @@ $('.insert-to-shopping-cart').click(function() {
 
 });
 
-$('.delete-from-shopping-cart').click(function() {
+$(document).on('click', '.delete-from-shopping-cart', function() {
 	$eventID = $(this).attr("eventid");
 	$.ajax({
 	  type: "POST",
@@ -58,25 +58,23 @@ $('.delete-from-shopping-cart').click(function() {
 
 });
 
-$("#alert-target").click(function () {
+$(document).on('click', '#alert-target', function() {
     toastr["info"]("I was launched via jQuery!");
 });
 
-
-$('.count-amount-up').click(function() {
+$(document).on('click', '.count-amount-up', function() {
 	$quantity = $('#eventquantity').attr("value");
 	$quantity++; 
 	 $('#eventquantity').attr("value", $quantity);
 });
 
-$('.count-amount-down').click(function() {
+$(document).on('click', '.count-amount-down', function() {
 	$quantity = $('#eventquantity').attr("value");
 	$quantity--; 
 	 $('#eventquantity').attr("value", $quantity);
 });
 
-
-$('.subscribe-event').click(function() {
+$(document).on('click', '.subscribe-event', function() {
 	alert("set value for subscribe");
 	$eventID = $(this).attr("eventid");
 	$('#modalEventID').attr("value", $eventID);

@@ -12,7 +12,7 @@ spl_autoload_register(function ($class) {
 	}
 });
 
-//require_once ROOT_PATH . 'view/subscribeform.php';!
+//require_once ROOT_PATH . 'view/subscribeform.php';
 
 //------------------------------------------
 

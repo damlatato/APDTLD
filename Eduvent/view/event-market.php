@@ -132,7 +132,7 @@ else {
 <script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
 
 <script>
-$( document ).ready(function() {
+$(document).ready(function() {
 	filterEvents(<?php echo $f ?>);
 
 	<?php
@@ -148,15 +148,23 @@ $( document ).ready(function() {
 		}
 	?>
 
-	$('.sb-item').click(function(){
+	$(document).on('click', '.sb-item', function() {
 		$('.sb-item').removeClass('sb-item-selected');
 		$(this).addClass('sb-item-selected');
 	});
-	$('#clear-date-from').click(function(){
+
+	$(document).on('click', '#clear-date-from', function() {
 		$('#datepicker-from-sidebar').val('');
 	});
-	$('#clear-date-to').click(function(){
+
+	$(document).on('click', '#clear-date-to', function() {
 		$('#datepicker-to-sidebar').val('');
+	});
+	
+	$(document).on('click', '.subscribe-event', function() {
+		alert("set value for subscribe");
+		eventId = $(this).attr("eventid");
+		$('#modalEventID').attr("value", eventId);
 	});
 });
 
