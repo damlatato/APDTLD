@@ -216,7 +216,7 @@ class Event implements JsonSerializable{
 		delete("event", $this->getId());
 	}
 	
-	private function saveTitlesAndDescriptions($eventList){		
+	private static function saveTitlesAndDescriptions($eventList){		
 		global $titles;
 		global $descriptions;
 		foreach($eventList as $event){
