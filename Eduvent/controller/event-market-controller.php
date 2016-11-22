@@ -1,7 +1,6 @@
 <script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
 <script type="text/javascript" src="../Eduvent/controller/js/wishlist.js"></script>
 
-
 <?php
 if (isset($_POST['root-path'])) {
 	$rootPath = $_POST['root-path'];
