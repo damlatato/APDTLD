@@ -121,7 +121,16 @@ else {
 .msf-form form .checkboxes-2 { display: inline-block; margin: 0 15px 20px 15px; }
 
 .msf-form form .selects-1,
-.msf-form form .selects-2 { display: inline-block; margin: 0 0 20px 0; }</style>
+.msf-form form .selects-2 { display: inline-block; margin: 0 0 20px 0; }
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}</style>
 
 <script type="text/javascript">
 jQuery(document).ready(function() {
@@ -305,10 +314,10 @@ jQuery(document).ready(function() {
 							<input type="text" name="price" class="address-city form-control" id="address-city" style="background: white;margin-left: 42px;">
 						</div>
 						<br>
-    						<div class="form-group">
-							<label for="address-city">Upload Image:</label><br>
-							<input type="file" name="fileToUpload" id="fileToUpload" style="margin-left: 112px;">
-						</div>
+    						
+							<label class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Upload Image
+							<input type="file" name="fileToUpload" id="fileToUpload" >
+						</label>
 						<br>
     
 						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
