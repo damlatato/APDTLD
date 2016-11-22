@@ -25,7 +25,7 @@ if($check === true){
 	
 //---image upload ---------------------------------------------------------------------------------------	
 	$target_event_dir = "../Eduvent/view/images/eventimages/";
-	$target_dir = "../view/images/eventimages/";
+	$target_dir = "../Eduvent/view/images/eventimages/";
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	$target_file_event = $target_event_dir . basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
