@@ -1,3 +1,9 @@
+<!--
+- replace bullet graph by pie chart (event types) nad move it to the center
+- remove pending tickets
+- add fake filter to orders list
+-->
+
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.theme.fint.js"></script>
 <script src="../Eduvent/lib/fusioncharts/fusioncharts.charts.js"></script>
@@ -66,7 +72,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<h1 class="h1-responsive">Eduvent Analytics</h1>
-		<h3 class="h3-responsive"><small class="text-muted">Track and monitor your business operations in real-time.</small></h3>
+		<h3 class="h3-responsive"><small class="text-muted">Track and monitor your business operations.</small></h3>
 	</div>
 </div>
 <!--/.Page heading-->
@@ -380,7 +386,7 @@ function loadMonthlyAnalysis(){
 												"value": "0"
 											}
 										]
-									},
+									}/*,
 									{
 										"seriesname": "Profit",
 										//"parentyaxis": "S",
@@ -424,7 +430,7 @@ function loadMonthlyAnalysis(){
 												"value": "0"
 											}
 										]
-									}
+									}*/
 								]
 							}
 		});
