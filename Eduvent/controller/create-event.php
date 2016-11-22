@@ -149,7 +149,7 @@ jQuery(document).ready(function() {
 	    });
 	});
 	
-	// previous step
+	
 	$('.msf-form form .btn-previous').on('click', function() {
 		$(this).parents('fieldset').fadeOut(400, function() {
 			$(this).prev().fadeIn();
@@ -195,8 +195,14 @@ jQuery(document).ready(function() {
 						</div>
 						<br>
 					   <div class="form-group">
-							<label for="birth-date">Date (YYYY/MM/DD):</label><br>
-							<input type="date" name="birth-date" class="birth-date form-control" id="birth-date">
+							<label for="birth-date">Date (DD/MM/YYYY):</label><br>
+							<input type="date" name="birth-date" class="birth-date form-control" id="birth-date" style="font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 283px;">
 						</div>
 					   
 						<br>
