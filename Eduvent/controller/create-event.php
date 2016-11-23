@@ -302,6 +302,14 @@ jQuery(document).ready(function() {
 								<option value="2">Business</option>
 								<option value="3">Cooking</option>
 								<option value="4">Design</option>
+								<option value="5">Entrepreneurship</option>
+								<option value="6">Finance</option>
+								<option value="7">Health</option>
+								<option value="8">HR</option>
+								<option value="9">Science</option>
+								<option value="10">Sports</option>
+								<option value="11">Technology</option>
+								<option value="12">Other</option>
 								
 							</select>
 						</div>
@@ -314,6 +322,11 @@ jQuery(document).ready(function() {
 								<option value="3">Forum</option>
 								<option value="4">Hackathon</option>
 								<option value="4">Meeting</option>
+								<option value="6">Online-course</option>
+								<option value="7">Presentation</option>
+								<option value="8">Seminar</option>
+								<option value="9">Tutorial</option>
+								<option value="10">Workshop</option>
 							</select>
 						</div>
 						<br>
