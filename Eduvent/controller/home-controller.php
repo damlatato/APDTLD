@@ -123,7 +123,7 @@
 						//$eventImage = ROOT_PATH . $events[$i]->getimgHref();
 					}
 					else {
-						$eventImage = ROOT_PATH . '/view/images/event-img.png';
+						$eventImage = '../Eduvent/view/images/event-img.png';
 					}
 			?>
 
