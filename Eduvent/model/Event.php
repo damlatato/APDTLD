@@ -331,7 +331,7 @@ class Event implements JsonSerializable{
 
 		$urlType='';
 		if ($type!=='All') {
-			$urlType="+type:".chr(34).$type.chr(34);
+			$urlType="+eventType:".chr(34).$type.chr(34);
 		}
 
 		$urlTopic='';
