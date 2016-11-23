@@ -87,6 +87,7 @@ else {
 }
 
 ?>
+<html>
 <head>
 <style>/***** Multi Step Form *****/
 
@@ -137,7 +138,14 @@ input[type="file"] {
 <script type="text/javascript">
 jQuery(document).ready(function() {
 
+	function scroll_to_class(chosen_class) {
+		var nav_height = $('nav').outerHeight();
+		var scroll_to = $(chosen_class).offset().top - nav_height;
 
+		if($(window).scrollTop() != scroll_to) {
+			$('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+		}
+	}
 	/*
 	    Multi Step Form
 	*/
@@ -361,3 +369,4 @@ jQuery(document).ready(function() {
 <!--[if lt IE 10]>
 	<script src="assets/js/placeholder.js"></script>
 <![endif]-->
+</html>
