@@ -1,5 +1,6 @@
 <?php
 require_once 'supportcontactform.php';
+require_once 'controller/initiatePage.php';
 ?>
 <!--Footer Links-->
 <div class="container-fluid">
@@ -41,7 +42,20 @@ require_once 'supportcontactform.php';
 	<ul>
 		<li>
 			<h5>Register for free</h5></li>
-		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-opposite">Sign up</a></li>
+									<?php
+
+	
+	$check = isLoggedUserExisting();
+	if ($check == true) {
+?>
+
+<li><a href="../Eduvent/index.php?page=profile" class="btn btn-opposite" id="myButton">Sign up</a></li>
+
+    <?php }
+    else {?>
+
+		<li><a href="../Eduvent/index.php?page=signup" class="btn btn-opposite" id="myButton">Sign up</a></li>
+		<?php }?>
 		<li>
 			<h5>Need help?</h5></li>
 		<li><a  class="btn btn-standard" href="#" data-toggle="modal" data-target="#modal-contact">Support</a></li>
