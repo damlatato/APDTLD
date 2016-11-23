@@ -5,7 +5,7 @@ include("../Eduvent/controller/profile-controller.php");
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-xs-center">
-			<div><img src="../Eduvent/view/images/event-img.png" class="img-responsive" height="140"></div>
+			<div><img src=<?php echo $userImg; ?> class="img-responsive" height="140"></div>
 			<h1><div class="editable-name"></div></h1>
 		</div>
 	</div><br>
