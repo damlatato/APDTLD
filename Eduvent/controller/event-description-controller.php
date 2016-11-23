@@ -124,7 +124,7 @@
 				<div class="tab-pane fade" id="ed-3" role="tabpanel">
 					<form class="well span8">
 						<div class="row">
-							<h4><small>Contact <?php echo $event->geteventOrganizer() ?></small></h4>
+							<h4><small>Contact <?php echo User::getUserById($event->geteventOrganizer())->getName() ?></small></h4>
 							<div class="col-md-5">
 
 								<div class="form-group row cp-form-group">

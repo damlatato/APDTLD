@@ -10,10 +10,12 @@ if (isset($_POST['sendsubscribeconfirmation'])) {
 	if ($email == ""){
 		echo "Please type a correct email.";
 	} else {
-		$message = "You successfully subscribed to newsletter of the company ".$event->geteventOrganizer().".";
+		$user = User::getUserById($event->geteventOrganizer());
+		
+		$message = "You successfully subscribed to newsletter of the company ".$user->getName().".";
 		$success = send_mail($message,"Subscribe Mail",$email); 
 		if ($success){
-			echo "You successfully subscribed to newsletter: ".$event->geteventOrganizer()." with your email ".$email.".</br>";
+			echo "You successfully subscribed to newsletter: ".$user->getName()." with your email ".$email.".</br>";
 			echo "Message has been sent.";
 		} else {
 			echo "Subscription to the newsletter fails. </br>";
