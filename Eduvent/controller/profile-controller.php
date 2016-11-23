@@ -44,6 +44,7 @@ else {
 	$userEmail   = $user->getEmail();
 	$userAddress = $user->getAddress();
 	$userDOB	 = $user->getBirthDate();
+	$userImg	= $user->getimgHref();
 	//$userInterests = str_replace('[','',json_encode($user->getInterest()));
 	//$userInterests = str_replace(']','',$s);
 }
