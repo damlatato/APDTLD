@@ -31,7 +31,9 @@ if(isset($_POST['btn-login'])) {
 // 		echo $_SESSION['usermail'];
 // 		echo json_encode($user->getVotedEvents());
 // 		echo "you passed";
-   		header("Location: http://localhost/APDTLD/Eduvent/index.php");
+
+		$home = '../Eduvent/index.php';
+   		header("Location: ". $home);
 	}
 	else {
 		$msg = "
