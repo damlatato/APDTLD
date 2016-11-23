@@ -8,7 +8,7 @@ if (isset($_POST['purchaseshoppingCart'])){
 
 if (isset($_POST['sendsubscribeconfirmation'])) {
 	if ($email == ""){
-		echo "Please type a correct email.";
+		echo "Please type a correct e-mail.";
 	} else {
 		$user = User::getUserById($event->geteventOrganizer());
 		
@@ -16,10 +16,9 @@ if (isset($_POST['sendsubscribeconfirmation'])) {
 		$success = send_mail($message,"Subscribe Mail",$email); 
 		if ($success){
 			echo "You successfully subscribed to newsletter: ".$user->getName()." with your email ".$email.".</br>";
-			echo "Message has been sent.";
+			
 		} else {
-			echo "Subscription to the newsletter fails. </br>";
-			echo 'Message could not be sent.';
+			echo 'Message could not be sent. Please try later again.';
 		}
 	}
 	$_POST = array();
@@ -47,9 +46,9 @@ if (isset($_POST['sendsupportmail'])) {
 	
 		$success = send_mail($message,"Support Mail","educationevent1@gmail.com");
 		if ($success){
-			echo 'Message has been sent.';
+			echo "You successfully sent a support mail. Our Support Team will contact you as soon as possible.</br>";
 		} else {
-			echo 'Message could not be sent. ' . $mail->ErrorInfo;
+			echo 'Message could not be sent. Please try later again. ';
 		}
 	}
 	$_POST = array();
