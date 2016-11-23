@@ -31,7 +31,6 @@ if (isset($_POST['sendsupportmail'])) {
 	$subject = trim($_POST['txtsubject']);
 	$description = trim($_POST['txtdescription']);
 	
-	//$user = User::getUserByEmail($email);
 
 	if ($name == "" || $email == "" || $subject == "" || $description == "") {
 		echo 'At least one of the form inputs are not correct given.';
@@ -73,7 +72,7 @@ function send_mail($message,$mailsubject,$emailTo)
 	$mail->AddReplyTo("educationevent1@gmail.com","Eduvent");
 	$mail->Subject    = $mailsubject;
 	$mail->MsgHTML($message);
-	//$mail->Send();
+
 	
 	if(!$mail->send()) {
 		return false;
