@@ -38,7 +38,7 @@ if(isset($_POST['btn-login'])) {
 	else {
 		$msg = "
 				<div class='alert alert-success'>
-					Sorry! Wrong detail! Please check your password or username.
+					Sorry! Wrong detail! <br> Please check your password or username.
 				</div>";
 	}
 }
