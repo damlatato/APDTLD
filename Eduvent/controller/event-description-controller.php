@@ -2,12 +2,11 @@
 	require_once ROOT_PATH . 'view/subscribeform.php';
 	$event = Event::getById($eventId);
 	$eventLocation = $event->getLocation(); //required later for google maps API
-?>
-	
+?>	
 
 
-<div id="content">
-    <div class="col-md-12">
+<div id="content" style="width:100%;">
+    <div class="col-md-12" style="width:80%;margin-left:10%;margin-right:10%;">
 		<div class="row">
 			<div class="col-md-7">
 				<img src="
@@ -44,14 +43,14 @@
 				<!--</div>
 				<div class="row">-->
 					<div class="col-md-8">
-						<button class="btn btn-blue-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
-						<button href="" id="gift" class="btn btn-dark-grey-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> style="min-width:192px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</button><br>
+						<button class="btn btn-blue-yellow insert-to-shopping-cart" style="width:195px;" eventid=<?php echo $event->getId() ?> ><strong><i class="fa fa-shopping-cart"></i> Add to shopping cart</strong></button><br>
+						<button href="" id="gift" class="btn btn-dark-grey-yellow insert-to-shopping-cart" eventid=<?php echo $event->getId() ?> style="width:195px;"><i class="fa fa-gift" aria-hidden="true"></i> Buy as gift</button><br>
 						<?php 
 							if (isset($_SESSION['usermail'])) { ?>
-							<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NOEMAIL"; }?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
+							<button class="btn btn-blue-yellow add-to-wishlist" style="width:195px;" eventid=<?php echo $event->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NOEMAIL"; }?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
 							<?php }
 							?> 
-						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
+						<a href="" eventid="<?php echo $event->getId() ?>" class="btn btn-dark-grey-yellow subscribe-event" href="#" style="width:195px;" data-toggle="modal" data-target="#modal-subscribe"><i class="fa fa-feed" aria-hidden="true"></i> Subscribe company newsletter</a>
 					</div>
 				</div>
 				<div class="social">
@@ -82,11 +81,6 @@
 					<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
 					<img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
 					</a>
-
-					<!-- Print -->
-					<a href="javascript:;" onclick="window.print()">
-					<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
-					</a>
 					</p>
 				</div>
 			</div>
@@ -108,7 +102,7 @@
 			</ul><hr>
 
 			<div class="tab-content">
-				<div class="tab-pane fade in active" id="ed-1" role="tabpanel">
+				<div class="tab-pane fade in active text-xs-left" id="ed-1" role="tabpanel">
 					<p><?php echo $event->getDescription() ?></p>
 				</div>
 				<div class="tab-pane fade" id="ed-2" role="tabpanel">
@@ -167,7 +161,7 @@
 										Message &nbsp;
 										<i class="fa fa-pencil prefix" style="font-size:1.45em;"></i>
 									</label>
-									<div class="col-xs-7 md-form">
+									<div class="col-xs-8 md-form">
 										<textarea type="text" class="form-control md-textarea" id="ed-message" name="ed-message" placeholder="Message" required></textarea>
 									</div>
 								</div>

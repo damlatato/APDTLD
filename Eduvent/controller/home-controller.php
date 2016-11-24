@@ -1,5 +1,20 @@
 <?php
-	require_once ROOT_PATH . 'view/subscribeform.php';
+require_once ROOT_PATH . 'view/subscribeform.php';
+
+function shorten_string($string, $wordsreturned) {
+	$retval = $string;
+	$string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $string);
+	$string = str_replace("\n", " ", $string);
+	$array = explode(" ", $string);
+	if (count($array)<=$wordsreturned) {
+		$retval = $string;
+	}
+	else {
+		array_splice($array, $wordsreturned);
+		$retval = implode(" ", $array)." ...";
+	}
+	return $retval;
+}
 ?>
 
 <script type="text/javascript" src="../Eduvent/controller/js/shoppingCart.js"></script>
@@ -29,7 +44,7 @@
 
 	<div class="col-md-6">
 		<div class="panel panel-default event-list">
-			<div class="panel-heading"><h5 class="font-weight-bold"><b>Newest nearby</b></h5></div>
+			<div class="panel-heading"><h5 class="font-weight-bold"><b>Newest events</b></h5></div>
 			<div class="panel-body list-group event-items newest">
 			<?php
 				for ($i = 0; $i < 4; $i++) {
@@ -84,7 +99,7 @@
 								</div>
 								
 								<div class="event-text card-text text-xs-left">
-									<p><?php echo $events[$i]->getDescription() ?></p>
+									<p><?php echo shorten_string($events[$i]->getDescription(), 23); ?></p>
 								</div>
 
 								<div class="card-footer">
