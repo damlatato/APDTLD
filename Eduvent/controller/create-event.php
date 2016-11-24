@@ -224,8 +224,9 @@ function colorFunction() {
 						</div>
 					   
 						<br>
+						<div style="    margin-right: 40px;">
 						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
-					</fieldset>
+					</div></fieldset>
 					
 					
 					<fieldset>
@@ -271,9 +272,10 @@ function colorFunction() {
 <!-- 							<input type="text" name="email" class="email form-control" id="email"> -->
 <!-- 						</div> -->
 						<br>
+						<div style="    margin-right: 40px;">
 						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
-					</fieldset>
+					</div></fieldset>
 					
 <!-- 					<fieldset> -->
 <!-- 						<h4>Social Media Profiles <span class="step">(Step 4 / 6)</span></h4> -->
@@ -303,9 +305,10 @@ function colorFunction() {
 							<textarea name="about-you" class="about-you form-control" id="about-you" style="border: 1px solid #ccc;background: white;"></textarea>
 						</div>
 						<br>
+						<div style="    margin-right: 40px;">
 						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
-					</fieldset>
+					</div></fieldset>
 									
 					<fieldset>
 						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
@@ -349,15 +352,15 @@ function colorFunction() {
 							<input type="text" name="price" class="address-city form-control" id="address-city" style="background: white;margin-left: 42px;">
 						</div>
 						<br>
-    						
-							<label class="custom-file-upload" onclick="colorFunction()"> <i class="fa fa-cloud-upload" id="color"></i> Upload Image
+    				
+							<label class="custom-file-upload" onclick="colorFunction()" style="margin-right: 35px;">  <i class="fa fa-cloud-upload" id="color"></i> Upload Image
 							<input type="file" name="fileToUpload" id="fileToUpload" >
 						</label>
 						<br>
-    
+ <div style="    margin-right: 40px;">
 						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="submit" class="btn" name="btn-signup" style="background: #1694b2;">Submit</button>
-					</fieldset>
+				</div>	</fieldset>
 					
 				</form>
 				
