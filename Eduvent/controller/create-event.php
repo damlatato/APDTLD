@@ -306,9 +306,7 @@ function colorFunction() {
 						<button type="button" class="btn btn-previous" style="background: #1694b2;"><i class="fa fa-angle-left"></i> Previous</button>
 						<button type="button" class="btn btn-next" style="background: #1694b2;">Next <i class="fa fa-angle-right"></i></button>
 					</fieldset>
-					
-			
-					
+									
 					<fieldset>
 						<h4>Other Form Elements <span class="step">(Step 4 / 4)</span></h4>
 					<div class="selects-1">
