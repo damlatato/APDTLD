@@ -65,13 +65,21 @@ input[type="file"] {
     display: none;
 }</style>
 
+<<script type="text/javascript">
+<!--
+function colorFunction() {
+	$("#color").css("color","#1694b2");
+}
+//-->
+</script>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-xs-center">
 			<div><img src=<?php echo $userImg; ?> class="img-responsive" height="140"></div>
 
 			<form action="" method="post" enctype="multipart/form-data">
-   					<label class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Select image to upload 
+   					<label class="custom-file-upload" onclick="colorFunction()"> <i class="fa fa-cloud-upload" id="color" ></i> Select image to upload 
    			 	<input type="file" name="fileToUpload" id="fileToUpload"> </label>
    			 	<button type="submit" class="btn" name="submitProfile" style="background: #1694b2;">Upload</button>
     			
