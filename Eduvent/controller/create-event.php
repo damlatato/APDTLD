@@ -256,7 +256,7 @@ function colorFunction() {
 						</div>
 						<div class="form-group">
 							<label for="address-postal-code">Postal Code:</label><br>
-							<input type="text" name="address-postal-code" class="address-postal-code form-control" id="address-postal-code" style="background: white;">
+							<input type="text" name="address-postal-code" class="address-postal-code form-control" id="address-postal-code" style="background: white;width: 176px;">
 						</div>
 <!-- 						<div class="form-group"> -->
 <!-- 							<label for="telephone">Telephone:</label><br> -->
