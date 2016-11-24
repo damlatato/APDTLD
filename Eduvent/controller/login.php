@@ -17,8 +17,14 @@ if (isset($_SESSION['usermail']))
 if(isset($_POST['btn-login'])) {
 	$email = trim($_POST['txtemail']);
 	$upass = trim($_POST['txtupass']);
- 
-	if (User::getPasswordByEmail($email)==$upass) {
+ 	
+	if (User::getUserByEmail($email)==null) {
+		$msg = "
+				<div class='alert alert-success'>
+					Sorry! Username doesn't exist! <br> Please check your username.
+				</div>";
+	}
+	else if (User::getPasswordByEmail($email)==$upass) {
 		//$user_login->redirect('../Eduvent/index.php');
 		$user = User::getUserByEmail($email);
 		$_SESSION['username'] = $user->getName();
@@ -38,7 +44,7 @@ if(isset($_POST['btn-login'])) {
 	else {
 		$msg = "
 				<div class='alert alert-success'>
-					Sorry! Wrong detail! <br> Please check your password or username.
+					Sorry! Wrong detail! <br> Please check your password.
 				</div>";
 	}
 }
