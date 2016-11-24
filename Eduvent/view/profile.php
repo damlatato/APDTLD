@@ -65,7 +65,7 @@ input[type="file"] {
     display: none;
 }</style>
 
-<<script type="text/javascript">
+<script type="text/javascript">
 <!--
 function colorFunction() {
 	$("#color").css("color","#1694b2");
