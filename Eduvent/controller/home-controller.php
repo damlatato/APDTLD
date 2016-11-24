@@ -54,7 +54,11 @@
 	<div class="col-md-12 event-market-area">
 		<div class="row">
 			<?php
-				for ($i = 0; $i < 3; $i++) {
+				for ($i = 0; $i < count($events); $i++) {
+						
+						if($i==6){
+							return;
+						}
 					if ($events[$i]->getimgHref()!=='') {
 						$eventImage = $events[$i]->getimgHref();
 						//$eventImage = ROOT_PATH . $events[$i]->getimgHref();
@@ -115,70 +119,7 @@
 				}
 			?>
 		</div>
-		<div class="row">
-			<?php
-				for ($i = 0; $i < 3; $i++) {
-					if ($events[$i]->getimgHref()!=='') {
-						$eventImage = $events[$i]->getimgHref();
-						//$eventImage = ROOT_PATH . $events[$i]->getimgHref();
-					}
-					else {
-						$eventImage = '../Eduvent/view/images/event-img.png';
-					}
-			?>
 
-					<!--echo '-->
-					<div class="col-md-4 event-market-col">
-						<div class="event-card card">
-							<div class="event-image view overlay hm-white-slight">
-								<img src="<?php echo $eventImage ?>" class="img-fluid">
-								<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $events[$i]->getId() ?>">
-									<div class="mask"></div>
-								</a>
-							</div>
-
-							<div class="event-body card-block text-xs-center">
-								<div class="event-title">
-									<h5><?php echo $events[$i]->getTopic() ?></h5>
-									<h4 class="card-title"><strong><a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $events[$i]->getId() ?>"><?php echo $events[$i]->getTitle() ?></a></strong></h4>
-								</div>
-								
-								<div class="event-text card-text text-xs-left">
-									<p><?php echo $events[$i]->getDescription() ?></p>
-								</div>
-
-								<div class="card-footer">
-									<div class="ticket-price">Ticket price: <?php echo $events[$i]->getPrice() ?>€</div>
-									<div class="event-buttons flex-center">
-										<a href="../Eduvent/index.php?page=event-description&eventId=<?php echo $events[$i]->getId() ?>">
-											<button class="btn btn-blue-yellow-small" type="button">Show details</button>
-										</a>
-
-										<div class="event-menu">
-											<button class="btn btn-grey-small" type="button">More</button>
-											<ul class="event-dropdown-menu">
-												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $events[$i]->getId()?>  href="#">
-													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-												<button class="btn btn-blue-yellow add-to-wishlist" eventid=<?php echo $event->getId()?> usermail=<?php $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail();?> ><strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>
-													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
-													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
-												<li class="text-xs-left">
-													<a class="event-dropdown-item subscribe-event" eventid=<?php echo $events[$i]->getId()?> href="#"  data-toggle="modal" data-target="#modal-subscribe">
-														<i class="fa fa-feed" aria-hidden="true"></i>&nbsp Subscribe company newsletter
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div><!--';-->
-			<?php
-				}
-			?>
-		</div>
 	</div>
 </div>
 <!--/.Row 4-->
