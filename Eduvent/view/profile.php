@@ -51,7 +51,9 @@ if(isset($_POST['submitProfile'])) {
 		}
 	}
 	
-	User::getUserByEmail($userEmail)->setimgHref($target_file_event);
+	$tempUser = User::getUserByEmail($userEmail);
+	$tempUser->setimgHref($target_file_event);
+	$tempUser->putUser();
 	$userImg = $target_file_event;
 }
 ?>
