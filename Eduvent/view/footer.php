@@ -83,7 +83,7 @@ require_once 'controller/initiatePage.php';
 <!--Copyright-->
 <div class="footer-copyright">
 	<div class="container-fluid">
-		© 2016 Copyright: <a href="http://www.Eduvent.com"> Eduvent.com </a>
+		&copy; 2016 Copyright: <a href="http://www.Eduvent.com"> Eduvent.com </a>
 
 	</div>
 </div>
