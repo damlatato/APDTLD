@@ -168,7 +168,15 @@ jQuery(document).ready(function() {
 	});
 	
 	
-});</script>
+});
+</script>
+<script type="text/javascript">
+<!--
+function colorFunction() {
+	$("#color").css("color","#ffff66");
+}
+//-->
+</script>
         </head>
 <body style="background: #fff;
     font-family: 'Raleway', sans-serif;
@@ -344,7 +352,7 @@ jQuery(document).ready(function() {
 						</div>
 						<br>
     						
-							<label class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Upload Image
+							<label class="custom-file-upload" onclick="colorFunction()"> <i class="fa fa-cloud-upload" id="color"></i> Upload Image
 							<input type="file" name="fileToUpload" id="fileToUpload" >
 						</label>
 						<br>
