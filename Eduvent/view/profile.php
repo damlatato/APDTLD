@@ -55,7 +55,15 @@ if(isset($_POST['submitProfile'])) {
 	$userImg = $target_file_event;
 }
 ?>
-
+<style>.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}</style>
 
 <div class="container">
 	<div class="row">
@@ -63,8 +71,8 @@ if(isset($_POST['submitProfile'])) {
 			<div><img src=<?php echo $userImg; ?> class="img-responsive" height="140"></div>
 
 			<form action="" method="post" enctype="multipart/form-data">
-   					 Select image to upload:
-   			 	<input type="file" name="fileToUpload" id="fileToUpload">
+   					<label class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Select image to upload 
+   			 	<input type="file" name="fileToUpload" id="fileToUpload"> </label>
    			 	<button type="submit" class="btn" name="submitProfile" style="background: #1694b2;">Upload</button>
     			
 			</form>
