@@ -13,6 +13,8 @@ $('.add-to-wishlist').click(function() {
 	  },
 	  dataType: "text"
 	}).done(function( msg ) {
+		$('#successfulwhislist').css("display", "inherit");
+		
 		alert( "done: " + msg );
 	}).fail(function( msg ) {
 	  alert( "Request failed: " + msg );
