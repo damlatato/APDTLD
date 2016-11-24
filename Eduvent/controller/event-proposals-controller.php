@@ -54,6 +54,15 @@ foreach($proposedEvents as $event) {
 		';
 	}
 
+		$offerStatus='&nbsp;&nbsp;
+			<div class="custom-dropdown-btn">
+				<div class="btn-grey-special-small"><b><i>Show matching events</b></i></div>
+				<ul class="custom-dropdown-menu custom-dropdown-menu-special">
+				<li><a href="../Eduvent/index.php?page=event-description&eventId="">test</a></li>
+				</ul>
+			</div>
+		';
+
 	echo('
 	<!--Proposal-->
 	<div class="row">
