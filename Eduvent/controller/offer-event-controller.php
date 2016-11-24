@@ -45,7 +45,7 @@ else
 
 					<!--Card image-->
 					<div class="event-image view overlay hm-white-slight">
-						<img src="' . $event->getimgHref() . '" class="img-fluid" alt="" height="195px">
+						<img src="' . $event->getimgHref() . '" class="img-fluid" alt="" style="height:11.5em;margin:auto;">
 						<a href="#">
 							<div class="mask"></div>
 						</a>

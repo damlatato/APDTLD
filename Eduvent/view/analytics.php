@@ -98,7 +98,7 @@
 	<div class="col-md-3">
 		<div class="span12 chart text-xs-center">
 			<p class="kpi-caption">Total tickets sold this year</p>
-			<p class="kpi-value">3115</p>
+			<p class="kpi-value">3.115</p>
 		</div>
 	</div>
 </div>
