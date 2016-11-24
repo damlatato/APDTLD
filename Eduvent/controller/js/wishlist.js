@@ -1,8 +1,6 @@
-$('.add-to-wishlist').click(function() {
-	alert( "we are here" );
+$(document).on('click', '.add-to-wishlist', function(){
 	$eventID = $(this).attr("eventid");
 	$userMail = $(this).attr("usermail");
-	alert("in wishlist js"+$eventID + '   '+ $userMail);
 	$.ajax({
 	  type: "POST",
 	  url: "controller/wishlistHandler.php",
@@ -15,7 +13,6 @@ $('.add-to-wishlist').click(function() {
 	}).done(function( msg ) {
 		$('#successfulwhislist').css("display", "inherit");
 		
-		alert( "done: " + msg );
 	}).fail(function( msg ) {
 	  alert( "Request failed: " + msg );
 	});

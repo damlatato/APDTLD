@@ -99,8 +99,16 @@
 											<ul class="event-dropdown-menu">
 												<li class="text-xs-left"><a class="event-dropdown-item insert-to-shopping-cart" eventid=<?php echo $events[$i]->getId()?>  href="#">
 													<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp Add to shopping cart</a></li>
-												<li class="text-xs-left"><a class="event-dropdown-item add-to-wishlist" eventid=<?php echo $events[$i]->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NOEMAIL"; }?>  href="#">
+												
+												<?php 
+												if (isset($_SESSION['usermail'])) { ?>
+													<li class="text-xs-left"><a class="event-dropdown-item add-to-wishlist" eventid=<?php echo $events[$i]->getId()?> usermail=<?php if (isset($_SESSION['usermail'])) { $email = $_SESSION['usermail']; $user = User::getUserByEmail($email); echo $user->getEmail(); } else { echo "NOEMAIL"; }?>  href="#">
 													<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>
+						
+												<?php }
+												?>  
+												
+												
 												<li class="text-xs-left"><a class="event-dropdown-item" href="#">
 													<i class="fa fa-share-alt"></i>&nbsp Share this event</a></li>
 												<li class="text-xs-left">

@@ -282,10 +282,10 @@ function filterEvents(status, type, topic, priceCategory, startDate, endDate) {
 					
 				if (email!=='') {
 					result = result + 
-						'<li class="text-xs-left">' +
-						'<button class="btn btn-blue-yellow add-to-wishlist" eventid=' + event.id + ' usermail=' + email + '>' +
-						'<strong><i class="fa fa-bookmark"></i> Add to wishlist</strong></button><br>' +
-						'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>';
+						
+
+					'<li class="text-xs-left"><a class="event-dropdown-item add-to-wishlist" eventid=' + event.id + ' usermail=' + email + '  href="#">'+
+					'<i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Add to wishlist</a></li>';
 				}
 				
 				result = result +				
